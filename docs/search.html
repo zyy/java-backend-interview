@@ -116,7 +116,7 @@
         let searchIndex = [];
         
         // 加载索引文件
-        fetch('/search_index.json')
+        fetch('search_index.json')
             .then(response => response.json())
             .then(data => {
                 searchIndex = data;

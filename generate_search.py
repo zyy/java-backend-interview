@@ -46,14 +46,14 @@ def process_md_files(docs_dir='docs'):
             with open(path, 'r', encoding='utf-8') as f:
                 content = f.read()
             title = extract_title(content) or file.replace('.md', '').replace('-', ' ').title()
-            # 生成URL - GitHub Pages格式：去掉.md后缀
+            # 生成URL - GitHub Pages格式：去掉.md后缀，添加baseurl
             rel_path = os.path.relpath(path, docs_dir)
-            url = '/' + rel_path.replace('\\', '/').replace('.md', '')
+            url = '/java-backend-interview/' + rel_path.replace('\\', '/').replace('.md', '')
             if file == 'index.md':
                 # 目录索引页面，确保以斜杠结尾
                 if url.endswith('/index'):
                     url = url[:-5]  # 去掉'/index'
-                if url != '/':
+                if url != '/java-backend-interview/':
                     url = url + '/'
             # 清理内容
             clean = clean_markdown(content)
