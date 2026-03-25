@@ -39,44 +39,55 @@
       background: white;
       border-radius: 10px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-      max-height: 500px;
+      max-height: 350px;
       overflow-y: auto;
       display: none;
       margin-top: 5px;
+      z-index: 1001;
     }
     .search-results.active {
       display: block;
     }
     .search-result-item {
-      padding: 15px;
+      padding: 10px 12px;
       border-bottom: 1px solid #eee;
       cursor: pointer;
+      display: block;
+      text-decoration: none;
     }
     .search-result-item:hover {
-      background: #f8f9fa;
+      background: #f5f8ff;
     }
     .search-result-title {
       font-weight: 600;
       color: #667eea;
-      margin-bottom: 5px;
-      font-size: 14px;
+      margin-bottom: 3px;
+      font-size: 13px;
+      line-height: 1.3;
     }
     .search-result-description {
       color: #666;
-      font-size: 12px;
-      margin-bottom: 5px;
+      font-size: 11px;
+      line-height: 1.3;
+      margin-bottom: 3px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     .search-result-category {
       background: #e9ecef;
       color: #495057;
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-size: 11px;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-size: 10px;
+      display: inline-block;
     }
     .search-no-results {
-      padding: 20px;
+      padding: 15px;
       text-align: center;
       color: #999;
+      font-size: 13px;
     }
     @media (max-width: 768px) {
       .search-bar-container {
@@ -86,6 +97,20 @@
       }
       .search-box {
         width: 100%;
+      }
+      .search-results {
+        max-height: 280px;
+        border-radius: 8px;
+      }
+      .search-result-item {
+        padding: 8px 10px;
+      }
+      .search-result-title {
+        font-size: 12px;
+      }
+      .search-result-description {
+        font-size: 10px;
+        -webkit-line-clamp: 1;
       }
     }
     /* 面包屑导航样式 - 优化版 */
@@ -262,15 +287,32 @@
           results.innerHTML = '<div class="search-no-results">没有找到相关结果</div>';
         } else {
           let html = '';
-          matches.slice(0, 20).forEach(item => {
+          const maxResults = 10;
+          const itemsToShow = matches.slice(0, maxResults);
+          
+          itemsToShow.forEach(item => {
+            // 简化描述文本，移除多余标记
+            let description = item.description;
+            // 移除Markdown front matter和重复标题
+            description = description.replace(/---[\s\S]*?---/, '');
+            description = description.replace(/^#+\s+/gm, '');
+            description = description.substring(0, 120).trim();
+            if (description.length > 120) description = description.substring(0, 117) + '...';
+            
             html += `
-              <a class="search-result-item" href="${item.url}" data-url="${item.url}">
+              <a class="search-result-item" href="${item.url}">
                 <div class="search-result-title">${item.title}</div>
-                <div class="search-result-description">${item.description}</div>
+                <div class="search-result-description">${description}</div>
                 <span class="search-result-category">${item.category}</span>
               </a>
             `;
           });
+          
+          // 如果结果超过显示数量，添加提示
+          if (matches.length > maxResults) {
+            html += `<div class="search-no-results">找到 ${matches.length} 条结果，显示前 ${maxResults} 条</div>`;
+          }
+          
           results.innerHTML = html;
         }
         
