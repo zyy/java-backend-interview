@@ -164,22 +164,14 @@
           let html = '';
           matches.slice(0, 20).forEach(item => {
             html += `
-              <div class="search-result-item" data-url="${item.url}">
+              <a class="search-result-item" href="${item.url}" data-url="${item.url}">
                 <div class="search-result-title">${item.title}</div>
                 <div class="search-result-description">${item.description}</div>
                 <span class="search-result-category">${item.category}</span>
-              </div>
+              </a>
             `;
           });
           results.innerHTML = html;
-          
-          results.querySelectorAll('.search-result-item').forEach(item => {
-            item.addEventListener('click', () => {
-              const url = item.getAttribute('data-url');
-              console.log('搜索跳转:', url);
-              window.location.href = url;
-            });
-          });
         }
         
         results.classList.add('active');
