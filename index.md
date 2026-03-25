@@ -12,7 +12,10 @@ title: Java 后端面试资料库
   text-align: center;
   margin-bottom: 2rem;
 }
-.hero h1 { color: white; margin-bottom: 1rem; }
+.hero h1 {
+  color: white;
+  margin-bottom: 1rem;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -27,15 +30,21 @@ title: Java 后端面试资料库
   color: #333;
   transition: all 0.3s ease;
   border: 1px solid #e9ecef;
-  display: block;
 }
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   border-color: #667eea;
 }
-.card h3 { color: #667eea; margin-bottom: 0.5rem; }
-.card p { color: #666; font-size: 0.9rem; margin: 0; }
+.card h3 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
 .badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -54,9 +63,18 @@ title: Java 后端面试资料库
   background: #f8f9fa;
   border-radius: 8px;
 }
-.stat { text-align: center; }
-.stat-number { font-size: 2rem; font-weight: bold; color: #667eea; }
-.stat-label { color: #666; font-size: 0.9rem; }
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
 </style>
 
 <div class="hero">
@@ -83,49 +101,49 @@ title: Java 后端面试资料库
 
 <div class="cards">
 
-<a class="card" href="java-core/">
+<a class="card" href="{{ site.baseurl }}java-core/">
   <h3>☕ Java 核心</h3>
   <p>HashMap、线程池、CAS/AQS、并发编程、IO/NIO</p>
   <span class="badge">10 篇</span>
 </a>
 
-<a class="card" href="jvm/">
+<a class="card" href="{{ site.baseurl }}jvm/">
   <h3>⚙️ JVM 原理</h3>
   <p>内存模型、垃圾回收、类加载机制，调优</p>
   <span class="badge">2 篇</span>
 </a>
 
-<a class="card" href="spring/">
+<a class="card" href="{{ site.baseurl }}spring/">
   <h3>🌱 Spring 框架</h3>
   <p>IoC/AOP、自动装配、循环依赖、事务</p>
   <span class="badge">6 篇</span>
 </a>
 
-<a class="card" href="database/">
+<a class="card" href="{{ site.baseurl }}database/">
   <h3>🗄️ 数据库</h3>
   <p>索引原理、事务隔离、MVCC、锁机制</p>
   <span class="badge">5 篇</span>
 </a>
 
-<a class="card" href="middleware/">
+<a class="card" href="{{ site.baseurl }}middleware/">
   <h3>🔧 中间件</h3>
   <p>Redis、MQ、Kafka、缓存问题</p>
   <span class="badge">5 篇</span>
 </a>
 
-<a class="card" href="design-patterns/">
+<a class="card" href="{{ site.baseurl }}design-patterns/">
   <h3>🎨 设计模式</h3>
   <p>单例、工厂、策略、观察者、代理</p>
   <span class="badge">2 篇</span>
 </a>
 
-<a class="card" href="algorithm/">
+<a class="card" href="{{ site.baseurl }}algorithm/">
   <h3>🧮 算法</h3>
   <p>链表、树、排序、查找、动态规划</p>
   <span class="badge">3 篇</span>
 </a>
 
-<a class="card" href="microservices/">
+<a class="card" href="{{ site.baseurl }}microservices/">
   <h3>🏗️ 微服务</h3>
   <p>分布式、CAP/BASE、服务治理</p>
   <span class="badge">建设ing</span>
