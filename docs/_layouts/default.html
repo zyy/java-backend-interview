@@ -88,28 +88,51 @@
         width: 100%;
       }
     }
-    /* 面包屑导航样式 */
+    /* 面包屑导航样式 - 优化版 */
     .breadcrumb {
-      margin-bottom: 20px;
-      padding: 10px 0;
-      font-size: 14px;
-      color: #666;
-      border-bottom: 1px solid #eee;
+      margin-bottom: 25px;
+      padding: 12px 16px;
+      font-size: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
     .breadcrumb a {
       color: #0366d6;
       text-decoration: none;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
     }
     .breadcrumb a:hover {
-      text-decoration: underline;
+      background: #e7f1ff;
+      text-decoration: none;
+      color: #034ea2;
     }
     .breadcrumb .separator {
-      margin: 0 5px;
-      color: #999;
+      margin: 0 8px;
+      color: #6c757d;
+      font-weight: 400;
     }
     .breadcrumb .current {
       color: #24292e;
-      font-weight: 500;
+      font-weight: 600;
+      padding: 4px 8px;
+      background: #fff;
+      border-radius: 4px;
+      border: 1px solid #e9ecef;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .breadcrumb {
+        padding: 10px 12px;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .breadcrumb .separator {
+        margin: 0 6px;
+      }
     }
   </style>
 </head>
@@ -124,60 +147,58 @@
 
   <div class="container">
     <!-- 面包屑导航（首页不显示） -->
-    {% assign baseurl = site.baseurl | default: '' %}
-    {% assign url_without_base = page.url | remove: baseurl %}
-    {% if url_without_base != '' and url_without_base != '/' and url_without_base != '/index.html' %}
+    {%- assign baseurl = site.baseurl | default: '' -%}
+    {%- assign url_without_base = page.url | remove: baseurl -%}
+    {%- if url_without_base != '' and url_without_base != '/' and url_without_base != '/index.html' -%}
       <nav class="breadcrumb">
-        <!-- 首页链接 -->
         <a href="{{ site.baseurl }}/">首页</a>
-        
-        {% assign parts = url_without_base | split: '/' %}
-        {% assign path_sofar = '' %}
-        {% for part in parts %}
-          {% if part == '' %}{% continue %}{% endif %}
-          {% assign path_sofar = path_sofar | append: '/' | append: part %}
-          {% if forloop.last %}
-            <!-- 最后一部分，当前页面 -->
+        {%- assign parts = url_without_base | split: '/' -%}
+        {%- assign path_sofar = '' -%}
+        {%- for part in parts -%}
+          {%- if part == '' -%}{%- continue -%}{%- endif -%}
+          {%- assign path_sofar = path_sofar | append: '/' | append: part -%}
+          {%- if forloop.last -%}
+            <!-- 当前页面 -->
             <span class="separator">›</span>
             <span class="current">
-              {% if part contains '.html' %}
+              {%- if part contains '.html' -%}
                 {{ page.title | default: part | replace: '.html', '' | replace: '-', ' ' | capitalize }}
-              {% else %}
-                {% case part %}
-                  {% when 'microservices' %}微服务架构
-                  {% when 'database' %}数据库
-                  {% when 'middleware' %}中间件
-                  {% when 'projects' %}项目实战
-                  {% when 'jvm' %}JVM 原理
-                  {% when 'algorithm' %}算法
-                  {% when 'design-patterns' %}设计模式
-                  {% when 'java-core' %}Java 核心基础
-                  {% when 'spring' %}Spring 框架
-                  {% else %}{{ part | replace: '-', ' ' | capitalize }}
-                {% endcase %}
-              {% endif %}
+              {%- else -%}
+                {%- case part -%}
+                  {%- when 'microservices' -%}微服务架构
+                  {%- when 'database' -%}数据库
+                  {%- when 'middleware' -%}中间件
+                  {%- when 'projects' -%}项目实战
+                  {%- when 'jvm' -%}JVM 原理
+                  {%- when 'algorithm' -%}算法
+                  {%- when 'design-patterns' -%}设计模式
+                  {%- when 'java-core' -%}Java 核心基础
+                  {%- when 'spring' -%}Spring 框架
+                  {%- else -%}{{ part | replace: '-', ' ' | capitalize }}
+                {%- endcase -%}
+              {%- endif -%}
             </span>
-          {% else %}
+          {%- else -%}
             <!-- 中间目录 -->
             <span class="separator">›</span>
-            {% assign display_name = part %}
-            {% case part %}
-              {% when 'microservices' %}{% assign display_name = '微服务架构' %}
-              {% when 'database' %}{% assign display_name = '数据库' %}
-              {% when 'middleware' %}{% assign display_name = '中间件' %}
-              {% when 'projects' %}{% assign display_name = '项目实战' %}
-              {% when 'jvm' %}{% assign display_name = 'JVM 原理' %}
-              {% when 'algorithm' %}{% assign display_name = '算法' %}
-              {% when 'design-patterns' %}{% assign display_name = '设计模式' %}
-              {% when 'java-core' %}{% assign display_name = 'Java 核心基础' %}
-              {% when 'spring' %}{% assign display_name = 'Spring 框架' %}
-              {% else %}{% assign display_name = part | replace: '-', ' ' | capitalize %}
-            {% endcase %}
+            {%- assign display_name = part -%}
+            {%- case part -%}
+              {%- when 'microservices' -%}{%- assign display_name = '微服务架构' -%}
+              {%- when 'database' -%}{%- assign display_name = '数据库' -%}
+              {%- when 'middleware' -%}{%- assign display_name = '中间件' -%}
+              {%- when 'projects' -%}{%- assign display_name = '项目实战' -%}
+              {%- when 'jvm' -%}{%- assign display_name = 'JVM 原理' -%}
+              {%- when 'algorithm' -%}{%- assign display_name = '算法' -%}
+              {%- when 'design-patterns' -%}{%- assign display_name = '设计模式' -%}
+              {%- when 'java-core' -%}{%- assign display_name = 'Java 核心基础' -%}
+              {%- when 'spring' -%}{%- assign display_name = 'Spring 框架' -%}
+              {%- else -%}{%- assign display_name = part | replace: '-', ' ' | capitalize -%}
+            {%- endcase -%}
             <a href="{{ site.baseurl }}{{ path_sofar }}/">{{ display_name }}</a>
-          {% endif %}
-        {% endfor %}
+          {%- endif -%}
+        {%- endfor -%}
       </nav>
-    {% endif %}
+    {%- endif -%}
     
     {{ content }}
   </div>
