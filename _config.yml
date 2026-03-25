@@ -4,9 +4,14 @@ description: 一份系统、全面的 Java 后端开发面试指南
 url: "https://zyy.github.io"
 baseurl: "/java-backend-interview"
 
-# 禁用 Jekyll 主题，使用自定义布局
+# 完全禁用 Jekyll 主题和插件
 theme: null
 remote_theme: null
+plugins: []
+safe: false
+
+# 布局目录设置 - 布局文件位于 docs/_layouts
+layouts_dir: docs/_layouts
 
 # Markdown 设置
 markdown: kramdown
@@ -14,18 +19,16 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# 默认布局
-default_layout: default
+# 默认布局 - 确保所有页面使用自定义布局
+defaults:
+  - scope:
+      path: "docs"  # docs 目录下所有文件
+    values:
+      layout: default
+  - scope:
+      path: ""  # 所有文件
+    values:
+      layout: default
 
 # 排除文件
-exclude:
-  - README.md
-  - LICENSE
-  - Gemfile
-  - Gemfile.lock
-
-# 包含文件
-include:
-  - _layouts
-  - search_index.json
-  - docs/search-bar.js
+exclude: []
