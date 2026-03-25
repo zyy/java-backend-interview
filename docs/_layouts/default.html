@@ -88,6 +88,29 @@
         width: 100%;
       }
     }
+    /* 面包屑导航样式 */
+    .breadcrumb {
+      margin-bottom: 20px;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #666;
+      border-bottom: 1px solid #eee;
+    }
+    .breadcrumb a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumb .separator {
+      margin: 0 5px;
+      color: #999;
+    }
+    .breadcrumb .current {
+      color: #24292e;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -100,6 +123,81 @@
   </div>
 
   <div class="container">
+    <!-- 面包屑导航 -->
+    <nav class="breadcrumb">
+      {% assign baseurl = site.baseurl | default: '' %}
+      {% assign relative_path = page.url | remove: baseurl %}
+      
+      <!-- 首页链接 -->
+      <a href="{{ site.baseurl }}/">首页</a>
+      
+      {% if relative_path != '' and relative_path != '/' and relative_path != '/index.html' %}
+        <!-- 非首页，显示层级 -->
+        {% assign parts = relative_path | split: '/' %}
+        {% assign filtered_parts = '' | split: '' %}
+        
+        <!-- 过滤空部分和index.html -->
+        {% for part in parts %}
+          {% if part != '' and part != 'index.html' %}
+            {% assign filtered_parts = filtered_parts | push: part %}
+          {% endif %}
+        {% endfor %}
+        
+        {% assign current_path = '' %}
+        {% for part in filtered_parts %}
+          {% assign current_path = current_path | append: '/' | append: part %}
+          
+          {% if forloop.last %}
+            <!-- 最后一部分：当前页面 -->
+            <span class="separator">›</span>
+            <span class="current">
+              {% if part contains '.html' %}
+                <!-- 内容页面：使用页面标题 -->
+                {{ page.title | default: part | replace: '.html', '' | replace: '-', ' ' | capitalize }}
+              {% else %}
+                <!-- 目录页面：使用映射名称 -->
+                {% case part %}
+                  {% when 'microservices' %}微服务架构
+                  {% when 'database' %}数据库
+                  {% when 'middleware' %}中间件
+                  {% when 'projects' %}项目实战
+                  {% when 'jvm' %}JVM 原理
+                  {% when 'algorithm' %}算法
+                  {% when 'design-patterns' %}设计模式
+                  {% when 'java-core' %}Java 核心基础
+                  {% when 'spring' %}Spring 框架
+                  {% else %}{{ part | replace: '-', ' ' | capitalize }}
+                {% endcase %}
+              {% endif %}
+            </span>
+          {% else %}
+            <!-- 中间目录：可点击链接 -->
+            <span class="separator">›</span>
+            {% assign folder_display_name = part %}
+            {% case part %}
+              {% when 'microservices' %}{% assign folder_display_name = '微服务架构' %}
+              {% when 'database' %}{% assign folder_display_name = '数据库' %}
+              {% when 'middleware' %}{% assign folder_display_name = '中间件' %}
+              {% when 'projects' %}{% assign folder_display_name = '项目实战' %}
+              {% when 'jvm' %}{% assign folder_display_name = 'JVM 原理' %}
+              {% when 'algorithm' %}{% assign folder_display_name = '算法' %}
+              {% when 'design-patterns' %}{% assign folder_display_name = '设计模式' %}
+              {% when 'java-core' %}{% assign folder_display_name = 'Java 核心基础' %}
+              {% when 'spring' %}{% assign folder_display_name = 'Spring 框架' %}
+              {% else %}{% assign folder_display_name = part | replace: '-', ' ' | capitalize %}
+            {% endcase %}
+            
+            {% if part contains '.html' %}
+              <!-- 这种情况不应该发生，因为中间部分不应该有.html -->
+              <a href="{{ site.baseurl }}{{ current_path }}">{{ folder_display_name }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ current_path }}/">{{ folder_display_name }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </nav>
+    
     {{ content }}
   </div>
 
