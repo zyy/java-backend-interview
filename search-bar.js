@@ -93,20 +93,26 @@ class SearchBar {
   
   async loadIndex() {
     try {
-      // 尝试多种路径
+      // 尝试多种路径（考虑GitHub Pages的baseurl）
       const paths = [
-        '/search_index.json',
-        'search_index.json',
-        '/java-backend-interview/search_index.json',
-        '../search_index.json',
-        'docs/search_index.json'
+        '/java-backend-interview/docs/search_index.json',  // 带baseurl的绝对路径
+        '/docs/search_index.json',      // 绝对路径（如果部署在根目录）
+        'docs/search_index.json',       // 相对路径
+        '../docs/search_index.json',    // 上一级目录
+        './docs/search_index.json',     // 当前目录下的docs
+        '/search_index.json',           // 根目录（备用）
+        'search_index.json',            // 当前目录
+        '/java-backend-interview/search_index.json'  // baseurl根目录
       ];
       
       let response;
       for (const path of paths) {
         try {
           response = await fetch(path);
-          if (response.ok) break;
+          if (response.ok) {
+            console.log('搜索索引加载成功，路径:', path);
+            break;
+          }
         } catch (e) {
           // 继续尝试下一个路径
         }

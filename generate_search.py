@@ -46,13 +46,15 @@ def process_md_files(docs_dir='docs'):
             with open(path, 'r', encoding='utf-8') as f:
                 content = f.read()
             title = extract_title(content) or file.replace('.md', '').replace('-', ' ').title()
-            # 生成URL
+            # 生成URL - GitHub Pages格式：去掉.md后缀
             rel_path = os.path.relpath(path, docs_dir)
-            url = '/' + rel_path.replace('\\', '/').replace('.md', '.html')
+            url = '/' + rel_path.replace('\\', '/').replace('.md', '')
             if file == 'index.md':
-                dir_url = os.path.dirname(url)
-                if dir_url != '/':
-                    url = dir_url + '/'
+                # 目录索引页面，确保以斜杠结尾
+                if url.endswith('/index'):
+                    url = url[:-5]  # 去掉'/index'
+                if url != '/':
+                    url = url + '/'
             # 清理内容
             clean = clean_markdown(content)
             # 截取前500字符作为描述

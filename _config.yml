@@ -2,6 +2,7 @@
 title: Java 后端面试资料库
 description: 一份系统、全面的 Java 后端开发面试指南
 url: "https://zyy.github.io"
+baseurl: "/java-backend-interview"
 
 # Markdown 设置
 markdown: kramdown
