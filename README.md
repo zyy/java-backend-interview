@@ -9,15 +9,15 @@
 
 | 模块 | 描述 | 状态 |
 |------|------|------|
-| [Java 核心](./docs/java-core/) | 基础语法、集合、并发、IO | 18 篇 |
-| [JVM 原理](./docs/jvm/) | 内存模型、垃圾回收、调优 | 14 篇 |
-| [Spring 框架](./docs/spring/) | Spring Boot、Spring Cloud | 14 篇 |
-| [数据库](./docs/database/) | MySQL、索引优化、事务 | 11 篇 |
+| [Java 核心](./docs/java-core/) | 基础语法、集合、并发、IO | 17 篇 |
+| [JVM 原理](./docs/jvm/) | 内存模型、垃圾回收、调优 | 13 篇 |
+| [Spring 框架](./docs/spring/) | Spring Boot、Spring Cloud | 15 篇 |
+| [数据库](./docs/database/) | MySQL、索引优化、事务 | 14 篇 |
 | [中间件](./docs/middleware/) | Redis、RocketMQ、Kafka | 18 篇 |
-| [微服务](./docs/microservices/) | 架构设计、分布式理论 | 12 篇 |
+| [微服务](./docs/microservices/) | 架构设计、分布式理论 | 13 篇 |
 | [设计模式](./docs/design-patterns/) | 常用模式与实战应用 | 10 篇 |
 | [算法](./docs/algorithm/) | LeetCode 精选、手写代码 | 15 篇 |
-| [项目实战](./docs/projects/) | 真实项目分析与优化 | 6 篇 |
+| [项目实战](./docs/projects/) | 真实项目分析与优化 | 14 篇 |
 
 ## 🚀 快速开始
 

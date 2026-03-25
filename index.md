@@ -84,11 +84,11 @@ title: Java 后端面试资料库
 
 <div class="stats">
   <div class="stat">
-    <div class="stat-number">33+</div>
+    <div class="stat-number">9+</div>
     <div class="stat-label">面试专题</div>
   </div>
   <div class="stat">
-    <div class="stat-number">100+</div>
+    <div class="stat-number">129+</div>
     <div class="stat-label">高频面试题</div>
   </div>
   <div class="stat">
@@ -97,6 +97,10 @@ title: Java 后端面试资料库
   </div>
 </div>
 
+## 🔍 全文搜索
+
+我们提供了全文搜索功能，可以快速查找面试题中的内容。 [点击进入搜索页面](docs/search.html)
+
 ## 🚀 快速导航
 
 <div class="cards">
@@ -104,49 +108,49 @@ title: Java 后端面试资料库
 <a class="card" href="{{ site.baseurl }}java-core/">
   <h3>☕ Java 核心</h3>
   <p>HashMap、线程池、CAS/AQS、并发编程、IO/NIO</p>
-  <span class="badge">10 篇</span>
+  <span class="badge">17 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}jvm/">
   <h3>⚙️ JVM 原理</h3>
   <p>内存模型、垃圾回收、类加载机制，调优</p>
-  <span class="badge">2 篇</span>
+  <span class="badge">13 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}spring/">
   <h3>🌱 Spring 框架</h3>
   <p>IoC/AOP、自动装配、循环依赖、事务</p>
-  <span class="badge">6 篇</span>
+  <span class="badge">15 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}database/">
   <h3>🗄️ 数据库</h3>
   <p>索引原理、事务隔离、MVCC、锁机制</p>
-  <span class="badge">5 篇</span>
+  <span class="badge">14 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}middleware/">
   <h3>🔧 中间件</h3>
   <p>Redis、MQ、Kafka、缓存问题</p>
-  <span class="badge">5 篇</span>
+  <span class="badge">18 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}design-patterns/">
   <h3>🎨 设计模式</h3>
   <p>单例、工厂、策略、观察者、代理</p>
-  <span class="badge">2 篇</span>
+  <span class="badge">10 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}algorithm/">
   <h3>🧮 算法</h3>
   <p>链表、树、排序、查找、动态规划</p>
-  <span class="badge">3 篇</span>
+  <span class="badge">15 篇</span>
 </a>
 
 <a class="card" href="{{ site.baseurl }}microservices/">
   <h3>🏗️ 微服务</h3>
   <p>分布式、CAP/BASE、服务治理</p>
-  <span class="badge">建设ing</span>
+  <span class="badge">13 篇</span>
 </a>
 
 </div>
