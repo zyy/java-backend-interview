@@ -6,10 +6,10 @@
 
 ### 1. Redis ⭐⭐⭐
 - [数据类型与应用场景](./redis-data-types.md)
-- [持久化机制](./redis-persistence.md)
+- [持久化与过期策略](./redis-persistence.md) ⭐⭐⭐
+- [缓存穿透、击穿、雪崩](./cache-problems.md) ⭐⭐⭐
 - [主从复制与哨兵](./redis-replication.md)
 - [Cluster 集群](./redis-cluster.md)
-- [缓存问题解决方案](./cache-problems.md)
 - [分布式锁实现](./distributed-lock.md)
 
 ### 2. 消息队列 ⭐⭐⭐
@@ -28,8 +28,8 @@
 ## 🎯 面试高频题
 
 1. **Redis 为什么这么快？**
-2. **缓存穿透、击穿、雪崩的解决方案？**
-3. **Redis 和数据库如何保证一致性？**
+2. **[什么是缓存穿透、击穿、雪崩？如何解决？](./cache-problems.md)**
+3. **[Redis 的持久化方式有哪些？过期策略是什么？](./redis-persistence.md)**
 4. **RocketMQ 的事务消息原理？**
 5. **Kafka 如何保证消息不丢失？**
 

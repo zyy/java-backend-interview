@@ -10,7 +10,7 @@
 - [内存分配策略](./memory-allocation.md)
 
 ### 2. 垃圾回收 ⭐⭐⭐
-- [垃圾回收算法](./gc-algorithms.md)
+- [垃圾回收算法详解](./gc-algorithms.md) ⭐⭐⭐
 - [G1、ZGC、Shenandoah](./modern-gc.md)
 - [GC 调优实战](./gc-tuning.md)
 
@@ -27,7 +27,7 @@
 ## 🎯 面试高频题
 
 1. **JVM 内存区域如何划分？各区域作用？**
-2. **如何判断对象是否可回收？**
+2. **[垃圾回收算法有哪些？各有什么优缺点？](./gc-algorithms.md)**
 3. **CMS 和 G1 的区别？**
 4. **类加载的双亲委派模型是什么？**
 5. **线上出现 OOM 如何排查？**
