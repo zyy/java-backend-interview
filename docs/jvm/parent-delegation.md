@@ -267,13 +267,31 @@ public class SPIDemo {
 
 ## 📖 面试真题
 
-### Q1: 双亲委派模型的好处？
+### Q1: 类加载的双亲委派模型是什么？
+
+**答：** 双亲委派模型是 Java 类加载机制的核心原则，其工作流程如下：
+
+1. **委派流程**：当一个类加载器收到类加载请求时，它首先不会自己尝试加载，而是将这个请求委托给父类加载器去完成。
+2. **层级传递**：每个类加载器都如此处理，请求最终会传送到最顶层的启动类加载器（Bootstrap ClassLoader）。
+3. **检查加载**：如果父类加载器可以完成加载，就成功返回；只有当父类加载器无法完成加载时，子加载器才会尝试自己加载。
+
+**类加载器层级**：
+- **Bootstrap ClassLoader**（启动类加载器）：加载 `JAVA_HOME/lib` 下的核心类库。
+- **Extension ClassLoader**（扩展类加载器）：加载 `JAVA_HOME/lib/ext` 下的扩展类。
+- **Application ClassLoader**（应用类加载器）：加载 classpath 下的应用类。
+- **Custom ClassLoader**（自定义类加载器）：用户自定义的类加载器。
+
+**示例**：加载 `java.lang.String` 时，`AppClassLoader` 会委托给 `Extension ClassLoader`，再委托给 `Bootstrap ClassLoader`，由 `Bootstrap` 加载并返回。
+
+**源码体现**：`ClassLoader.loadClass()` 方法中先调用 `parent.loadClass()`，如果抛出 `ClassNotFoundException` 再调用自己的 `findClass()`。
+
+### Q2: 双亲委派模型的好处？
 
 **答：** 
 1. 避免类的重复加载：父加载器已加载，子加载器不再加载
 2. 保护核心类安全：防止用户自定义同名类替换 JDK 类
 
-### Q2: 如何自定义类加载器？
+### Q3: 如何自定义类加载器？
 
 **答：** 
 1. 继承 ClassLoader 类
@@ -281,7 +299,7 @@ public class SPIDemo {
 3. 或重写 loadClass() 方法（打破双亲委派）
 4. 读取 .class 文件，调用 defineClass() 定义类
 
-### Q3: 为什么 JDBC 需要打破双亲委派？
+### Q4: 为什么 JDBC 需要打破双亲委派？
 
 **答：** 
 JDBC 接口在 java.sql 包中，由 Bootstrap 加载。MySQL 等驱动在 classpath 中，由 AppClassLoader 加载。如果不打破双亲委派，AppClassLoader 无法加载实现类。通过设置线程上下文类加载器解决。
