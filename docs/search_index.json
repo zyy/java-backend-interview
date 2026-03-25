@@ -64,7 +64,7 @@
   },
   {
     "title": "微服务架构",
-    "url": "/java-backend-interview/microservices//",
+    "url": "/java-backend-interview/microservices/",
     "description": "--- layout: default title: 微服务架构 --- 微服务架构 > 微服务是大型系统的标配，架构师面试重点 📋 内容大纲 1. 分布式基础 ⭐⭐⭐ - CAP 与 BASE 理论 - 分布式一致性 - 分布式事务 2. 服务治理 ⭐⭐⭐ - 服务注册发现 - 配置中心 - 链路追踪 3. 高可用设计 ⭐⭐⭐ - 限流算法 - 熔断降级 - 负载均衡策略 4. 容器化与云原生 ⭐⭐ - Docker 基础 - Kubernetes 核心概念 - 服务网格 Istio 🎯 面试高频题 1. CAP 理论是什么？如何取舍？ 2. 分布式事务的解决方案有哪些？ 3. 限流的常见算法？ 4. 熔断和降级的区别？ 5. 服务网格解决了什么问题？ 📚 延伸阅读 - 微服务设计 - Kubernetes 官方文档",
     "category": "microservices",
     "content": "--- layout: default title: 微服务架构 --- 微服务架构 > 微服务是大型系统的标配，架构师面试重点 📋 内容大纲 1. 分布式基础 ⭐⭐⭐ - CAP 与 BASE 理论 - 分布式一致性 - 分布式事务 2. 服务治理 ⭐⭐⭐ - 服务注册发现 - 配置中心 - 链路追踪 3. 高可用设计 ⭐⭐⭐ - 限流算法 - 熔断降级 - 负载均衡策略 4. 容器化与云原生 ⭐⭐ - Docker 基础 - Kubernetes 核心概念 - 服务网格 Istio 🎯 面试高频题 1. CAP 理论是什么？如何取舍？ 2. 分布式事务的解决方案有哪些？ 3. 限流的常见算法？ 4. 熔断和降级的区别？ 5. 服务网格解决了什么问题？ 📚 延伸阅读 - 微服务设计 - Kubernetes 官方文档"
@@ -148,7 +148,7 @@
   },
   {
     "title": "中间件",
-    "url": "/java-backend-interview/middleware//",
+    "url": "/java-backend-interview/middleware/",
     "description": "--- layout: default title: 中间件 --- 中间件 > 中间件是构建高并发系统的基石 📋 内容大纲 1. Redis ⭐⭐⭐ - 数据类型与应用场景 - 持久化与过期策略 ⭐⭐⭐ - 缓存穿透、击穿、雪崩 ⭐⭐⭐ - 主从复制与哨兵 - Cluster 集群 - 分布式锁实现 2. 消息队列 ⭐⭐⭐ - 消息队列选型 - RocketMQ 架构 - Kafka 原理 - 消息可靠性保证 - 顺序消息与延迟消息 3. Elasticsearch ⭐⭐ - 倒排索引原理 - 分词与映射 - 搜索与聚合 - 性能优化 🎯 面试高频题 1. Redis 为什么这么快？ 2. 什么是缓存穿透、击穿、雪崩？如何解决？ 3. Redis 的持久化方式有哪些？过期策略是什么？ 4. RocketMQ 的事务消息原理？ 5. Kafka 如何保证消息不丢失？ 📚 延伸阅读 - Redis 官方文档 - RocketMQ 官方文档",
     "category": "middleware",
     "content": "--- layout: default title: 中间件 --- 中间件 > 中间件是构建高并发系统的基石 📋 内容大纲 1. Redis ⭐⭐⭐ - 数据类型与应用场景 - 持久化与过期策略 ⭐⭐⭐ - 缓存穿透、击穿、雪崩 ⭐⭐⭐ - 主从复制与哨兵 - Cluster 集群 - 分布式锁实现 2. 消息队列 ⭐⭐⭐ - 消息队列选型 - RocketMQ 架构 - Kafka 原理 - 消息可靠性保证 - 顺序消息与延迟消息 3. Elasticsearch ⭐⭐ - 倒排索引原理 - 分词与映射 - 搜索与聚合 - 性能优化 🎯 面试高频题 1. Redis 为什么这么快？ 2. 什么是缓存穿透、击穿、雪崩？如何解决？ 3. Redis 的持久化方式有哪些？过期策略是什么？ 4. RocketMQ 的事务消息原理？ 5. Kafka 如何保证消息不丢失？ 📚 延伸阅读 - Redis 官方文档 - RocketMQ 官方文档"
@@ -274,7 +274,7 @@
   },
   {
     "title": "数据库",
-    "url": "/java-backend-interview/database//",
+    "url": "/java-backend-interview/database/",
     "description": "--- layout: default title: 数据库 --- 数据库 > 数据库是后端开发的核心技能，面试重点考察 📋 内容大纲 1. MySQL 基础 ⭐ - 存储引擎对比 - 数据类型选择 - SQL 优化技巧 2. 索引原理 ⭐⭐⭐ - B+树索引原理 ⭐⭐⭐ - 索引失效场景 ⭐⭐⭐ - 覆盖索引与回表 3. 事务与锁 ⭐⭐⭐ - 事务 ACID 与 MVCC ⭐⭐⭐ - 隔离级别与问题 - 锁机制详解 ⭐⭐⭐ - 死锁分析与预防 4. 分库分表 ⭐⭐⭐ - 分片策略 - 分布式 ID - ShardingSphere 实战 🎯 面试高频题 1. InnoDB 和 MyISAM 的区别？ 2. B+树索引的原理？为什么不用 B 树？ 3. 什么情况下索引会失效？ 4. MVCC 如何实现读写不阻塞？ 5. MySQL 有哪些锁？如何避免死锁？ 📚 延伸阅读 - MySQL 官方文档 - 高性能 MySQL",
     "category": "database",
     "content": "--- layout: default title: 数据库 --- 数据库 > 数据库是后端开发的核心技能，面试重点考察 📋 内容大纲 1. MySQL 基础 ⭐ - 存储引擎对比 - 数据类型选择 - SQL 优化技巧 2. 索引原理 ⭐⭐⭐ - B+树索引原理 ⭐⭐⭐ - 索引失效场景 ⭐⭐⭐ - 覆盖索引与回表 3. 事务与锁 ⭐⭐⭐ - 事务 ACID 与 MVCC ⭐⭐⭐ - 隔离级别与问题 - 锁机制详解 ⭐⭐⭐ - 死锁分析与预防 4. 分库分表 ⭐⭐⭐ - 分片策略 - 分布式 ID - ShardingSphere 实战 🎯 面试高频题 1. InnoDB 和 MyISAM 的区别？ 2. B+树索引的原理？为什么不用 B 树？ 3. 什么情况下索引会失效？ 4. MVCC 如何实现读写不阻塞？ 5. MySQL 有哪些锁？如何避免死锁？ 📚 延伸阅读 - MySQL 官方文档 - 高性能 MySQL"
@@ -365,7 +365,7 @@
   },
   {
     "title": "项目实战",
-    "url": "/java-backend-interview/projects//",
+    "url": "/java-backend-interview/projects/",
     "description": "--- layout: default title: 项目实战 --- 项目实战 > 项目经验是面试的核心，要能清晰表达 📋 内容大纲 1. 项目介绍技巧 ⭐⭐⭐ - STAR 法则 - 技术亮点提炼 - 常见问题准备 2. 系统设计 ⭐⭐⭐ - 设计一个短链系统 - 设计一个秒杀系统 - 设计一个即时通讯系统 - 设计一个推荐系统 3. 性能优化案例 ⭐⭐⭐ - 接口性能优化 - 数据库优化实战 - JVM 调优案例 4. 线上问题排查 ⭐⭐⭐ - CPU 100% 排查 - 内存泄漏排查 - 接口超时排查 🎯 面试高频题 1. 介绍一个你最有成就感的项目 2. 项目中遇到的最大挑战是什么？ 3. 如何设计一个高并发系统？ 4. 线上出问题了怎么排查？ 📚 延伸阅读 - 系统设计面试",
     "category": "projects",
     "content": "--- layout: default title: 项目实战 --- 项目实战 > 项目经验是面试的核心，要能清晰表达 📋 内容大纲 1. 项目介绍技巧 ⭐⭐⭐ - STAR 法则 - 技术亮点提炼 - 常见问题准备 2. 系统设计 ⭐⭐⭐ - 设计一个短链系统 - 设计一个秒杀系统 - 设计一个即时通讯系统 - 设计一个推荐系统 3. 性能优化案例 ⭐⭐⭐ - 接口性能优化 - 数据库优化实战 - JVM 调优案例 4. 线上问题排查 ⭐⭐⭐ - CPU 100% 排查 - 内存泄漏排查 - 接口超时排查 🎯 面试高频题 1. 介绍一个你最有成就感的项目 2. 项目中遇到的最大挑战是什么？ 3. 如何设计一个高并发系统？ 4. 线上出问题了怎么排查？ 📚 延伸阅读 - 系统设计面试"
@@ -491,7 +491,7 @@
   },
   {
     "title": "JVM 原理",
-    "url": "/java-backend-interview/jvm//",
+    "url": "/java-backend-interview/jvm/",
     "description": "--- layout: default title: JVM 原理 --- JVM 原理 > JVM 是区分初级和高级 Java 开发者的关键知识点 📋 内容大纲 1. JVM 内存模型 ⭐⭐ - 运行时数据区 ⭐⭐ - 对象内存布局 - 内存分配策略 3. 类加载机制 ⭐⭐ - 类加载过程 ⭐⭐ - 双亲委派模型 - 打破双亲委派 2. 垃圾回收 ⭐⭐⭐ - 垃圾回收算法详解 ⭐⭐⭐ - G1、ZGC、Shenandoah - GC 调优实战 3. 类加载机制 ⭐⭐ - 类加载过程 - 双亲委派模型 - 打破双亲委派 4. 性能监控与调优 ⭐⭐⭐ - 常用监控工具 - 线上问题排查 - JVM 参数配置 🎯 面试高频题 1. JVM 内存区域如何划分？各区域作用？ 2. 垃圾回收算法有哪些？各有什么优缺点？ 3. CMS 和 G1 的区别？ 4. 类加载的双亲委派模型是什么？ 5. 线上出现 OOM 如何排查？ 📚 延伸阅读 - JVM 规范 - Java Performance",
     "category": "jvm",
     "content": "--- layout: default title: JVM 原理 --- JVM 原理 > JVM 是区分初级和高级 Java 开发者的关键知识点 📋 内容大纲 1. JVM 内存模型 ⭐⭐ - 运行时数据区 ⭐⭐ - 对象内存布局 - 内存分配策略 3. 类加载机制 ⭐⭐ - 类加载过程 ⭐⭐ - 双亲委派模型 - 打破双亲委派 2. 垃圾回收 ⭐⭐⭐ - 垃圾回收算法详解 ⭐⭐⭐ - G1、ZGC、Shenandoah - GC 调优实战 3. 类加载机制 ⭐⭐ - 类加载过程 - 双亲委派模型 - 打破双亲委派 4. 性能监控与调优 ⭐⭐⭐ - 常用监控工具 - 线上问题排查 - JVM 参数配置 🎯 面试高频题 1. JVM 内存区域如何划分？各区域作用？ 2. 垃圾回收算法有哪些？各有什么优缺点？ 3. CMS 和 G1 的区别？ 4. 类加载的双亲委派模型是什么？ 5. 线上出现 OOM 如何排查？ 📚 延伸阅读 - JVM 规范 - Java Performance"
@@ -561,7 +561,7 @@
   },
   {
     "title": "算法",
-    "url": "/java-backend-interview/algorithm//",
+    "url": "/java-backend-interview/algorithm/",
     "description": "--- layout: default title: 算法 --- 算法 > 算法是面试的硬通货，必须重视 📋 内容大纲 1. 基础算法 ⭐⭐ - 时间/空间复杂度分析 - 常见算法与数据结构 ⭐⭐⭐ - 排序算法 2. 数据结构 ⭐⭐⭐ - 数组与链表 - 栈与队列 - 树与二叉树 - 哈希表 - 图论基础 3. LeetCode 精选 ⭐⭐⭐ - 高频 100 题 - 剑指 Offer - 动态规划专题 4. 手写代码 ⭐⭐⭐ - 手写 LRU - 手写线程池 - 手写 RPC 框架 🎯 面试高频题 1. 反转链表 2. 两数之和 3. 最长无重复子串 4. 合并 K 个有序链表 5. 二叉树层序遍历 📚 刷题平台 - LeetCode 中国 - 牛客网",
     "category": "algorithm",
     "content": "--- layout: default title: 算法 --- 算法 > 算法是面试的硬通货，必须重视 📋 内容大纲 1. 基础算法 ⭐⭐ - 时间/空间复杂度分析 - 常见算法与数据结构 ⭐⭐⭐ - 排序算法 2. 数据结构 ⭐⭐⭐ - 数组与链表 - 栈与队列 - 树与二叉树 - 哈希表 - 图论基础 3. LeetCode 精选 ⭐⭐⭐ - 高频 100 题 - 剑指 Offer - 动态规划专题 4. 手写代码 ⭐⭐⭐ - 手写 LRU - 手写线程池 - 手写 RPC 框架 🎯 面试高频题 1. 反转链表 2. 两数之和 3. 最长无重复子串 4. 合并 K 个有序链表 5. 二叉树层序遍历 📚 刷题平台 - LeetCode 中国 - 牛客网"
@@ -631,7 +631,7 @@
   },
   {
     "title": "设计模式",
-    "url": "/java-backend-interview/design-patterns//",
+    "url": "/java-backend-interview/design-patterns/",
     "description": "--- layout: default title: 设计模式 --- 设计模式 > 设计模式体现代码设计能力，面试常考 📋 内容大纲 1. 创建型模式 ⭐⭐ - 单例、工厂、建造者模式 ⭐⭐ - 工厂模式 - 建造者模式 2. 结构型模式 ⭐⭐ - 代理模式 - 装饰器模式 - 适配器模式 3. 行为型模式 ⭐⭐⭐ - 策略、观察者、代理模式 ⭐⭐ - 责任链模式 4. 设计原则 ⭐⭐⭐ - SOLID 原则 - 设计模式实战应用 🎯 面试高频题 1. 单例模式的几种实现方式？线程安全的单例如何实现？ 2. JDK 中哪些用到了设计模式？ 3. Spring 中用到了哪些设计模式？ 4. 策略模式和代理模式的区别？ 📚 延伸阅读 - 设计模式：可复用面向对象软件的基础 - Head First 设计模式",
     "category": "design-patterns",
     "content": "--- layout: default title: 设计模式 --- 设计模式 > 设计模式体现代码设计能力，面试常考 📋 内容大纲 1. 创建型模式 ⭐⭐ - 单例、工厂、建造者模式 ⭐⭐ - 工厂模式 - 建造者模式 2. 结构型模式 ⭐⭐ - 代理模式 - 装饰器模式 - 适配器模式 3. 行为型模式 ⭐⭐⭐ - 策略、观察者、代理模式 ⭐⭐ - 责任链模式 4. 设计原则 ⭐⭐⭐ - SOLID 原则 - 设计模式实战应用 🎯 面试高频题 1. 单例模式的几种实现方式？线程安全的单例如何实现？ 2. JDK 中哪些用到了设计模式？ 3. Spring 中用到了哪些设计模式？ 4. 策略模式和代理模式的区别？ 📚 延伸阅读 - 设计模式：可复用面向对象软件的基础 - Head First 设计模式"
@@ -764,7 +764,7 @@
   },
   {
     "title": "Java 核心基础",
-    "url": "/java-backend-interview/java-core//",
+    "url": "/java-backend-interview/java-core/",
     "description": "--- layout: default title: Java 核心基础 --- Java 核心基础 > Java 基础是后端面试的重中之重，务必扎实掌握 📋 内容大纲 1. 基础语法 ⭐ - 数据类型与包装类 - String、StringBuilder、StringBuffer ⭐⭐ - equals 与 hashCode - 泛型机制 - 注解与反射 2. 集合框架 ⭐⭐ - ArrayList vs LinkedList ⭐⭐ - HashMap 原理详解 ⭐⭐⭐ - ConcurrentHashMap ⭐⭐⭐ - 其他集合类对比 3. 并发编程 ⭐⭐⭐ - 线程池核心参数详解 ⭐⭐⭐ - synchronized 与锁升级 ⭐⭐⭐ - volatile 与内存屏障 ⭐⭐⭐ - CAS 与 AQS 原理 ⭐⭐⭐ - ThreadLocal 原理与内存泄漏 ⭐⭐⭐ 4. IO/NIO ⭐⭐ - BIO、NIO、AIO 区别 ⭐⭐ - Netty 基础 🎯 面试高频题 1. HashMap 的 put 流程是怎样的？ 2. ConcurrentHashMap 如何保证线程安全？ 3...",
     "category": "java-core",
     "content": "--- layout: default title: Java 核心基础 --- Java 核心基础 > Java 基础是后端面试的重中之重，务必扎实掌握 📋 内容大纲 1. 基础语法 ⭐ - 数据类型与包装类 - String、StringBuilder、StringBuffer ⭐⭐ - equals 与 hashCode - 泛型机制 - 注解与反射 2. 集合框架 ⭐⭐ - ArrayList vs LinkedList ⭐⭐ - HashMap 原理详解 ⭐⭐⭐ - ConcurrentHashMap ⭐⭐⭐ - 其他集合类对比 3. 并发编程 ⭐⭐⭐ - 线程池核心参数详解 ⭐⭐⭐ - synchronized 与锁升级 ⭐⭐⭐ - volatile 与内存屏障 ⭐⭐⭐ - CAS 与 AQS 原理 ⭐⭐⭐ - ThreadLocal 原理与内存泄漏 ⭐⭐⭐ 4. IO/NIO ⭐⭐ - BIO、NIO、AIO 区别 ⭐⭐ - Netty 基础 🎯 面试高频题 1. HashMap 的 put 流程是怎样的？ 2. ConcurrentHashMap 如何保证线程安全？ 3. 线程池的核心参数有哪些？如何合理配置？ 4. String、StringBuilder、StringBuffer 的区别？ 5. synchronized 的锁升级过程？ 6. volatile 能保证原子性吗？为什么？ 7. ArrayList 和 LinkedList 的区别？ 8. ThreadLocal 为什么会内存泄漏？如何解决？ 9. CAS 和 AQS 的原理？ 10. BIO、NIO、AIO 的区别？ 📚 延伸阅读 - Java 官方文档 - 深入理解 Java 虚拟机"
@@ -862,7 +862,7 @@
   },
   {
     "title": "Spring 框架",
-    "url": "/java-backend-interview/spring//",
+    "url": "/java-backend-interview/spring/",
     "description": "--- layout: default title: Spring 框架 --- Spring 框架 > Spring 是 Java 后端开发的事实标准，面试必考 📋 内容大纲 1. Spring Core ⭐⭐ - IoC 与 AOP 原理 ⭐⭐⭐ - Bean 生命周期 ⭐⭐⭐ - 循环依赖与三级缓存 ⭐⭐⭐ 2. Spring Boot ⭐⭐ - 自动装配原理 ⭐⭐⭐ - Starter 机制 - 启动流程分析 3. Spring Cloud ⭐⭐⭐ - 服务注册与发现 - 负载均衡 - 熔断与限流 - 配置中心 - 网关设计 4. 事务管理 ⭐⭐⭐ - 事务传播机制 ⭐⭐⭐ - 事务隔离级别 - @Transactional 失效场景 🎯 面试高频题 1. Spring Bean 的生命周期？ 2. Spring 如何解决循环依赖？ 3. Spring IoC 和 AOP 的实现原理？ 4. Spring Boot 自动装配原理？ 5. Spring 事务传播机制有哪些？ 📚 延伸阅读 - Spring 官方文档 - Spring Boot 官方文档",
     "category": "spring",
     "content": "--- layout: default title: Spring 框架 --- Spring 框架 > Spring 是 Java 后端开发的事实标准，面试必考 📋 内容大纲 1. Spring Core ⭐⭐ - IoC 与 AOP 原理 ⭐⭐⭐ - Bean 生命周期 ⭐⭐⭐ - 循环依赖与三级缓存 ⭐⭐⭐ 2. Spring Boot ⭐⭐ - 自动装配原理 ⭐⭐⭐ - Starter 机制 - 启动流程分析 3. Spring Cloud ⭐⭐⭐ - 服务注册与发现 - 负载均衡 - 熔断与限流 - 配置中心 - 网关设计 4. 事务管理 ⭐⭐⭐ - 事务传播机制 ⭐⭐⭐ - 事务隔离级别 - @Transactional 失效场景 🎯 面试高频题 1. Spring Bean 的生命周期？ 2. Spring 如何解决循环依赖？ 3. Spring IoC 和 AOP 的实现原理？ 4. Spring Boot 自动装配原理？ 5. Spring 事务传播机制有哪些？ 📚 延伸阅读 - Spring 官方文档 - Spring Boot 官方文档"

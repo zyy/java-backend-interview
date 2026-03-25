@@ -53,7 +53,7 @@ def process_md_files(docs_dir='docs'):
                 # 目录索引页面，确保以斜杠结尾
                 if url.endswith('/index'):
                     url = url[:-5]  # 去掉'/index'
-                if url != '/java-backend-interview/':
+                if url != '/java-backend-interview/' and not url.endswith('/'):
                     url = url + '/'
             # 清理内容
             clean = clean_markdown(content)
