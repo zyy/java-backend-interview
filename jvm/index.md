@@ -5,9 +5,14 @@
 ## 📋 内容大纲
 
 ### 1. JVM 内存模型 ⭐⭐
-- [运行时数据区](./runtime-data-areas.md)
+- [运行时数据区](./runtime-data-areas.md) ⭐⭐
 - [对象内存布局](./object-memory-layout.md)
 - [内存分配策略](./memory-allocation.md)
+
+### 3. 类加载机制 ⭐⭐
+- [类加载过程](./class-loading-process.md) ⭐⭐
+- [双亲委派模型](./parent-delegation.md)
+- [打破双亲委派](./break-delegation.md)
 
 ### 2. 垃圾回收 ⭐⭐⭐
 - [垃圾回收算法详解](./gc-algorithms.md) ⭐⭐⭐
