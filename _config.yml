@@ -4,6 +4,10 @@ description: 一份系统、全面的 Java 后端开发面试指南
 url: "https://zyy.github.io"
 baseurl: "/java-backend-interview"
 
+# 禁用 Jekyll 主题，使用自定义布局
+theme: null
+remote_theme: null
+
 # Markdown 设置
 markdown: kramdown
 kramdown:
@@ -17,3 +21,11 @@ default_layout: default
 exclude:
   - README.md
   - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+# 包含文件
+include:
+  - _layouts
+  - search_index.json
+  - docs/search-bar.js

@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | Java 后端面试资料库</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
   <style>
-    /* 全局搜索栏样式 */
+    /* 搜索栏样式 */
     .search-bar-container {
       position: fixed;
       top: 10px;
       right: 20px;
       z-index: 1000;
     }
-    
     .search-box {
       position: relative;
       width: 300px;
     }
-    
     .search-input {
       width: 100%;
       padding: 10px 15px;
@@ -25,17 +23,13 @@
       border: 2px solid #ddd;
       border-radius: 25px;
       outline: none;
-      transition: all 0.3s;
       background: white;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    
     .search-input:focus {
       border-color: #667eea;
       box-shadow: 0 2px 15px rgba(102, 126, 234, 0.3);
-      width: 400px;
     }
-    
     .search-results {
       position: absolute;
       top: 100%;
@@ -49,78 +43,47 @@
       display: none;
       margin-top: 5px;
     }
-    
     .search-results.active {
       display: block;
     }
-    
     .search-result-item {
       padding: 15px;
       border-bottom: 1px solid #eee;
       cursor: pointer;
-      transition: background 0.2s;
     }
-    
     .search-result-item:hover {
       background: #f8f9fa;
     }
-    
     .search-result-title {
       font-weight: 600;
       color: #667eea;
       margin-bottom: 5px;
       font-size: 14px;
     }
-    
     .search-result-description {
       color: #666;
       font-size: 12px;
       margin-bottom: 5px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
     }
-    
     .search-result-category {
-      display: inline-block;
       background: #e9ecef;
       color: #495057;
       padding: 2px 6px;
       border-radius: 3px;
       font-size: 11px;
     }
-    
     .search-no-results {
       padding: 20px;
       text-align: center;
       color: #999;
     }
-    
-    .search-loading {
-      padding: 20px;
-      text-align: center;
-      color: #667eea;
-    }
-    
-    /* 移动端适配 */
     @media (max-width: 768px) {
       .search-bar-container {
         top: 5px;
         right: 10px;
         left: 10px;
       }
-      
       .search-box {
-        width: 100%;
-      }
-      
-      .search-input {
-        width: 100%;
-      }
-      
-      .search-input:focus {
         width: 100%;
       }
     }
@@ -134,36 +97,29 @@
       <div class="search-results"></div>
     </div>
   </div>
-  
-  {{ content }}
-  
+
+  <div class="container">
+    {{ content }}
+  </div>
+
   <script>
-    // 内联搜索栏功能
+    // 搜索功能
     (function() {
-      'use strict';
-      
       const searchBar = document.querySelector('.search-bar-container');
-      if (!searchBar) return;
-      
       const input = searchBar.querySelector('.search-input');
       const results = searchBar.querySelector('.search-results');
-      if (!input || !results) return;
       
       let searchIndex = [];
       let timeout;
       
-      // 加载搜索索引
+      // 加载索引
       async function loadIndex() {
         try {
           const paths = [
             '/java-backend-interview/search_index.json',
             '/search_index.json',
             'search_index.json',
-            '../search_index.json',
-            './search_index.json',
-            '/java-backend-interview/docs/search_index.json',
-            'docs/search_index.json',
-            '../docs/search_index.json'
+            '../search_index.json'
           ];
           
           let response;
@@ -176,14 +132,13 @@
           
           if (response && response.ok) {
             searchIndex = await response.json();
-            console.log('搜索索引加载成功:', searchIndex.length, '条记录');
           }
         } catch (error) {
           console.error('加载搜索索引失败:', error);
         }
       }
       
-      // 搜索功能
+      // 搜索
       function search(query) {
         query = query.trim().toLowerCase();
         if (!query) {
@@ -197,44 +152,26 @@
           return;
         }
         
-        const startTime = performance.now();
         const matches = searchIndex.filter(item => {
           const text = (item.title + ' ' + item.description + ' ' + item.content).toLowerCase();
           return text.includes(query);
         });
-        const endTime = performance.now();
         
         if (matches.length === 0) {
-          results.innerHTML = `
-            <div class="search-no-results">
-              没有找到"${query}"的相关结果<br>
-              <small>耗时 ${(endTime - startTime).toFixed(2)}ms</small>
-            </div>
-          `;
+          results.innerHTML = '<div class="search-no-results">没有找到相关结果</div>';
         } else {
           let html = '';
           matches.slice(0, 20).forEach(item => {
-            const title = highlightText(item.title, query);
-            const desc = highlightText(item.description, query);
-            
             html += `
               <div class="search-result-item" data-url="${item.url}">
-                <div class="search-result-title">${title}</div>
-                <div class="search-result-description">${desc}</div>
+                <div class="search-result-title">${item.title}</div>
+                <div class="search-result-description">${item.description}</div>
                 <span class="search-result-category">${item.category}</span>
               </div>
             `;
           });
-          
-          if (matches.length > 20) {
-            html += `<div class="search-no-results">找到 ${matches.length} 条结果，显示前 20 条</div>`;
-          } else {
-            html += `<div class="search-no-results">找到 ${matches.length} 条结果，耗时 ${(endTime - startTime).toFixed(2)}ms</div>`;
-          }
-          
           results.innerHTML = html;
           
-          // 绑定点击事件
           results.querySelectorAll('.search-result-item').forEach(item => {
             item.addEventListener('click', () => {
               window.location.href = item.getAttribute('data-url');
@@ -243,12 +180,6 @@
         }
         
         results.classList.add('active');
-      }
-      
-      function highlightText(text, query) {
-        if (!text || !query) return text;
-        const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<mark>$1</mark>');
       }
       
       // 事件绑定
@@ -266,40 +197,6 @@
           results.classList.remove('active');
         }
       });
-      
-      // 键盘导航
-      input.addEventListener('keydown', (e) => {
-        const items = results.querySelectorAll('.search-result-item');
-        if (!items.length) return;
-        
-        const currentActive = results.querySelector('.search-result-item.active');
-        let index = currentActive ? Array.from(items).indexOf(currentActive) : -1;
-        
-        if (e.key === 'ArrowDown') {
-          e.preventDefault();
-          index = (index + 1) % items.length;
-          highlightItem(items[index]);
-        } else if (e.key === 'ArrowUp') {
-          e.preventDefault();
-          index = (index - 1 + items.length) % items.length;
-          highlightItem(items[index]);
-        } else if (e.key === 'Enter' && currentActive) {
-          e.preventDefault();
-          currentActive.click();
-        } else if (e.key === 'Escape') {
-          results.classList.remove('active');
-          input.blur();
-        }
-      });
-      
-      function highlightItem(item) {
-        const items = results.querySelectorAll('.search-result-item');
-        items.forEach(i => i.classList.remove('active'));
-        if (item) {
-          item.classList.add('active');
-          item.scrollIntoView({ block: 'nearest' });
-        }
-      }
       
       // 初始化
       loadIndex();
