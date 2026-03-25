@@ -6,8 +6,8 @@
 
 ### 1. Spring Core ⭐⭐
 - [IoC 与 AOP 原理](./ioc-aop.md) ⭐⭐⭐
-- [Bean 生命周期](./bean-lifecycle.md)
-- [循环依赖解决](./circular-dependency.md)
+- [Bean 生命周期](./bean-lifecycle.md) ⭐⭐⭐
+- [循环依赖与三级缓存](./circular-dependency.md) ⭐⭐⭐
 
 ### 2. Spring Boot ⭐⭐
 - [自动装配原理](./auto-configuration.md) ⭐⭐⭐
@@ -22,17 +22,17 @@
 - [网关设计](./gateway.md)
 
 ### 4. 事务管理 ⭐⭐⭐
-- [事务传播机制](./transaction-propagation.md)
+- [事务传播机制](./transaction-propagation.md) ⭐⭐⭐
 - [事务隔离级别](./transaction-isolation.md)
 - [@Transactional 失效场景](./transactional-pitfalls.md)
 
 ## 🎯 面试高频题
 
-1. **Spring Bean 的生命周期？**
-2. **Spring 如何解决循环依赖？**
+1. **[Spring Bean 的生命周期？](./bean-lifecycle.md)**
+2. **[Spring 如何解决循环依赖？](./circular-dependency.md)**
 3. **[Spring IoC 和 AOP 的实现原理？](./ioc-aop.md)**
 4. **[Spring Boot 自动装配原理？](./auto-configuration.md)**
-5. **分布式事务的解决方案？**
+5. **[Spring 事务传播机制有哪些？](./transaction-propagation.md)**
 
 ## 📚 延伸阅读
 
