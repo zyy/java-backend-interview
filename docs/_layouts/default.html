@@ -123,14 +123,14 @@
   </div>
 
   <div class="container">
-    <!-- 面包屑导航 -->
-    <nav class="breadcrumb">
-      {% assign baseurl = site.baseurl | default: '' %}
-      <!-- 首页链接 -->
-      <a href="{{ site.baseurl }}/">首页</a>
-      
-      {% assign url_without_base = page.url | remove: baseurl %}
-      {% if url_without_base != '' and url_without_base != '/' %}
+    <!-- 面包屑导航（首页不显示） -->
+    {% assign baseurl = site.baseurl | default: '' %}
+    {% assign url_without_base = page.url | remove: baseurl %}
+    {% if url_without_base != '' and url_without_base != '/' and url_without_base != '/index.html' %}
+      <nav class="breadcrumb">
+        <!-- 首页链接 -->
+        <a href="{{ site.baseurl }}/">首页</a>
+        
         {% assign parts = url_without_base | split: '/' %}
         {% assign path_sofar = '' %}
         {% for part in parts %}
@@ -176,8 +176,8 @@
             <a href="{{ site.baseurl }}{{ path_sofar }}/">{{ display_name }}</a>
           {% endif %}
         {% endfor %}
-      {% endif %}
-    </nav>
+      </nav>
+    {% endif %}
     
     {{ content }}
   </div>
