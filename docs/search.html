@@ -109,14 +109,14 @@
         
         <div id="results"></div>
         
-        <a href="index.html" class="back-link">← 返回首页</a>
+        <a href="/" class="back-link">← 返回首页</a>
     </div>
 
     <script>
         let searchIndex = [];
         
         // 加载索引文件
-        fetch('search_index.json')
+        fetch('/search_index.json')
             .then(response => response.json())
             .then(data => {
                 searchIndex = data;
