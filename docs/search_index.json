@@ -1,63 +1,63 @@
 [
   {
     "title": "Kubernetes 核心概念",
-    "url": "/java-backend-interview/microservices/kubernetes",
+    "url": "/java-backend-interview/microservices/kubernetes.html",
     "description": "--- layout: default title: Kubernetes 核心概念 --- Kubernetes 核心概念 > 容器编排平台 🎯 面试重点 - Kubernetes 架构 - 核心资源 📖 架构 📖 核心资源 📖 面试真题 Q1: K8s 的作用？ 答： 容器编排、自动调度、弹性伸缩。 --- ⭐ 重点：K8s 是云原生的核心",
     "category": "microservices",
     "content": "--- layout: default title: Kubernetes 核心概念 --- Kubernetes 核心概念 > 容器编排平台 🎯 面试重点 - Kubernetes 架构 - 核心资源 📖 架构 📖 核心资源 📖 面试真题 Q1: K8s 的作用？ 答： 容器编排、自动调度、弹性伸缩。 --- ⭐ 重点：K8s 是云原生的核心"
   },
   {
     "title": "CAP 理论与 BASE 理论",
-    "url": "/java-backend-interview/microservices/cap-base",
+    "url": "/java-backend-interview/microservices/cap-base.html",
     "description": "--- layout: default title: CAP 理论与 BASE 理论 --- CAP 理论与 BASE 理论 > 分布式系统的基石，面试必问 🎯 面试重点 - CAP 理论的理解和三选二的误区 - CAP 在不同场景下的选择 - BASE 理论的核心思想 - 实际系统中的权衡 📖 CAP 理论 什么是 CAP？ CAP 三选二的误区 各组合的典型系统 实际案例分析 📖 BASE 理论 什么是 BASE？ BASE vs CAP BASE 实践模式 📖 分布式事务方案 2PC（两阶段提交） TCC（补偿事务） 可靠消息最终一致 📖 面试真题 Q1: CAP 理论中为什么 P 是必须的？ 答： 网络分区在分布式系统中是必然发生的（网络抖动、机器故障等）。CAP 理论描述的是在发生网络分区时，系统必须在 C 和 A 之间做出选择。因此 P 不是可选项，而是必须接受的现实。 Q2: 如何选择 CP 还是 AP？ 答： - 对一致性要求高的场景（金融、库存）→ CP - 对可用性要求高的场景（秒杀、社交）→ AP - 可以根据业务容错能力灵活选择 Q3: BASE 理论的核心？ ...",
     "category": "microservices",
     "content": "--- layout: default title: CAP 理论与 BASE 理论 --- CAP 理论与 BASE 理论 > 分布式系统的基石，面试必问 🎯 面试重点 - CAP 理论的理解和三选二的误区 - CAP 在不同场景下的选择 - BASE 理论的核心思想 - 实际系统中的权衡 📖 CAP 理论 什么是 CAP？ CAP 三选二的误区 各组合的典型系统 实际案例分析 📖 BASE 理论 什么是 BASE？ BASE vs CAP BASE 实践模式 📖 分布式事务方案 2PC（两阶段提交） TCC（补偿事务） 可靠消息最终一致 📖 面试真题 Q1: CAP 理论中为什么 P 是必须的？ 答： 网络分区在分布式系统中是必然发生的（网络抖动、机器故障等）。CAP 理论描述的是在发生网络分区时，系统必须在 C 和 A 之间做出选择。因此 P 不是可选项，而是必须接受的现实。 Q2: 如何选择 CP 还是 AP？ 答： - 对一致性要求高的场景（金融、库存）→ CP - 对可用性要求高的场景（秒杀、社交）→ AP - 可以根据业务容错能力灵活选择 Q3: BASE 理论的核心？ 答： - 基本可用：允许降级，但核心功能可用 - 软状态：允许数据存在中间状态 - 最终一致：系统在一段时间后达到一致状态 Q4: 分布式事务解决方案？ 答： - 2PC：强一致，但有阻塞问题 - TCC：性能好，但侵入性强 - 消息队列：最终一致，适合高并发 - Saga：长流程事务 --- ⭐ 重点：CAP 和 BASE 是分布式系统的核心理论，必须深入理解并能在实际场景中应用"
   },
   {
     "title": "配置中心设计与实现",
-    "url": "/java-backend-interview/microservices/config-server",
+    "url": "/java-backend-interview/microservices/config-server.html",
     "description": "--- layout: default title: 配置中心设计与实现 --- 配置中心设计与实现 > 统一配置管理是微服务架构的基石 🎯 面试重点 - 配置中心的必要性 - 主流配置中心对比 - 配置推送原理 - 高可用设计 📖 为什么需要配置中心？ 传统配置方式的痛点 配置中心的优势 📖 主流配置中心对比 Spring Cloud Config 特点： - 基于 Git 存储配置 - 支持多种后端（Git、SVN、本地文件） - 与 Spring Boot 集成好 - 需要配合 Bus 实现动态刷新 Apollo（携程开源） 特点： - 图形化管理界面 - 配置实时推送 - 权限管理完善 - 配置灰度发布 - 支持多环境 Nacos（阿里巴巴） 特点： - 配置中心 + 服务注册发现 - 配置变更监听 - 多数据格式支持 - 易于扩展 对比表格 📖 配置中心核心设计 1. 配置模型设计 2. 配置推送机制 3. 高可用设计 📖 Spring Cloud Config 实战 1. 服务端配置 2. 客户端配置 3. 配置动态刷新 📖 Apollo 实战 1. 核心概念 2. 客户端...",
     "category": "microservices",
     "content": "--- layout: default title: 配置中心设计与实现 --- 配置中心设计与实现 > 统一配置管理是微服务架构的基石 🎯 面试重点 - 配置中心的必要性 - 主流配置中心对比 - 配置推送原理 - 高可用设计 📖 为什么需要配置中心？ 传统配置方式的痛点 配置中心的优势 📖 主流配置中心对比 Spring Cloud Config 特点： - 基于 Git 存储配置 - 支持多种后端（Git、SVN、本地文件） - 与 Spring Boot 集成好 - 需要配合 Bus 实现动态刷新 Apollo（携程开源） 特点： - 图形化管理界面 - 配置实时推送 - 权限管理完善 - 配置灰度发布 - 支持多环境 Nacos（阿里巴巴） 特点： - 配置中心 + 服务注册发现 - 配置变更监听 - 多数据格式支持 - 易于扩展 对比表格 📖 配置中心核心设计 1. 配置模型设计 2. 配置推送机制 3. 高可用设计 📖 Spring Cloud Config 实战 1. 服务端配置 2. 客户端配置 3. 配置动态刷新 📖 Apollo 实战 1. 核心概念 2. 客户端使用 3. 高可用部署 📖 安全与最佳实践 1. 配置加密 2. 配置版本管理 3. 监控与告警 📖 面试真题 Q1: 为什么需要配置中心？传统方式有什么问题？ 答： 传统配置方式的问题： 1. 配置文件散落各处，管理困难 2. 配置修改需要重启应用 3. 敏感信息明文存储，安全性差 4. 多环境配置不一致 5. 配置变更无法追溯 配置中心的优势： 1. 集中管理，统一版本控制 2. 动态更新，无需重启 3. 配置加密，安全存储 4. 环境隔离，一键切换 5. 变更审计，历史可查 Q2: 配置中心如何实现动态更新？ 答： 1. 推模式：配置中心主动推送（长轮询、WebSocket） 2. 拉模式：客户端定时拉取（定时任务） 3. 推拉结合：长连接保持 + 定时检查 Spring Cloud Config：需要手动调用 或配合 Spring Cloud Bus Apollo/Nacos：实时推送，客户端监听配置变更 Q3: 配置中心如何保证高可用？ 答： 1. 集群部署：多节点部署，负载均衡 2. 数据持久化：配置持久化到数据库，定期备份 3. 客户端容错：本地缓存配置，服务端不可用时降级 4. 健康检查：客户端健康检查，自动切换 5. 配置回滚：版本管理，快速回退 Q4: 如何设计配置中心的权限管理？ 答： 1. RBAC模型：角色-权限控制 2. 命名空间权限：不同团队管理不同命名空间 3. 操作审计：记录所有配置变更 4. 审批流程：重要配置变更需要审批 5. 环境隔离：生产环境配置修改权限严格控制 Q5: 配置中心如何做灰度发布？ 答： 1. 按实例灰度：先发布到部分实例验证 2. 按用户灰度：特定用户使用新配置 3. 按流量比例：按百分比逐步放大 4. 条件规则：满足条件的请求使用新配置 5. 回滚机制：发现问题快速回滚 📚 延伸阅读 - Spring Cloud Config - Apollo GitHub - Nacos GitHub - 配置中心设计模式 --- ⭐ 重点：配置中心是微服务架构的基础设施，必须掌握其原理和主流实现方案"
   },
   {
     "title": "服务注册与发现",
-    "url": "/java-backend-interview/microservices/service-registry",
+    "url": "/java-backend-interview/microservices/service-registry.html",
     "description": "--- layout: default title: 服务注册与发现 --- 服务注册与发现 > 微服务架构的核心组件 🎯 面试重点 - 服务注册与发现的工作原理 - Eureka vs Zookeeper/Nacos 的区别 - 注册中心的核心功能 📖 服务注册与发现原理 核心概念 服务注册 服务发现 📖 主流注册中心对比 Eureka Nacos Zookeeper 对比总结 📖 核心面试题 Q1: Eureka 自我保护机制？ 答： 当 Eureka Server 在短时间内丢失过多客户端心跳时，会进入自我保护模式，不再剔除服务，防止网络分区导致误删。表现为 Q2: Eureka 和 Nacos 的区别？ 答： - 一致性：Eureka 是 AP，Nacos 同时支持 AP 和 CP - 功能：Nacos 支持配置管理，Eureka 不支持 - 模型：Nacos 支持临时/持久实例，Eureka 只有临时 - 维护：Eureka 已停止维护，Nacos 活跃 Q3: 服务注册中心选型考虑因素？ 答： - 一致性要求（AP vs CP） - 集群规模和性能 - 功能需求（是否需要配...",
     "category": "microservices",
     "content": "--- layout: default title: 服务注册与发现 --- 服务注册与发现 > 微服务架构的核心组件 🎯 面试重点 - 服务注册与发现的工作原理 - Eureka vs Zookeeper/Nacos 的区别 - 注册中心的核心功能 📖 服务注册与发现原理 核心概念 服务注册 服务发现 📖 主流注册中心对比 Eureka Nacos Zookeeper 对比总结 📖 核心面试题 Q1: Eureka 自我保护机制？ 答： 当 Eureka Server 在短时间内丢失过多客户端心跳时，会进入自我保护模式，不再剔除服务，防止网络分区导致误删。表现为 Q2: Eureka 和 Nacos 的区别？ 答： - 一致性：Eureka 是 AP，Nacos 同时支持 AP 和 CP - 功能：Nacos 支持配置管理，Eureka 不支持 - 模型：Nacos 支持临时/持久实例，Eureka 只有临时 - 维护：Eureka 已停止维护，Nacos 活跃 Q3: 服务注册中心选型考虑因素？ 答： - 一致性要求（AP vs CP） - 集群规模和性能 - 功能需求（是否需要配置管理） - 维护活跃度 - 多语言支持需求 --- ⭐ 重点：服务注册与发现是微服务架构的基础，理解各注册中心的区别和适用场景"
   },
   {
     "title": "熔断与降级",
-    "url": "/java-backend-interview/microservices/circuit-breaker-pattern",
+    "url": "/java-backend-interview/microservices/circuit-breaker-pattern.html",
     "description": "--- layout: default title: 熔断与降级 --- 熔断与降级 > 系统保护的重要机制 🎯 面试重点 - 熔断和降级的区别 - 熔断器的工作原理 - 常用实现方案 📖 概念区别 熔断 vs 降级 工作流程 📖 实现方案 Sentinel Hystrix（已停止维护） 📖 面试真题 Q1: 熔断和降级的区别？ 答： - 熔断：防止故障蔓延，暂时切断调用 - 降级：返回备选方案，保证核心功能 Q2: 熔断器状态？ 答： - Closed：正常状态，统计失败率 - Open：熔断状态，直接返回失败 - Half-Open：尝试恢复，探测服务是否可用 --- ⭐ 重点：熔断和降级是保障系统可用性的重要手段",
     "category": "microservices",
     "content": "--- layout: default title: 熔断与降级 --- 熔断与降级 > 系统保护的重要机制 🎯 面试重点 - 熔断和降级的区别 - 熔断器的工作原理 - 常用实现方案 📖 概念区别 熔断 vs 降级 工作流程 📖 实现方案 Sentinel Hystrix（已停止维护） 📖 面试真题 Q1: 熔断和降级的区别？ 答： - 熔断：防止故障蔓延，暂时切断调用 - 降级：返回备选方案，保证核心功能 Q2: 熔断器状态？ 答： - Closed：正常状态，统计失败率 - Open：熔断状态，直接返回失败 - Half-Open：尝试恢复，探测服务是否可用 --- ⭐ 重点：熔断和降级是保障系统可用性的重要手段"
   },
   {
     "title": "分布式事务",
-    "url": "/java-backend-interview/microservices/distributed-transaction",
+    "url": "/java-backend-interview/microservices/distributed-transaction.html",
     "description": "--- layout: default title: 分布式事务 --- 分布式事务 > 微服务架构下的数据一致性挑战 🎯 面试重点 - 分布式事务的解决方案 - 2PC、TCC、消息队列的区别 - 如何选择合适的事务方案 📖 分布式事务问题 什么是分布式事务？ 分布式事务的理论基础 📖 解决方案 1. 2PC（两阶段提交） 2. TCC（Try-Confirm-Cancel） 3. 可靠消息最终一致 4. Saga 模式 📖 Seata 框架 📖 方案对比与选型 📖 面试真题 Q1: 2PC 有什么问题？ 答： 1. 同步阻塞：Prepare 阶段锁定资源，其他事务等待 2. 单点故障：协调者宕机后参与者无法完成事务 3. 数据不一致：部分提交成功、部分失败 Q2: TCC 和 2PC 的区别？ 答： - 2PC 在数据库层面锁定资源，TCC 在业务层面预留资源 - TCC 性能更好，但需要编写三个接口 - 2PC 是强一致，TCC 是最终一致 Q3: 如何保证消息不丢失？ 答： 1. 本地消息表：消息和业务在同一事务，消息表 + 定时重试 2. 消息队列事务：RocketMQ 半消...",
     "category": "microservices",
     "content": "--- layout: default title: 分布式事务 --- 分布式事务 > 微服务架构下的数据一致性挑战 🎯 面试重点 - 分布式事务的解决方案 - 2PC、TCC、消息队列的区别 - 如何选择合适的事务方案 📖 分布式事务问题 什么是分布式事务？ 分布式事务的理论基础 📖 解决方案 1. 2PC（两阶段提交） 2. TCC（Try-Confirm-Cancel） 3. 可靠消息最终一致 4. Saga 模式 📖 Seata 框架 📖 方案对比与选型 📖 面试真题 Q1: 2PC 有什么问题？ 答： 1. 同步阻塞：Prepare 阶段锁定资源，其他事务等待 2. 单点故障：协调者宕机后参与者无法完成事务 3. 数据不一致：部分提交成功、部分失败 Q2: TCC 和 2PC 的区别？ 答： - 2PC 在数据库层面锁定资源，TCC 在业务层面预留资源 - TCC 性能更好，但需要编写三个接口 - 2PC 是强一致，TCC 是最终一致 Q3: 如何保证消息不丢失？ 答： 1. 本地消息表：消息和业务在同一事务，消息表 + 定时重试 2. 消息队列事务：RocketMQ 半消息机制 3. 消费确认：消费者手动 ACK，失败重试 4. 死信队列：多次重试失败后进入死信队列 Q4: Seata AT 模式原理？ 答： 1. 解析 SQL，记录前后镜像到 undolog 表 2. 执行 SQL 3. 全局提交时删除 undolog，回滚时执行反向 SQL --- ⭐ 重点：分布式事务是微服务架构的核心难点，理解各方案的优缺点和适用场景"
   },
   {
     "title": "分布式一致性",
-    "url": "/java-backend-interview/microservices/distributed-consistency",
+    "url": "/java-backend-interview/microservices/distributed-consistency.html",
     "description": "--- layout: default title: 分布式一致性 --- 分布式一致性 > 分布式系统的一致性问题 🎯 面试重点 - 一致性模型 - Paxos / Raft 📖 一致性模型 📖 共识算法 📖 面试真题 Q1: 强一致性和最终一致性的区别？ 答： 强一致需要同步确认，最终一致允许暂时不一致。 --- ⭐ 重点：分布式一致性是分布式系统的核心问题",
     "category": "microservices",
     "content": "--- layout: default title: 分布式一致性 --- 分布式一致性 > 分布式系统的一致性问题 🎯 面试重点 - 一致性模型 - Paxos / Raft 📖 一致性模型 📖 共识算法 📖 面试真题 Q1: 强一致性和最终一致性的区别？ 答： 强一致需要同步确认，最终一致允许暂时不一致。 --- ⭐ 重点：分布式一致性是分布式系统的核心问题"
   },
   {
     "title": "限流算法",
-    "url": "/java-backend-interview/microservices/rate-limiting",
+    "url": "/java-backend-interview/microservices/rate-limiting.html",
     "description": "--- layout: default title: 限流算法 --- 限流算法 > 保护系统的第一道防线 🎯 面试重点 - 各限流算法的原理 - 计数器、滑动窗口、漏桶、令牌桶 - 限流实现方式 📖 限流算法 计数器算法 滑动窗口算法 漏桶算法 令牌桶算法 📖 限流实现 本地限流 分布式限流 📖 面试真题 Q1: 限流算法对比？ 答： - 计数器：简单，但有临界问题 - 滑动窗口：解决临界问题，实现复杂 - 漏桶：平滑，但无法应对突发 - 令牌桶：允许突发，主流选择 Q2: 令牌桶和漏桶的区别？ 答： 令牌桶允许一定程度的突发流量，漏桶严格以固定速率处理。 --- ⭐ 重点：限流是保护系统的核心手段，必须掌握各算法原理",
     "category": "microservices",
     "content": "--- layout: default title: 限流算法 --- 限流算法 > 保护系统的第一道防线 🎯 面试重点 - 各限流算法的原理 - 计数器、滑动窗口、漏桶、令牌桶 - 限流实现方式 📖 限流算法 计数器算法 滑动窗口算法 漏桶算法 令牌桶算法 📖 限流实现 本地限流 分布式限流 📖 面试真题 Q1: 限流算法对比？ 答： - 计数器：简单，但有临界问题 - 滑动窗口：解决临界问题，实现复杂 - 漏桶：平滑，但无法应对突发 - 令牌桶：允许突发，主流选择 Q2: 令牌桶和漏桶的区别？ 答： 令牌桶允许一定程度的突发流量，漏桶严格以固定速率处理。 --- ⭐ 重点：限流是保护系统的核心手段，必须掌握各算法原理"
   },
   {
     "title": "分布式链路追踪",
-    "url": "/java-backend-interview/microservices/distributed-tracing",
+    "url": "/java-backend-interview/microservices/distributed-tracing.html",
     "description": "--- layout: default title: 分布式链路追踪 --- 分布式链路追踪 > 微服务调用链追踪 🎯 面试重点 - 链路追踪原理 - 主流方案 📖 核心概念 📖 主流方案 📖 面试真题 Q1: 链路追踪的作用？ 答： 问题定位、性能分析、依赖分析。 --- ⭐ 重点：链路追踪是微服务治理的基础",
     "category": "microservices",
     "content": "--- layout: default title: 分布式链路追踪 --- 分布式链路追踪 > 微服务调用链追踪 🎯 面试重点 - 链路追踪原理 - 主流方案 📖 核心概念 📖 主流方案 📖 面试真题 Q1: 链路追踪的作用？ 答： 问题定位、性能分析、依赖分析。 --- ⭐ 重点：链路追踪是微服务治理的基础"
@@ -71,77 +71,77 @@
   },
   {
     "title": "服务网格 Istio",
-    "url": "/java-backend-interview/microservices/service-mesh",
+    "url": "/java-backend-interview/microservices/service-mesh.html",
     "description": "--- layout: default title: 服务网格 Istio --- 服务网格 Istio > 微服务通信基础设施 🎯 面试重点 - 服务网格概念 - Istio 核心功能 📖 概念 📖 Istio 功能 📖 面试真题 Q1: 服务网格解决了什么问题？ 答： 微服务通信、流量管理、安全、可观测性。 --- ⭐ 重点：Istio 是服务治理的未来",
     "category": "microservices",
     "content": "--- layout: default title: 服务网格 Istio --- 服务网格 Istio > 微服务通信基础设施 🎯 面试重点 - 服务网格概念 - Istio 核心功能 📖 概念 📖 Istio 功能 📖 面试真题 Q1: 服务网格解决了什么问题？ 答： 微服务通信、流量管理、安全、可观测性。 --- ⭐ 重点：Istio 是服务治理的未来"
   },
   {
     "title": "Docker 基础",
-    "url": "/java-backend-interview/microservices/docker-basics",
+    "url": "/java-backend-interview/microservices/docker-basics.html",
     "description": "--- layout: default title: Docker 基础 --- Docker 基础 > 容器化技术 🎯 面试重点 - Docker 核心概念 - 常用命令 📖 核心概念 📖 常用命令 📖 面试真题 Q1: Docker 和虚拟机的区别？ 答： Docker 共享内核，启动快，占用小。 --- ⭐ 重点：Docker 是容器化的基础",
     "category": "microservices",
     "content": "--- layout: default title: Docker 基础 --- Docker 基础 > 容器化技术 🎯 面试重点 - Docker 核心概念 - 常用命令 📖 核心概念 📖 常用命令 📖 面试真题 Q1: Docker 和虚拟机的区别？ 答： Docker 共享内核，启动快，占用小。 --- ⭐ 重点：Docker 是容器化的基础"
   },
   {
     "title": "负载均衡策略",
-    "url": "/java-backend-interview/microservices/load-balance-strategies",
+    "url": "/java-backend-interview/microservices/load-balance-strategies.html",
     "description": "--- layout: default title: 负载均衡策略 --- 负载均衡策略 > 分发流量的核心策略 🎯 面试重点 - 常见负载均衡算法 - 各算法的适用场景 - 实际使用示例 📖 负载均衡算法 随机 轮询 加权轮询 最少连接 一致性哈希 📖 实际使用 Ribbon 📖 面试真题 Q1: Nginx 负载均衡策略？ 答： 轮询、加权轮询、IP 哈希、最少连接、一致性哈希。 Q2: Ribbon 的主要策略？ 答： 轮询、随机、响应时间加权、最空闲优先。 --- ⭐ 重点：负载均衡是分布式系统的基础组件",
     "category": "microservices",
     "content": "--- layout: default title: 负载均衡策略 --- 负载均衡策略 > 分发流量的核心策略 🎯 面试重点 - 常见负载均衡算法 - 各算法的适用场景 - 实际使用示例 📖 负载均衡算法 随机 轮询 加权轮询 最少连接 一致性哈希 📖 实际使用 Ribbon 📖 面试真题 Q1: Nginx 负载均衡策略？ 答： 轮询、加权轮询、IP 哈希、最少连接、一致性哈希。 Q2: Ribbon 的主要策略？ 答： 轮询、随机、响应时间加权、最空闲优先。 --- ⭐ 重点：负载均衡是分布式系统的基础组件"
   },
   {
     "title": "Kafka 核心原理",
-    "url": "/java-backend-interview/middleware/kafka",
+    "url": "/java-backend-interview/middleware/kafka.html",
     "description": "--- layout: default title: Kafka 核心原理 --- Kafka 核心原理 > 高吞吐量的分布式消息队列 🎯 面试重点 - Kafka 的架构和核心概念 - 分区和副本机制 - 消息顺序性和可靠性 - 消费者组和offset 管理 📖 Kafka 架构 核心概念 架构图 📖 分区和副本机制 Partition 分区 Replica 副本 📖 消息可靠性 ACK 机制 消息顺序性 📖 消费者和消费者组 消费者组 Offset 管理 📖 面试真题 Q1: Kafka 为什么这么快？ 答： 1. 顺序读写：利用磁盘顺序读写，比随机读快 2. 零拷贝：使用 sendfile 系统调用，避免内核和用户空间之间的数据复制 3. 批量处理：消息批量发送和消费 4. 压缩：支持多种压缩算法（GZIP、Snappy、LZ4） 5. 分区：并行处理 Q2: 如何保证消息不丢失？ 答： 1. Producer 端：设置 acks=all，重试 retries>0，启用幂等性 2. Broker 端：设置 replica.lag.time.max.ms，合理配置副本因子 3. C...",
     "category": "middleware",
     "content": "--- layout: default title: Kafka 核心原理 --- Kafka 核心原理 > 高吞吐量的分布式消息队列 🎯 面试重点 - Kafka 的架构和核心概念 - 分区和副本机制 - 消息顺序性和可靠性 - 消费者组和offset 管理 📖 Kafka 架构 核心概念 架构图 📖 分区和副本机制 Partition 分区 Replica 副本 📖 消息可靠性 ACK 机制 消息顺序性 📖 消费者和消费者组 消费者组 Offset 管理 📖 面试真题 Q1: Kafka 为什么这么快？ 答： 1. 顺序读写：利用磁盘顺序读写，比随机读快 2. 零拷贝：使用 sendfile 系统调用，避免内核和用户空间之间的数据复制 3. 批量处理：消息批量发送和消费 4. 压缩：支持多种压缩算法（GZIP、Snappy、LZ4） 5. 分区：并行处理 Q2: 如何保证消息不丢失？ 答： 1. Producer 端：设置 acks=all，重试 retries>0，启用幂等性 2. Broker 端：设置 replica.lag.time.max.ms，合理配置副本因子 3. Consumer 端：手动提交 offset Q3: Kafka 消费者组 rebalance 的问题？ 答： - 问题：所有消费者停止消费，重新分配分区 - 解决： 1. 合理设计分区数（避免频繁 rebalance） 2. 使用静态成员（cooperative rebalance） 3. 调整 rebalance 超时时间 --- ⭐ 重点：Kafka 是大数据领域最常用的消息队列，需要掌握其架构、可靠性和性能优化**"
   },
   {
     "title": "顺序消息与延迟消息",
-    "url": "/java-backend-interview/middleware/message-patterns",
+    "url": "/java-backend-interview/middleware/message-patterns.html",
     "description": "--- layout: default title: 顺序消息与延迟消息 --- 顺序消息与延迟消息 > 消息的两种特殊模式 🎯 面试重点 - 顺序消息实现 - 延迟消息应用 📖 顺序消息 实现方式 📖 延迟消息 应用场景 📖 面试真题 Q1: RocketMQ 延迟消息级别？ 答： 1s, 5s, 10s, 30s, 1m, 2m, 3m... 共 18 个级别。 --- ⭐ 重点：理解特殊消息类型的应用",
     "category": "middleware",
     "content": "--- layout: default title: 顺序消息与延迟消息 --- 顺序消息与延迟消息 > 消息的两种特殊模式 🎯 面试重点 - 顺序消息实现 - 延迟消息应用 📖 顺序消息 实现方式 📖 延迟消息 应用场景 📖 面试真题 Q1: RocketMQ 延迟消息级别？ 答： 1s, 5s, 10s, 30s, 1m, 2m, 3m... 共 18 个级别。 --- ⭐ 重点：理解特殊消息类型的应用"
   },
   {
     "title": "ES 性能优化",
-    "url": "/java-backend-interview/middleware/es-optimization",
+    "url": "/java-backend-interview/middleware/es-optimization.html",
     "description": "--- layout: default title: ES 性能优化 --- ES 性能优化 > Elasticsearch 调优 🎯 面试重点 - 索引优化 - 查询优化 📖 索引优化 📖 查询优化 📖 面试真题 Q1: 深分页问题？ 答： 使用 scroll 或 searchafter 替代 from/size。 --- ⭐ 重点：ES 优化影响搜索性能**",
     "category": "middleware",
     "content": "--- layout: default title: ES 性能优化 --- ES 性能优化 > Elasticsearch 调优 🎯 面试重点 - 索引优化 - 查询优化 📖 索引优化 📖 查询优化 📖 面试真题 Q1: 深分页问题？ 答： 使用 scroll 或 searchafter 替代 from/size。 --- ⭐ 重点：ES 优化影响搜索性能**"
   },
   {
     "title": "Redis 持久化与过期策略 ⭐⭐⭐",
-    "url": "/java-backend-interview/middleware/redis-persistence",
+    "url": "/java-backend-interview/middleware/redis-persistence.html",
     "description": "--- layout: default title: Redis 持久化与过期策略 ⭐⭐⭐ --- Redis 持久化与过期策略 ⭐⭐⭐ 面试题：Redis 的持久化方式有哪些？过期策略是什么？ 核心回答 Redis 提供两种持久化方式：RDB（数据快照）和 AOF（命令日志），以及 过期策略（惰性删除+定期删除）和 内存淘汰策略。 一、RDB 持久化 原理 RDB（Redis Database）通过创建数据快照的方式，将内存中的所有数据写入磁盘。 触发方式 优点 1. 恢复速度快：RDB 是紧凑的二进制文件，恢复大量数据时比 AOF 快 2. 性能影响小：fork 的子进程完成持久化，不影响主进程 3. 适合备份：可以定时备份 RDB 文件 缺点 1. 可能丢失数据：最后一次快照之后的数据会丢失 2. fork 开销：数据量大时，fork 可能阻塞 二、AOF 持久化 原理 AOF（Append Only File）通过记录每个写命令来保存数据。 配置 AOF 重写 重写原理： 三、RDB vs AOF | 特性 | RDB | AOF | |------|------|-----|...",
     "category": "middleware",
     "content": "--- layout: default title: Redis 持久化与过期策略 ⭐⭐⭐ --- Redis 持久化与过期策略 ⭐⭐⭐ 面试题：Redis 的持久化方式有哪些？过期策略是什么？ 核心回答 Redis 提供两种持久化方式：RDB（数据快照）和 AOF（命令日志），以及 过期策略（惰性删除+定期删除）和 内存淘汰策略。 一、RDB 持久化 原理 RDB（Redis Database）通过创建数据快照的方式，将内存中的所有数据写入磁盘。 触发方式 优点 1. 恢复速度快：RDB 是紧凑的二进制文件，恢复大量数据时比 AOF 快 2. 性能影响小：fork 的子进程完成持久化，不影响主进程 3. 适合备份：可以定时备份 RDB 文件 缺点 1. 可能丢失数据：最后一次快照之后的数据会丢失 2. fork 开销：数据量大时，fork 可能阻塞 二、AOF 持久化 原理 AOF（Append Only File）通过记录每个写命令来保存数据。 配置 AOF 重写 重写原理： 三、RDB vs AOF | 特性 | RDB | AOF | |------|------|-----| | 数据安全性 | 可能有丢失 | 可配置（每秒/每次） | | 恢复速度 | 快 | 慢（需重放命令） | | 文件大小 | 小（紧凑） | 大（包含所有命令） | | CPU 开销 | fork 开销 | 需要重写 | | 适用场景 | 备份、恢复 | 数据安全要求高 | 四、Redis 过期策略 设置过期时间 三种过期策略 Redis 采用的策略 Redis 采用 惰性删除 + 定期删除 的组合策略： 五、内存淘汰策略 当 Redis 内存达到上限时，需要淘汰一些 key： 八种淘汰策略 | 策略 | 说明 | |------|------| | noeviction | 不淘汰，返回错误（默认） | | volatile-lru | 从设置过期时间的 key 中，淘汰最近最少使用的 | | allkeys-lru | 从所有 key 中，淘汰最近最少使用的 | | volatile-lfu | 从设置过期时间的 key 中，淘汰使用频率最低的 | | allkeys-lfu | 从所有 key 中，淘汰使用频率最低的 | | volatile-random | 从设置过期时间的 key 中，随机淘汰 | | allkeys-random | 从所有 key 中，随机淘汰 | | volatile-ttl | 从设置过期时间的 key 中，淘汰 TTL 最小的 | LRU vs LFU 六、高频面试题 Q1: Redis 持久化方式如何选择？ Q2: AOF 和 RDB 可以同时启用吗？ Q3: 过期 key 对持久化的影响？ Q4: 如何实现 Redis 缓存和数据库双写一致？ 七、最佳实践 --- 参考链接： - Redis持久化详解-牛客网 - Redis过期策略-腾讯云"
   },
   {
     "title": "倒排索引原理",
-    "url": "/java-backend-interview/middleware/inverted-index",
+    "url": "/java-backend-interview/middleware/inverted-index.html",
     "description": "--- layout: default title: 倒排索引原理 --- 倒排索引原理 > ES 核心数据结构 🎯 面试重点 - 倒排索引结构 - 与正排索引的区别 📖 原理 正排 vs 倒排 📖 面试真题 Q1: 倒排索引的优点？ 答： 查询快，时间复杂度 O(1)。 --- ⭐ 重点：倒排索引是搜索引擎的核心",
     "category": "middleware",
     "content": "--- layout: default title: 倒排索引原理 --- 倒排索引原理 > ES 核心数据结构 🎯 面试重点 - 倒排索引结构 - 与正排索引的区别 📖 原理 正排 vs 倒排 📖 面试真题 Q1: 倒排索引的优点？ 答： 查询快，时间复杂度 O(1)。 --- ⭐ 重点：倒排索引是搜索引擎的核心"
   },
   {
     "title": "Redis 数据类型",
-    "url": "/java-backend-interview/middleware/redis-data-types",
+    "url": "/java-backend-interview/middleware/redis-data-types.html",
     "description": "--- layout: default title: Redis 数据类型 --- Redis 数据类型 > Redis 核心数据结构 🎯 面试重点 - 各数据类型的应用场景 - 底层实现原理 📖 数据类型 String List Hash Set ZSet 📖 面试真题 Q1: Redis 为什么快？ 答： 内存存储、单线程避免了锁竞争、I/O 多路复用。 --- ⭐ 重点：理解各类型的应用场景",
     "category": "middleware",
     "content": "--- layout: default title: Redis 数据类型 --- Redis 数据类型 > Redis 核心数据结构 🎯 面试重点 - 各数据类型的应用场景 - 底层实现原理 📖 数据类型 String List Hash Set ZSet 📖 面试真题 Q1: Redis 为什么快？ 答： 内存存储、单线程避免了锁竞争、I/O 多路复用。 --- ⭐ 重点：理解各类型的应用场景"
   },
   {
     "title": "Redis 缓存穿透、击穿、雪崩 ⭐⭐⭐",
-    "url": "/java-backend-interview/middleware/cache-problems",
+    "url": "/java-backend-interview/middleware/cache-problems.html",
     "description": "--- layout: default title: Redis 缓存穿透、击穿、雪崩 ⭐⭐⭐ --- Redis 缓存穿透、击穿、雪崩 ⭐⭐⭐ 面试题：什么是缓存穿透、击穿、雪崩？如何解决？ 核心回答 缓存穿透、击穿、雪崩是 Redis 缓存使用中的三大问题，分别由不同的原因导致，需要针对性的解决方案。 一、缓存穿透 问题描述 缓存穿透：查询一个不存在的数据，缓存和数据库都没有命中，导致每次请求都打到数据库。 危害： - 大量无效请求打到数据库 - 数据库压力剧增 - 可能导致数据库宕机 - 常见于恶意攻击 解决方案 方案1：缓存空对象 优点：实现简单 缺点： - 存储无效数据，消耗内存 - 短期数据不一致 方案2：布隆过滤器（推荐） 二、缓存击穿 问题描述 缓存击穿：某个热点 key 在缓存中过期的瞬间，大量并发请求直接打到数据库。 特点： - 针对热点 key - 高并发 + key 过期 - 数据库瞬时压力过大 解决方案 方案1：互斥锁（分布式锁） 方案2：热点数据永不过期 方案3：Redisson 分布式锁（推荐） 三、缓存雪崩 问题描述 缓存雪崩：大量缓存同时过期 或 Re...",
     "category": "middleware",
     "content": "--- layout: default title: Redis 缓存穿透、击穿、雪崩 ⭐⭐⭐ --- Redis 缓存穿透、击穿、雪崩 ⭐⭐⭐ 面试题：什么是缓存穿透、击穿、雪崩？如何解决？ 核心回答 缓存穿透、击穿、雪崩是 Redis 缓存使用中的三大问题，分别由不同的原因导致，需要针对性的解决方案。 一、缓存穿透 问题描述 缓存穿透：查询一个不存在的数据，缓存和数据库都没有命中，导致每次请求都打到数据库。 危害： - 大量无效请求打到数据库 - 数据库压力剧增 - 可能导致数据库宕机 - 常见于恶意攻击 解决方案 方案1：缓存空对象 优点：实现简单 缺点： - 存储无效数据，消耗内存 - 短期数据不一致 方案2：布隆过滤器（推荐） 二、缓存击穿 问题描述 缓存击穿：某个热点 key 在缓存中过期的瞬间，大量并发请求直接打到数据库。 特点： - 针对热点 key - 高并发 + key 过期 - 数据库瞬时压力过大 解决方案 方案1：互斥锁（分布式锁） 方案2：热点数据永不过期 方案3：Redisson 分布式锁（推荐） 三、缓存雪崩 问题描述 缓存雪崩：大量缓存同时过期 或 Redis 故障，导致大量请求直接打到数据库。 解决方案 方案1：过期时间随机化 方案2：热点数据预加载 方案3：Redis 高可用架构 方案4：服务降级和限流 四、三种问题对比 | 问题 | 原因 | 特点 | 解决方案 | |------|------|------|---------| | 穿透 | 查询不存在的数据 | 数据本身不存在 | 布隆过滤器、缓存空对象 | | 击穿 | 热点 key 过期瞬间 | 高并发 + 单 key | 互斥锁、逻辑过期 | | 雪崩 | 大量 key 同时过期/Redis 故障 | 批量失效/服务不可用 | 随机过期、高可用、降级限流 | 五、完整解决方案示例 六、高频面试题 Q1: 布隆过滤器的误判率如何计算？ Q2: 如何选择解决方案？ --- 参考链接： - Redis缓存穿透、击穿、雪崩-阿里云 - Redis经典面试题-腾讯云"
   },
   {
     "title": "ES 分词与映射",
-    "url": "/java-backend-interview/middleware/analysis-mapping",
+    "url": "/java-backend-interview/middleware/analysis-mapping.html",
     "description": "--- layout: default title: ES 分词与映射 --- ES 分词与映射 > Elasticsearch 分析器 🎯 面试重点 - 分词器类型 - Mapping 字段映射 📖 分词器 分词器类型 📖 Mapping 📖 面试真题 Q1: text 和 keyword 区别？ 答： text 分词，keyword 不分词。 --- ⭐ 重点：分词是搜索的基础",
     "category": "middleware",
     "content": "--- layout: default title: ES 分词与映射 --- ES 分词与映射 > Elasticsearch 分析器 🎯 面试重点 - 分词器类型 - Mapping 字段映射 📖 分词器 分词器类型 📖 Mapping 📖 面试真题 Q1: text 和 keyword 区别？ 答： text 分词，keyword 不分词。 --- ⭐ 重点：分词是搜索的基础"
@@ -155,119 +155,119 @@
   },
   {
     "title": "ES 搜索与聚合",
-    "url": "/java-backend-interview/middleware/search-aggregate",
+    "url": "/java-backend-interview/middleware/search-aggregate.html",
     "description": "--- layout: default title: ES 搜索与聚合 --- ES 搜索与聚合 > Elasticsearch 查询 🎯 面试重点 - 查询语法 - 聚合分析 📖 查询 查询语法 📖 聚合 📖 面试真题 Q1: match 和 term 区别？ 答： match 分词后匹配，term 精确匹配。 --- ⭐ 重点：ES 查询是搜索系统的核心",
     "category": "middleware",
     "content": "--- layout: default title: ES 搜索与聚合 --- ES 搜索与聚合 > Elasticsearch 查询 🎯 面试重点 - 查询语法 - 聚合分析 📖 查询 查询语法 📖 聚合 📖 面试真题 Q1: match 和 term 区别？ 答： match 分词后匹配，term 精确匹配。 --- ⭐ 重点：ES 查询是搜索系统的核心"
   },
   {
     "title": "Redis 分布式锁",
-    "url": "/java-backend-interview/middleware/distributed-lock",
+    "url": "/java-backend-interview/middleware/distributed-lock.html",
     "description": "--- layout: default title: Redis 分布式锁 --- Redis 分布式锁 > 分布式环境下的锁实现 🎯 面试重点 - 分布式锁的实现方式 - Redis 分布式锁的问题 📖 实现方式 SET NX Redisson 📖 面试真题 Q1: 分布式锁的问题？ 答： - 死锁：设置过期时间 - 误删：使用唯一标识 - 不可重入：可使用 Redisson --- ⭐ 重点：分布式锁是分布式系统的基础",
     "category": "middleware",
     "content": "--- layout: default title: Redis 分布式锁 --- Redis 分布式锁 > 分布式环境下的锁实现 🎯 面试重点 - 分布式锁的实现方式 - Redis 分布式锁的问题 📖 实现方式 SET NX Redisson 📖 面试真题 Q1: 分布式锁的问题？ 答： - 死锁：设置过期时间 - 误删：使用唯一标识 - 不可重入：可使用 Redisson --- ⭐ 重点：分布式锁是分布式系统的基础"
   },
   {
     "title": "Kafka 原理",
-    "url": "/java-backend-interview/middleware/kafka-principles",
+    "url": "/java-backend-interview/middleware/kafka-principles.html",
     "description": "--- layout: default title: Kafka 原理 --- Kafka 原理 > Kafka 核心原理详解 🎯 面试重点 - Kafka 架构 - 分区和副本 - 消息可靠性 📖 核心概念 架构 📖 面试真题 Q1: Kafka 为什么快？ 答： 顺序写、零拷贝、批量处理、压缩。 --- ⭐ 重点：Kafka 是大数据生态的核心",
     "category": "middleware",
     "content": "--- layout: default title: Kafka 原理 --- Kafka 原理 > Kafka 核心原理详解 🎯 面试重点 - Kafka 架构 - 分区和副本 - 消息可靠性 📖 核心概念 架构 📖 面试真题 Q1: Kafka 为什么快？ 答： 顺序写、零拷贝、批量处理、压缩。 --- ⭐ 重点：Kafka 是大数据生态的核心"
   },
   {
     "title": "RocketMQ 架构",
-    "url": "/java-backend-interview/middleware/rocketmq-architecture",
+    "url": "/java-backend-interview/middleware/rocketmq-architecture.html",
     "description": "--- layout: default title: RocketMQ 架构 --- RocketMQ 架构 > RocketMQ 核心组件 🎯 面试重点 - RocketMQ 架构组件 - 消息存储原理 📖 架构组件 核心组件 📖 面试真题 Q1: RocketMQ 的特点？ 答： 事务消息、顺序消息、延迟消息，功能完善。 --- ⭐ 重点：理解 RocketMQ 架构",
     "category": "middleware",
     "content": "--- layout: default title: RocketMQ 架构 --- RocketMQ 架构 > RocketMQ 核心组件 🎯 面试重点 - RocketMQ 架构组件 - 消息存储原理 📖 架构组件 核心组件 📖 面试真题 Q1: RocketMQ 的特点？ 答： 事务消息、顺序消息、延迟消息，功能完善。 --- ⭐ 重点：理解 RocketMQ 架构"
   },
   {
     "title": "Redis 主从复制与哨兵",
-    "url": "/java-backend-interview/middleware/redis-replication",
+    "url": "/java-backend-interview/middleware/redis-replication.html",
     "description": "--- layout: default title: Redis 主从复制与哨兵 --- Redis 主从复制与哨兵 > Redis 高可用方案 🎯 面试重点 - 主从复制原理 - 哨兵机制 - 故障转移 📖 主从复制 复制原理 配置 📖 哨兵机制 哨兵功能 📖 面试真题 Q1: 主从复制丢失数据？ 答： - 异步复制，主节点故障可能丢失数据 - 可以配置 min-slaves-write-timeout --- ⭐ 重点：Redis 高可用是面试常考点",
     "category": "middleware",
     "content": "--- layout: default title: Redis 主从复制与哨兵 --- Redis 主从复制与哨兵 > Redis 高可用方案 🎯 面试重点 - 主从复制原理 - 哨兵机制 - 故障转移 📖 主从复制 复制原理 配置 📖 哨兵机制 哨兵功能 📖 面试真题 Q1: 主从复制丢失数据？ 答： - 异步复制，主节点故障可能丢失数据 - 可以配置 min-slaves-write-timeout --- ⭐ 重点：Redis 高可用是面试常考点"
   },
   {
     "title": "消息队列选型",
-    "url": "/java-backend-interview/middleware/mq-comparison",
+    "url": "/java-backend-interview/middleware/mq-comparison.html",
     "description": "--- layout: default title: 消息队列选型 --- 消息队列选型 > 主流 MQ 对比 🎯 面试重点 - 各 MQ 的特点 - 选型依据 📖 主流 MQ 对比 对比表 选型建议 📖 面试真题 Q1: 各 MQ 的特点？ 答： RocketMQ 功能完善、Kafka 吞吐高、RabbitMQ 灵活。 --- ⭐ 重点：根据业务场景选型",
     "category": "middleware",
     "content": "--- layout: default title: 消息队列选型 --- 消息队列选型 > 主流 MQ 对比 🎯 面试重点 - 各 MQ 的特点 - 选型依据 📖 主流 MQ 对比 对比表 选型建议 📖 面试真题 Q1: 各 MQ 的特点？ 答： RocketMQ 功能完善、Kafka 吞吐高、RabbitMQ 灵活。 --- ⭐ 重点：根据业务场景选型"
   },
   {
     "title": "Redis Cluster 集群",
-    "url": "/java-backend-interview/middleware/redis-cluster",
+    "url": "/java-backend-interview/middleware/redis-cluster.html",
     "description": "--- layout: default title: Redis Cluster 集群 --- Redis Cluster 集群 > Redis 分布式集群方案 🎯 面试重点 - 集群原理 - 数据分片 - 故障恢复 📖 集群架构 数据分片 节点通信 📖 面试真题 Q1: Cluster 的优点？ 答： 数据分片、高可用、自动故障转移。 --- ⭐ 重点：Redis Cluster 是大规模应用的方案",
     "category": "middleware",
     "content": "--- layout: default title: Redis Cluster 集群 --- Redis Cluster 集群 > Redis 分布式集群方案 🎯 面试重点 - 集群原理 - 数据分片 - 故障恢复 📖 集群架构 数据分片 节点通信 📖 面试真题 Q1: Cluster 的优点？ 答： 数据分片、高可用、自动故障转移。 --- ⭐ 重点：Redis Cluster 是大规模应用的方案"
   },
   {
     "title": "消息可靠性保证",
-    "url": "/java-backend-interview/middleware/message-reliability",
+    "url": "/java-backend-interview/middleware/message-reliability.html",
     "description": "--- layout: default title: 消息可靠性保证 --- 消息可靠性保证 > 确保消息不丢失 🎯 面试重点 - 消息丢失场景 - 可靠消息方案 📖 可靠性保证 生产端 消费端 📖 面试真题 Q1: 如何保证消息不丢失？ 答： - 生产端：ACK=all + 重试 - 存储端：同步刷盘 + 副本 - 消费端：手动提交 offset --- ⭐ 重点：消息可靠性是 MQ 的核心",
     "category": "middleware",
     "content": "--- layout: default title: 消息可靠性保证 --- 消息可靠性保证 > 确保消息不丢失 🎯 面试重点 - 消息丢失场景 - 可靠消息方案 📖 可靠性保证 生产端 消费端 📖 面试真题 Q1: 如何保证消息不丢失？ 答： - 生产端：ACK=all + 重试 - 存储端：同步刷盘 + 副本 - 消费端：手动提交 offset --- ⭐ 重点：消息可靠性是 MQ 的核心"
   },
   {
     "title": "RocketMQ 核心原理",
-    "url": "/java-backend-interview/middleware/rocketmq",
+    "url": "/java-backend-interview/middleware/rocketmq.html",
     "description": "--- layout: default title: RocketMQ 核心原理 --- RocketMQ 核心原理 > 阿里巴巴开源的分布式消息中间件 🎯 面试重点 - RocketMQ 的架构和核心概念 - 顺序消息、事务消息 - 消息可靠性保证 - 与 Kafka 的对比 📖 RocketMQ 架构 核心组件 消息存储 📖 消息类型 普通消息 顺序消息 事务消息 延迟消息 📖 消息可靠性 消息丢失场景和应对 消息重复消费 📖 RocketMQ vs Kafka 📖 面试真题 Q1: RocketMQ 事务消息原理？ 答： 1. 发送半消息到 Broker（预提交） 2. 执行本地事务 3. 根据结果提交或回滚 4. 如果没有结果，Broker 定时回查事务状态 Q2: 如何保证消息顺序？ 答： - RocketMQ 本身支持队列级顺序 - 发送时使用 MessageQueueSelector 将同一类消息发送到同一队列 - 消费时使用 MessageListenerOrderly 顺序消费 Q3: 消息积压如何处理？ 答： 1. 临时扩容消费者，提高消费能力 2. 排查消费慢的原...",
     "category": "middleware",
     "content": "--- layout: default title: RocketMQ 核心原理 --- RocketMQ 核心原理 > 阿里巴巴开源的分布式消息中间件 🎯 面试重点 - RocketMQ 的架构和核心概念 - 顺序消息、事务消息 - 消息可靠性保证 - 与 Kafka 的对比 📖 RocketMQ 架构 核心组件 消息存储 📖 消息类型 普通消息 顺序消息 事务消息 延迟消息 📖 消息可靠性 消息丢失场景和应对 消息重复消费 📖 RocketMQ vs Kafka 📖 面试真题 Q1: RocketMQ 事务消息原理？ 答： 1. 发送半消息到 Broker（预提交） 2. 执行本地事务 3. 根据结果提交或回滚 4. 如果没有结果，Broker 定时回查事务状态 Q2: 如何保证消息顺序？ 答： - RocketMQ 本身支持队列级顺序 - 发送时使用 MessageQueueSelector 将同一类消息发送到同一队列 - 消费时使用 MessageListenerOrderly 顺序消费 Q3: 消息积压如何处理？ 答： 1. 临时扩容消费者，提高消费能力 2. 排查消费慢的原因（代码问题/数据库瓶颈） 3. 增加队列数，提高并行度 4. 消息过期处理（消息只保留一定时间） --- ⭐ 重点：RocketMQ 是国内最常用的消息中间件，需要掌握其架构和可靠消息方案"
   },
   {
     "title": "MySQL 存储引擎",
-    "url": "/java-backend-interview/database/storage-engines",
+    "url": "/java-backend-interview/database/storage-engines.html",
     "description": "--- layout: default title: MySQL 存储引擎 --- MySQL 存储引擎 > 选择合适的存储引擎是优化的第一步 🎯 面试重点 - InnoDB 和 MyISAM 的区别 - 各存储引擎的特点和适用场景 - 如何选择存储引擎 📖 存储引擎对比 InnoDB MyISAM 对比 其他存储引擎 📖 详细对比分析 1. 存储结构差异 InnoDB： - 数据和索引存储在一个文件（.ibd） - 使用聚簇索引：数据按主键顺序存储，叶节点存储完整数据行 - 支持表空间管理：共享表空间 vs 独立表空间 MyISAM： - 数据（.MYD）和索引（.MYI）分开存储 - 使用非聚簇索引：索引叶节点存储数据指针（行号） - 支持压缩表：节省存储空间 2. 锁机制对比 InnoDB 行级锁： MyISAM 表级锁： 3. 事务与崩溃恢复 InnoDB 事务日志： - redo log（重做日志）：保证事务持久性 - undo log（撤销日志）：实现事务回滚和 MVCC - 崩溃恢复：重启时通过 redo log 恢复未提交事务 MyISAM 无事务： - 写操作直接修改...",
     "category": "database",
     "content": "--- layout: default title: MySQL 存储引擎 --- MySQL 存储引擎 > 选择合适的存储引擎是优化的第一步 🎯 面试重点 - InnoDB 和 MyISAM 的区别 - 各存储引擎的特点和适用场景 - 如何选择存储引擎 📖 存储引擎对比 InnoDB MyISAM 对比 其他存储引擎 📖 详细对比分析 1. 存储结构差异 InnoDB： - 数据和索引存储在一个文件（.ibd） - 使用聚簇索引：数据按主键顺序存储，叶节点存储完整数据行 - 支持表空间管理：共享表空间 vs 独立表空间 MyISAM： - 数据（.MYD）和索引（.MYI）分开存储 - 使用非聚簇索引：索引叶节点存储数据指针（行号） - 支持压缩表：节省存储空间 2. 锁机制对比 InnoDB 行级锁： MyISAM 表级锁： 3. 事务与崩溃恢复 InnoDB 事务日志： - redo log（重做日志）：保证事务持久性 - undo log（撤销日志）：实现事务回滚和 MVCC - 崩溃恢复：重启时通过 redo log 恢复未提交事务 MyISAM 无事务： - 写操作直接修改数据文件 - 崩溃后可能数据不一致 - 需要定期使用 修复表 4. 性能差异 读写性能： - InnoDB：写性能优秀，适合读写混合场景 - MyISAM：读性能极佳，写性能较差（全表锁） 并发性能： - InnoDB：高并发（MVCC + 行锁） - MyISAM：低并发（表锁，读写互斥） 内存使用： - InnoDB：需要较大缓冲池（Buffer Pool） - MyISAM：需要键缓存（Key Cache） 5. 特殊功能 MyISAM 优势： - 全文索引（FULLTEXT） - 空间数据类型和索引（GIS） - 表压缩（myisampack） - 延迟索引更新 InnoDB 优势： - 在线 DDL（5.6+） - 热备份（ibbackup） - 多版本控制（MVCC） - 自适应哈希索引 📖 面试真题 Q1: InnoDB 和 MyISAM 的区别？ 答： 1. 事务支持：InnoDB 支持事务（ACID），MyISAM 不支持 2. 锁级别：InnoDB 行级锁，MyISAM 表级锁 3. 外键约束：InnoDB 支持，MyISAM 不支持 4. 崩溃恢复：InnoDB 通过 redo/undo log 恢复，MyISAM 容易损坏 5. 索引结构：InnoDB 聚簇索引，MyISAM 非聚簇索引 6. 并发能力：InnoDB MVCC 高并发，MyISAM 读写互斥 7. 全文索引：MyISAM 原生支持，InnoDB 5.6+ 支持 Q2: 什么场景使用 MyISAM？ 答： - 只读/读多写少：如数据仓库、报表系统 - 全文搜索：老版本 MySQL 全文搜索需求 - GIS 应用：需要空间函数和索引 - 临时表：MySQL 内部临时表使用 - 日志表：写入后很少修改的表 Q3: InnoDB 为什么推荐使用自增主键？ 答： - 顺序写入：自增 ID 保证数据按顺序插入，减少 B+ 树分裂 - 减少碎片：避免随机插入导致的页分裂和空间碎片 - 性能优化：顺序 IO 比随机 IO 快很多 - 缓存友好：相邻数据可能在同一页，提高缓存命中率 Q4: MyISAM 表损坏如何处理？ 答： 1. 使用 检查表状态 2. 使用 尝试修复 3. 使用命令行工具 4. 从备份恢复，或使用 工具 5. 建议定期使用 整理碎片 Q5: 如何从 MyISAM 迁移到 InnoDB？ 答： 1. 备份数据： 全量备份 2. 修改引擎： 3. 参数调整：增加 4. 测试验证：功能测试和性能测试 5. 灰度切换：逐步迁移，监控性能 🎯 选择建议 选择 InnoDB 的情况： - 需要事务支持（银行、电商） - 高并发读写（在线系统） - 数据完整性要求高（外键约束） - 需要崩溃恢复能力 - MySQL 5.5+ 默认引擎 选择 MyISAM 的情况： - 只读或读多写少（数据仓库） - 需要全文搜索（5.6 前版本） - 空间/GIS 应用 - 内存有限的小型应用 - 临时表、日志表 混合使用策略： - 核心业务表使用 InnoDB - 日志、配置表使用 MyISAM - 全文搜索表使用 MyISAM（5.6 前）或 InnoDB（5.6+） --- ⭐ 重点：InnoDB 是 MySQL 的默认存储引擎，从 MySQL 5.5 开始全面替代 MyISAM"
   },
   {
     "title": "事务隔离级别",
-    "url": "/java-backend-interview/database/isolation-levels",
+    "url": "/java-backend-interview/database/isolation-levels.html",
     "description": "--- layout: default title: 事务隔离级别 --- 事务隔离级别 > 并发控制的核心 🎯 面试重点 - 四种隔离级别的区别 - 各隔离级别可能出现的问题 - 隔离级别和锁的关系 📖 隔离级别 四种级别 各级别问题 MySQL 隔离级别 📖 MVCC 和锁 隔离级别实现 锁机制 📖 面试真题 Q1: MySQL 默认隔离级别？ 答： MySQL 5.7 默认是 REPEATABLE READ，MySQL 8.0 默认是 READ COMMITTED。 Q2: 什么是幻读？如何解决？ 答： 幻读是指在事务中，相同的查询条件两次查询结果不同（因为其他事务插入了新数据）。InnoDB 使用 Next-Key Lock（记录锁+间隙锁）解决幻读。 Q3: READ COMMITTED 下的 MVCC 原理？ 答： 每次 SELECT 都创建新的 Read View，通过比较 trxid 判断可见性。而 REPEATABLE READ 只在事务开始时创建一次 Read View。 --- ⭐ 重点：理解隔离级别是理解并发控制的基础，也是常考点**",
     "category": "database",
     "content": "--- layout: default title: 事务隔离级别 --- 事务隔离级别 > 并发控制的核心 🎯 面试重点 - 四种隔离级别的区别 - 各隔离级别可能出现的问题 - 隔离级别和锁的关系 📖 隔离级别 四种级别 各级别问题 MySQL 隔离级别 📖 MVCC 和锁 隔离级别实现 锁机制 📖 面试真题 Q1: MySQL 默认隔离级别？ 答： MySQL 5.7 默认是 REPEATABLE READ，MySQL 8.0 默认是 READ COMMITTED。 Q2: 什么是幻读？如何解决？ 答： 幻读是指在事务中，相同的查询条件两次查询结果不同（因为其他事务插入了新数据）。InnoDB 使用 Next-Key Lock（记录锁+间隙锁）解决幻读。 Q3: READ COMMITTED 下的 MVCC 原理？ 答： 每次 SELECT 都创建新的 Read View，通过比较 trxid 判断可见性。而 REPEATABLE READ 只在事务开始时创建一次 Read View。 --- ⭐ 重点：理解隔离级别是理解并发控制的基础，也是常考点**"
   },
   {
     "title": "MySQL 锁机制详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/database/locking",
+    "url": "/java-backend-interview/database/locking.html",
     "description": "--- layout: default title: MySQL 锁机制详解 ⭐⭐⭐ --- MySQL 锁机制详解 ⭐⭐⭐ 面试题：MySQL 有哪些锁？分别适用于什么场景？ 核心回答 MySQL InnoDB 存储引擎实现了多种锁机制，包括行锁、表锁、意向锁、Gap 锁等，用于控制并发访问和数据一致性。 锁的分类 InnoDB 行锁 1. 记录锁（Record Lock） 定义：锁定索引记录本身。 特点： - 锁定单条索引记录 - 其他事务无法修改或删除该记录 - 不会阻止其他事务读取（除非显式加锁） 2. 间隙锁（Gap Lock） 定义：锁定索引记录之间的间隙。 特点： - 防止幻读（Phantom Read） - 只在 REPEATABLE READ 隔离级别下生效 - 锁定的是索引之间的空隙，而不是数据行 3. Next-Key Lock 定义：记录锁 + 间隙锁的组合，锁定记录及其前面的间隙。 作用： - 防止幻读 - 锁定索引范围，包括记录本身和间隙 - InnoDB 默认的锁算法 共享锁与排他锁 共享锁（S 锁） 特点： - 读读兼容 - 读写互斥 排他锁（X 锁） ...",
     "category": "database",
     "content": "--- layout: default title: MySQL 锁机制详解 ⭐⭐⭐ --- MySQL 锁机制详解 ⭐⭐⭐ 面试题：MySQL 有哪些锁？分别适用于什么场景？ 核心回答 MySQL InnoDB 存储引擎实现了多种锁机制，包括行锁、表锁、意向锁、Gap 锁等，用于控制并发访问和数据一致性。 锁的分类 InnoDB 行锁 1. 记录锁（Record Lock） 定义：锁定索引记录本身。 特点： - 锁定单条索引记录 - 其他事务无法修改或删除该记录 - 不会阻止其他事务读取（除非显式加锁） 2. 间隙锁（Gap Lock） 定义：锁定索引记录之间的间隙。 特点： - 防止幻读（Phantom Read） - 只在 REPEATABLE READ 隔离级别下生效 - 锁定的是索引之间的空隙，而不是数据行 3. Next-Key Lock 定义：记录锁 + 间隙锁的组合，锁定记录及其前面的间隙。 作用： - 防止幻读 - 锁定索引范围，包括记录本身和间隙 - InnoDB 默认的锁算法 共享锁与排他锁 共享锁（S 锁） 特点： - 读读兼容 - 读写互斥 排他锁（X 锁） 特点： - 写写互斥 - 读写互斥 意向锁 什么是意向锁？ 意向锁是表级锁，表示事务即将对某行加锁。 | 锁类型 | 作用 | |--------|------| | 意向共享锁（IS） | 事务即将对行加共享锁 | | 意向排他锁（IX） | 事务即将对行加排他锁 | 意向锁的作用 死锁 什么是死锁？ 两个或多个事务相互等待对方持有的锁，形成循环等待。 InnoDB 处理死锁 避免死锁 锁等待查看 MVCC 与锁 快照读 vs 当前读 读已提交 vs 可重复读 高频面试题 Q1: InnoDB 行锁的实现方式？ Q2: 什么是临键锁（Next-Key Lock）？ Q3: 如何排查死锁？ Q4: 乐观锁和悲观锁的区别？ Q5: SELECT 会加锁吗？ 最佳实践 --- 参考链接： - MySQL锁机制详解-腾讯云"
   },
   {
     "title": "MySQL 数据类型选择",
-    "url": "/java-backend-interview/database/data-types",
+    "url": "/java-backend-interview/database/data-types.html",
     "description": "--- layout: default title: MySQL 数据类型选择 --- MySQL 数据类型选择 > 合理选择数据类型提高性能和可维护性 🎯 面试重点 - 数据类型选择原则 - 常见数据类型的使用场景 - 数据类型对性能的影响 📖 选择原则 基本原则 整数类型 字符串类型 日期类型 📖 面试真题 Q1: INT(1) 和 INT(10) 的区别？ 答： 没有区别，都是 4 字节的 INT。括号内的数字只是显示宽度，不影响存储范围。 Q2: VARCHAR(100) 和 VARCHAR(255) 的区别？ 答： VARCHAR 是可变长度，实际存储 1-2 字节 + 实际字符。255 以下用 1 字节存储长度，256 及以上用 2 字节。但实际性能差异不大。 --- ⭐ 重点：合理的数据类型选择是优化的基础",
     "category": "database",
     "content": "--- layout: default title: MySQL 数据类型选择 --- MySQL 数据类型选择 > 合理选择数据类型提高性能和可维护性 🎯 面试重点 - 数据类型选择原则 - 常见数据类型的使用场景 - 数据类型对性能的影响 📖 选择原则 基本原则 整数类型 字符串类型 日期类型 📖 面试真题 Q1: INT(1) 和 INT(10) 的区别？ 答： 没有区别，都是 4 字节的 INT。括号内的数字只是显示宽度，不影响存储范围。 Q2: VARCHAR(100) 和 VARCHAR(255) 的区别？ 答： VARCHAR 是可变长度，实际存储 1-2 字节 + 实际字符。255 以下用 1 字节存储长度，256 及以上用 2 字节。但实际性能差异不大。 --- ⭐ 重点：合理的数据类型选择是优化的基础"
   },
   {
     "title": "ShardingSphere 分库分表实战",
-    "url": "/java-backend-interview/database/shardingsphere",
+    "url": "/java-backend-interview/database/shardingsphere.html",
     "description": "--- layout: default title: ShardingSphere 分库分表实战 --- ShardingSphere 分库分表实战 > 阿里巴巴开源的分布式数据库中间件，提供分库分表、读写分离等能力 🎯 面试重点 - ShardingSphere 核心概念：分片键、分片算法、分片策略 - 分库分表的实现原理 - 读写分离的配置与实现 - 分布式事务处理 📖 ShardingSphere 架构 核心组件 核心概念 📖 配置实战 分库分表示例 读写分离配置 📖 面试真题 Q1: ShardingSphere 如何实现分库分表？ 答： 1. SQL 解析：解析 SQL 语句，提取分片条件 2. 路由：根据分片键计算目标库表 3. 改写：将逻辑 SQL 改写为真实 SQL（如 → ） 4. 执行：在多个数据源上执行 SQL 5. 归并：将多个结果集合并返回 Q2: 分片键如何选择？ 答： - 数据均匀：保证数据分布均衡，避免热点 - 查询高频：高频查询条件作为分片键，避免跨库查询 - 业务相关：如用户 ID、订单 ID、时间范围 - 避免修改：分片键修改会导致数据迁移 Q3:...",
     "category": "database",
     "content": "--- layout: default title: ShardingSphere 分库分表实战 --- ShardingSphere 分库分表实战 > 阿里巴巴开源的分布式数据库中间件，提供分库分表、读写分离等能力 🎯 面试重点 - ShardingSphere 核心概念：分片键、分片算法、分片策略 - 分库分表的实现原理 - 读写分离的配置与实现 - 分布式事务处理 📖 ShardingSphere 架构 核心组件 核心概念 📖 配置实战 分库分表示例 读写分离配置 📖 面试真题 Q1: ShardingSphere 如何实现分库分表？ 答： 1. SQL 解析：解析 SQL 语句，提取分片条件 2. 路由：根据分片键计算目标库表 3. 改写：将逻辑 SQL 改写为真实 SQL（如 → ） 4. 执行：在多个数据源上执行 SQL 5. 归并：将多个结果集合并返回 Q2: 分片键如何选择？ 答： - 数据均匀：保证数据分布均衡，避免热点 - 查询高频：高频查询条件作为分片键，避免跨库查询 - 业务相关：如用户 ID、订单 ID、时间范围 - 避免修改：分片键修改会导致数据迁移 Q3: 跨库分页查询如何处理？ 答： 1. 全局排序法（不推荐）：查询所有数据在内存排序，性能差 2. 二次查询法（推荐）： - 各分片查询，取前 N 条 - 内存排序取前 M 条 - 二次查询获取完整数据 3. 业务折中：使用 ES 等搜索引擎 Q4: 分布式事务如何解决？ 答： 1. 柔性事务（最终一致）： - TCC：Try-Confirm-Cancel，业务侵入强 - SAGA：长事务，补偿机制 - 消息事务：MQ 事务消息 2. 刚性事务（强一致）： - XA 协议：两阶段提交，性能低 - Seata AT 模式：自动补偿 Q5: 分库分表后 ID 生成方案？ 答： 1. Snowflake：分布式自增 ID，ShardingSphere 默认 2. UUID：无序，索引效率低 3. 数据库分段：多实例分段自增 4. Redis 自增：Redis 原子操作 5. Leaf：美团开源的分布式 ID 生成器 📖 最佳实践 1. 分片策略选择 - 水平分片：数据量大时使用 - 垂直分片：业务模块分离时使用 - 混合分片：先垂直后水平 2. 分片数量规划 - 单表数据量控制在 1000 万以内 - 分片数 = 预估数据量 / 单表容量 - 预留 30% 扩展空间 3. 数据迁移方案 - 双写方案：新旧库同时写入，数据同步 - 数据校验：全量和增量数据校验 - 灰度切换：逐步切流验证 4. 监控与运维 - 慢 SQL 监控：跨库查询性能 - 数据倾斜监控：分片数据分布 - 连接池监控：数据源连接状态 📚 延伸阅读 - ShardingSphere 官方文档 - 分布式数据库架构 - 分库分表实战案例 --- ⭐ 重点：分库分表是解决海量数据存储和查询的终极方案，必须掌握其原理和实践"
   },
   {
     "title": "MySQL 分片策略",
-    "url": "/java-backend-interview/database/sharding-strategy",
+    "url": "/java-backend-interview/database/sharding-strategy.html",
     "description": "--- layout: default title: MySQL 分片策略 --- MySQL 分片策略 > 分库分表的核心策略 🎯 面试重点 - 分片策略选择 - 分片键设计 - 跨分片查询处理 📖 分片策略 常见策略 分片键选择 跨分片查询 📖 面试真题 Q1: 分库分表的适用场景？ 答： 单表数据量超过千万、数据写入/查询性能下降、数据库连接数瓶颈。 Q2: 分片键如何选择？ 答： 优先选择业务中最常用的查询字段，保证数据分布均匀，避免热点。 --- ⭐ 重点：分库分表是应对大数据量的重要手段",
     "category": "database",
     "content": "--- layout: default title: MySQL 分片策略 --- MySQL 分片策略 > 分库分表的核心策略 🎯 面试重点 - 分片策略选择 - 分片键设计 - 跨分片查询处理 📖 分片策略 常见策略 分片键选择 跨分片查询 📖 面试真题 Q1: 分库分表的适用场景？ 答： 单表数据量超过千万、数据写入/查询性能下降、数据库连接数瓶颈。 Q2: 分片键如何选择？ 答： 优先选择业务中最常用的查询字段，保证数据分布均匀，避免热点。 --- ⭐ 重点：分库分表是应对大数据量的重要手段"
   },
   {
     "title": "MySQL 索引失效场景 ⭐⭐⭐",
-    "url": "/java-backend-interview/database/index-failure",
+    "url": "/java-backend-interview/database/index-failure.html",
     "description": "--- layout: default title: MySQL 索引失效场景 ⭐⭐⭐ --- MySQL 索引失效场景 ⭐⭐⭐ 面试题：什么情况下索引会失效？ 核心回答 索引失效是 MySQL 查询优化中的重要知识点，常见场景包括：违反最左前缀原则、使用函数/运算、隐式类型转换、LIKE 左边通配符等。 常见索引失效场景 | 序号 | 场景 | 是否失效 | 说明 | |------|------|---------|------| | 1 | 违反最左前缀原则 | ⚠️ 部分失效 | 联合索引必须从最左列开始 | | 2 | LIKE %开头 | ⚠️ 失效 | \"%abc\" 导致全表扫描 | | 3 | 使用 OR | ⚠️ 部分失效 | OR 两边都要有索引 | | 4 | 对索引列运算 | ⚠️ 失效 | 使用函数或算术运算 | | 5 | 隐式类型转换 | ⚠️ 失效 | 类型不匹配 | | 6 | 负向查询 | ⚠️ 可能失效 | !=、NOT IN、IS NOT NULL | | 7 | 使用 SELECT | ⚠️ 可能失效 | 无法使用覆盖索引 | | 8 | 数据...",
     "category": "database",
     "content": "--- layout: default title: MySQL 索引失效场景 ⭐⭐⭐ --- MySQL 索引失效场景 ⭐⭐⭐ 面试题：什么情况下索引会失效？ 核心回答 索引失效是 MySQL 查询优化中的重要知识点，常见场景包括：违反最左前缀原则、使用函数/运算、隐式类型转换、LIKE 左边通配符等。 常见索引失效场景 | 序号 | 场景 | 是否失效 | 说明 | |------|------|---------|------| | 1 | 违反最左前缀原则 | ⚠️ 部分失效 | 联合索引必须从最左列开始 | | 2 | LIKE %开头 | ⚠️ 失效 | \"%abc\" 导致全表扫描 | | 3 | 使用 OR | ⚠️ 部分失效 | OR 两边都要有索引 | | 4 | 对索引列运算 | ⚠️ 失效 | 使用函数或算术运算 | | 5 | 隐式类型转换 | ⚠️ 失效 | 类型不匹配 | | 6 | 负向查询 | ⚠️ 可能失效 | !=、NOT IN、IS NOT NULL | | 7 | 使用 SELECT | ⚠️ 可能失效 | 无法使用覆盖索引 | | 8 | 数据量过小 | ⚠️ 不走索引 | 优化器选择全表扫描 | 场景详解 1. 违反最左前缀原则 原理： 2. LIKE 左边通配符 原理： 优化方案： 3. OR 条件 替代方案： 4. 对索引列使用函数或运算 原理： 5. 隐式类型转换 原则：确保查询参数类型与列类型一致 6. 负向查询 注意：MySQL 优化器会根据数据分布决定是否使用索引 7. 使用 SELECT 8. 数据量过小 复杂场景分析 场景1：多个条件组合 场景2：索引列参与计算 场景3：字符集不一致 EXPLAIN 分析索引使用 type 值从好到差： 高频面试题 Q1: 为什么 LIKE \"%abc\" 会导致索引失效？ Q2: OR 一定失效吗？ Q3: 为什么建议使用覆盖索引？ Q4: 如何优化 LIKE \"%abc%\" 查询？ 最佳实践 --- 参考链接： - MySQL索引失效场景-CSDN - MySQL索引失效场景验证-知乎"
   },
   {
     "title": "MySQL 死锁分析",
-    "url": "/java-backend-interview/database/deadlock",
+    "url": "/java-backend-interview/database/deadlock.html",
     "description": "--- layout: default title: MySQL 死锁分析 --- MySQL 死锁分析 > 死锁是并发环境下的常见问题 🎯 面试重点 - 死锁的产生原因 - 如何避免死锁 - 死锁的检测和处理 📖 死锁产生 什么是死锁？ 死锁原因 📖 避免死锁 预防策略 检测和处理 监控和优化 📖 面试真题 Q1: 如何避免死锁？ 答： 1. 统一加锁顺序 2. 降低事务隔离级别 3. 使用乐观锁 4. 减小事务粒度 5. 添加合适的索引 Q2: 发生死锁后如何处理？ 答： 1. 查看死锁日志： 2. 分析参与死锁的事务和 SQL 3. 优化 SQL，添加索引 4. 调整事务隔离级别或加锁顺序 --- ⭐ 重点：死锁是生产环境常见问题，需要掌握预防和排查方法",
     "category": "database",
     "content": "--- layout: default title: MySQL 死锁分析 --- MySQL 死锁分析 > 死锁是并发环境下的常见问题 🎯 面试重点 - 死锁的产生原因 - 如何避免死锁 - 死锁的检测和处理 📖 死锁产生 什么是死锁？ 死锁原因 📖 避免死锁 预防策略 检测和处理 监控和优化 📖 面试真题 Q1: 如何避免死锁？ 答： 1. 统一加锁顺序 2. 降低事务隔离级别 3. 使用乐观锁 4. 减小事务粒度 5. 添加合适的索引 Q2: 发生死锁后如何处理？ 答： 1. 查看死锁日志： 2. 分析参与死锁的事务和 SQL 3. 优化 SQL，添加索引 4. 调整事务隔离级别或加锁顺序 --- ⭐ 重点：死锁是生产环境常见问题，需要掌握预防和排查方法"
@@ -281,84 +281,84 @@
   },
   {
     "title": "MySQL 事务与 MVCC 详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/database/transaction-mvcc",
+    "url": "/java-backend-interview/database/transaction-mvcc.html",
     "description": "--- layout: default title: MySQL 事务与 MVCC 详解 ⭐⭐⭐ --- MySQL 事务与 MVCC 详解 ⭐⭐⭐ 面试题：解释 MySQL 中的 ACID 属性，并说明 MVCC 的实现原理 核心回答 MySQL InnoDB 通过 ACID 特性保证事务的可靠性，通过 MVCC（多版本并发控制）实现高效的并发读写。 --- 一、ACID 特性 1. 原子性（Atomicity） 定义：事务是一个不可分割的工作单位，要么全部成功，要么全部失败回滚。 实现机制：undo log（回滚日志） 2. 一致性（Consistency） 定义：事务执行前后，数据库必须从一个一致性状态变为另一个一致性状态。 保证方式： - 原子性 + 隔离性 + 持久性共同保证 - 数据库约束（外键、唯一约束等） - 业务逻辑校验 3. 隔离性（Isolation） 定义：多个事务并发执行时，一个事务的执行不应影响其他事务。 实现机制：锁 + MVCC 4. 持久性（Durability） 定义：事务一旦提交，对数据库的修改就是永久的，即使系统故障也不会丢失。 实现机制：red...",
     "category": "database",
     "content": "--- layout: default title: MySQL 事务与 MVCC 详解 ⭐⭐⭐ --- MySQL 事务与 MVCC 详解 ⭐⭐⭐ 面试题：解释 MySQL 中的 ACID 属性，并说明 MVCC 的实现原理 核心回答 MySQL InnoDB 通过 ACID 特性保证事务的可靠性，通过 MVCC（多版本并发控制）实现高效的并发读写。 --- 一、ACID 特性 1. 原子性（Atomicity） 定义：事务是一个不可分割的工作单位，要么全部成功，要么全部失败回滚。 实现机制：undo log（回滚日志） 2. 一致性（Consistency） 定义：事务执行前后，数据库必须从一个一致性状态变为另一个一致性状态。 保证方式： - 原子性 + 隔离性 + 持久性共同保证 - 数据库约束（外键、唯一约束等） - 业务逻辑校验 3. 隔离性（Isolation） 定义：多个事务并发执行时，一个事务的执行不应影响其他事务。 实现机制：锁 + MVCC 4. 持久性（Durability） 定义：事务一旦提交，对数据库的修改就是永久的，即使系统故障也不会丢失。 实现机制：redo log（重做日志） --- 二、事务隔离级别 并发问题 | 问题 | 描述 | 示例 | |------|------|------| | 脏读 | 读到其他事务未提交的数据 | 事务 A 修改未提交，事务 B 读到修改后的值 | | 不可重复读 | 同一事务内多次读取，结果不同 | 事务 A 两次读取之间，事务 B 修改并提交 | | 幻读 | 同一事务内多次查询，结果集不同 | 事务 A 两次查询之间，事务 B 插入新记录 | 四种隔离级别 | 隔离级别 | 脏读 | 不可重复读 | 幻读 | 实现机制 | |---------|------|-----------|------|---------| | READ UNCOMMITTED | ✓ | ✓ | ✓ | 不加锁，直接读最新数据 | | READ COMMITTED | ✗ | ✓ | ✓ | MVCC（每次查询生成新 ReadView） | | REPEATABLE READ（默认） | ✗ | ✗ | ✓（部分解决） | MVCC（事务开始时生成 ReadView） | | SERIALIZABLE | ✗ | ✗ | ✗ | 所有操作加排他锁 | --- 三、MVCC 多版本并发控制 核心思想 读写不阻塞：写操作生成新版本数据，读操作根据版本号读取历史版本。 undo log 版本链 ReadView（读视图） 作用：判断当前事务可见哪个版本的数据。 结构： 可见性判断规则： 对于某条记录的 trxid： 1. trxid == creatortrxid：当前事务修改的，可见 2. trxid = maxtrxid：在 ReadView 生成后启动，不可见 4. mintrxid <= trxid < maxtrxid： - 如果 trxid 在 mids 中：未提交，不可见 - 如果 trxid 不在 mids 中：已提交，可见 不同隔离级别的 MVCC 实现 READ COMMITTED（读已提交） 特点：每次查询都生成新的 ReadView REPEATABLE READ（可重复读） 特点：事务开始时生成 ReadView，整个事务期间复用 MVCC 解决幻读？ 快照读（普通 SELECT）：MVCC 解决幻读 当前读（SELECT FOR UPDATE）：MVCC 不能解决幻读，需要 Gap Lock --- 四、锁机制 锁类型 按粒度分 | 锁类型 | 描述 | 使用场景 | |--------|------|---------| | 行锁 | 锁定单行记录 | InnoDB 默认，高并发 | | 表锁 | 锁定整个表 | MyISAM 默认，DDL 操作 | | 页锁 | 锁定数据页 | BDB 存储引擎 | 按功能分 | 锁类型 | 描述 | 兼容性 | |--------|------|--------| | 共享锁（S 锁） | 读锁，允许多个事务同时读 | 与 S 锁兼容，与 X 锁冲突 | | 排他锁（X 锁） | 写锁，禁止其他事务读写 | 与 S 锁、X 锁都冲突 | InnoDB 行锁算法 | 锁类型 | 描述 | 示例 | |--------|------|------| | Record Lock | 锁定单个记录 | | | Gap Lock | 锁定索引间隙，防止幻读 | | | Next-Key Lock | Record Lock + Gap Lock | 默认行锁算法 | 锁兼容性矩阵 | | S 锁 | X 锁 | |--|------|------| | S 锁 | 兼容 | 冲突 | | X 锁 | 冲突 | 冲突 | --- 五、高频面试题 Q1: ACID 的实现原理？ | 特性 | 实现机制 | |------|---------| | 原子性 | undo log | | 一致性 | 原子性 + 隔离性 + 持久性 + 约束 | | 隔离性 | 锁 + MVCC | | 持久性 | redo log | Q2: MVCC 解决了什么问题？ 1. 读写不阻塞：读操作不需要加锁，提高并发性能 2. 实现非阻塞读：SELECT 操作不会被写操作阻塞 3. 实现可重复读：通过 ReadView 保证同一事务内多次读取结果一致 Q3: 为什么 REPEATABLE READ 下还会幻读？ - 快照读：MVCC 解决幻读（使用 ReadView） - 当前读： 读取最新数据，需要 Gap Lock 解决幻读 Q4: redo log 和 undo log 的区别？ | 特性 | redo log | undo log | |------|---------|---------| | 作用 | 保证持久性，故障恢复 | 保证原子性，事务回滚 | | 内容 | 物理日志，记录数据页修改 | 逻辑日志，记录反向操作 | | 写入时机 | 事务执行过程中持续写入 | 事务执行过程中持续写入 | | 清理时机 | 数据页刷盘后清理 | 事务提交后，无其他事务引用时清理 | Q5: 如何查看当前事务的锁情况？ --- 参考链接：** - MySQL事务的ACID详解-腾讯云 - MySQL事务详解从ACID到MVCC-知乎"
   },
   {
     "title": "MySQL 索引原理详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/database/index-principle",
+    "url": "/java-backend-interview/database/index-principle.html",
     "description": "--- layout: default title: MySQL 索引原理详解 ⭐⭐⭐ --- MySQL 索引原理详解 ⭐⭐⭐ 面试题：说一下 B+ 树索引实现原理 核心回答 MySQL InnoDB 存储引擎使用 B+ 树作为索引的数据结构，B+ 树是一种多路平衡查找树，专为磁盘存储优化设计。 为什么使用 B+ 树？ 磁盘 IO 优化： - 数据库数据存储在磁盘，每次读取需要磁盘 IO - B+ 树节点大小等于磁盘页（默认 16KB），一次 IO 可读取一个节点 - 3 层 B+ 树可存储约 2000 万条记录，只需 3 次磁盘 IO 对比其他数据结构： | 数据结构 | 问题 | B+ 树优势 | |---------|------|----------| | 二叉搜索树 | 可能退化成链表，高度不平衡 | 多叉树，高度低且平衡 | | AVL/红黑树 | 二叉树，高度较高 | 多叉树，减少磁盘 IO 次数 | | B 树 | 非叶子节点也存数据，范围查询慢 | 数据只存叶子节点，范围查询快 | | 哈希表 | 不支持范围查询 | 支持高效的范围查询 | B+ 树的结构特点 核心...",
     "category": "database",
     "content": "--- layout: default title: MySQL 索引原理详解 ⭐⭐⭐ --- MySQL 索引原理详解 ⭐⭐⭐ 面试题：说一下 B+ 树索引实现原理 核心回答 MySQL InnoDB 存储引擎使用 B+ 树作为索引的数据结构，B+ 树是一种多路平衡查找树，专为磁盘存储优化设计。 为什么使用 B+ 树？ 磁盘 IO 优化： - 数据库数据存储在磁盘，每次读取需要磁盘 IO - B+ 树节点大小等于磁盘页（默认 16KB），一次 IO 可读取一个节点 - 3 层 B+ 树可存储约 2000 万条记录，只需 3 次磁盘 IO 对比其他数据结构： | 数据结构 | 问题 | B+ 树优势 | |---------|------|----------| | 二叉搜索树 | 可能退化成链表，高度不平衡 | 多叉树，高度低且平衡 | | AVL/红黑树 | 二叉树，高度较高 | 多叉树，减少磁盘 IO 次数 | | B 树 | 非叶子节点也存数据，范围查询慢 | 数据只存叶子节点，范围查询快 | | 哈希表 | 不支持范围查询 | 支持高效的范围查询 | B+ 树的结构特点 核心特点： 1. 多叉树：每个节点可存储多个键值，降低树高 2. 数据只存叶子节点：非叶子节点只存键值和指针，可存储更多索引 3. 叶子节点有序链表连接：支持高效的范围查询和排序 4. 高度平衡：所有叶子节点到根节点距离相同 B+ 树 vs B 树 | 特性 | B 树 | B+ 树 | |------|------|-------| | 数据存储 | 所有节点都存数据 | 只有叶子节点存数据 | | 叶子节点 | 无链表连接 | 有序链表连接 | | 范围查询 | 需中序遍历 | 直接遍历叶子节点链表 | | 查询稳定性 | 可能在非叶子节点找到 | 必须查到叶子节点，稳定性好 | | 空间利用率 | 较低 | 较高 | InnoDB 索引类型 1. 聚簇索引（Clustered Index） 特点： - 叶子节点存储的是完整的行数据 - 表数据本身就是按聚簇索引组织的 - 一个表只能有一个聚簇索引 默认聚簇索引： - 如果有主键，主键就是聚簇索引 - 如果没有主键，选择第一个非空唯一索引 - 如果都没有，自动生成隐藏的 rowid 作为聚簇索引 2. 非聚簇索引（Secondary Index） 特点： - 叶子节点存储的是主键值（不是数据地址） - 需要通过主键值回表查询完整数据 回表查询： 3. 覆盖索引（Covering Index） 定义：查询的所有列都在索引中，无需回表。 索引查询过程 查询步骤： 1. 加载根节点：从磁盘加载 B+ 树根节点到内存 2. 二分查找：在节点内二分查找，确定下一层节点 3. 逐层下降：重复步骤 1-2，直到叶子节点 4. 获取数据：在叶子节点找到对应记录 示例： 索引设计原则 1. 最左前缀原则 2. 索引选择性 选择性 = 不重复值数量 / 总记录数，越接近 1 越好。 3. 避免冗余索引 索引失效场景 索引优化技巧 1. 覆盖索引优化 2. 索引下推（Index Condition Pushdown） MySQL 5.6+ 特性，在存储引擎层过滤数据，减少回表次数。 3. 前缀索引 高频面试题 Q1: 为什么 InnoDB 选择 B+ 树而不是 B 树？ 1. B+ 树数据只存叶子节点：非叶子节点可存储更多键值，树更矮，IO 更少 2. B+ 树叶子节点链表连接：范围查询只需遍历链表，B 树需中序遍历 3. B+ 树查询更稳定：所有查询都到叶子节点，性能一致 Q2: 什么是回表？如何避免？ - 回表：通过非聚簇索引找到主键，再用主键查聚簇索引获取完整数据 - 避免：使用覆盖索引，让查询的所有列都在索引中 Q3: 聚簇索引和非聚簇索引的区别？ | 特性 | 聚簇索引 | 非聚簇索引 | |------|---------|-----------| | 叶子节点数据 | 完整行数据 | 主键值 | | 数量 | 一个表只有一个 | 可以有多个 | | 查询效率 | 高（直接取数据） | 可能需要回表 | | 插入效率 | 需要维护数据顺序 | 只需维护索引 | Q4: 联合索引 (a, b, c) 的查询使用情况？ Q5: 一个 B+ 树能存多少数据？ 假设： - 页大小 16KB - 主键 bigint（8 字节） - 指针 6 字节 计算： - 非叶子节点：16KB / (8+6)B ≈ 1170 个指针 - 叶子节点：假设每行数据 1KB，16KB / 1KB = 16 条记录 - 3 层 B+ 树：1170 × 1170 × 16 ≈ 2190 万条记录 --- 参考链接：** - MySQL索引的底层原理-CSDN - MySQL B+树索引查询全过程详解-CSDN"
   },
   {
     "title": "SQL 优化技巧",
-    "url": "/java-backend-interview/database/sql-optimization",
+    "url": "/java-backend-interview/database/sql-optimization.html",
     "description": "--- layout: default title: SQL 优化技巧 --- SQL 优化技巧 > 写出高性能的 SQL 是后端工程师的核心能力 🎯 面试重点 - SQL 执行计划解读 - 索引优化策略 - 查询优化技巧 - 分页查询优化 📖 SQL 执行计划 EXPLAIN 命令详解 访问类型（type）详解 📖 索引优化策略 1. 最左前缀原则 2. 覆盖索引优化 3. 索引下推（ICP） 📖 查询优化技巧 1. 避免 SELECT 2. 避免在 WHERE 子句中对字段进行运算或函数操作 3. 使用 EXISTS 替代 IN 4. 分页查询优化 5. JOIN 优化 📖 数据批量操作优化 批量插入 批量更新 📖 数据库设计优化 1. 字段类型选择 2. 规范化与反规范化 📖 面试真题 Q1: 如何分析 SQL 性能？ 答： 1. 使用 查看执行计划 2. 关注 （访问类型），避免 ALL 全表扫描 3. 关注 （使用索引），确保使用合适索引 4. 关注 （扫描行数），越少越好 5. 关注 ，避免 Using filesort、Using temporary Q2: 什么情况下索...",
     "category": "database",
     "content": "--- layout: default title: SQL 优化技巧 --- SQL 优化技巧 > 写出高性能的 SQL 是后端工程师的核心能力 🎯 面试重点 - SQL 执行计划解读 - 索引优化策略 - 查询优化技巧 - 分页查询优化 📖 SQL 执行计划 EXPLAIN 命令详解 访问类型（type）详解 📖 索引优化策略 1. 最左前缀原则 2. 覆盖索引优化 3. 索引下推（ICP） 📖 查询优化技巧 1. 避免 SELECT 2. 避免在 WHERE 子句中对字段进行运算或函数操作 3. 使用 EXISTS 替代 IN 4. 分页查询优化 5. JOIN 优化 📖 数据批量操作优化 批量插入 批量更新 📖 数据库设计优化 1. 字段类型选择 2. 规范化与反规范化 📖 面试真题 Q1: 如何分析 SQL 性能？ 答： 1. 使用 查看执行计划 2. 关注 （访问类型），避免 ALL 全表扫描 3. 关注 （使用索引），确保使用合适索引 4. 关注 （扫描行数），越少越好 5. 关注 ，避免 Using filesort、Using temporary Q2: 什么情况下索引会失效？ 答： 1. 违反最左前缀原则 2. 对索引字段进行运算或函数操作 3. 使用 、、、 4. 使用 前导通配符 5. 类型转换（如字符串字段使用数字查询） 6. OR 条件未全部使用索引 7. 数据量少时，MySQL 可能选择全表扫描 Q3: 如何优化大表的分页查询？ 答： 1. 覆盖索引：先查主键，再关联查详情 2. 游标分页：使用 3. 延迟关联：子查询查主键，外层关联查详情 4. 业务折中：限制深度分页，或使用搜索引擎 Q4: COUNT() 和 COUNT(1) 哪个快？ 答： - 性能基本相同，MySQL 对两者优化相同 - 是 SQL 标准写法 - 会跳过 NULL 值，性能稍差 - 推荐使用，语义清晰 Q5: 数据库连接池如何配置？ 答： 1. 初始连接数：根据应用启动需求设置 2. 最大连接数：根据服务器资源和并发量设置 3. 超时时间：避免连接泄漏 4. 验证连接：定期检查连接有效性 5. 监控统计：监控连接池使用情况 📚 延伸阅读 - MySQL 性能优化 - 高性能 MySQL - SQL 优化案例 --- ⭐ 重点：SQL 优化是数据库性能的关键，必须掌握执行计划分析和索引优化技巧"
   },
   {
     "title": "分布式 ID",
-    "url": "/java-backend-interview/database/distributed-id",
+    "url": "/java-backend-interview/database/distributed-id.html",
     "description": "--- layout: default title: 分布式 ID --- 分布式 ID > 分库分表后的唯一 ID 生成策略 🎯 面试重点 - 分布式 ID 的要求 - 各方案的优缺点 - 选型建议 📖 要求和方案 要求 方案对比 📖 Snowflake 原理 📖 面试真题 Q1: 各方案的优缺点？ 答： - UUID：简单但无序、占用大 - 数据库自增：有序但单点 - Snowflake：高性能、有序但依赖时钟 Q2: Snowflake 时钟回拨问题？ 答： 记录上次时间戳，回拨时等待或使用备用 ID 序列。 --- ⭐ 重点：分布式 ID 是分库分表的核心基础设施",
     "category": "database",
     "content": "--- layout: default title: 分布式 ID --- 分布式 ID > 分库分表后的唯一 ID 生成策略 🎯 面试重点 - 分布式 ID 的要求 - 各方案的优缺点 - 选型建议 📖 要求和方案 要求 方案对比 📖 Snowflake 原理 📖 面试真题 Q1: 各方案的优缺点？ 答： - UUID：简单但无序、占用大 - 数据库自增：有序但单点 - Snowflake：高性能、有序但依赖时钟 Q2: Snowflake 时钟回拨问题？ 答： 记录上次时间戳，回拨时等待或使用备用 ID 序列。 --- ⭐ 重点：分布式 ID 是分库分表的核心基础设施"
   },
   {
     "title": "覆盖索引与回表查询",
-    "url": "/java-backend-interview/database/covering-index",
+    "url": "/java-backend-interview/database/covering-index.html",
     "description": "--- layout: default title: 覆盖索引与回表查询 --- 覆盖索引与回表查询 > 理解覆盖索引是 SQL 优化的高级技巧 🎯 面试重点 - 什么是覆盖索引？ - 回表查询的原理和代价 - 如何设计覆盖索引 - 覆盖索引的实际应用 📖 核心概念 什么是回表查询？ 什么是覆盖索引？ 📖 覆盖索引的优势 1. 减少 IO 操作 2. 减少内存占用 3. 优化排序和分组 📖 覆盖索引设计 1. 包含所有查询字段 2. 利用最左前缀原则 3. 处理范围查询 📖 实际应用场景 1. 统计查询优化 2. 分页查询优化 3. 多条件查询优化 📖 MySQL 扩展特性 1. 索引条件下推（ICP） 2. 索引合并（Index Merge） 3. 虚拟列索引（Generated Columns） 📖 面试真题 Q1: 什么是覆盖索引？ 答： 覆盖索引是指一个索引包含了查询需要的所有字段，查询只需要扫描索引而不需要回表。比如索引 对于查询 就是覆盖索引。 Q2: 覆盖索引有哪些优势？ 答： 1. 减少 IO：避免回表操作，减少磁盘访问 2. 减少内存：只需要缓存索引，不需要缓存数据 ...",
     "category": "database",
     "content": "--- layout: default title: 覆盖索引与回表查询 --- 覆盖索引与回表查询 > 理解覆盖索引是 SQL 优化的高级技巧 🎯 面试重点 - 什么是覆盖索引？ - 回表查询的原理和代价 - 如何设计覆盖索引 - 覆盖索引的实际应用 📖 核心概念 什么是回表查询？ 什么是覆盖索引？ 📖 覆盖索引的优势 1. 减少 IO 操作 2. 减少内存占用 3. 优化排序和分组 📖 覆盖索引设计 1. 包含所有查询字段 2. 利用最左前缀原则 3. 处理范围查询 📖 实际应用场景 1. 统计查询优化 2. 分页查询优化 3. 多条件查询优化 📖 MySQL 扩展特性 1. 索引条件下推（ICP） 2. 索引合并（Index Merge） 3. 虚拟列索引（Generated Columns） 📖 面试真题 Q1: 什么是覆盖索引？ 答： 覆盖索引是指一个索引包含了查询需要的所有字段，查询只需要扫描索引而不需要回表。比如索引 对于查询 就是覆盖索引。 Q2: 覆盖索引有哪些优势？ 答： 1. 减少 IO：避免回表操作，减少磁盘访问 2. 减少内存：只需要缓存索引，不需要缓存数据 3. 优化排序：索引有序，避免 filesort 4. 优化分组：索引有序，提高分组效率 Q3: 如何判断查询使用了覆盖索引？ 答： 使用 查看执行计划，如果 列显示 ，则表示使用了覆盖索引。 Q4: 什么情况下无法使用覆盖索引？ 答： 1. 查询字段包含未在索引中的字段 2. 使用了 （除非索引包含所有字段） 3. 查询包含 / 等大字段 4. 索引字段被函数或表达式修改 Q5: 如何设计覆盖索引？ 答： 1. 分析查询模式：识别高频查询的 WHERE 和 SELECT 字段 2. 包含必要字段：索引包含查询需要的所有字段 3. 考虑顺序：等值查询字段在前，范围查询字段在后 4. 权衡取舍：避免索引过大，考虑写入性能影响 Q6: 覆盖索引会导致索引过大吗？ 答： 会。包含多个字段的索引会占用更多存储空间，影响写入性能。需要权衡： - 查询性能 vs 存储成本 - 读取性能 vs 写入性能 - 高频查询优化 vs 低频查询 📖 最佳实践 1. 索引设计流程 2. 监控索引使用 3. 定期优化索引 📚 延伸阅读 - MySQL 覆盖索引优化 - 索引设计最佳实践 - 高性能索引策略 --- ⭐ 重点：覆盖索引是 SQL 优化的高级技巧，能显著提升查询性能，但需要合理设计避免索引过大"
   },
   {
     "title": "CPU 100% 问题排查实战",
-    "url": "/java-backend-interview/projects/cpu-troubleshoot",
+    "url": "/java-backend-interview/projects/cpu-troubleshoot.html",
     "description": "--- layout: default title: CPU 100% 问题排查实战 --- CPU 100% 问题排查实战 > 从报警到解决：CPU爆满问题全链路排查指南 🎯 面试重点 - CPU问题定位工具链 - 常见CPU问题场景分析 - 线程堆栈分析与解读 - 性能问题根治方案 📖 问题现象与分类 1. CPU 100% 现象识别 2. CPU问题分类 📖 排查工具链 1. 系统层面工具 2. JVM层面工具 3. 应用层面工具 📖 常见场景与排查 场景1：死循环 场景2：频繁GC 场景3：锁竞争 场景4：正则表达式灾难 场景5：数学计算密集 📖 实战排查案例 案例1：电商大促期间CPU 100% 案例2：定时任务导致CPU周期性尖刺 案例3：线程池配置不当 📖 预防与优化 1. 代码层面预防 2. 监控预警体系 3. 应急预案 📖 面试真题 Q1: 如何快速定位CPU 100%问题？ 答： 1. 系统层面：使用top找到高CPU进程，top -H找到高CPU线程 2. 进程层面：如果是Java进程，使用jstack分析线程堆栈 3. 线程分析：将线程ID转为十六进制，在jst...",
     "category": "projects",
     "content": "--- layout: default title: CPU 100% 问题排查实战 --- CPU 100% 问题排查实战 > 从报警到解决：CPU爆满问题全链路排查指南 🎯 面试重点 - CPU问题定位工具链 - 常见CPU问题场景分析 - 线程堆栈分析与解读 - 性能问题根治方案 📖 问题现象与分类 1. CPU 100% 现象识别 2. CPU问题分类 📖 排查工具链 1. 系统层面工具 2. JVM层面工具 3. 应用层面工具 📖 常见场景与排查 场景1：死循环 场景2：频繁GC 场景3：锁竞争 场景4：正则表达式灾难 场景5：数学计算密集 📖 实战排查案例 案例1：电商大促期间CPU 100% 案例2：定时任务导致CPU周期性尖刺 案例3：线程池配置不当 📖 预防与优化 1. 代码层面预防 2. 监控预警体系 3. 应急预案 📖 面试真题 Q1: 如何快速定位CPU 100%问题？ 答： 1. 系统层面：使用top找到高CPU进程，top -H找到高CPU线程 2. 进程层面：如果是Java进程，使用jstack分析线程堆栈 3. 线程分析：将线程ID转为十六进制，在jstack输出中查找对应线程 4. 代码定位：根据线程堆栈定位到具体代码行 5. 原因分析：常见原因包括死循环、频繁GC、锁竞争、算法复杂等 6. 解决方案：根据具体原因修复代码或调整配置 Q2: 如何区分用户态CPU高和内核态CPU高？ 答： 1. 查看top输出： - us（用户态）：应用程序代码消耗的CPU - sy（内核态）：系统调用消耗的CPU 2. 用户态CPU高：通常是应用代码问题，如死循环、复杂计算 3. 内核态CPU高：通常是系统调用频繁，如大量IO、网络操作、锁竞争 4. 使用pidstat区分：pidstat -u -t -p 可以查看线程级别的用户态和内核态CPU Q3: 如何排查死锁导致的CPU问题？ 答： 1. 现象识别：CPU使用率不高但负载高，大量线程BLOCKED 2. jstack分析：jstack | grep -A 10 -B 5 \"BLOCKED\" 3. 查找死锁：jstack输出末尾会有死锁检测结果 4. 分析锁依赖：查看哪些线程持有什么锁，等待什么锁 5. 代码修复： - 保证锁的获取顺序一致 - 使用tryLock设置超时 - 减小锁粒度 - 使用无锁数据结构 Q4: 如何预防CPU问题？ 答： 1. 代码规范：避免死循环、优化算法、合理使用正则 2. 资源限制：设置线程池大小、连接池大小、超时时间 3. 监控预警：建立完善的监控体系，设置合理的告警阈值 4. 压测验证：定期进行压力测试，发现性能瓶颈 5. 容量规划：根据业务增长规划资源，提前扩容 6. 应急预案：制定应急预案，快速响应问题 Q5: CPU问题和内存问题如何关联分析？ 答： 1. 频繁GC导致CPU高：垃圾回收消耗CPU资源 2. 内存泄漏导致OOM：最终可能引发频繁GC 3. 分析工具结合： - jstat查看GC情况 - jmap分析内存使用 - jstack分析线程状态 4. 典型场景： - 内存泄漏 → 频繁GC → CPU升高 - 大对象创建 → Young GC频繁 → CPU周期性尖刺 - 元空间不足 → Full GC → CPU短暂100% 5. 综合解决方案：既要优化内存使用，也要调整GC策略 📚 延伸阅读 - Linux性能优化实战 - Java性能权威指南 - Brendan Gregg的性能分析博客 - Oracle官方性能调优指南 --- ⭐ 重点：CPU问题排查需要系统化的工具链和方法论，从现象到根因，从应急到预防，建立完整的性能保障体系"
   },
   {
     "title": "推荐系统设计",
-    "url": "/java-backend-interview/projects/recommendation-design",
+    "url": "/java-backend-interview/projects/recommendation-design.html",
     "description": "--- layout: default title: 推荐系统设计 --- 推荐系统设计 > 设计一个个性化推荐系统，实现千人千面的内容推荐 🎯 面试重点 - 推荐算法选型与组合 - 用户画像构建 - 实时推荐与离线推荐 - 推荐效果评估 📖 需求分析 业务场景 核心指标 📖 系统架构设计 整体架构 推荐流程 📖 详细设计 1. 数据采集与处理 2. 特征工程 3. 召回策略 4. 排序模型 5. 实时推荐架构 📖 关键技术实现 1. 协同过滤实现 2. 特征存储设计 3. 实时特征计算（Flink） 4. 模型服务（TensorFlow Serving） 📖 效果评估与优化 1. A/B测试框架 2. 评估指标计算 📖 冷启动解决方案 1. 用户冷启动 2. 物品冷启动 📖 面试真题 Q1: 推荐系统的主要模块有哪些？ 答： 1. 数据层：用户行为采集、特征存储 2. 召回层：从海量物品中快速筛选候选集（协同过滤、内容过滤、热门召回等） 3. 排序层：对候选集精排序（CTR预估模型） 4. 重排层：业务规则调整、多样性控制 5. 评估层：A/B测试、效果评估、模型迭代 Q2: 协同过...",
     "category": "projects",
     "content": "--- layout: default title: 推荐系统设计 --- 推荐系统设计 > 设计一个个性化推荐系统，实现千人千面的内容推荐 🎯 面试重点 - 推荐算法选型与组合 - 用户画像构建 - 实时推荐与离线推荐 - 推荐效果评估 📖 需求分析 业务场景 核心指标 📖 系统架构设计 整体架构 推荐流程 📖 详细设计 1. 数据采集与处理 2. 特征工程 3. 召回策略 4. 排序模型 5. 实时推荐架构 📖 关键技术实现 1. 协同过滤实现 2. 特征存储设计 3. 实时特征计算（Flink） 4. 模型服务（TensorFlow Serving） 📖 效果评估与优化 1. A/B测试框架 2. 评估指标计算 📖 冷启动解决方案 1. 用户冷启动 2. 物品冷启动 📖 面试真题 Q1: 推荐系统的主要模块有哪些？ 答： 1. 数据层：用户行为采集、特征存储 2. 召回层：从海量物品中快速筛选候选集（协同过滤、内容过滤、热门召回等） 3. 排序层：对候选集精排序（CTR预估模型） 4. 重排层：业务规则调整、多样性控制 5. 评估层：A/B测试、效果评估、模型迭代 Q2: 协同过滤有哪些类型？各有什么优缺点？ 答： 1. 用户协同过滤： - 优点：发现用户潜在兴趣 - 缺点：用户矩阵稀疏，计算量大 2. 物品协同过滤： - 优点：物品矩阵相对稠密，可离线计算 - 缺点：难以应对物品冷启动 3. 矩阵分解（MF）： - 优点：解决稀疏性问题，可扩展性好 - 缺点：可解释性差，需要定期重训 4. 深度学习协同过滤： - 优点：自动特征学习，效果好 - 缺点：计算资源消耗大，可解释性差 Q3: 如何处理推荐系统的冷启动问题？ 答： 用户冷启动： 1. 基于热门推荐 2. 基于地域推荐 3. 基于人口统计信息推荐 4. 引导用户明确兴趣（标签选择） 5. 探索式推荐 物品冷启动： 1. 基于内容相似度推荐 2. 探索性曝光（Epsilon-Greedy） 3. 运营扶持（人工曝光） 4. 结合用户反馈快速学习 Q4: 如何评估推荐系统的效果？ 答： 1. 离线评估： - 准确率：Precision、Recall、F1-score - 覆盖率：Coverage - 多样性：Intra-list Diversity - 新颖性：Novelty 2. 在线评估： - 业务指标：CTR、CVR、GMV - 用户指标：留存率、使用时长 - A/B测试：统计显著性检验 3. 长期评估： - 用户满意度调研 - 生态健康度（马太效应） - 系统可扩展性 Q5: 推荐系统如何保证多样性？ 答： 1. 召回阶段：多路召回（不同策略保证多样性） 2. 排序阶段：在损失函数中加入多样性正则项 3. 重排阶段： - MMR（Maximal Marginal Relevance）算法 - 品类打散（同一品类不超过2个） - 价格段分布（高、中、低均衡） - 时间新鲜度（新旧内容混合） 4. 探索机制：ε-greedy、Thompson Sampling、Bandit算法 📚 延伸阅读 - 推荐系统实践 - 深度学习推荐系统 - Recommender Systems Handbook - Netflix推荐系统 --- ⭐ 重点：推荐系统是数据驱动和算法驱动的典型应用，需要平衡准确性、多样性、新颖性和实时性"
   },
   {
     "title": "设计一个秒杀系统",
-    "url": "/java-backend-interview/projects/seckill-design",
+    "url": "/java-backend-interview/projects/seckill-design.html",
     "description": "--- layout: default title: 设计一个秒杀系统 --- 设计一个秒杀系统 > 高并发系统设计 🎯 挑战 - 瞬时高并发 - 库存一致性 - 防止超卖 📖 设计方案 前端 网关层 服务层 数据层 --- ⭐ 重点：秒杀系统是高并发面试经典",
     "category": "projects",
     "content": "--- layout: default title: 设计一个秒杀系统 --- 设计一个秒杀系统 > 高并发系统设计 🎯 挑战 - 瞬时高并发 - 库存一致性 - 防止超卖 📖 设计方案 前端 网关层 服务层 数据层 --- ⭐ 重点：秒杀系统是高并发面试经典"
   },
   {
     "title": "设计一个短链系统",
-    "url": "/java-backend-interview/projects/tinyurl-design",
+    "url": "/java-backend-interview/projects/tinyurl-design.html",
     "description": "--- layout: default title: 设计一个短链系统 --- 设计一个短链系统 > 系统设计题 🎯 需求 - 将长 URL 转换为短 URL - 访问短 URL 跳转到长 URL - 高并发、高可用 📖 设计方案 短链生成 存储方案 架构 --- ⭐ 重点：短链系统考察系统设计能力",
     "category": "projects",
     "content": "--- layout: default title: 设计一个短链系统 --- 设计一个短链系统 > 系统设计题 🎯 需求 - 将长 URL 转换为短 URL - 访问短 URL 跳转到长 URL - 高并发、高可用 📖 设计方案 短链生成 存储方案 架构 --- ⭐ 重点：短链系统考察系统设计能力"
   },
   {
     "title": "JVM调优实战案例",
-    "url": "/java-backend-interview/projects/jvm-tuning-case",
+    "url": "/java-backend-interview/projects/jvm-tuning-case.html",
     "description": "--- layout: default title: JVM调优实战案例 --- JVM调优实战案例 > 从OOM到高性能：JVM调优实战全记录 🎯 面试重点 - JVM内存模型与垃圾回收原理 - 常见JVM问题诊断与解决 - 线上性能问题排查流程 - JVM参数调优实战 📖 内存溢出（OOM）案例 案例1：堆内存溢出（Heap OOM） 案例2：元空间溢出（Metaspace OOM） 案例3：直接内存溢出（Direct Memory OOM） 📖 GC性能问题案例 案例1：频繁Full GC 案例2：Young GC时间过长 案例3：CMS GC并发模式失败 📖 CPU性能问题案例 案例1：CPU 100%问题 案例2：上下文切换过多 📖 实战调优参数 1. 电商应用调优参数 2. 大数据处理调优参数 3. 微服务应用调优参数 📖 监控与诊断工具 1. Arthas（阿尔萨斯）实战 2. 线上问题排查流程 📖 面试真题 Q1: 如何排查线上JVM内存溢出问题？ 答： 1. 查看错误日志：确认OOM类型（Java heap space、Metaspace等） 2. 分析堆转储：如果配...",
     "category": "projects",
     "content": "--- layout: default title: JVM调优实战案例 --- JVM调优实战案例 > 从OOM到高性能：JVM调优实战全记录 🎯 面试重点 - JVM内存模型与垃圾回收原理 - 常见JVM问题诊断与解决 - 线上性能问题排查流程 - JVM参数调优实战 📖 内存溢出（OOM）案例 案例1：堆内存溢出（Heap OOM） 案例2：元空间溢出（Metaspace OOM） 案例3：直接内存溢出（Direct Memory OOM） 📖 GC性能问题案例 案例1：频繁Full GC 案例2：Young GC时间过长 案例3：CMS GC并发模式失败 📖 CPU性能问题案例 案例1：CPU 100%问题 案例2：上下文切换过多 📖 实战调优参数 1. 电商应用调优参数 2. 大数据处理调优参数 3. 微服务应用调优参数 📖 监控与诊断工具 1. Arthas（阿尔萨斯）实战 2. 线上问题排查流程 📖 面试真题 Q1: 如何排查线上JVM内存溢出问题？ 答： 1. 查看错误日志：确认OOM类型（Java heap space、Metaspace等） 2. 分析堆转储：如果配置了-XX:+HeapDumpOnOutOfMemoryError，使用MAT或jhat分析 3. 检查监控指标：查看内存使用趋势，确定是突然增长还是缓慢增长 4. 代码分析：结合堆转储中的大对象，定位相关代码 5. 常见原因： - 内存泄漏（如静态集合无限增长） - 大对象创建（如大数组、大字符串） - 不合理的内存配置（如堆内存太小） 6. 解决方案： - 修复内存泄漏代码 - 增加堆内存大小 - 使用缓存时设置上限和过期时间 Q2: 如何分析GC日志？ 答： 1. 开启GC日志：使用-XX:+PrintGCDetails等参数 2. 关键指标： - GC类型：Young GC vs Full GC - 耗时：关注real time（实际暂停时间） - 内存变化：GC前后各区域使用量 - 频率：GC发生频率 3. 分析工具： - 使用GCViewer可视化分析 - 使用gceasy在线分析 - 手动分析关注Full GC频率和耗时 4. 优化目标： - 减少Full GC频率 - 降低GC暂停时间 - 提高吞吐量 Q3: 如何选择垃圾回收器？ 答： 根据应用特点选择： 1. Serial GC：单核小内存（几百MB），嵌入式系统 2. Parallel GC（吞吐量优先）：多核，追求高吞吐，可接受较长暂停 3. CMS GC（低延迟）：多核，追求低暂停，老年代并发收集 4. G1 GC（平衡型）：大堆（4G+），平衡吞吐和暂停，JDK9+默认 5. ZGC：超大堆（TB级），极低暂停（32G）：ZGC或Shenandoah - 实时性要求高：ZGC、Shenandoah Q4: 如何设置合理的JVM参数？ 答： 1. 堆内存： - 初始堆（-Xms）和最大堆（-Xmx）设置相同值，避免动态调整 - 堆大小 = 活跃数据量 × 2 ~ 3倍 - 留出20%内存给操作系统和其他进程 2. 新生代： - 新生代大小 = 堆大小 × 1/3 ~ 1/2 - 使用-XX:NewRatio或-Xmn指定 3. 元空间： - 初始值：-XX:MetaspaceSize=256m - 最大值：-XX:MaxMetaspaceSize=512m 4. 垃圾回收器： - 根据应用特点选择合适的GC - 设置合理的暂停时间目标 5. 监控参数： - 开启GC日志、堆转储、错误日志 - 方便问题排查 Q5: 如何预防JVM性能问题？ 答： 1. 监控预警： - 建立完善的监控体系（CPU、内存、GC、线程等） - 设置合理的告警阈值 2. 容量规划： - 根据业务量预估内存需求 - 定期进行容量评估和扩容 3. 代码规范： - 避免内存泄漏（如静态集合、未关闭的资源） - 合理使用缓存（设置大小限制和过期时间） - 减少大对象创建 4. 压测验证： - 定期进行压力测试，验证系统承载能力 - 通过压测发现性能瓶颈 5. 定期优化： - 定期分析GC日志，优化JVM参数 - 定期检查代码中的性能问题 📚 延伸阅读 - 深入理解Java虚拟机 - Java性能权威指南 - Arthas官方文档 - G1垃圾回收器调优 --- ⭐ 重点：JVM调优需要结合监控数据、日志分析和代码审查，是一个持续优化和迭代的过程"
   },
   {
     "title": "数据库优化实战",
-    "url": "/java-backend-interview/projects/db-optimization",
+    "url": "/java-backend-interview/projects/db-optimization.html",
     "description": "--- layout: default title: 数据库优化实战 --- 数据库优化实战 > 从慢查询到高性能：数据库优化全链路指南 🎯 面试重点 - 数据库性能分析与监控 - SQL优化与执行计划解读 - 索引设计与优化策略 - 分库分表实战方案 📖 性能监控体系 1. 数据库监控指标 2. 性能分析工具 📖 SQL优化实战 1. 执行计划深度解读 2. 常见SQL优化模式 3. 索引优化策略 📖 表设计与优化 1. 数据类型选择 2. 规范化与反规范化 📖 高并发场景优化 1. 热点更新问题 2. 大批量数据操作 📖 分库分表实战 1. 分片策略选择 2. 分库分表示例 3. 分布式ID生成 📖 备份与恢复 1. 备份策略 2. 主从复制 📖 面试真题 Q1: 如何分析SQL性能问题？ 答： 1. 开启慢查询日志：找到执行时间长的SQL 2. 使用EXPLAIN分析：查看执行计划，关注type、key、rows、Extra 3. 检查索引使用：是否使用正确索引，是否回表查询 4. 分析锁情况：使用SHOW ENGINE INNODB STATUS查看锁信息 5. 监控服务器资源...",
     "category": "projects",
     "content": "--- layout: default title: 数据库优化实战 --- 数据库优化实战 > 从慢查询到高性能：数据库优化全链路指南 🎯 面试重点 - 数据库性能分析与监控 - SQL优化与执行计划解读 - 索引设计与优化策略 - 分库分表实战方案 📖 性能监控体系 1. 数据库监控指标 2. 性能分析工具 📖 SQL优化实战 1. 执行计划深度解读 2. 常见SQL优化模式 3. 索引优化策略 📖 表设计与优化 1. 数据类型选择 2. 规范化与反规范化 📖 高并发场景优化 1. 热点更新问题 2. 大批量数据操作 📖 分库分表实战 1. 分片策略选择 2. 分库分表示例 3. 分布式ID生成 📖 备份与恢复 1. 备份策略 2. 主从复制 📖 面试真题 Q1: 如何分析SQL性能问题？ 答： 1. 开启慢查询日志：找到执行时间长的SQL 2. 使用EXPLAIN分析：查看执行计划，关注type、key、rows、Extra 3. 检查索引使用：是否使用正确索引，是否回表查询 4. 分析锁情况：使用SHOW ENGINE INNODB STATUS查看锁信息 5. 监控服务器资源：CPU、内存、磁盘IO、网络 6. 使用性能分析工具：pt-query-digest、innotop等 7. 压测验证：修改后重新压测，验证优化效果 Q2: 什么情况下索引会失效？ 答： 1. 违反最左前缀原则：复合索引未使用最左列 2. 对索引列进行计算或函数操作：WHERE YEAR(createtime) = 2023 3. 使用OR条件：OR两侧未都使用索引 4. LIKE以通配符开头：WHERE name LIKE '%张三' 5. 类型转换：字符串字段使用数字查询 WHERE phone = 13800138000 6. 使用!=或<>：WHERE status != 'active' 7. 索引列使用IS NULL或IS NOT NULL：需要额外处理 8. 数据量太少：MySQL可能选择全表扫描 Q3: 如何设计一个高性能的数据库架构？ 答： 1. 合理分库分表：根据业务场景选择分片策略 2. 读写分离：主库写，从库读，增加多个从库 3. 缓存层：Redis缓存热点数据，减少数据库压力 4. 连接池优化：合理配置连接池参数 5. 索引优化：创建合适的索引，定期维护 6. SQL优化：避免N+1查询，使用JOIN优化 7. 硬件优化：使用SSD，增加内存，优化网络 8. 监控告警：实时监控数据库性能，快速响应问题 Q4: 如何解决数据库死锁？ 答： 1. 预防死锁： - 按相同顺序访问多张表 - 减少事务大小和持有锁时间 - 使用较低的事务隔离级别（如READ COMMITTED） - 使用索引，减少锁范围 2. 检测死锁： - 监控InnoDB状态：SHOW ENGINE INNODB STATUS - 设置死锁超时：innodblockwaittimeout = 50 - 开启死锁日志：innodbprintalldeadlocks = ON 3. 解决死锁： - MySQL自动检测并回滚代价较小的事务 - 应用层重试机制 - 使用SELECT ... FOR UPDATE NOWAIT（立即失败，不等待） Q5: 如何进行数据库容量规划？ 答： 1. 数据增长预测：分析历史数据，预测未来增长 2. 存储计算：数据量 × 增长系数 + 索引空间 + 预留空间 3. 性能需求：根据QPS、TPS计算需要的IOPS和吞吐量 4. 高可用规划：主从复制、集群部署需要的机器数量 5. 备份规划：备份空间 = 数据量 × 备份保留天数 × 每日增量 6. 监控告警：设置磁盘使用率、连接数等阈值告警 7. 扩容方案：垂直扩容（升级硬件）和水平扩容（分库分表）方案 📚 延伸阅读 - 高性能MySQL - MySQL技术内幕 - 数据库索引设计与优化 - MySQL官方文档 --- ⭐ 重点：数据库优化是系统工程，需要从SQL、索引、架构、硬件等多个层面综合考虑，持续监控和调优**"
   },
   {
     "title": "技术亮点提炼",
-    "url": "/java-backend-interview/projects/highlight-extraction",
+    "url": "/java-backend-interview/projects/highlight-extraction.html",
     "description": "--- layout: default title: 技术亮点提炼 --- 技术亮点提炼 > 项目经验包装 📖 提炼方法 📖 示例 --- ⭐ 重点：用数据和细节说话",
     "category": "projects",
     "content": "--- layout: default title: 技术亮点提炼 --- 技术亮点提炼 > 项目经验包装 📖 提炼方法 📖 示例 --- ⭐ 重点：用数据和细节说话"
@@ -372,119 +372,119 @@
   },
   {
     "title": "接口超时排查实战",
-    "url": "/java-backend-interview/projects/timeout-troubleshoot",
+    "url": "/java-backend-interview/projects/timeout-troubleshoot.html",
     "description": "--- layout: default title: 接口超时排查实战 --- 接口超时排查实战 > 从超时到优化：接口性能问题全链路排查指南 🎯 面试重点 - 超时问题分类与根因分析 - 全链路调用追踪技术 - 数据库与中间件性能分析 - 超时预防与优化策略 📖 超时问题分类 1. 超时现象定义 2. 超时影响范围 📖 排查工具链 1. 网络层排查工具 2. 系统层排查工具 3. 应用层排查工具 4. 数据库层排查工具 📖 常见超时场景 场景1：数据库查询超时 场景2：外部API调用超时 场景3：线程池耗尽超时 场景4：锁竞争超时 📖 全链路追踪 1. 分布式追踪原理 2. SkyWalking实战配置 3. 自定义追踪 📖 超时优化策略 1. 超时配置最佳实践 2. 降级与熔断策略 3. 异步化改造 📖 监控与告警 1. 超时监控指标 2. 智能告警策略 📖 面试真题 Q1: 接口超时如何快速定位问题？ 答： 1. 查看监控指标：响应时间、错误率、超时率 2. 分析调用链：使用APM工具查看全链路，定位慢节点 3. 检查依赖服务：数据库、缓存、外部API等依赖服务状态 4. 分析系...",
     "category": "projects",
     "content": "--- layout: default title: 接口超时排查实战 --- 接口超时排查实战 > 从超时到优化：接口性能问题全链路排查指南 🎯 面试重点 - 超时问题分类与根因分析 - 全链路调用追踪技术 - 数据库与中间件性能分析 - 超时预防与优化策略 📖 超时问题分类 1. 超时现象定义 2. 超时影响范围 📖 排查工具链 1. 网络层排查工具 2. 系统层排查工具 3. 应用层排查工具 4. 数据库层排查工具 📖 常见超时场景 场景1：数据库查询超时 场景2：外部API调用超时 场景3：线程池耗尽超时 场景4：锁竞争超时 📖 全链路追踪 1. 分布式追踪原理 2. SkyWalking实战配置 3. 自定义追踪 📖 超时优化策略 1. 超时配置最佳实践 2. 降级与熔断策略 3. 异步化改造 📖 监控与告警 1. 超时监控指标 2. 智能告警策略 📖 面试真题 Q1: 接口超时如何快速定位问题？ 答： 1. 查看监控指标：响应时间、错误率、超时率 2. 分析调用链：使用APM工具查看全链路，定位慢节点 3. 检查依赖服务：数据库、缓存、外部API等依赖服务状态 4. 分析系统资源：CPU、内存、磁盘IO、网络 5. 查看日志：应用日志、慢查询日志、GC日志 6. 线程堆栈分析：使用jstack分析线程状态 7. 网络排查：使用ping、traceroute、tcpdump分析网络 Q2: 数据库查询超时如何排查？ 答： 1. 查看慢查询日志：找到执行时间长的SQL 2. 分析执行计划：使用EXPLAIN分析SQL执行计划 3. 检查索引使用：是否使用合适索引，是否回表查询 4. 分析锁情况：使用SHOW ENGINE INNODB STATUS查看锁信息 5. 检查连接数：SHOW PROCESSLIST查看当前连接 6. 检查表状态：表大小、碎片情况、统计信息是否准确 7. 硬件检查：磁盘IO、CPU使用率、内存使用 Q3: 如何设置合理的超时时间？ 答： 1. 分层设置：网络层、连接层、应用层分别设置 2. 参考SLA：根据业务SLA要求设置 3. 逐步调优：从较小值开始，逐步调整到合适值 4. 考虑依赖：下游服务的超时时间要小于上游 5. 区分场景：读操作和写操作设置不同的超时时间 6. 监控反馈：根据实际监控数据调整超时时间 7. 设置重试：超时后配合重试机制，但注意幂等性 Q4: 如何避免超时导致的雪崩效应？ 答： 1. 设置超时：所有外部调用都必须设置超时时间 2. 使用熔断器：当失败率超过阈值时自动熔断，避免连锁反应 3. 服务降级：非核心功能降级，保证核心功能可用 4. 限流保护：限制并发请求数，保护服务不被压垮 5. 异步处理：耗时操作异步化，不阻塞主流程 6. 缓存优化：使用缓存减少重复计算和外部调用 7. 快速失败：尽早失败，避免资源长时间占用 Q5: 全链路追踪在超时排查中的作用？ 答： 1. 定位慢节点：直观显示每个环节的耗时 2. 分析依赖关系：显示服务调用链，找到瓶颈点 3. 关联日志：通过Trace ID关联不同服务的日志 4. 性能分析：统计每个服务的P95、P99响应时间 5. 根因分析：结合业务日志，分析超时的根本原因 6. 容量规划：基于调用链数据，合理规划服务容量 7. 优化验证：优化后验证效果，对比优化前后的性能 📚 延伸阅读 - 微服务架构设计模式 - SRE：Google运维解密 - 分布式系统：概念与设计 - Resilience4j官方文档 --- ⭐ 重点：超时问题排查需要系统化的方法论，结合监控、追踪、日志分析和性能优化，建立从预防、检测到恢复的完整体系"
   },
   {
     "title": "内存泄漏排查实战",
-    "url": "/java-backend-interview/projects/memory-leak",
+    "url": "/java-backend-interview/projects/memory-leak.html",
     "description": "--- layout: default title: 内存泄漏排查实战 --- 内存泄漏排查实战 > 从缓慢死亡到精准定位：内存泄漏全链路排查指南 🎯 面试重点 - 内存泄漏原理与常见场景 - 内存分析工具链使用 - 堆转储文件分析与解读 - 内存泄漏预防与监控 📖 内存泄漏原理 1. Java内存管理基础 2. 内存泄漏 vs 内存溢出 📖 常见内存泄漏场景 1. 静态集合类泄漏 2. 监听器与回调泄漏 3. ThreadLocal泄漏 4. 内部类持有外部类引用 5. 连接未关闭 📖 排查工具链 1. 监控工具 2. 堆转储分析实战 3. MAT分析技巧 📖 实战排查案例 案例1：缓存服务内存泄漏 案例2：线程池内存泄漏 案例3：第三方库内存泄漏 📖 预防与最佳实践 1. 代码规范 2. 监控与告警 3. 定期健康检查 📖 面试真题 Q1: 如何判断应用是否存在内存泄漏？ 答： 1. 监控指标：老年代内存使用率持续增长，不随GC下降 2. GC日志：Full GC频率增加，但每次回收的内存越来越少 3. 应用表现：运行时间越长，内存使用越高，最终OOM 4. 重启验证：重启后内存恢...",
     "category": "projects",
     "content": "--- layout: default title: 内存泄漏排查实战 --- 内存泄漏排查实战 > 从缓慢死亡到精准定位：内存泄漏全链路排查指南 🎯 面试重点 - 内存泄漏原理与常见场景 - 内存分析工具链使用 - 堆转储文件分析与解读 - 内存泄漏预防与监控 📖 内存泄漏原理 1. Java内存管理基础 2. 内存泄漏 vs 内存溢出 📖 常见内存泄漏场景 1. 静态集合类泄漏 2. 监听器与回调泄漏 3. ThreadLocal泄漏 4. 内部类持有外部类引用 5. 连接未关闭 📖 排查工具链 1. 监控工具 2. 堆转储分析实战 3. MAT分析技巧 📖 实战排查案例 案例1：缓存服务内存泄漏 案例2：线程池内存泄漏 案例3：第三方库内存泄漏 📖 预防与最佳实践 1. 代码规范 2. 监控与告警 3. 定期健康检查 📖 面试真题 Q1: 如何判断应用是否存在内存泄漏？ 答： 1. 监控指标：老年代内存使用率持续增长，不随GC下降 2. GC日志：Full GC频率增加，但每次回收的内存越来越少 3. 应用表现：运行时间越长，内存使用越高，最终OOM 4. 重启验证：重启后内存恢复正常，然后再次缓慢增长 5. 工具验证：使用jstat监控，或生成堆转储分析 Q2: 如何使用MAT分析内存泄漏？ 答： 1. 生成堆转储：使用jmap或JVM参数生成heapdump.hprof 2. 打开MAT：使用Eclipse Memory Analyzer打开堆转储文件 3. 查看泄漏报告：查看Leak Suspects报告，MAT会自动分析可疑点 4. 分析直方图：查看占用内存最多的对象类型 5. 查看支配树：找到支配大量内存的对象 6. 分析GC Roots路径：查看对象为什么无法被回收 7. 对比堆转储：生成不同时间点的堆转储，对比对象增长情况 Q3: ThreadLocal为什么会引起内存泄漏？如何避免？ 答： 泄漏原因： 1. ThreadLocal使用static修饰，生命周期与类相同 2. 线程池中的线程会复用，ThreadLocal会一直存在 3. ThreadLocal的Entry是弱引用，但value是强引用 4. 如果ThreadLocal不再使用，但线程仍然存活，value无法被回收 避免方法： 1. 使用后清理：调用ThreadLocal.remove() 2. 使用try-finally保证清理 3. 使用线程安全的替代品：如DateTimeFormatter（Java 8+） 4. 使用自定义ThreadLocal子类：重写initialValue()，返回可回收对象 5. 避免在线程池中使用ThreadLocal：如果必须使用，确保清理 Q4: 如何排查第三方库引起的内存泄漏？ 答： 1. 隔离测试：单独测试可疑的第三方库 2. 版本对比：升级/降级版本，观察内存变化 3. 堆转储分析：分析堆转储中第三方库的对象 4. 源码审查：查看第三方库源码，寻找可能的泄漏点 5. 替代方案：尝试使用其他同类库 6. 监控告警：监控第三方库的内存使用 7. 社区反馈：查看GitHub issues，是否有类似问题 Q5: 线上系统内存泄漏，如何紧急处理？ 答： 紧急处理： 1. 扩容：增加实例数量，分担压力 2. 重启：重启有问题实例，快速恢复 3. 降级：关闭非核心功能，减少内存使用 4. 限流：限制流量，防止问题扩散 排查定位： 1. 生成堆转储：在重启前生成堆转储 2. 保存日志：保存GC日志、应用日志 3. 监控分析：分析监控数据，定位问题时间点 4. 代码审查：审查最近上线的代码变更 根治方案： 1. 修复代码：根据堆转储分析结果修复泄漏点 2. 增加监控：增加内存泄漏监控告警 3. 压测验证：修复后压测验证 4. 复盘总结：总结问题原因，完善流程 📚 延伸阅读 - Eclipse MAT官方文档 - Java性能权威指南 - Understanding and Solving Memory Leaks in Java - Plumbr内存泄漏检测 --- ⭐ 重点：内存泄漏排查需要结合监控、工具分析和代码审查，建立从预防、检测到修复的完整闭环"
   },
   {
     "title": "面试常见问题",
-    "url": "/java-backend-interview/projects/common-questions",
+    "url": "/java-backend-interview/projects/common-questions.html",
     "description": "--- layout: default title: 面试常见问题 --- 面试常见问题 > 项目相关问题 📖 常见问题 项目介绍 技术深度 团队协作 --- ⭐ 重点：准备 3-5 个项目的详细介绍",
     "category": "projects",
     "content": "--- layout: default title: 面试常见问题 --- 面试常见问题 > 项目相关问题 📖 常见问题 项目介绍 技术深度 团队协作 --- ⭐ 重点：准备 3-5 个项目的详细介绍"
   },
   {
     "title": "STAR 法则",
-    "url": "/java-backend-interview/projects/star-method",
+    "url": "/java-backend-interview/projects/star-method.html",
     "description": "--- layout: default title: STAR 法则 --- STAR 法则 > 项目介绍方法论 📖 STAR 法则 📖 示例 --- ⭐ 重点：STAR 法则让项目介绍更有条理",
     "category": "projects",
     "content": "--- layout: default title: STAR 法则 --- STAR 法则 > 项目介绍方法论 📖 STAR 法则 📖 示例 --- ⭐ 重点：STAR 法则让项目介绍更有条理"
   },
   {
     "title": "接口性能优化实战",
-    "url": "/java-backend-interview/projects/api-optimization",
+    "url": "/java-backend-interview/projects/api-optimization.html",
     "description": "--- layout: default title: 接口性能优化实战 --- 接口性能优化实战 > 从毫秒到微秒：高性能接口优化全攻略 🎯 面试重点 - 接口性能分析工具 - 常见性能瓶颈识别 - 优化策略与实战技巧 - 监控与预警体系建设 📖 性能指标体系 关键性能指标（KPI） 性能监控体系 📖 性能分析工具 1. 压测工具 2. 性能分析工具 3. 火焰图分析 📖 常见性能瓶颈 1. CPU密集型瓶颈 2. 内存密集型瓶颈 3. I/O密集型瓶颈 📖 优化策略与实践 1. 数据库优化 2. 缓存优化 3. 异步与并发优化 4. JVM优化 5. 网络优化 📖 实战案例 案例1：商品详情页优化 案例2：秒杀系统优化 📖 面试真题 Q1: 如何定位接口性能瓶颈？ 答： 1. 监控指标分析：查看响应时间、QPS、错误率等指标 2. 链路追踪：使用APM工具（SkyWalking、Pinpoint）分析调用链 3. CPU分析：使用jstack、arthas分析CPU热点 4. 内存分析：使用jmap、MAT分析内存使用 5. I/O分析：使用iostat、vmstat分析磁盘和网络I...",
     "category": "projects",
     "content": "--- layout: default title: 接口性能优化实战 --- 接口性能优化实战 > 从毫秒到微秒：高性能接口优化全攻略 🎯 面试重点 - 接口性能分析工具 - 常见性能瓶颈识别 - 优化策略与实战技巧 - 监控与预警体系建设 📖 性能指标体系 关键性能指标（KPI） 性能监控体系 📖 性能分析工具 1. 压测工具 2. 性能分析工具 3. 火焰图分析 📖 常见性能瓶颈 1. CPU密集型瓶颈 2. 内存密集型瓶颈 3. I/O密集型瓶颈 📖 优化策略与实践 1. 数据库优化 2. 缓存优化 3. 异步与并发优化 4. JVM优化 5. 网络优化 📖 实战案例 案例1：商品详情页优化 案例2：秒杀系统优化 📖 面试真题 Q1: 如何定位接口性能瓶颈？ 答： 1. 监控指标分析：查看响应时间、QPS、错误率等指标 2. 链路追踪：使用APM工具（SkyWalking、Pinpoint）分析调用链 3. CPU分析：使用jstack、arthas分析CPU热点 4. 内存分析：使用jmap、MAT分析内存使用 5. I/O分析：使用iostat、vmstat分析磁盘和网络IO 6. 数据库分析：慢查询日志、执行计划分析 7. 压测验证：使用wrk、JMeter模拟高并发，观察瓶颈点 Q2: 常见的接口性能优化手段有哪些？ 答： 1. 缓存优化：多级缓存、缓存预热、缓存击穿解决方案 2. 数据库优化：索引优化、分库分表、读写分离 3. 异步处理：消息队列、异步调用、并行处理 4. 代码优化：算法优化、避免重复计算、资源复用 5. JVM优化：合理配置堆内存、选择合适的GC算法 6. 网络优化：连接池、HTTP/2、CDN加速 7. 架构优化：微服务拆分、服务治理、负载均衡 Q3: 如何设计一个高性能的API网关？ 答： 1. 异步非阻塞：使用Netty或WebFlux实现异步IO 2. 连接池管理：合理配置连接池参数 3. 缓存策略：缓存鉴权结果、响应内容 4. 限流熔断：实现令牌桶、漏桶等限流算法 5. 负载均衡：支持多种负载均衡策略 6. 协议优化：支持HTTP/2、gRPC等高性能协议 7. 监控告警：实时监控网关性能，快速发现故障 Q4: 如何解决缓存穿透、击穿、雪崩？ 答： 1. 缓存穿透： - 布隆过滤器判断key是否存在 - 缓存空值（设置较短过期时间） - 接口层校验非法请求 2. 缓存击穿： - 热点数据永不过期 - 互斥锁（Redis setnx） - 后台定时更新缓存 3. 缓存雪崩： - 设置随机过期时间 - 缓存高可用（集群、哨兵） - 降级熔断机制 - 缓存预热 Q5: 如何进行有效的压力测试？ 答： 1. 制定压测目标：明确QPS、响应时间、错误率等指标 2. 准备测试环境：隔离的测试环境，与生产环境配置一致 3. 设计压测场景：单接口压测、混合场景压测、峰值压力测试 4. 执行压测：使用wrk、JMeter等工具，逐步增加压力 5. 监控分析：实时监控系统指标，发现性能瓶颈 6. 优化验证：实施优化后，重新压测验证效果 7. 生成报告：记录压测过程、结果和优化建议 📚 延伸阅读 - 高性能MySQL - Java性能权威指南 - Systems Performance - Netflix性能优化 --- ⭐ 重点：性能优化是系统工程，需要从监控、分析、优化、验证全流程入手，平衡开发效率和系统性能"
   },
   {
     "title": "即时通讯系统设计",
-    "url": "/java-backend-interview/projects/im-design",
+    "url": "/java-backend-interview/projects/im-design.html",
     "description": "--- layout: default title: 即时通讯系统设计 --- 即时通讯系统设计 > 设计一个支持千万级用户的即时通讯系统 🎯 面试重点 - 消息推送架构 - 在线状态管理 - 消息可靠投递 - 系统扩展性设计 📖 需求分析 核心功能 非功能需求 📖 系统架构设计 整体架构 核心组件设计 📖 详细设计 1. 连接管理 2. 消息投递 3. 在线状态管理 📖 关键技术实现 1. WebSocket网关 2. 消息存储设计 3. 离线消息处理 📖 性能优化 1. 连接优化 2. 消息优化 3. 存储优化 📖 监控与运维 1. 监控指标 2. 告警规则 📖 面试真题 Q1: 如何设计一个支持千万级用户的IM系统？ 答： 1. 架构分层：客户端、网关层、业务层、存储层 2. 连接管理：WebSocket长连接，网关集群，心跳保活 3. 消息投递：消息队列解耦，可靠投递，状态同步 4. 状态管理：Redis存储在线状态，实时更新 5. 存储设计：消息分表，冷热分离，读写分离 6. 扩展性：无状态设计，水平扩展，负载均衡 Q2: 如何保证消息不丢失？ 答： 1. 发送确认：客户端发...",
     "category": "projects",
     "content": "--- layout: default title: 即时通讯系统设计 --- 即时通讯系统设计 > 设计一个支持千万级用户的即时通讯系统 🎯 面试重点 - 消息推送架构 - 在线状态管理 - 消息可靠投递 - 系统扩展性设计 📖 需求分析 核心功能 非功能需求 📖 系统架构设计 整体架构 核心组件设计 📖 详细设计 1. 连接管理 2. 消息投递 3. 在线状态管理 📖 关键技术实现 1. WebSocket网关 2. 消息存储设计 3. 离线消息处理 📖 性能优化 1. 连接优化 2. 消息优化 3. 存储优化 📖 监控与运维 1. 监控指标 2. 告警规则 📖 面试真题 Q1: 如何设计一个支持千万级用户的IM系统？ 答： 1. 架构分层：客户端、网关层、业务层、存储层 2. 连接管理：WebSocket长连接，网关集群，心跳保活 3. 消息投递：消息队列解耦，可靠投递，状态同步 4. 状态管理：Redis存储在线状态，实时更新 5. 存储设计：消息分表，冷热分离，读写分离 6. 扩展性：无状态设计，水平扩展，负载均衡 Q2: 如何保证消息不丢失？ 答： 1. 发送确认：客户端发送后等待服务端ACK 2. 消息持久化：收到消息立即存储到数据库 3. 消息队列：使用Kafka保证消息不丢 4. 接收确认：接收方返回已读回执 5. 离线消息：离线消息存储，上线后同步 6. 重试机制：投递失败自动重试 Q3: 如何处理海量连接？ 答： 1. 网关集群：多个网关分担连接压力 2. 连接复用：同一用户多设备共享连接 3. 资源限制：限制单机连接数，防DDOS 4. 心跳优化：合理设置心跳间隔，减少空耗 5. 连接池：使用连接池管理数据库连接 6. 异步处理：I/O多路复用，非阻塞处理 Q4: 如何实现多端消息同步？ 答： 1. 消息多播：一条消息推送到用户所有在线设备 2. 消息去重：基于messageId去重，避免重复 3. 状态同步：已读状态同步到所有设备 4. 时间同步：消息按时间戳排序，保证顺序 5. 冲突解决：最后写入优先，或用户手动解决 6. 增量同步：只同步增量消息，减少流量 Q5: 如何设计群聊功能？ 答： 1. 群组管理：建群、加人、踢人、解散 2. 消息扩散：群消息推送给所有成员 3. @功能：支持@特定成员 4. 群公告：群主发布公告 5. 消息屏蔽：支持屏蔽某些群成员 6. 群权限：不同角色不同权限 📚 延伸阅读 - WebSocket协议 - Netty实战 - IM系统架构设计 - 微信架构设计 --- ⭐ 重点：IM系统是典型的高并发实时系统，需要深入理解网络编程、消息队列、分布式存储等技术"
   },
   {
     "title": "打破双亲委派",
-    "url": "/java-backend-interview/jvm/break-delegation",
+    "url": "/java-backend-interview/jvm/break-delegation.html",
     "description": "--- layout: default title: 打破双亲委派 --- 打破双亲委派 > 特殊场景下的类加载策略 🎯 面试重点 - 何时需要打破双亲委派 - 常见的打破方式 - Tomcat 的类加载器架构 📖 打破场景 Tomcat 类加载器架构 Tomcat 加载流程 JDBC 驱动加载 SPI 机制 📖 打破方式 重写 loadClass 线程上下文类加载器 自定义类加载器组合 📖 面试真题 Q1: Tomcat 为什么打破双亲委派？ 答： 1. 每个 Web 应用需要隔离，不能加载其他应用的类 2. Web 应用可能需要加载同名但不同版本的类 3. Web 应用可能需要覆盖 JDK 的类 Q2: 如何实现热部署？ 答： 1. 自定义类加载器，每次加载重新读取 .class 文件 2. 不使用双亲委派，直接使用自己的类加载器 3. 卸载旧类：让旧的类加载器变为不可达，触发 GC Q3: 类加载器的隔离方案？ 答： 1. 不同的类加载器加载的类视为不同的类 2. 即使类名相同，只要类加载器不同，就是不同的类 3. 类的全限定名 = 类名 + 类加载器实例 ID --- ⭐ 重点...",
     "category": "jvm",
     "content": "--- layout: default title: 打破双亲委派 --- 打破双亲委派 > 特殊场景下的类加载策略 🎯 面试重点 - 何时需要打破双亲委派 - 常见的打破方式 - Tomcat 的类加载器架构 📖 打破场景 Tomcat 类加载器架构 Tomcat 加载流程 JDBC 驱动加载 SPI 机制 📖 打破方式 重写 loadClass 线程上下文类加载器 自定义类加载器组合 📖 面试真题 Q1: Tomcat 为什么打破双亲委派？ 答： 1. 每个 Web 应用需要隔离，不能加载其他应用的类 2. Web 应用可能需要加载同名但不同版本的类 3. Web 应用可能需要覆盖 JDK 的类 Q2: 如何实现热部署？ 答： 1. 自定义类加载器，每次加载重新读取 .class 文件 2. 不使用双亲委派，直接使用自己的类加载器 3. 卸载旧类：让旧的类加载器变为不可达，触发 GC Q3: 类加载器的隔离方案？ 答： 1. 不同的类加载器加载的类视为不同的类 2. 即使类名相同，只要类加载器不同，就是不同的类 3. 类的全限定名 = 类名 + 类加载器实例 ID --- ⭐ 重点：理解打破双亲委派的场景和方式，对于理解模块化系统非常重要"
   },
   {
     "title": "双亲委派模型",
-    "url": "/java-backend-interview/jvm/parent-delegation",
+    "url": "/java-backend-interview/jvm/parent-delegation.html",
     "description": "--- layout: default title: 双亲委派模型 --- 双亲委派模型 > Java 类加载的核心机制 🎯 面试重点 - 双亲委派的工作流程 - 为什么要使用双亲委派 - 如何打破双亲委派 📖 工作原理 委派流程 源码解析 📖 为什么需要双亲委派 优点 类加载器层级 📖 打破双亲委派 场景 打破方式 📖 SPI 与双亲委派 📖 面试真题 Q1: 双亲委派模型的好处？ 答： 1. 避免类的重复加载：父加载器已加载，子加载器不再加载 2. 保护核心类安全：防止用户自定义同名类替换 JDK 类 Q2: 如何自定义类加载器？ 答： 1. 继承 ClassLoader 类 2. 重写 findClass() 方法（推荐） 3. 或重写 loadClass() 方法（打破双亲委派） 4. 读取 .class 文件，调用 defineClass() 定义类 Q3: 为什么 JDBC 需要打破双亲委派？ 答： JDBC 接口在 java.sql 包中，由 Bootstrap 加载。MySQL 等驱动在 classpath 中，由 AppClassLoader 加载。如果不打破双亲委派...",
     "category": "jvm",
     "content": "--- layout: default title: 双亲委派模型 --- 双亲委派模型 > Java 类加载的核心机制 🎯 面试重点 - 双亲委派的工作流程 - 为什么要使用双亲委派 - 如何打破双亲委派 📖 工作原理 委派流程 源码解析 📖 为什么需要双亲委派 优点 类加载器层级 📖 打破双亲委派 场景 打破方式 📖 SPI 与双亲委派 📖 面试真题 Q1: 双亲委派模型的好处？ 答： 1. 避免类的重复加载：父加载器已加载，子加载器不再加载 2. 保护核心类安全：防止用户自定义同名类替换 JDK 类 Q2: 如何自定义类加载器？ 答： 1. 继承 ClassLoader 类 2. 重写 findClass() 方法（推荐） 3. 或重写 loadClass() 方法（打破双亲委派） 4. 读取 .class 文件，调用 defineClass() 定义类 Q3: 为什么 JDBC 需要打破双亲委派？ 答： JDBC 接口在 java.sql 包中，由 Bootstrap 加载。MySQL 等驱动在 classpath 中，由 AppClassLoader 加载。如果不打破双亲委派，AppClassLoader 无法加载实现类。通过设置线程上下文类加载器解决。 --- ⭐ 重点：理解双亲委派是理解 Java 模块系统的基础，也是面试常考点"
   },
   {
     "title": "GC 调优实战",
-    "url": "/java-backend-interview/jvm/gc-tuning",
+    "url": "/java-backend-interview/jvm/gc-tuning.html",
     "description": "--- layout: default title: GC 调优实战 --- GC 调优实战 > 实际生产环境的 GC 调优 🎯 面试重点 - 常见的 GC 问题 - 调优思路和参数 - 典型案例分析 📖 调优思路 调优目标 调优步骤 📖 常见问题 Full GC 频繁 GC 停顿时间长 内存泄漏 📖 调优参数 堆内存参数 GC 收集器参数 📖 调优案例 案例1：堆外内存溢出 案例2：Metaspace 溢出 📖 面试真题 Q1: 如何排查 OOM？ 答： 1. 添加 -XX:+HeapDumpOnOutOfMemoryError 参数，OOM 时自动 dump 2. 使用 jmap -dump 手动导出 3. 使用 MAT 分析 dump 文件，查找大对象和内存泄漏 4. 分析代码中的对象创建和引用 Q2: G1 调优参数？ 答： - -XX:MaxGCPauseMillis=200：设置停顿时间目标 - -XX:G1HeapRegionSize=8m：Region 大小 - -XX:InitiatingHeapOccupancyPercent=45：触发 Mixed GC 阈值 -...",
     "category": "jvm",
     "content": "--- layout: default title: GC 调优实战 --- GC 调优实战 > 实际生产环境的 GC 调优 🎯 面试重点 - 常见的 GC 问题 - 调优思路和参数 - 典型案例分析 📖 调优思路 调优目标 调优步骤 📖 常见问题 Full GC 频繁 GC 停顿时间长 内存泄漏 📖 调优参数 堆内存参数 GC 收集器参数 📖 调优案例 案例1：堆外内存溢出 案例2：Metaspace 溢出 📖 面试真题 Q1: 如何排查 OOM？ 答： 1. 添加 -XX:+HeapDumpOnOutOfMemoryError 参数，OOM 时自动 dump 2. 使用 jmap -dump 手动导出 3. 使用 MAT 分析 dump 文件，查找大对象和内存泄漏 4. 分析代码中的对象创建和引用 Q2: G1 调优参数？ 答： - -XX:MaxGCPauseMillis=200：设置停顿时间目标 - -XX:G1HeapRegionSize=8m：Region 大小 - -XX:InitiatingHeapOccupancyPercent=45：触发 Mixed GC 阈值 - -XX:G1ReservePercent=10：保留内存比例 --- ⭐ 重点：GC 调优是生产环境必备技能，需要结合具体场景分析"
   },
   {
     "title": "JVM 监控工具",
-    "url": "/java-backend-interview/jvm/monitoring-tools",
+    "url": "/java-backend-interview/jvm/monitoring-tools.html",
     "description": "--- layout: default title: JVM 监控工具 --- JVM 监控工具 > JVM 问题排查利器 🎯 面试重点 - 常用监控命令 - 分析工具使用 📖 命令行工具 jps jstat jmap jstack jinfo 📖 可视化工具 JConsole VisualVM JMC (Java Mission Control) Arthas（阿里开源） 📖 面试真题 Q1: 如何查看线上 JVM 内存使用？ 答： - 快速查看 GC 情况 - 查看堆内存详情 - JConsole/VisualVM 可视化监控 Q2: 线上 CPU 100% 如何排查？ 答： 1. 找到占用 CPU 高的线程 2. 将线程 ID 转为 16 进制： 3. 找到对应线程栈 4. 分析代码定位问题 --- ⭐ 重点：监控工具是排查问题的基础",
     "category": "jvm",
     "content": "--- layout: default title: JVM 监控工具 --- JVM 监控工具 > JVM 问题排查利器 🎯 面试重点 - 常用监控命令 - 分析工具使用 📖 命令行工具 jps jstat jmap jstack jinfo 📖 可视化工具 JConsole VisualVM JMC (Java Mission Control) Arthas（阿里开源） 📖 面试真题 Q1: 如何查看线上 JVM 内存使用？ 答： - 快速查看 GC 情况 - 查看堆内存详情 - JConsole/VisualVM 可视化监控 Q2: 线上 CPU 100% 如何排查？ 答： 1. 找到占用 CPU 高的线程 2. 将线程 ID 转为 16 进制： 3. 找到对应线程栈 4. 分析代码定位问题 --- ⭐ 重点：监控工具是排查问题的基础"
   },
   {
     "title": "G1、ZGC、Shenandoah",
-    "url": "/java-backend-interview/jvm/modern-gc",
+    "url": "/java-backend-interview/jvm/modern-gc.html",
     "description": "--- layout: default title: G1、ZGC、Shenandoah --- G1、ZGC、Shenandoah > 现代垃圾回收器 🎯 面试重点 - 各现代回收器的特点 - G1 的区域概念和回收流程 - ZGC 的染色指针技术 📖 G1 收集器 G1 特点 G1 区域 G1 回收流程 RSet 和 Card Table 📖 ZGC 收集器 ZGC 特点 染色指针 ZGC 回收流程 📖 Shenandoah 收集器 Shenandoah 特点 转发指针 📖 对比总结 📖 面试真题 Q1: G1 和 CMS 的区别？ 答： - G1 使用 Region 内存布局，CMS 使用 old 区的卡表 - G1 可以设置停顿时间目标，CMS 不行 - G1 使用复制+整理，CMS 使用标记+清除（会产生碎片） - G1 会产生 Mixed GC，CMS 不会 Q2: ZGC 为什么快？ 答： - 染色指针：在指针上标记，不需要额外空间，不需要改变对象头 - 并发重分配：大部分阶段与应用并发 - 读屏障优化：轻微开销换取并发安全 Q3: G1 的 Region 大小如何设置？...",
     "category": "jvm",
     "content": "--- layout: default title: G1、ZGC、Shenandoah --- G1、ZGC、Shenandoah > 现代垃圾回收器 🎯 面试重点 - 各现代回收器的特点 - G1 的区域概念和回收流程 - ZGC 的染色指针技术 📖 G1 收集器 G1 特点 G1 区域 G1 回收流程 RSet 和 Card Table 📖 ZGC 收集器 ZGC 特点 染色指针 ZGC 回收流程 📖 Shenandoah 收集器 Shenandoah 特点 转发指针 📖 对比总结 📖 面试真题 Q1: G1 和 CMS 的区别？ 答： - G1 使用 Region 内存布局，CMS 使用 old 区的卡表 - G1 可以设置停顿时间目标，CMS 不行 - G1 使用复制+整理，CMS 使用标记+清除（会产生碎片） - G1 会产生 Mixed GC，CMS 不会 Q2: ZGC 为什么快？ 答： - 染色指针：在指针上标记，不需要额外空间，不需要改变对象头 - 并发重分配：大部分阶段与应用并发 - 读屏障优化：轻微开销换取并发安全 Q3: G1 的 Region 大小如何设置？ 答： - 默认根据堆大小动态计算（1MB-32MB） - 建议：不要太小（增加 RSet 开销），不要太大（GC 回收时间长） - 公式：-XX:G1HeapRegionSize=8M（推荐 2 的幂次） --- ⭐ 重点：现代回收器是 JDK 升级的重点，G1 必须掌握，ZGC 是未来趋势"
   },
   {
     "title": "JVM 垃圾回收算法详解",
-    "url": "/java-backend-interview/jvm/gc-algorithms",
+    "url": "/java-backend-interview/jvm/gc-algorithms.html",
     "description": "--- layout: default title: JVM 垃圾回收算法详解 --- JVM 垃圾回收算法详解 > 垃圾回收是 JVM 最重要的机制之一，也是面试高频考点 🎯 面试重点 - 各垃圾回收算法的原理和优缺点 - 各算法的适用场景 - 为什么需要分代回收 📖 垃圾回收概述 什么是垃圾？ 引用计数算法 可达性分析算法（主流） 📖 垃圾回收算法 1. 标记-清除算法（Mark-Sweep） 图示： 2. 复制算法（Copying） 图示： 3. 标记-整理算法（Mark-Compact） 4. 分代收集算法（Generational Collection） 📖 垃圾收集器 新生代收集器 老年代收集器 各收集器对比 | 收集器 | 区域 | 算法 | 特点 | 适用场景 | |--------|------|------|------|---------| | Serial | 新生代 | 复制 | 单线程、Client | 小型应用 | | ParNew | 新生代 | 复制 | 多线程、Server | 多核 + CMS | | Parallel | 新生代 | 复制 | 吞...",
     "category": "jvm",
     "content": "--- layout: default title: JVM 垃圾回收算法详解 --- JVM 垃圾回收算法详解 > 垃圾回收是 JVM 最重要的机制之一，也是面试高频考点 🎯 面试重点 - 各垃圾回收算法的原理和优缺点 - 各算法的适用场景 - 为什么需要分代回收 📖 垃圾回收概述 什么是垃圾？ 引用计数算法 可达性分析算法（主流） 📖 垃圾回收算法 1. 标记-清除算法（Mark-Sweep） 图示： 2. 复制算法（Copying） 图示： 3. 标记-整理算法（Mark-Compact） 4. 分代收集算法（Generational Collection） 📖 垃圾收集器 新生代收集器 老年代收集器 各收集器对比 | 收集器 | 区域 | 算法 | 特点 | 适用场景 | |--------|------|------|------|---------| | Serial | 新生代 | 复制 | 单线程、Client | 小型应用 | | ParNew | 新生代 | 复制 | 多线程、Server | 多核 + CMS | | Parallel | 新生代 | 复制 | 吞吐量优先 | 后台计算 | | Serial Old | 老年代 | 整理 | 单线程 | 小型应用 | | Parallel Old | 老年代 | 整理 | 多线程 | 后台计算 | | CMS | 老年代 | 清除 | 并发、低停顿 | 互联网 | | G1 | 全代 | 整理+复制 | 可预测停顿 | JDK 9+ | 📖 面试真题 Q1: 为什么分代回收？ 答： 根据对象生命周期特点，90% 的对象是短命鬼（朝生夕死），只有少数对象存活时间长。新生代用复制算法（高效处理死亡对象），老年代用标记-整理（适合存活对象多的情况）。 Q2: G1 有什么特点？ 答： 1. 区域（Region）概念：将堆划分为多个大小相等的区域 2. 卡片（Card）：每个 Region 进一步划分，用于并发标记 3. 可预测停顿：支持设置最大停顿时间 4. 软实时：优先回收垃圾最多的区域 5. 并发标记：减少 STW 时间 6. JDK 9+ 成为默认收集器 Q3: CMS 有什么问题？ 答： 1. 浮动垃圾：并发清理阶段产生的垃圾无法本次清理 2. 内存碎片：标记-清除算法导致碎片，需要 Full GC 整理 3. 并发失败：预留内存不够时退化为 Serial Old Q4: 对象分配过程？ 答： 1. 优先在 Eden 区分配 2. 大对象（超过阈值）直接进入老年代 3. 长期存活对象进入 Survivor 区 4. 对象 age 超过阈值（默认 15）进入老年代 --- ⭐ 重点：垃圾回收算法是 JVM 核心，面试必问，务必掌握各算法优缺点和适用场景"
   },
   {
     "title": "对象内存布局",
-    "url": "/java-backend-interview/jvm/object-memory-layout",
+    "url": "/java-backend-interview/jvm/object-memory-layout.html",
     "description": "--- layout: default title: 对象内存布局 --- 对象内存布局 > 了解对象在内存中的存储结构 🎯 面试重点 - 对象由哪几部分组成 - 对象头包含什么 - 内存对齐的作用 📖 对象内存布局 对象结构 对象头详解 实例数据 对齐填充 验证方法 📖 面试真题 Q1: new Object() 占多少字节？ 答： - 不开启压缩：8(Mark Word) + 8(Klass) + 0(实例数据) + 8(对齐) = 24字节 - 开启压缩：8(Mark Word) + 4(Klass) + 0(实例数据) + 4(对齐) = 16字节 Q2: new Object[10] 占多少字节？ 答： - 数组对象多 4 字节存储数组长度 - 开启压缩：8 + 4 + 4(数组长度) + 40(10个引用) + 4(对齐) = 60字节 ≈ 64字节 Q3: 对象头中的锁状态？ 答： - 无锁：00/01 - 偏向锁：101 - 轻量级锁：00 - 重量级锁：10 - GC 标记：11 --- ⭐ 重点：对象内存布局是理解 JVM 的基础，面试中经常结合 OOM 问题考察",
     "category": "jvm",
     "content": "--- layout: default title: 对象内存布局 --- 对象内存布局 > 了解对象在内存中的存储结构 🎯 面试重点 - 对象由哪几部分组成 - 对象头包含什么 - 内存对齐的作用 📖 对象内存布局 对象结构 对象头详解 实例数据 对齐填充 验证方法 📖 面试真题 Q1: new Object() 占多少字节？ 答： - 不开启压缩：8(Mark Word) + 8(Klass) + 0(实例数据) + 8(对齐) = 24字节 - 开启压缩：8(Mark Word) + 4(Klass) + 0(实例数据) + 4(对齐) = 16字节 Q2: new Object[10] 占多少字节？ 答： - 数组对象多 4 字节存储数组长度 - 开启压缩：8 + 4 + 4(数组长度) + 40(10个引用) + 4(对齐) = 60字节 ≈ 64字节 Q3: 对象头中的锁状态？ 答： - 无锁：00/01 - 偏向锁：101 - 轻量级锁：00 - 重量级锁：10 - GC 标记：11 --- ⭐ 重点：对象内存布局是理解 JVM 的基础，面试中经常结合 OOM 问题考察"
   },
   {
     "title": "JVM 线上问题排查",
-    "url": "/java-backend-interview/jvm/troubleshooting",
+    "url": "/java-backend-interview/jvm/troubleshooting.html",
     "description": "--- layout: default title: JVM 线上问题排查 --- JVM 线上问题排查 > 生产环境问题定位 🎯 面试重点 - CPU 飙高排查 - OOM 排查 - 死锁排查 📖 CPU 100% 排查 排查步骤 常见原因 📖 OOM 排查 排查步骤 常见 OOM 类型 📖 死锁排查 排查步骤 死锁示例 解决方案 📖 内存泄漏排查 排查步骤 常见泄漏场景 📖 面试真题 Q1: 线上服务响应慢如何排查？ 答： 1. 查看系统资源：top、vmstat 2. 查看 JVM：jstat -gc 3. 查看线程状态：jstack 4. 查看是否有死锁 5. 使用 Arthas trace 追踪慢方法 Q2: 如何排查内存泄漏？ 答： 1. 多次 GC 后内存持续增长 2. 导出 heap dump 3. 使用 MAT 分析泄漏对象 4. 追踪对象引用链 5. 定位代码修复 --- ⭐ 重点：问题排查能力是高级工程师必备技能",
     "category": "jvm",
     "content": "--- layout: default title: JVM 线上问题排查 --- JVM 线上问题排查 > 生产环境问题定位 🎯 面试重点 - CPU 飙高排查 - OOM 排查 - 死锁排查 📖 CPU 100% 排查 排查步骤 常见原因 📖 OOM 排查 排查步骤 常见 OOM 类型 📖 死锁排查 排查步骤 死锁示例 解决方案 📖 内存泄漏排查 排查步骤 常见泄漏场景 📖 面试真题 Q1: 线上服务响应慢如何排查？ 答： 1. 查看系统资源：top、vmstat 2. 查看 JVM：jstat -gc 3. 查看线程状态：jstack 4. 查看是否有死锁 5. 使用 Arthas trace 追踪慢方法 Q2: 如何排查内存泄漏？ 答： 1. 多次 GC 后内存持续增长 2. 导出 heap dump 3. 使用 MAT 分析泄漏对象 4. 追踪对象引用链 5. 定位代码修复 --- ⭐ 重点：问题排查能力是高级工程师必备技能"
   },
   {
     "title": "JVM 运行时数据区",
-    "url": "/java-backend-interview/jvm/runtime-data-areas",
+    "url": "/java-backend-interview/jvm/runtime-data-areas.html",
     "description": "--- layout: default title: JVM 运行时数据区 --- JVM 运行时数据区 > 理解 JVM 内存划分是排查内存问题的基础 🎯 面试重点 - 各内存区域的作用和特点 - 哪些区域是线程私有的，哪些是共享的 - OOM 可能发生在哪些区域 📖 详细解析 1. 线程私有区域 程序计数器（Program Counter Register） 虚拟机栈（VM Stack） 栈帧结构： 本地方法栈（Native Method Stack） - 与虚拟机栈类似，但为 Native 方法服务 - HotSpot 将两者合二为一 - 同样会抛出 StackOverflowError 和 OutOfMemoryError 2. 线程共享区域 堆（Heap） 堆内存结构： 方法区（Method Area） 3. 直接内存（Direct Memory） 📊 总结对比 | 区域 | 线程私有 | 作用 | 异常类型 | |------|---------|------|---------| | 程序计数器 | ✅ | 记录字节码行号 | 无 | | 虚拟机栈 | ✅ | 方法执行、...",
     "category": "jvm",
     "content": "--- layout: default title: JVM 运行时数据区 --- JVM 运行时数据区 > 理解 JVM 内存划分是排查内存问题的基础 🎯 面试重点 - 各内存区域的作用和特点 - 哪些区域是线程私有的，哪些是共享的 - OOM 可能发生在哪些区域 📖 详细解析 1. 线程私有区域 程序计数器（Program Counter Register） 虚拟机栈（VM Stack） 栈帧结构： 本地方法栈（Native Method Stack） - 与虚拟机栈类似，但为 Native 方法服务 - HotSpot 将两者合二为一 - 同样会抛出 StackOverflowError 和 OutOfMemoryError 2. 线程共享区域 堆（Heap） 堆内存结构： 方法区（Method Area） 3. 直接内存（Direct Memory） 📊 总结对比 | 区域 | 线程私有 | 作用 | 异常类型 | |------|---------|------|---------| | 程序计数器 | ✅ | 记录字节码行号 | 无 | | 虚拟机栈 | ✅ | 方法执行、局部变量 | StackOverflowError / OOM | | 本地方法栈 | ✅ | Native 方法执行 | StackOverflowError / OOM | | 堆 | ❌ | 对象实例存储 | OOM | | 方法区 | ❌ | 类信息、常量、代码 | OOM（MetaspaceOOM） | | 直接内存 | ❌ | NIO 堆外内存 | OOM | 💡 面试真题 Q1: 什么是运行时常量池？ 答： 运行时常量池是方法区的一部分，用于存储编译期生成的字面量和符号引用。运行时可以将新的常量放入池中（如 String.intern()）。 Q2: String.intern() 方法的作用？ 答： 当调用 intern() 方法时，如果字符串常量池中已包含该字符串，则返回池中的引用；否则将字符串添加到常量池并返回引用。可以用来节省内存。 Q3: 对象创建的过程？ 答： 1. 检查类是否已加载、初始化 2. 分配内存（指针碰撞/空闲列表） 3. 初始化零值 4. 设置对象头 5. 执行 构造函数 --- ⭐ 重点：堆是内存分配的重点区域，面试必问垃圾回收和内存分配策略"
   },
   {
     "title": "类加载机制",
-    "url": "/java-backend-interview/jvm/class-loading-process",
+    "url": "/java-backend-interview/jvm/class-loading-process.html",
     "description": "--- layout: default title: 类加载机制 --- 类加载机制 > 理解类的生命周期和加载过程 🎯 面试重点 - 类加载的各个阶段 - 双亲委派模型 - 如何打破双亲委派 - 类加载器的分类 📖 类加载过程 1. 加载（Loading） 2. 验证（Verification） 3. 准备（Preparation） 4. 解析（Resolution） 5. 初始化（Initialization） 📖 双亲委派模型 模型结构 工作原理 打破双亲委派 📖 类加载器分类 📖 面试真题 Q1: 什么是双亲委派模型？ 答： 当类加载器收到加载请求时，会先将请求委托给父类加载器处理，父类再委托其父类...直到启动类加载器。只有父加载器无法完成时，子加载器才尝试自己加载。优点是避免类的重复加载，保证核心类安全。 Q2: 为什么需要自定义类加载器？ 答： 1. 隔离加载冲突（Tomcat 每个 Web 应用独立） 2. 动态加载（从非标准路径加载类） 3. 热部署（运行时替换类） 4. 加密保护（自定义解密逻辑） Q3: 类的主动使用和被动使用？ 答： 主动使用会触发初始化： - ...",
     "category": "jvm",
     "content": "--- layout: default title: 类加载机制 --- 类加载机制 > 理解类的生命周期和加载过程 🎯 面试重点 - 类加载的各个阶段 - 双亲委派模型 - 如何打破双亲委派 - 类加载器的分类 📖 类加载过程 1. 加载（Loading） 2. 验证（Verification） 3. 准备（Preparation） 4. 解析（Resolution） 5. 初始化（Initialization） 📖 双亲委派模型 模型结构 工作原理 打破双亲委派 📖 类加载器分类 📖 面试真题 Q1: 什么是双亲委派模型？ 答： 当类加载器收到加载请求时，会先将请求委托给父类加载器处理，父类再委托其父类...直到启动类加载器。只有父加载器无法完成时，子加载器才尝试自己加载。优点是避免类的重复加载，保证核心类安全。 Q2: 为什么需要自定义类加载器？ 答： 1. 隔离加载冲突（Tomcat 每个 Web 应用独立） 2. 动态加载（从非标准路径加载类） 3. 热部署（运行时替换类） 4. 加密保护（自定义解密逻辑） Q3: 类的主动使用和被动使用？ 答： 主动使用会触发初始化： - new 对象 - 访问类的静态属性/方法 - 反射调用 - 初始化子类（父类先初始化） - 启动类（main 方法所在类） 被动使用不触发初始化： - 引用常量（编译期常量） - 数组定义 - 子类引用父类静态属性（只初始化父类） --- ⭐ 重点：双亲委派模型是 Java 模块系统的基础，理解其工作原理和如何打破非常重要"
   },
   {
     "title": "内存分配策略",
-    "url": "/java-backend-interview/jvm/memory-allocation",
+    "url": "/java-backend-interview/jvm/memory-allocation.html",
     "description": "--- layout: default title: 内存分配策略 --- 内存分配策略 > 对象如何在堆内存中分配 🎯 面试重点 - 对象分配的流程 - 内存分配方式（指针碰撞/空闲列表） - 内存分配是否线程安全 📖 对象分配流程 分配步骤 内存分配方式 线程安全问题 📖 对象分配策略 对象年龄（Age） 晋升老年代的时机 分配担保 📖 面试真题 Q1: 什么情况下对象会进入老年代？ 答： 1. 年龄达到阈值（默认 15 岁） 2. 动态年龄判断，Survivor 区同龄对象超过一半 3. 大对象（超过 -XX:PretenureSizeThreshold） 4. Survivor 区空间不够 Q2: 什么是 TLAB？ 答： Thread Local Allocation Buffer，线程本地分配缓冲区。每个线程在 Eden 区分配一小块内存，对象在 TLAB 中分配不需要同步，提高分配效率。 Q3: 对象分配在堆还是栈？ 答： - 对象本身分配在堆中（new Object） - 引用变量在栈中（Object obj） - 逃逸分析后，可能进行栈上分配（标量替换） --- ⭐ ...",
     "category": "jvm",
     "content": "--- layout: default title: 内存分配策略 --- 内存分配策略 > 对象如何在堆内存中分配 🎯 面试重点 - 对象分配的流程 - 内存分配方式（指针碰撞/空闲列表） - 内存分配是否线程安全 📖 对象分配流程 分配步骤 内存分配方式 线程安全问题 📖 对象分配策略 对象年龄（Age） 晋升老年代的时机 分配担保 📖 面试真题 Q1: 什么情况下对象会进入老年代？ 答： 1. 年龄达到阈值（默认 15 岁） 2. 动态年龄判断，Survivor 区同龄对象超过一半 3. 大对象（超过 -XX:PretenureSizeThreshold） 4. Survivor 区空间不够 Q2: 什么是 TLAB？ 答： Thread Local Allocation Buffer，线程本地分配缓冲区。每个线程在 Eden 区分配一小块内存，对象在 TLAB 中分配不需要同步，提高分配效率。 Q3: 对象分配在堆还是栈？ 答： - 对象本身分配在堆中（new Object） - 引用变量在栈中（Object obj） - 逃逸分析后，可能进行栈上分配（标量替换） --- ⭐ 重点：理解对象分配流程和内存分配方式，这是理解 GC 的基础"
@@ -498,63 +498,63 @@
   },
   {
     "title": "JVM 参数配置",
-    "url": "/java-backend-interview/jvm/jvm-parameters",
+    "url": "/java-backend-interview/jvm/jvm-parameters.html",
     "description": "--- layout: default title: JVM 参数配置 --- JVM 参数配置 > JVM 调优参数详解 🎯 面试重点 - 常用 JVM 参数 - 参数设置原则 - 生产配置示例 📖 堆内存参数 📖 GC 参数 Serial GC Parallel GC CMS GC G1 GC ZGC 📖 GC 日志参数 📖 OOM 处理参数 📖 其他常用参数 📖 生产配置示例 4C8G 服务器 8C16G 服务器 大数据应用 📖 面试真题 Q1: 常用的 JVM 参数？ 答： - ：堆大小 - ：年轻代大小 - ：使用 G1 - ：停顿时间目标 - ：GC 日志 Q2: 如何设置堆大小？ 答： - 初始堆和最大堆设置为相同值 - 堆大小一般不超过物理内存的 50% - 需要考虑元空间、直接内存、栈等开销 Q3: 如何选择垃圾收集器？ 答： - 单核/客户端：Serial - 多核/吞吐优先：Parallel - 低延迟：G1 - 超低延迟（JDK 11+）：ZGC --- ⭐ 重点：JVM 参数配置是性能调优的基础",
     "category": "jvm",
     "content": "--- layout: default title: JVM 参数配置 --- JVM 参数配置 > JVM 调优参数详解 🎯 面试重点 - 常用 JVM 参数 - 参数设置原则 - 生产配置示例 📖 堆内存参数 📖 GC 参数 Serial GC Parallel GC CMS GC G1 GC ZGC 📖 GC 日志参数 📖 OOM 处理参数 📖 其他常用参数 📖 生产配置示例 4C8G 服务器 8C16G 服务器 大数据应用 📖 面试真题 Q1: 常用的 JVM 参数？ 答： - ：堆大小 - ：年轻代大小 - ：使用 G1 - ：停顿时间目标 - ：GC 日志 Q2: 如何设置堆大小？ 答： - 初始堆和最大堆设置为相同值 - 堆大小一般不超过物理内存的 50% - 需要考虑元空间、直接内存、栈等开销 Q3: 如何选择垃圾收集器？ 答： - 单核/客户端：Serial - 多核/吞吐优先：Parallel - 低延迟：G1 - 超低延迟（JDK 11+）：ZGC --- ⭐ 重点：JVM 参数配置是性能调优的基础"
   },
   {
     "title": "数组与链表",
-    "url": "/java-backend-interview/algorithm/array-linkedlist",
+    "url": "/java-backend-interview/algorithm/array-linkedlist.html",
     "description": "--- layout: default title: 数组与链表 --- 数组与链表 > 基础数据结构 🎯 面试重点 - 数组和链表的区别 - 常见面试题 📖 对比 📖 常见题型 📖 面试真题 Q1: 数组和链表的区别？ 答： 数组连续内存，O(1) 访问；链表不连续，O(1) 插入删除。 --- ⭐ 重点：数组和链表是最基础的数据结构",
     "category": "algorithm",
     "content": "--- layout: default title: 数组与链表 --- 数组与链表 > 基础数据结构 🎯 面试重点 - 数组和链表的区别 - 常见面试题 📖 对比 📖 常见题型 📖 面试真题 Q1: 数组和链表的区别？ 答： 数组连续内存，O(1) 访问；链表不连续，O(1) 插入删除。 --- ⭐ 重点：数组和链表是最基础的数据结构"
   },
   {
     "title": "剑指 Offer",
-    "url": "/java-backend-interview/algorithm/sword-to-offer",
+    "url": "/java-backend-interview/algorithm/sword-to-offer.html",
     "description": "--- layout: default title: 剑指 Offer --- 剑指 Offer > 经典面试题集 📖 题目列表 数据结构 算法 动态规划 --- ⭐ 重点：剑指 Offer 是面试必刷",
     "category": "algorithm",
     "content": "--- layout: default title: 剑指 Offer --- 剑指 Offer > 经典面试题集 📖 题目列表 数据结构 算法 动态规划 --- ⭐ 重点：剑指 Offer 是面试必刷"
   },
   {
     "title": "手写 LRU 缓存",
-    "url": "/java-backend-interview/algorithm/lru-cache",
+    "url": "/java-backend-interview/algorithm/lru-cache.html",
     "description": "--- layout: default title: 手写 LRU 缓存 --- 手写 LRU 缓存 > 经典面试题 🎯 面试重点 - LRU 原理 - 实现方式 📖 实现 📖 面试真题 Q1: LRU 时间复杂度？ 答： HashMap + 双向链表，get/put 都是 O(1)。 --- ⭐ 重点：LinkedHashMap 已经实现了 LRU",
     "category": "algorithm",
     "content": "--- layout: default title: 手写 LRU 缓存 --- 手写 LRU 缓存 > 经典面试题 🎯 面试重点 - LRU 原理 - 实现方式 📖 实现 📖 面试真题 Q1: LRU 时间复杂度？ 答： HashMap + 双向链表，get/put 都是 O(1)。 --- ⭐ 重点：LinkedHashMap 已经实现了 LRU"
   },
   {
     "title": "哈希表",
-    "url": "/java-backend-interview/algorithm/hashtable",
+    "url": "/java-backend-interview/algorithm/hashtable.html",
     "description": "--- layout: default title: 哈希表 --- 哈希表 > 高效查找数据结构 🎯 面试重点 - 哈希表原理 - 哈希冲突解决 📖 原理 📖 面试真题 Q1: 哈希表时间复杂度？ 答： 平均 O(1)，最坏 O(n)（哈希冲突严重时）。 --- ⭐ 重点：HashMap 是哈希表的经典实现",
     "category": "algorithm",
     "content": "--- layout: default title: 哈希表 --- 哈希表 > 高效查找数据结构 🎯 面试重点 - 哈希表原理 - 哈希冲突解决 📖 原理 📖 面试真题 Q1: 哈希表时间复杂度？ 答： 平均 O(1)，最坏 O(n)（哈希冲突严重时）。 --- ⭐ 重点：HashMap 是哈希表的经典实现"
   },
   {
     "title": "栈与队列",
-    "url": "/java-backend-interview/algorithm/stack-queue",
+    "url": "/java-backend-interview/algorithm/stack-queue.html",
     "description": "--- layout: default title: 栈与队列 --- 栈与队列 > 线性数据结构 🎯 面试重点 - 栈和队列特点 - 常见应用 📖 栈 📖 队列 📖 面试真题 Q1: 用两个栈实现队列？ 答： 入队时压入 stack1，出队时从 stack2 弹出，stack2 为空时将 stack1 倒入。 --- ⭐ 重点：栈和队列是很多算法的基础",
     "category": "algorithm",
     "content": "--- layout: default title: 栈与队列 --- 栈与队列 > 线性数据结构 🎯 面试重点 - 栈和队列特点 - 常见应用 📖 栈 📖 队列 📖 面试真题 Q1: 用两个栈实现队列？ 答： 入队时压入 stack1，出队时从 stack2 弹出，stack2 为空时将 stack1 倒入。 --- ⭐ 重点：栈和队列是很多算法的基础"
   },
   {
     "title": "常见算法与数据结构 ⭐⭐⭐",
-    "url": "/java-backend-interview/algorithm/common-algorithms",
+    "url": "/java-backend-interview/algorithm/common-algorithms.html",
     "description": "--- layout: default title: 常见算法与数据结构 ⭐⭐⭐ --- 常见算法与数据结构 ⭐⭐⭐ 面试题：手写几个常见算法 核心回答 算法是面试的硬通货，需要熟练掌握常见数据结构和算法。 --- 一、数组与链表 1. 反转链表 2. 合并两个有序链表 3. 两数之和 --- 二、栈与队列 1. 有效括号 2. 用栈实现队列 --- 三、树 1. 二叉树遍历 2. 二叉树最大深度 3. 验证二叉搜索树 --- 四、排序算法 1. 快速排序 2. 归并排序 3. 堆排序 --- 五、查找算法 1. 二分查找 2. 旋转数组查找 --- 六、高级数据结构 1. LRU 缓存 2. 并查集（Union-Find） --- 七、算法复杂度速查 | 算法 | 时间复杂度（平均） | 时间复杂度（最坏） | 空间复杂度 | |------|------------------|-------------------|-----------| | 冒泡排序 | O(n²) | O(n²) | O(1) | | 选择排序 | O(n²) | O(n²) | O(1) | | 插入排序...",
     "category": "algorithm",
     "content": "--- layout: default title: 常见算法与数据结构 ⭐⭐⭐ --- 常见算法与数据结构 ⭐⭐⭐ 面试题：手写几个常见算法 核心回答 算法是面试的硬通货，需要熟练掌握常见数据结构和算法。 --- 一、数组与链表 1. 反转链表 2. 合并两个有序链表 3. 两数之和 --- 二、栈与队列 1. 有效括号 2. 用栈实现队列 --- 三、树 1. 二叉树遍历 2. 二叉树最大深度 3. 验证二叉搜索树 --- 四、排序算法 1. 快速排序 2. 归并排序 3. 堆排序 --- 五、查找算法 1. 二分查找 2. 旋转数组查找 --- 六、高级数据结构 1. LRU 缓存 2. 并查集（Union-Find） --- 七、算法复杂度速查 | 算法 | 时间复杂度（平均） | 时间复杂度（最坏） | 空间复杂度 | |------|------------------|-------------------|-----------| | 冒泡排序 | O(n²) | O(n²) | O(1) | | 选择排序 | O(n²) | O(n²) | O(1) | | 插入排序 | O(n²) | O(n²) | O(1) | | 归并排序 | O(n log n) | O(n log n) | O(n) | | 快速排序 | O(n log n) | O(n²) | O(log n) | | 堆排序 | O(n log n) | O(n log n) | O(1) | | 希尔排序 | O(n^1.3) | O(n²) | O(1) | | 计数排序 | O(n + k) | O(n + k) | O(k) | | 基数排序 | O(nk) | O(nk) | O(n + k) | | 桶排序 | O(n + k) | O(n²) | O(n + k) | | 二分查找 | O(log n) | O(log n) | O(1) | | 数据结构 | 查询 | 插入 | 删除 | |---------|------|------|------| | 数组 | O(1) | O(n) | O(n) | | 链表 | O(n) | O(1) | O(1) | | 栈 | O(n) | O(1) | O(1) | | 队列 | O(n) | O(1) | O(1) | | 哈希表 | O(1) | O(1) | O(1) | | 二叉搜索树 | O(log n) | O(log n) | O(log n) | | 平衡二叉树 | O(log n) | O(log n) | O(log n) | | 堆 | O(1) | O(log n) | O(log n) | --- 参考链接： - LeetCode 热题 100 - 剑指 Offer"
   },
   {
     "title": "手写线程池",
-    "url": "/java-backend-interview/algorithm/thread-pool",
+    "url": "/java-backend-interview/algorithm/thread-pool.html",
     "description": "--- layout: default title: 手写线程池 --- 手写线程池 > 线程池实现原理 🎯 面试重点 - 线程池核心参数 - 实现原理 📖 简化实现 📖 面试真题 Q1: 线程池核心参数？ 答： corePoolSize, maximumPoolSize, workQueue, keepAliveTime, handler。 --- ⭐ 重点：理解线程池原理",
     "category": "algorithm",
     "content": "--- layout: default title: 手写线程池 --- 手写线程池 > 线程池实现原理 🎯 面试重点 - 线程池核心参数 - 实现原理 📖 简化实现 📖 面试真题 Q1: 线程池核心参数？ 答： corePoolSize, maximumPoolSize, workQueue, keepAliveTime, handler。 --- ⭐ 重点：理解线程池原理"
   },
   {
     "title": "高频 100 题",
-    "url": "/java-backend-interview/algorithm/top-100",
+    "url": "/java-backend-interview/algorithm/top-100.html",
     "description": "--- layout: default title: 高频 100 题 --- 高频 100 题 > LeetCode 高频题目 📖 题目列表 数组/链表 二叉树 动态规划 回溯/搜索 --- ⭐ 重点：刷题要理解思路，举一反三",
     "category": "algorithm",
     "content": "--- layout: default title: 高频 100 题 --- 高频 100 题 > LeetCode 高频题目 📖 题目列表 数组/链表 二叉树 动态规划 回溯/搜索 --- ⭐ 重点：刷题要理解思路，举一反三"
@@ -568,63 +568,63 @@
   },
   {
     "title": "手写 RPC 框架",
-    "url": "/java-backend-interview/algorithm/rpc-framework",
+    "url": "/java-backend-interview/algorithm/rpc-framework.html",
     "description": "--- layout: default title: 手写 RPC 框架 --- 手写 RPC 框架 > RPC 核心原理 🎯 面试重点 - RPC 调用流程 - 核心组件 📖 核心流程 📖 简化实现 📖 面试真题 Q1: RPC 核心组件？ 答： 注册中心、代理、序列化、网络传输。 --- ⭐ 重点：RPC 是分布式系统的基础",
     "category": "algorithm",
     "content": "--- layout: default title: 手写 RPC 框架 --- 手写 RPC 框架 > RPC 核心原理 🎯 面试重点 - RPC 调用流程 - 核心组件 📖 核心流程 📖 简化实现 📖 面试真题 Q1: RPC 核心组件？ 答： 注册中心、代理、序列化、网络传输。 --- ⭐ 重点：RPC 是分布式系统的基础"
   },
   {
     "title": "树与二叉树",
-    "url": "/java-backend-interview/algorithm/tree",
+    "url": "/java-backend-interview/algorithm/tree.html",
     "description": "--- layout: default title: 树与二叉树 --- 树与二叉树 > 层级数据结构 🎯 面试重点 - 二叉树遍历 - 常见题型 📖 遍历 📖 面试真题 Q1: 前/中/后序遍历区别？ 答： 根节点访问顺序不同：前序先根，中序中间，后序最后。 --- ⭐ 重点：二叉树遍历是树算法的基础",
     "category": "algorithm",
     "content": "--- layout: default title: 树与二叉树 --- 树与二叉树 > 层级数据结构 🎯 面试重点 - 二叉树遍历 - 常见题型 📖 遍历 📖 面试真题 Q1: 前/中/后序遍历区别？ 答： 根节点访问顺序不同：前序先根，中序中间，后序最后。 --- ⭐ 重点：二叉树遍历是树算法的基础"
   },
   {
     "title": "动态规划专题",
-    "url": "/java-backend-interview/algorithm/dynamic-programming",
+    "url": "/java-backend-interview/algorithm/dynamic-programming.html",
     "description": "--- layout: default title: 动态规划专题 --- 动态规划专题 > DP 核心思想 🎯 面试重点 - DP 核心思想 - 经典题目 📖 核心思想 📖 经典题目 斐波那契 最长递增子序列 📖 面试真题 Q1: DP 和递归的区别？ 答： DP 避免重复计算，时间换空间。 --- ⭐ 重点：DP 是面试高频考点",
     "category": "algorithm",
     "content": "--- layout: default title: 动态规划专题 --- 动态规划专题 > DP 核心思想 🎯 面试重点 - DP 核心思想 - 经典题目 📖 核心思想 📖 经典题目 斐波那契 最长递增子序列 📖 面试真题 Q1: DP 和递归的区别？ 答： DP 避免重复计算，时间换空间。 --- ⭐ 重点：DP 是面试高频考点"
   },
   {
     "title": "排序算法",
-    "url": "/java-backend-interview/algorithm/sorting",
+    "url": "/java-backend-interview/algorithm/sorting.html",
     "description": "--- layout: default title: 排序算法 --- 排序算法 > 经典排序算法 🎯 面试重点 - 各排序算法原理 - 时间/空间复杂度 📖 算法对比 📖 快速排序 📖 面试真题 Q1: 快排为什么快？ 答： 平均 O(nlogn)，原地排序，缓存友好。 --- ⭐ 重点：排序是算法基础",
     "category": "algorithm",
     "content": "--- layout: default title: 排序算法 --- 排序算法 > 经典排序算法 🎯 面试重点 - 各排序算法原理 - 时间/空间复杂度 📖 算法对比 📖 快速排序 📖 面试真题 Q1: 快排为什么快？ 答： 平均 O(nlogn)，原地排序，缓存友好。 --- ⭐ 重点：排序是算法基础"
   },
   {
     "title": "图论基础",
-    "url": "/java-backend-interview/algorithm/graph",
+    "url": "/java-backend-interview/algorithm/graph.html",
     "description": "--- layout: default title: 图论基础 --- 图论基础 > 复杂关系建模 🎯 面试重点 - 图的表示 - BFS/DFS 📖 图的表示 📖 遍历 📖 面试真题 Q1: BFS 和 DFS 区别？ 答： BFS 用队列，逐层遍历；DFS 用栈（递归），深入到底。 --- ⭐ 重点：图算法是高级数据结构",
     "category": "algorithm",
     "content": "--- layout: default title: 图论基础 --- 图论基础 > 复杂关系建模 🎯 面试重点 - 图的表示 - BFS/DFS 📖 图的表示 📖 遍历 📖 面试真题 Q1: BFS 和 DFS 区别？ 答： BFS 用队列，逐层遍历；DFS 用栈（递归），深入到底。 --- ⭐ 重点：图算法是高级数据结构"
   },
   {
     "title": "时间复杂度和空间复杂度",
-    "url": "/java-backend-interview/algorithm/complexity",
+    "url": "/java-backend-interview/algorithm/complexity.html",
     "description": "--- layout: default title: 时间复杂度和空间复杂度 --- 时间复杂度和空间复杂度 > 算法分析的基础 🎯 面试重点 - 常见时间复杂度 - 复杂度的计算方法 - 空间复杂度分析 📖 时间复杂度 常见复杂度 示例 规则 📖 空间复杂度 常见空间复杂度 递归空间 📖 面试真题 Q1: 二分查找的时间复杂度？ 答： O(log n) Q2: 冒泡排序的时间/空间复杂度？ 答： - 时间复杂度：O(n²)（最优 O(n)） - 空间复杂度：O(1) --- ⭐ 重点：复杂度分析是算法基础，必须熟练掌握",
     "category": "algorithm",
     "content": "--- layout: default title: 时间复杂度和空间复杂度 --- 时间复杂度和空间复杂度 > 算法分析的基础 🎯 面试重点 - 常见时间复杂度 - 复杂度的计算方法 - 空间复杂度分析 📖 时间复杂度 常见复杂度 示例 规则 📖 空间复杂度 常见空间复杂度 递归空间 📖 面试真题 Q1: 二分查找的时间复杂度？ 答： O(log n) Q2: 冒泡排序的时间/空间复杂度？ 答： - 时间复杂度：O(n²)（最优 O(n)） - 空间复杂度：O(1) --- ⭐ 重点：复杂度分析是算法基础，必须熟练掌握"
   },
   {
     "title": "建造者模式",
-    "url": "/java-backend-interview/design-patterns/builder",
+    "url": "/java-backend-interview/design-patterns/builder.html",
     "description": "--- layout: default title: 建造者模式 --- 建造者模式 > 复杂对象的构建 🎯 面试重点 - 建造者模式结构 - 使用场景 📖 实现 📖 面试真题 Q1: 建造者模式的优点？ 答： 分步构建、参数可选、链式调用。 --- ⭐ 重点：StringBuilder、Lombok @Builder 都是建造者模式",
     "category": "design-patterns",
     "content": "--- layout: default title: 建造者模式 --- 建造者模式 > 复杂对象的构建 🎯 面试重点 - 建造者模式结构 - 使用场景 📖 实现 📖 面试真题 Q1: 建造者模式的优点？ 答： 分步构建、参数可选、链式调用。 --- ⭐ 重点：StringBuilder、Lombok @Builder 都是建造者模式"
   },
   {
     "title": "设计模式实战应用",
-    "url": "/java-backend-interview/design-patterns/practical-patterns",
+    "url": "/java-backend-interview/design-patterns/practical-patterns.html",
     "description": "--- layout: default title: 设计模式实战应用 --- 设计模式实战应用 > 设计模式在实际项目中的应用 🎯 面试重点 - Spring 中的设计模式 - JDK 中的设计模式 📖 Spring 中的设计模式 📖 JDK 中的设计模式 📖 面试真题 Q1: Spring 用到了哪些设计模式？ 答： 工厂、单例、代理、模板方法、策略、责任链。 --- ⭐ 重点：理解设计模式在框架中的应用",
     "category": "design-patterns",
     "content": "--- layout: default title: 设计模式实战应用 --- 设计模式实战应用 > 设计模式在实际项目中的应用 🎯 面试重点 - Spring 中的设计模式 - JDK 中的设计模式 📖 Spring 中的设计模式 📖 JDK 中的设计模式 📖 面试真题 Q1: Spring 用到了哪些设计模式？ 答： 工厂、单例、代理、模板方法、策略、责任链。 --- ⭐ 重点：理解设计模式在框架中的应用"
   },
   {
     "title": "SOLID 原则",
-    "url": "/java-backend-interview/design-patterns/solid",
+    "url": "/java-backend-interview/design-patterns/solid.html",
     "description": "--- layout: default title: SOLID 原则 --- SOLID 原则 > 面向对象设计原则 🎯 面试重点 - 五大原则含义 - 实际应用 📖 五大原则 单一职责 (SRP) 开闭原则 (OCP) 里氏替换 (LSP) 接口隔离 (ISP) 依赖倒置 (DIP) 📖 面试真题 Q1: 举例说明开闭原则？ 答： 策略模式新增策略只需实现接口，不修改已有代码。 --- ⭐ 重点：SOLID 是设计模式的理论基础",
     "category": "design-patterns",
     "content": "--- layout: default title: SOLID 原则 --- SOLID 原则 > 面向对象设计原则 🎯 面试重点 - 五大原则含义 - 实际应用 📖 五大原则 单一职责 (SRP) 开闭原则 (OCP) 里氏替换 (LSP) 接口隔离 (ISP) 依赖倒置 (DIP) 📖 面试真题 Q1: 举例说明开闭原则？ 答： 策略模式新增策略只需实现接口，不修改已有代码。 --- ⭐ 重点：SOLID 是设计模式的理论基础"
@@ -638,126 +638,126 @@
   },
   {
     "title": "设计模式",
-    "url": "/java-backend-interview/design-patterns/design-patterns",
+    "url": "/java-backend-interview/design-patterns/design-patterns.html",
     "description": "--- layout: default title: 设计模式 --- 设计模式 > 创建型、结构型、行为型模式详解 🎯 面试重点 - 常用设计模式 - 模式应用场景 📖 单例模式 📖 工厂模式 📖 策略模式 📖 面试真题 Q1: JDK 中哪些用到了设计模式？ 答： - 工厂模式：Calendar.getInstance() - 单例模式：Runtime.getRuntime() - 策略模式：Comparator --- ⭐ 重点：设计模式体现代码设计能力",
     "category": "design-patterns",
     "content": "--- layout: default title: 设计模式 --- 设计模式 > 创建型、结构型、行为型模式详解 🎯 面试重点 - 常用设计模式 - 模式应用场景 📖 单例模式 📖 工厂模式 📖 策略模式 📖 面试真题 Q1: JDK 中哪些用到了设计模式？ 答： - 工厂模式：Calendar.getInstance() - 单例模式：Runtime.getRuntime() - 策略模式：Comparator --- ⭐ 重点：设计模式体现代码设计能力"
   },
   {
     "title": "工厂模式",
-    "url": "/java-backend-interview/design-patterns/factory",
+    "url": "/java-backend-interview/design-patterns/factory.html",
     "description": "--- layout: default title: 工厂模式 --- 工厂模式 > 对象创建的封装 🎯 面试重点 - 简单工厂 vs 工厂方法 - 抽象工厂 📖 实现 简单工厂 工厂方法 📖 面试真题 Q1: 工厂模式的优点？ 答： 解耦、扩展方便、符合开闭原则。 --- ⭐ 重点：工厂模式是创建型模式的基础",
     "category": "design-patterns",
     "content": "--- layout: default title: 工厂模式 --- 工厂模式 > 对象创建的封装 🎯 面试重点 - 简单工厂 vs 工厂方法 - 抽象工厂 📖 实现 简单工厂 工厂方法 📖 面试真题 Q1: 工厂模式的优点？ 答： 解耦、扩展方便、符合开闭原则。 --- ⭐ 重点：工厂模式是创建型模式的基础"
   },
   {
     "title": "责任链模式",
-    "url": "/java-backend-interview/design-patterns/chain-of-responsibility",
+    "url": "/java-backend-interview/design-patterns/chain-of-responsibility.html",
     "description": "--- layout: default title: 责任链模式 --- 责任链模式 > 请求链式处理 🎯 面试重点 - 责任链结构 - 使用场景 📖 实现 📖 面试真题 Q1: 责任链的应用场景？ 答： 过滤器、拦截器、审批流程。 --- ⭐ 重点：Servlet Filter、Spring Interceptor 使用责任链",
     "category": "design-patterns",
     "content": "--- layout: default title: 责任链模式 --- 责任链模式 > 请求链式处理 🎯 面试重点 - 责任链结构 - 使用场景 📖 实现 📖 面试真题 Q1: 责任链的应用场景？ 答： 过滤器、拦截器、审批流程。 --- ⭐ 重点：Servlet Filter、Spring Interceptor 使用责任链"
   },
   {
     "title": "装饰器模式",
-    "url": "/java-backend-interview/design-patterns/decorator",
+    "url": "/java-backend-interview/design-patterns/decorator.html",
     "description": "--- layout: default title: 装饰器模式 --- 装饰器模式 > 动态扩展对象功能 🎯 面试重点 - 装饰器模式结构 - 与代理模式区别 📖 实现 📖 面试真题 Q1: 装饰器和代理的区别？ 答： 装饰器强调增强功能，代理强调控制访问。 --- ⭐ 重点：Java IO 使用装饰器模式",
     "category": "design-patterns",
     "content": "--- layout: default title: 装饰器模式 --- 装饰器模式 > 动态扩展对象功能 🎯 面试重点 - 装饰器模式结构 - 与代理模式区别 📖 实现 📖 面试真题 Q1: 装饰器和代理的区别？ 答： 装饰器强调增强功能，代理强调控制访问。 --- ⭐ 重点：Java IO 使用装饰器模式"
   },
   {
     "title": "适配器模式",
-    "url": "/java-backend-interview/design-patterns/adapter",
+    "url": "/java-backend-interview/design-patterns/adapter.html",
     "description": "--- layout: default title: 适配器模式 --- 适配器模式 > 接口转换 🎯 面试重点 - 适配器模式结构 - 使用场景 📖 实现 📖 面试真题 Q1: 适配器模式的优点？ 答： 复用现有类、解耦、符合开闭原则。 --- ⭐ 重点：Arrays.asList() 是适配器模式",
     "category": "design-patterns",
     "content": "--- layout: default title: 适配器模式 --- 适配器模式 > 接口转换 🎯 面试重点 - 适配器模式结构 - 使用场景 📖 实现 📖 面试真题 Q1: 适配器模式的优点？ 答： 复用现有类、解耦、符合开闭原则。 --- ⭐ 重点：Arrays.asList() 是适配器模式"
   },
   {
     "title": "代理模式",
-    "url": "/java-backend-interview/design-patterns/proxy",
+    "url": "/java-backend-interview/design-patterns/proxy.html",
     "description": "--- layout: default title: 代理模式 --- 代理模式 > 对象的代理访问 🎯 面试重点 - 静态代理 vs 动态代理 - JDK 动态代理 vs CGLIB 📖 实现 静态代理 JDK 动态代理 📖 面试真题 Q1: JDK 动态代理和 CGLIB 区别？ 答： JDK 基于接口，CGLIB 基于继承。 --- ⭐ 重点：Spring AOP 使用代理模式",
     "category": "design-patterns",
     "content": "--- layout: default title: 代理模式 --- 代理模式 > 对象的代理访问 🎯 面试重点 - 静态代理 vs 动态代理 - JDK 动态代理 vs CGLIB 📖 实现 静态代理 JDK 动态代理 📖 面试真题 Q1: JDK 动态代理和 CGLIB 区别？ 答： JDK 基于接口，CGLIB 基于继承。 --- ⭐ 重点：Spring AOP 使用代理模式"
   },
   {
     "title": "BIO、NIO、AIO 区别 ⭐⭐",
-    "url": "/java-backend-interview/java-core/io-models",
+    "url": "/java-backend-interview/java-core/io-models.html",
     "description": "--- layout: default title: BIO、NIO、AIO 区别 ⭐⭐ --- BIO、NIO、AIO 区别 ⭐⭐ 面试题：说说 BIO、NIO、AIO 的区别 核心回答 BIO、NIO、AIO 是 Java 中三种不同的 I/O 模型，分别代表同步阻塞、同步非阻塞、异步非阻塞 I/O。 三种 I/O 模型对比 | 特性 | BIO | NIO | AIO | |------|-----|-----|-----| | 全称 | Blocking I/O | Non-blocking I/O | Asynchronous I/O | | JDK 版本 | 1.0 | 1.4 | 1.7 | | I/O 模型 | 同步阻塞 | 同步非阻塞 | 异步非阻塞 | | 线程模型 | 一个连接一个线程 | 一个线程处理多个连接 | 回调驱动 | | 适用场景 | 连接数少 | 连接数多、短连接 | 连接数多、长连接 | | API 位置 | java.io | java.nio | java.nio.channels | 同步 vs 异步，阻塞 vs 非阻塞 BIO（同步阻塞） ...",
     "category": "java-core",
     "content": "--- layout: default title: BIO、NIO、AIO 区别 ⭐⭐ --- BIO、NIO、AIO 区别 ⭐⭐ 面试题：说说 BIO、NIO、AIO 的区别 核心回答 BIO、NIO、AIO 是 Java 中三种不同的 I/O 模型，分别代表同步阻塞、同步非阻塞、异步非阻塞 I/O。 三种 I/O 模型对比 | 特性 | BIO | NIO | AIO | |------|-----|-----|-----| | 全称 | Blocking I/O | Non-blocking I/O | Asynchronous I/O | | JDK 版本 | 1.0 | 1.4 | 1.7 | | I/O 模型 | 同步阻塞 | 同步非阻塞 | 异步非阻塞 | | 线程模型 | 一个连接一个线程 | 一个线程处理多个连接 | 回调驱动 | | 适用场景 | 连接数少 | 连接数多、短连接 | 连接数多、长连接 | | API 位置 | java.io | java.nio | java.nio.channels | 同步 vs 异步，阻塞 vs 非阻塞 BIO（同步阻塞） 工作原理 代码示例 缺点 1. 线程开销大：每个连接需要一个线程 2. 阻塞等待：线程大部分时间处于阻塞状态 3. C10K 问题：无法处理大量并发连接 NIO（同步非阻塞） 核心组件 工作原理 代码示例 零拷贝（Zero-Copy） AIO（异步非阻塞） 工作原理 代码示例 三种模型对比图示 使用场景 | 场景 | 推荐模型 | 原因 | |------|---------|------| | 连接数 1000，短连接 | NIO | 高并发，节省线程 | | 连接数 > 1000，长连接 | AIO | 异步处理，最高效 | | 文件传输 | NIO | 零拷贝，高性能 | | 实时通信 | NIO/AIO | 非阻塞，响应快 | Netty 的选择 高频面试题 Q1: NIO 为什么是同步而不是异步？ Q2: Selector 的 select() 会阻塞吗？ Q3: NIO 的 Buffer 为什么要 flip()？ Q4: 什么是多路复用？ 最佳实践 --- 参考链接： - Java 中的 BIO、NIO 和 AIO 区别-CSDN - BIO,NIO,AIO 的区别-博客园"
   },
   {
     "title": "synchronized 与锁升级原理 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/synchronized",
+    "url": "/java-backend-interview/java-core/synchronized.html",
     "description": "--- layout: default title: synchronized 与锁升级原理 ⭐⭐⭐ --- synchronized 与锁升级原理 ⭐⭐⭐ 面试题：synchronized 的锁升级过程是怎样的？ 核心回答 JDK 1.6 之前，synchronized 是重量级锁，直接调用操作系统互斥量（Mutex Lock），性能较差。JDK 1.6 引入了锁升级机制，根据竞争情况从无锁逐步升级到重量级锁，大幅提升了性能。 锁的四种状态 Java 对象头结构 synchronized 锁信息存储在对象头（Mark Word）中： 锁升级过程详解 1. 无锁状态 2. 偏向锁（Biased Locking） 适用场景：只有一个线程访问同步块 原理： - 第一次获取锁时，将线程 ID 写入对象头 - 后续同一线程进入，只需检查线程 ID，无需 CAS 优点： - 无竞争时，同步操作几乎零开销 - 适合单线程反复进入同步块的场景 偏向锁撤销： - 当其他线程尝试获取锁时，需要撤销偏向锁 - 撤销需要等待全局安全点（STW），有一定开销 3. 轻量级锁（Lightweight Locki...",
     "category": "java-core",
     "content": "--- layout: default title: synchronized 与锁升级原理 ⭐⭐⭐ --- synchronized 与锁升级原理 ⭐⭐⭐ 面试题：synchronized 的锁升级过程是怎样的？ 核心回答 JDK 1.6 之前，synchronized 是重量级锁，直接调用操作系统互斥量（Mutex Lock），性能较差。JDK 1.6 引入了锁升级机制，根据竞争情况从无锁逐步升级到重量级锁，大幅提升了性能。 锁的四种状态 Java 对象头结构 synchronized 锁信息存储在对象头（Mark Word）中： 锁升级过程详解 1. 无锁状态 2. 偏向锁（Biased Locking） 适用场景：只有一个线程访问同步块 原理： - 第一次获取锁时，将线程 ID 写入对象头 - 后续同一线程进入，只需检查线程 ID，无需 CAS 优点： - 无竞争时，同步操作几乎零开销 - 适合单线程反复进入同步块的场景 偏向锁撤销： - 当其他线程尝试获取锁时，需要撤销偏向锁 - 撤销需要等待全局安全点（STW），有一定开销 3. 轻量级锁（Lightweight Locking） 适用场景：多个线程交替执行（无激烈竞争） 原理： - 线程在栈帧中创建 Lock Record（锁记录） - 使用 CAS 将对象头的 Mark Word 替换为指向 Lock Record 的指针 - 失败则自旋等待 自旋优化： - 自适应自旋：根据历史成功率动态调整自旋次数 - 如果之前成功过，增加自旋次数 - 如果之前失败过，减少自旋次数 4. 重量级锁（Heavyweight Locking） 适用场景：多个线程激烈竞争 原理： - 使用操作系统互斥量（Mutex） - 线程阻塞和唤醒需要用户态/内核态切换 - 开销最大，但最稳定 锁升级流程图 代码示例 锁优化技术 1. 锁消除（Lock Elimination） 2. 锁粗化（Lock Coarsening） 查看锁状态（JVM 参数） 高频面试题 Q1: 为什么 JDK 15 要禁用偏向锁？ JDK 15 默认禁用了偏向锁，原因： 1. 收益减少：现代应用多线程竞争激烈，偏向锁撤销开销大 2. 复杂性：偏向锁增加了代码复杂性和维护成本 3. 替代方案：轻量级锁优化已经足够好 Q2: synchronized 和 ReentrantLock 的区别？ | 特性 | synchronized | ReentrantLock | |------|-------------|---------------| | 实现 | JVM 层（字节码） | API 层（Java 代码） | | 锁获取 | 自动获取/释放 | 手动 lock/unlock | | 可中断 | 不支持 | 支持 lockInterruptibly() | | 超时获取 | 不支持 | 支持 tryLock(timeout) | | 公平锁 | 非公平 | 支持公平/非公平 | | 条件变量 | 一个（wait/notify） | 多个（Condition） | | 性能 | JDK 6+ 优化后接近 | 与 synchronized 接近 | Q3: 为什么 wait()/notify() 必须在 synchronized 块内调用？ 1. 防止竞态条件：确保在检查条件和等待之间不会有其他线程修改条件 2. Monitor 关联：wait()/notify() 依赖 Monitor，必须先获取锁 3. 语义完整性：保证原子性操作 Q4: 什么是锁的 happens-before 关系？ 最佳实践 --- 参考链接： - synchronized锁升级的原理-CSDN - Java面试题之synchronized关键字原理-阿里云"
   },
   {
     "title": "泛型机制",
-    "url": "/java-backend-interview/java-core/generics",
+    "url": "/java-backend-interview/java-core/generics.html",
     "description": "--- layout: default title: 泛型机制 --- 泛型机制 > Java 的类型参数化 🎯 面试重点 - 泛型的作用和类型参数 - 泛型擦除 - 泛型限定 📖 泛型基础 什么是泛型？ 泛型限定 📖 泛型擦除 类型擦除 面试真题 📖 面试真题 Q1: 泛型的作用？ 答： 编译时类型检查、避免强转、代码复用。 Q2: 泛型擦除是什么？ 答： 编译后泛型类型被替换为 Object 或限定类型，运行时没有泛型信息。 Q3: 为什么不能创建泛型数组？ 答： 泛型擦除后无法确定具体类型，编译器无法安全地创建泛型数组。 --- ⭐ 重点：理解泛型擦除是理解 Java 类型系统的关键",
     "category": "java-core",
     "content": "--- layout: default title: 泛型机制 --- 泛型机制 > Java 的类型参数化 🎯 面试重点 - 泛型的作用和类型参数 - 泛型擦除 - 泛型限定 📖 泛型基础 什么是泛型？ 泛型限定 📖 泛型擦除 类型擦除 面试真题 📖 面试真题 Q1: 泛型的作用？ 答： 编译时类型检查、避免强转、代码复用。 Q2: 泛型擦除是什么？ 答： 编译后泛型类型被替换为 Object 或限定类型，运行时没有泛型信息。 Q3: 为什么不能创建泛型数组？ 答： 泛型擦除后无法确定具体类型，编译器无法安全地创建泛型数组。 --- ⭐ 重点：理解泛型擦除是理解 Java 类型系统的关键"
   },
   {
     "title": "HashMap 原理详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/hashmap",
+    "url": "/java-backend-interview/java-core/hashmap.html",
     "description": "--- layout: default title: HashMap 原理详解 ⭐⭐⭐ --- HashMap 原理详解 ⭐⭐⭐ 面试题：介绍一下 HashMap 底层的实现原理 核心回答 HashMap 是 Java 中最常用的集合类之一，基于哈希表实现，提供快速的键值对存取操作。 数据结构（JDK 1.8） 结构说明： - 数组（Node[] table）：存储哈希桶，默认初始容量 16 - 链表：解决哈希冲突，采用拉链法 - 红黑树：当链表长度超过 8 且数组长度 ≥ 64 时，链表转为红黑树 核心参数 | 参数 | 默认值 | 说明 | |------|--------|------| | DEFAULTINITIALCAPACITY | 16 | 默认初始容量（必须是 2 的幂） | | DEFAULTLOADFACTOR | 0.75 | 默认负载因子 | | TREEIFYTHRESHOLD | 8 | 链表转红黑树阈值 | | UNTREEIFYTHRESHOLD | 6 | 红黑树转链表阈值 | | MINTREEIFYCAPACITY | 64 | 最小树化容量 |...",
     "category": "java-core",
     "content": "--- layout: default title: HashMap 原理详解 ⭐⭐⭐ --- HashMap 原理详解 ⭐⭐⭐ 面试题：介绍一下 HashMap 底层的实现原理 核心回答 HashMap 是 Java 中最常用的集合类之一，基于哈希表实现，提供快速的键值对存取操作。 数据结构（JDK 1.8） 结构说明： - 数组（Node[] table）：存储哈希桶，默认初始容量 16 - 链表：解决哈希冲突，采用拉链法 - 红黑树：当链表长度超过 8 且数组长度 ≥ 64 时，链表转为红黑树 核心参数 | 参数 | 默认值 | 说明 | |------|--------|------| | DEFAULTINITIALCAPACITY | 16 | 默认初始容量（必须是 2 的幂） | | DEFAULTLOADFACTOR | 0.75 | 默认负载因子 | | TREEIFYTHRESHOLD | 8 | 链表转红黑树阈值 | | UNTREEIFYTHRESHOLD | 6 | 红黑树转链表阈值 | | MINTREEIFYCAPACITY | 64 | 最小树化容量 | put() 方法执行流程 执行步骤： 1. 计算哈希值：通过 方法计算 key 的哈希值 2. 计算索引：（等价于 ，但位运算更快） 3. 检查位置： - 如果位置为空，直接插入新节点 - 如果位置不为空，检查 key 是否相同（hashCode 和 equals） 4. 处理冲突： - key 相同：覆盖旧值 - key 不同：遍历链表/红黑树，找到合适位置插入 5. 检查转换：链表长度 ≥ 8 且数组长度 ≥ 64，转为红黑树 6. 检查扩容：元素数量 > 容量 × 负载因子，触发扩容 扩容机制 触发条件：（threshold = capacity × loadFactor） 扩容过程： 1. 创建新数组，容量为原来的 2 倍 2. 重新计算每个元素在新数组中的位置 3. JDK 1.8 优化：元素位置要么在原位置，要么在原位置 + 旧容量 为什么用红黑树而不是AVL树？ | 特性 | 红黑树 | AVL树 | |------|--------|-------| | 平衡度 | 弱平衡（黑高平衡） | 强平衡（高度差 ≤ 1） | | 查找 | O(log n) | O(log n) | | 插入/删除 | 旋转次数少，O(1)次 | 旋转次数多，O(log n)次 | | 适用场景 | 插入删除频繁 | 查询频繁 | 结论：HashMap 中插入删除操作频繁，红黑树综合性能更好。 为什么容量必须是 2 的幂？ 1. 位运算替代取模： 等价于 ，但位运算效率更高 2. 均匀分布：2 的幂能让哈希值均匀分布在数组中 3. 扩容优化：元素在新数组中的位置计算更简单 线程安全问题 HashMap 不是线程安全的，多线程环境下可能出现： - 数据丢失（两个线程同时扩容） - 死循环（JDK 1.7 头插法导致） 解决方案： - 使用 （推荐） - 使用 高频面试题 Q1: HashMap 和 Hashtable 的区别？ - HashMap 非线程安全，Hashtable 线程安全 - HashMap 允许 null key/value，Hashtable 不允许 - HashMap 继承 AbstractMap，Hashtable 继承 Dictionary Q2: HashMap 和 ConcurrentHashMap 的区别？ - ConcurrentHashMap 线程安全，采用分段锁（JDK 1.7）或 CAS + synchronized（JDK 1.8） - ConcurrentHashMap 性能更好，锁粒度更细 Q3: 为什么重写 equals() 必须重写 hashCode()？ - HashMap 先比较 hashCode，再比较 equals - 如果只重写 equals，可能导致相同对象计算出不同哈希值，无法正确查找 代码示例 --- 参考链接： - Java HashMap实现原理-阿里云 - Java面试必问:HashMap底层原理详解-CSDN"
   },
   {
     "title": "equals 与 hashCode",
-    "url": "/java-backend-interview/java-core/equals-hashcode",
+    "url": "/java-backend-interview/java-core/equals-hashcode.html",
     "description": "--- layout: default title: equals 与 hashCode --- equals 与 hashCode > Java 对象比较的核心方法 🎯 面试重点 - equals 和 == 的区别 - hashCode 的作用 - 为什么重写 equals 必须重写 hashCode 📖 equals vs == == 比较 equals 方法 📖 hashCode 作用 重写规则 最佳实践 📖 面试真题 Q1: == 和 equals 的区别？ 答： == 基本类型比较值，引用类型比较地址；equals 默认比较地址，通常重写为比较内容。 Q2: 为什么重写 equals 必须重写 hashCode？ 答： HashMap/HashSet 用 hashCode 定位元素，如果不重写，可能导致相同对象被当作不同元素，或者无法正确找到元素。 Q3: String 的 equals 和 hashCode？ 答： String 重写了 equals 比较内容，hashCode 也根据内容计算。相同内容的 String 有相同的 hashCode。 --- ⭐ 重点：理解 ...",
     "category": "java-core",
     "content": "--- layout: default title: equals 与 hashCode --- equals 与 hashCode > Java 对象比较的核心方法 🎯 面试重点 - equals 和 == 的区别 - hashCode 的作用 - 为什么重写 equals 必须重写 hashCode 📖 equals vs == == 比较 equals 方法 📖 hashCode 作用 重写规则 最佳实践 📖 面试真题 Q1: == 和 equals 的区别？ 答： == 基本类型比较值，引用类型比较地址；equals 默认比较地址，通常重写为比较内容。 Q2: 为什么重写 equals 必须重写 hashCode？ 答： HashMap/HashSet 用 hashCode 定位元素，如果不重写，可能导致相同对象被当作不同元素，或者无法正确找到元素。 Q3: String 的 equals 和 hashCode？ 答： String 重写了 equals 比较内容，hashCode 也根据内容计算。相同内容的 String 有相同的 hashCode。 --- ⭐ 重点：理解 equals 和 hashCode 是理解 Java 集合框架的基础"
   },
   {
     "title": "Netty 基础",
-    "url": "/java-backend-interview/java-core/netty-basics",
+    "url": "/java-backend-interview/java-core/netty-basics.html",
     "description": "--- layout: default title: Netty 基础 --- Netty 基础 > 高性能网络编程框架 🎯 面试重点 - Netty 核心概念 - 线程模型 - 零拷贝 📖 核心概念 线程模型 核心组件 零拷贝 📖 面试真题 Q1: Netty 为什么快？ 答： 零拷贝、I/O 多路复用、内存池、无锁化。 --- ⭐ 重点：Netty 是高性能网络编程的基础",
     "category": "java-core",
     "content": "--- layout: default title: Netty 基础 --- Netty 基础 > 高性能网络编程框架 🎯 面试重点 - Netty 核心概念 - 线程模型 - 零拷贝 📖 核心概念 线程模型 核心组件 零拷贝 📖 面试真题 Q1: Netty 为什么快？ 答： 零拷贝、I/O 多路复用、内存池、无锁化。 --- ⭐ 重点：Netty 是高性能网络编程的基础"
   },
   {
     "title": "String、StringBuilder、StringBuffer 区别 ⭐⭐",
-    "url": "/java-backend-interview/java-core/string",
+    "url": "/java-backend-interview/java-core/string.html",
     "description": "--- layout: default title: String、StringBuilder、StringBuffer 区别 ⭐⭐ --- String、StringBuilder、StringBuffer 区别 ⭐⭐ 面试题：String、StringBuilder、StringBuffer 有什么区别？ 核心回答 三者都是 Java 中用于处理字符串的类，核心区别在于可变性和线程安全性。 对比总览 | 特性 | String | StringBuilder | StringBuffer | |------|--------|---------------|--------------| | 可变性 | 不可变 | 可变 | 可变 | | 线程安全 | 安全（不可变） | 不安全 | 安全（synchronized） | | 性能 | 低（每次修改创建新对象） | 高（单线程） | 中（多线程有锁开销） | | 使用场景 | 字符串常量 | 单线程字符串操作 | 多线程字符串操作 | | JDK版本 | 1.0 | 1.5 | 1.0 | String - 不可变字符串 不可变性的...",
     "category": "java-core",
     "content": "--- layout: default title: String、StringBuilder、StringBuffer 区别 ⭐⭐ --- String、StringBuilder、StringBuffer 区别 ⭐⭐ 面试题：String、StringBuilder、StringBuffer 有什么区别？ 核心回答 三者都是 Java 中用于处理字符串的类，核心区别在于可变性和线程安全性。 对比总览 | 特性 | String | StringBuilder | StringBuffer | |------|--------|---------------|--------------| | 可变性 | 不可变 | 可变 | 可变 | | 线程安全 | 安全（不可变） | 不安全 | 安全（synchronized） | | 性能 | 低（每次修改创建新对象） | 高（单线程） | 中（多线程有锁开销） | | 使用场景 | 字符串常量 | 单线程字符串操作 | 多线程字符串操作 | | JDK版本 | 1.0 | 1.5 | 1.0 | String - 不可变字符串 不可变性的实现 不可变原因： 1. ：类不能被继承，防止方法被重写 2. ：字符数组引用不可变 3. 无修改方法：String 类没有提供修改字符数组内容的方法 字符串常量池 intern() 方法： 字符串拼接的问题 StringBuilder - 可变字符串（单线程） 特点 - 可变：底层使用可扩容的字符数组 - 非线程安全：方法没有 synchronized 修饰 - 高性能：单线程下无锁开销 源码分析 扩容机制 优化建议：预估字符串长度，避免频繁扩容 StringBuffer - 可变字符串（多线程） 特点 - 可变：与 StringBuilder 相同的底层结构 - 线程安全：方法使用 修饰 - 性能较低：同步带来额外开销 源码分析 继承关系 性能对比测试 典型结果： 使用场景总结 | 场景 | 推荐类 | |------|--------| | 字符串常量，不修改 | String | | 单线程，频繁修改字符串 | StringBuilder | | 多线程，频繁修改字符串 | StringBuffer | | 循环中拼接字符串 | StringBuilder | | SQL 语句拼接 | StringBuilder | | JSON/XML 字符串构建 | StringBuilder | 高频面试题 Q1: 为什么 String 要设计成不可变的？ 1. 安全性：字符串常用作参数（如网络连接、文件路径），不可变可防止被篡改 2. 线程安全：不可变对象天然线程安全，无需同步 3. 哈希缓存：String 的 hashCode 可缓存，适合作为 HashMap 的 key 4. 字符串常量池：不可变才能实现常量池复用，节省内存 Q2: StringBuilder 和 StringBuffer 的扩容机制？ - 默认初始容量 16 - 扩容时：新容量 = 旧容量 × 2 + 2 - 如果还不够，使用所需的最小容量 Q3: 如何在多线程环境下安全使用 StringBuilder？ Q4: JDK 对字符串拼接的优化？ 最佳实践 1. 优先使用 StringBuilder：单线程环境下性能最优 2. 预估容量：减少扩容带来的数组拷贝开销 3. 避免在循环中使用 String 拼接：编译器优化有限，大循环仍会创建大量对象 4. 多线程考虑 ThreadLocal：比 StringBuffer 性能更好 --- 参考链接： - String、StringBuffer和StringBuilder的区别-CSDN - Java中String、StringBuffer和StringBuilder的区别-面试鸭"
   },
   {
     "title": "ConcurrentHashMap 原理详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/concurrent-hashmap",
+    "url": "/java-backend-interview/java-core/concurrent-hashmap.html",
     "description": "--- layout: default title: ConcurrentHashMap 原理详解 ⭐⭐⭐ --- ConcurrentHashMap 原理详解 ⭐⭐⭐ 面试题：ConcurrentHashMap 是如何保证线程安全的？ 核心回答 ConcurrentHashMap 是 Java 并发包中提供的线程安全哈希表，相比 Hashtable 和 Collections.synchronizedMap()，它采用了更细粒度的锁机制，实现了更高的并发性能。 JDK 1.7 vs JDK 1.8 对比 | 特性 | JDK 1.7 | JDK 1.8 | |------|---------|---------| | 数据结构 | Segment 数组 + HashEntry 数组 + 链表 | Node 数组 + 链表 + 红黑树 | | 锁机制 | 分段锁（Segment 继承 ReentrantLock） | CAS + synchronized（锁单个 Node） | | 锁粒度 | 段级别（默认 16 段） | 节点级别 | | 并发度 | 固定 16（Segment 数量...",
     "category": "java-core",
     "content": "--- layout: default title: ConcurrentHashMap 原理详解 ⭐⭐⭐ --- ConcurrentHashMap 原理详解 ⭐⭐⭐ 面试题：ConcurrentHashMap 是如何保证线程安全的？ 核心回答 ConcurrentHashMap 是 Java 并发包中提供的线程安全哈希表，相比 Hashtable 和 Collections.synchronizedMap()，它采用了更细粒度的锁机制，实现了更高的并发性能。 JDK 1.7 vs JDK 1.8 对比 | 特性 | JDK 1.7 | JDK 1.8 | |------|---------|---------| | 数据结构 | Segment 数组 + HashEntry 数组 + 链表 | Node 数组 + 链表 + 红黑树 | | 锁机制 | 分段锁（Segment 继承 ReentrantLock） | CAS + synchronized（锁单个 Node） | | 锁粒度 | 段级别（默认 16 段） | 节点级别 | | 并发度 | 固定 16（Segment 数量） | 理论上无上限 | | 哈希冲突 | 链表 | 链表 + 红黑树（长度≥8） | | size 计算 | 分段统计后累加 | 基于 CounterCell 数组 | JDK 1.8 核心结构 核心参数 put() 方法执行流程 线程安全机制 1. CAS 操作（无锁化） CAS 使用场景： - 初始化 table - 桶位为空时插入节点 - 更新元素个数（CounterCell） 2. synchronized 细粒度锁 为什么用 synchronized 而不是 ReentrantLock？ JDK 1.8 对 synchronized 进行了优化： - 锁升级机制（无锁 → 偏向锁 → 轻量级锁 → 重量级锁） - 在锁竞争不激烈时，synchronized 性能更好 - 代码更简洁 3. volatile 保证可见性 扩容机制（多线程协作） 扩容特点： 1. 多线程协作：多个线程可以同时参与扩容 2. 分段迁移：每个线程负责一段数据的迁移 3. 渐进式：查询时遇到 ForwardingNode 会协助扩容 size() 方法实现 优化思路： - 使用 CounterCell 数组分散 CAS 竞争 - 不同线程更新不同的 CounterCell - 求和时累加 baseCount 和所有 CounterCell 高频面试题 Q1: ConcurrentHashMap 为什么 key 和 value 不能为 null？ 原因： 1. 避免歧义：无法区分 \"key 不存在\" 和 \"key 存在但 value 为 null\" 2. 并发安全：在多线程环境下，null 值可能导致判断错误 对比 HashMap： - HashMap 允许 null key 和 null value（单线程环境，可以通过 containsKey 区分） Q2: ConcurrentHashMap 和 Hashtable 的区别？ | 特性 | ConcurrentHashMap | Hashtable | |------|-------------------|-----------| | 锁机制 | 细粒度锁（桶级别） | 粗粒度锁（整个表） | | 性能 | 高并发性能好 | 并发性能差 | | null 支持 | 不支持 | 不支持 | | 迭代器 | 弱一致性 | 快速失败 | | 出现版本 | JDK 1.5 | JDK 1.0 | Q3: size() 方法是准确的吗？ 不是实时的准确值，是弱一致性的： - size() 返回的是一个估计值 - 在计算过程中，其他线程可能正在修改 Map - 如果需要精确值，需要加锁遍历（但性能差） Q4: get() 方法需要加锁吗？ 不需要，get() 是完全无锁的： - 利用 volatile 保证可见性 - 利用 CAS 保证原子性 最佳实践 --- 参考链接： - ConcurrentHashMap 底层实现原理-CSDN - ConcurrentHashMap 1.7与1.8的核心差异解析-CSDN"
   },
   {
     "title": "volatile 原理与内存屏障 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/volatile",
+    "url": "/java-backend-interview/java-core/volatile.html",
     "description": "--- layout: default title: volatile 原理与内存屏障 ⭐⭐⭐ --- volatile 原理与内存屏障 ⭐⭐⭐ 面试题：volatile 的作用和原理是什么？ 核心回答 volatile 是 Java 中的轻量级同步机制，保证变量的可见性和有序性，但不保证原子性。 volatile 的三大特性 | 特性 | 说明 | 实现机制 | |------|------|---------| | 可见性 | 一个线程修改，其他线程立即可见 | 内存屏障 + 缓存一致性协议 | | 有序性 | 禁止指令重排序 | 内存屏障 | | 原子性 | ❌ 不保证 | 需要配合 synchronized 或 CAS | 可见性原理 Java 内存模型（JMM） 问题：线程修改变量后，其他线程可能看不到最新值 volatile 解决： - 写操作：立即刷新到主内存 - 读操作：直接从主内存读取 内存屏障（Memory Barrier） 内存屏障是一种 CPU 指令，用于确保指令的执行顺序。 四种内存屏障 | 屏障类型 | 说明 | 作用 | |---------|------...",
     "category": "java-core",
     "content": "--- layout: default title: volatile 原理与内存屏障 ⭐⭐⭐ --- volatile 原理与内存屏障 ⭐⭐⭐ 面试题：volatile 的作用和原理是什么？ 核心回答 volatile 是 Java 中的轻量级同步机制，保证变量的可见性和有序性，但不保证原子性。 volatile 的三大特性 | 特性 | 说明 | 实现机制 | |------|------|---------| | 可见性 | 一个线程修改，其他线程立即可见 | 内存屏障 + 缓存一致性协议 | | 有序性 | 禁止指令重排序 | 内存屏障 | | 原子性 | ❌ 不保证 | 需要配合 synchronized 或 CAS | 可见性原理 Java 内存模型（JMM） 问题：线程修改变量后，其他线程可能看不到最新值 volatile 解决： - 写操作：立即刷新到主内存 - 读操作：直接从主内存读取 内存屏障（Memory Barrier） 内存屏障是一种 CPU 指令，用于确保指令的执行顺序。 四种内存屏障 | 屏障类型 | 说明 | 作用 | |---------|------|------| | LoadLoad | 读-读屏障 | 禁止读-读重排序 | | StoreStore | 写-写屏障 | 禁止写-写重排序 | | LoadStore | 读-写屏障 | 禁止读-写重排序 | | StoreLoad | 写-读屏障 | 禁止写-读重排序（全能屏障）| volatile 的内存屏障插入策略 经典应用场景 1. 状态标志位 2. 双重检查锁定（DCL） 为什么需要 volatile？ 3. 读写锁的读操作 volatile 不保证原子性 原因： 实际上是三个操作： 1. 读取 count 值 2. 加 1 3. 写回 count volatile 不能保证这三步的原子性。 解决方案： volatile vs synchronized | 特性 | volatile | synchronized | |------|---------|--------------| | 可见性 | ✓ | ✓ | | 原子性 | ✗ | ✓ | | 有序性 | ✓ | ✓ | | 阻塞 | 不会阻塞线程 | 会阻塞线程 | | 适用场景 | 单一变量的读写 | 复合操作 | | 性能 | 轻量级 | 重量级 | happens-before 规则 volatile 变量的读写操作满足 happens-before 关系： CPU 缓存一致性协议（MESI） volatile 的可见性实现依赖于 CPU 的缓存一致性协议： 高频面试题 Q1: volatile 能保证线程安全吗？ - 单一操作：volatile 变量的读写是线程安全的 - 复合操作：如 不是线程安全的，需要 synchronized 或 Atomic 类 Q2: 为什么 volatile 能解决 DCL 的单例问题？ Q3: volatile 和 Atomic 类的区别？ Q4: 什么场景不适合用 volatile？ 1. 需要原子性的场景：如计数器递增 2. 复杂的状态判断： 最佳实践 --- 参考链接： - 深入理解volatile与synchronized - volatile关键字最全原理剖析-SegmentFault"
   },
   {
     "title": "ArrayList 与 LinkedList 区别 ⭐⭐",
-    "url": "/java-backend-interview/java-core/list",
+    "url": "/java-backend-interview/java-core/list.html",
     "description": "--- layout: default title: ArrayList 与 LinkedList 区别 ⭐⭐ --- ArrayList 与 LinkedList 区别 ⭐⭐ 面试题：ArrayList 和 LinkedList 有什么区别？ 核心回答 ArrayList 和 LinkedList 都是 List 接口的实现类，但底层数据结构不同，导致它们在性能特征上有显著差异。 对比总览 | 特性 | ArrayList | LinkedList | |------|-----------|------------| | 底层结构 | 动态数组（Object[]） | 双向链表（Node） | | 随机访问 | O(1) - 极快 | O(n) - 慢 | | 尾部插入/删除 | O(1)（均摊） | O(1) | | 中间插入/删除 | O(n) - 需要移动元素 | O(1)（找到位置后） | | 内存占用 | 较少（只存数据） | 较多（额外存前后指针） | | 扩容机制 | 1.5 倍扩容 | 无需扩容 | | 线程安全 | 不安全 | 不安全 | ArrayList 详解...",
     "category": "java-core",
     "content": "--- layout: default title: ArrayList 与 LinkedList 区别 ⭐⭐ --- ArrayList 与 LinkedList 区别 ⭐⭐ 面试题：ArrayList 和 LinkedList 有什么区别？ 核心回答 ArrayList 和 LinkedList 都是 List 接口的实现类，但底层数据结构不同，导致它们在性能特征上有显著差异。 对比总览 | 特性 | ArrayList | LinkedList | |------|-----------|------------| | 底层结构 | 动态数组（Object[]） | 双向链表（Node） | | 随机访问 | O(1) - 极快 | O(n) - 慢 | | 尾部插入/删除 | O(1)（均摊） | O(1) | | 中间插入/删除 | O(n) - 需要移动元素 | O(1)（找到位置后） | | 内存占用 | 较少（只存数据） | 较多（额外存前后指针） | | 扩容机制 | 1.5 倍扩容 | 无需扩容 | | 线程安全 | 不安全 | 不安全 | ArrayList 详解 底层结构 扩容机制 扩容过程： 1. 创建新数组，容量为原来的 1.5 倍 2. 使用 复制旧数据到新数组 3. 丢弃旧数组 优化建议： 随机访问为什么快？ 数组在内存中是连续存储的，通过索引可直接计算出元素的内存地址。 LinkedList 详解 底层结构 插入操作 性能对比测试 典型结果： 使用场景 | 场景 | 推荐 | 原因 | |------|------|------| | 频繁随机访问 | ArrayList | O(1) 访问速度 | | 频繁在头部/中间插入删除 | LinkedList | O(1) 插入删除 | | 只需要在尾部添加 | ArrayList | 缓存友好，内存占用少 | | 实现队列/栈 | LinkedList | 已实现 Deque 接口 | | 数据量固定 | ArrayList | 内存连续，性能好 | 线程安全问题 两者都是线程不安全的，多线程环境下需要： 高频面试题 Q1: 为什么 ArrayList 扩容是 1.5 倍而不是 2 倍？ - 1.5 倍是空间和时间折中的结果 - 2 倍扩容可能导致内存浪费 - 1.5 倍在扩容频率和内存占用之间取得平衡 Q2: LinkedList 实现了哪些接口？ 实现了 接口，可以作为队列（FIFO）或栈（LIFO）使用： Q3: ArrayList 的 trimToSize() 方法有什么用？ 用于释放未使用的数组空间。 Q4: 遍历 List 时删除元素的正确方式？ --- 参考链接： - ArrayList和LinkedList区别-PHP中文网 - ArrayList和LinkedList的区别-博客园"
   },
   {
     "title": "线程池核心参数详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/thread-pool",
+    "url": "/java-backend-interview/java-core/thread-pool.html",
     "description": "--- layout: default title: 线程池核心参数详解 ⭐⭐⭐ --- 线程池核心参数详解 ⭐⭐⭐ 面试题：讲讲线程池有哪些核心参数？ 核心回答 Java 线程池通过 类实现，包含 7 个核心参数，合理配置这些参数是高性能并发编程的关键。 七大核心参数 参数详解 1. corePoolSize（核心线程数） 定义：线程池中始终保持存活的线程数量，即使空闲也不会被销毁。 特点： - 线程池初始化时不会立即创建核心线程 - 有任务提交时，如果当前线程数 corePoolSize 时） - 超过此时间，空闲线程会被销毁 - 可通过 让核心线程也受限制 4. unit（时间单位） 定义：keepAliveTime 的时间单位。 常用值： - - 秒 - - 毫秒 5. workQueue（任务队列） 定义：用于存放等待执行任务的阻塞队列。 常用队列类型： | 队列类型 | 特点 | 适用场景 | |---------|------|---------| | | 有界队列，基于数组 | 需要限制队列大小，防止 OOM | | | 无界队列（默认容量 Integer.MAXVAL...",
     "category": "java-core",
     "content": "--- layout: default title: 线程池核心参数详解 ⭐⭐⭐ --- 线程池核心参数详解 ⭐⭐⭐ 面试题：讲讲线程池有哪些核心参数？ 核心回答 Java 线程池通过 类实现，包含 7 个核心参数，合理配置这些参数是高性能并发编程的关键。 七大核心参数 参数详解 1. corePoolSize（核心线程数） 定义：线程池中始终保持存活的线程数量，即使空闲也不会被销毁。 特点： - 线程池初始化时不会立即创建核心线程 - 有任务提交时，如果当前线程数 corePoolSize 时） - 超过此时间，空闲线程会被销毁 - 可通过 让核心线程也受限制 4. unit（时间单位） 定义：keepAliveTime 的时间单位。 常用值： - - 秒 - - 毫秒 5. workQueue（任务队列） 定义：用于存放等待执行任务的阻塞队列。 常用队列类型： | 队列类型 | 特点 | 适用场景 | |---------|------|---------| | | 有界队列，基于数组 | 需要限制队列大小，防止 OOM | | | 无界队列（默认容量 Integer.MAXVALUE） | 任务量波动大，内存充足 | | | 不存储元素，直接提交 | 任务执行快，需要直接传递 | | | 优先级队列 | 任务有优先级区分 | 选择建议： - 有界队列：防止任务无限堆积导致 OOM - 无界队列：配合合理的拒绝策略使用 6. threadFactory（线程工厂） 定义：用于创建新线程的工厂类。 作用： - 自定义线程名称（便于问题排查） - 设置线程优先级 - 设置守护线程属性 7. handler（拒绝策略） 定义：当线程池和队列都满时，处理新任务的策略。 JDK 内置策略： | 策略 | 行为 | |------|------| | （默认） | 直接抛出 RejectedExecutionException | | | 由调用线程（提交任务的线程）执行 | | | 静默丢弃任务 | | | 丢弃队列中最老的任务，重试提交 | 自定义拒绝策略： 线程池执行流程 线程池状态 线程池配置示例 高频面试题 Q1: 为什么使用线程池？ - 减少线程创建/销毁的开销 - 控制并发线程数量 - 便于线程管理和监控 - 提高响应速度 Q2: corePoolSize = 0 时线程池如何工作？ - 提交任务时，任务直接进入队列 - 队列满后，创建线程执行任务 - 适用于任务执行不频繁的场景 Q3: 如何合理配置线程池参数？ 1. 分析任务是 CPU 密集型还是 IO 密集型 2. 根据任务类型设置 corePoolSize 3. 根据系统资源设置 maximumPoolSize 4. 根据任务量波动选择队列类型 5. 根据业务重要性选择拒绝策略 Q4: submit() 和 execute() 的区别？ - ：提交 Runnable 任务，无返回值 - ：提交 Runnable/Callable 任务，返回 Future 最佳实践 1. 使用有界队列：防止任务无限堆积 2. 自定义线程名称：便于问题排查 3. 监控线程池状态：通过 、 等 4. 优雅关闭：先调用 ，等待任务完成后再关闭 --- 参考链接：** - Java线程池核心参数详解-CSDN - 线程池核心参数详解-掘金"
   },
   {
     "title": "ThreadLocal 原理与内存泄漏 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/threadlocal",
+    "url": "/java-backend-interview/java-core/threadlocal.html",
     "description": "--- layout: default title: ThreadLocal 原理与内存泄漏 ⭐⭐⭐ --- ThreadLocal 原理与内存泄漏 ⭐⭐⭐ 面试题：ThreadLocal 为什么会内存泄漏？如何解决？ 核心回答 ThreadLocal 为每个线程提供独立的变量副本，实现线程隔离。但如果使用不当，可能导致内存泄漏，主要原因是 ThreadLocalMap 中的 Entry 使用弱引用作为 key，而 value 是强引用。 ThreadLocal 结构 核心源码 内存泄漏原因 场景分析 泄漏过程 为什么 key 要设计为弱引用？ 设计权衡： - 弱引用：ThreadLocal 本身可回收，但 value 可能泄漏 - 强引用：ThreadLocal 和 value 都泄漏 解决方案 1. 及时调用 remove() 2. 使用 try-finally 模式 3. 使用 InheritableThreadLocal 注意传递 注意：线程池中使用 InheritableThreadLocal 也有问题，需要使用 TransmittableThreadLocal。 Threa...",
     "category": "java-core",
     "content": "--- layout: default title: ThreadLocal 原理与内存泄漏 ⭐⭐⭐ --- ThreadLocal 原理与内存泄漏 ⭐⭐⭐ 面试题：ThreadLocal 为什么会内存泄漏？如何解决？ 核心回答 ThreadLocal 为每个线程提供独立的变量副本，实现线程隔离。但如果使用不当，可能导致内存泄漏，主要原因是 ThreadLocalMap 中的 Entry 使用弱引用作为 key，而 value 是强引用。 ThreadLocal 结构 核心源码 内存泄漏原因 场景分析 泄漏过程 为什么 key 要设计为弱引用？ 设计权衡： - 弱引用：ThreadLocal 本身可回收，但 value 可能泄漏 - 强引用：ThreadLocal 和 value 都泄漏 解决方案 1. 及时调用 remove() 2. 使用 try-finally 模式 3. 使用 InheritableThreadLocal 注意传递 注意：线程池中使用 InheritableThreadLocal 也有问题，需要使用 TransmittableThreadLocal。 ThreadLocalMap 的清理机制 1. 探测式清理（expungeStaleEntry） 2. 启发式清理（cleanSomeSlots） 触发时机： - set() 方法：发现 key 为 null 时触发 - get() 方法：发现 key 为 null 时触发 - remove() 方法：主动触发 使用场景 1. 用户上下文传递 2. 数据库连接管理 3. SimpleDateFormat 线程安全 高频面试题 Q1: ThreadLocal 和 synchronized 的区别？ | 特性 | ThreadLocal | synchronized | |------|-------------|--------------| | 作用 | 线程隔离 | 线程同步 | | 数据 | 每个线程独立副本 | 共享数据 | | 竞争 | 无竞争 | 有竞争 | | 适用场景 | 线程上下文传递 | 临界区保护 | Q2: ThreadLocalMap 的哈希冲突怎么解决？ Q3: 父子线程如何共享 ThreadLocal？ Q4: 线程池中使用 ThreadLocal 有什么问题？ 解决方案： 最佳实践 --- 参考链接： - ThreadLocal 原理与内存泄漏-掘金 - ThreadLocal 内存泄露是怎么回事-图灵课堂"
@@ -771,91 +771,91 @@
   },
   {
     "title": "集合类对比",
-    "url": "/java-backend-interview/java-core/collections-compare",
+    "url": "/java-backend-interview/java-core/collections-compare.html",
     "description": "--- layout: default title: 集合类对比 --- 集合类对比 > 选择合适的集合类 🎯 面试重点 - 各集合类的特点 - 适用场景 - 线程安全问题 📖 List 对比 📖 Set 对比 📖 Map 对比 📖 面试真题 Q1: HashMap 和 Hashtable 的区别？ 答： - Hashtable 线程安全，不允许 null - HashMap 线程不安全，允许 null - HashMap 性能更好 Q2: ArrayList 和 LinkedList 的区别？ 答： ArrayList 随机访问 O(1)，LinkedList 插入删除 O(1)。 --- ⭐ 重点：根据场景选择合适的集合类",
     "category": "java-core",
     "content": "--- layout: default title: 集合类对比 --- 集合类对比 > 选择合适的集合类 🎯 面试重点 - 各集合类的特点 - 适用场景 - 线程安全问题 📖 List 对比 📖 Set 对比 📖 Map 对比 📖 面试真题 Q1: HashMap 和 Hashtable 的区别？ 答： - Hashtable 线程安全，不允许 null - HashMap 线程不安全，允许 null - HashMap 性能更好 Q2: ArrayList 和 LinkedList 的区别？ 答： ArrayList 随机访问 O(1)，LinkedList 插入删除 O(1)。 --- ⭐ 重点：根据场景选择合适的集合类"
   },
   {
     "title": "Java 基础数据类型与包装类",
-    "url": "/java-backend-interview/java-core/basic-types",
+    "url": "/java-backend-interview/java-core/basic-types.html",
     "description": "--- layout: default title: Java 基础数据类型与包装类 --- Java 基础数据类型与包装类 > 理解基本类型和包装类的区别是 Java 基础 🎯 面试重点 - 基本类型和包装类的区别 - 自动装箱和拆箱 - 缓存机制 📖 基本类型 8 种基本类型 包装类 📖 区别 基本类型 vs 包装类 缓存机制 📖 面试真题 Q1: 基本类型和包装类的区别？ 答： - 基本类型存储在栈中，包装类存储在堆中 - 包装类有默认值 null，基本类型有默认值 - 包装类可以用于泛型，基本类型不可以 Q2: Integer 的缓存范围？ 答： -128 到 127 Q3: new Integer(10) 和 Integer.valueOf(10) 的区别？ 答： valueOf 使用缓存，new Integer 每次创建新对象。 --- ⭐ 重点：理解基本类型和包装类的区别是理解 Java 的基础",
     "category": "java-core",
     "content": "--- layout: default title: Java 基础数据类型与包装类 --- Java 基础数据类型与包装类 > 理解基本类型和包装类的区别是 Java 基础 🎯 面试重点 - 基本类型和包装类的区别 - 自动装箱和拆箱 - 缓存机制 📖 基本类型 8 种基本类型 包装类 📖 区别 基本类型 vs 包装类 缓存机制 📖 面试真题 Q1: 基本类型和包装类的区别？ 答： - 基本类型存储在栈中，包装类存储在堆中 - 包装类有默认值 null，基本类型有默认值 - 包装类可以用于泛型，基本类型不可以 Q2: Integer 的缓存范围？ 答： -128 到 127 Q3: new Integer(10) 和 Integer.valueOf(10) 的区别？ 答： valueOf 使用缓存，new Integer 每次创建新对象。 --- ⭐ 重点：理解基本类型和包装类的区别是理解 Java 的基础"
   },
   {
     "title": "CAS 与 AQS 原理详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/java-core/cas-aqs",
+    "url": "/java-backend-interview/java-core/cas-aqs.html",
     "description": "--- layout: default title: CAS 与 AQS 原理详解 ⭐⭐⭐ --- CAS 与 AQS 原理详解 ⭐⭐⭐ 面试题：说说 CAS 和 AQS 的原理 核心回答 CAS（Compare And Swap）是一种无锁原子操作，通过比较内存值和预期值来决定是否更新。AQS（AbstractQueuedSynchronizer）是 Java 并发包的基石，提供了实现锁和同步器的框架。 --- 一、CAS 原理 什么是 CAS？ CAS 包含三个操作数： - V：内存地址的值 - A：预期值 - B：新值 操作逻辑：当且仅当 V == A 时，将 V 更新为 B，否则不做任何操作。 CAS 的硬件支持 CAS 是 CPU 的原子指令（x86 的 指令），保证了操作的原子性。 AtomicInteger 源码分析 CAS 的问题 1. ABA 问题 问题描述： - 线程 1：读取值为 A - 线程 2：将 A 改为 B，再改回 A - 线程 1：CAS 成功，但实际上值已经被修改过 解决方案：使用版本号（AtomicStampedReference） 2. 自旋开销 ...",
     "category": "java-core",
     "content": "--- layout: default title: CAS 与 AQS 原理详解 ⭐⭐⭐ --- CAS 与 AQS 原理详解 ⭐⭐⭐ 面试题：说说 CAS 和 AQS 的原理 核心回答 CAS（Compare And Swap）是一种无锁原子操作，通过比较内存值和预期值来决定是否更新。AQS（AbstractQueuedSynchronizer）是 Java 并发包的基石，提供了实现锁和同步器的框架。 --- 一、CAS 原理 什么是 CAS？ CAS 包含三个操作数： - V：内存地址的值 - A：预期值 - B：新值 操作逻辑：当且仅当 V == A 时，将 V 更新为 B，否则不做任何操作。 CAS 的硬件支持 CAS 是 CPU 的原子指令（x86 的 指令），保证了操作的原子性。 AtomicInteger 源码分析 CAS 的问题 1. ABA 问题 问题描述： - 线程 1：读取值为 A - 线程 2：将 A 改为 B，再改回 A - 线程 1：CAS 成功，但实际上值已经被修改过 解决方案：使用版本号（AtomicStampedReference） 2. 自旋开销 CAS 失败会不断重试，CPU 开销大。 优化： - 自适应自旋：根据历史成功率调整重试次数 - 退避策略：失败后短暂休眠 3. 只能保证单个变量的原子性 对于多个变量的复合操作，需要使用 synchronized 或 AtomicReference。 --- 二、AQS 原理 AQS 概述 AQS（AbstractQueuedSynchronizer）是 Java 并发包的核心框架，提供了： - 同步状态的管理（state） - 线程的排队和阻塞 - 线程的唤醒机制 基于 AQS 实现的类： - ReentrantLock - ReentrantReadWriteLock - CountDownLatch - Semaphore - CyclicBarrier AQS 核心结构 独占模式获取锁（acquire） 独占模式释放锁（release） 共享模式 AQS 的模板方法模式 子类只需实现特定方法： ReentrantLock 实现示例 高频面试题 Q1: CAS 和 synchronized 的区别？ | 特性 | CAS | synchronized | |------|-----|--------------| | 实现 | 硬件原子指令 | JVM 监视器锁 | | 阻塞 | 非阻塞（自旋） | 阻塞 | | 开销 | 低（无上下文切换） | 高（可能涉及内核态） | | 适用场景 | 低竞争、短操作 | 高竞争、长操作 | | 问题 | ABA、自旋开销 | 线程切换开销 | Q2: AQS 为什么使用双向链表？ 1. 方便取消节点：需要找到前驱节点修改 next 指针 2. 支持从尾部向前遍历：unparkSuccessor 方法需要 3. 方便插入：在尾部插入时需要修改前驱的 next Q3: AQS 如何保证可见性？ Q4: 公平锁和非公平锁的区别？ Q5: 什么是 CLH 队列？ CLH（Craig, Landin, and Hagersten）是一种基于链表的可扩展、高性能公平锁。 AQS 借鉴了 CLH 的思想： - 使用双向链表组织等待线程 - 每个节点自旋检查前驱节点的状态 - 前驱释放锁时唤醒后继 最佳实践 --- 参考链接： - Java面试题之AQS-CSDN - AQS抽象队列同步器及工作原理解析-脚本之家"
   },
   {
     "title": "注解与反射",
-    "url": "/java-backend-interview/java-core/annotation-reflection",
+    "url": "/java-backend-interview/java-core/annotation-reflection.html",
     "description": "--- layout: default title: 注解与反射 --- 注解与反射 > Java 的元编程能力 🎯 面试重点 - 注解的定义和使用 - 反射的原理和应用 - 两者结合使用场景 📖 注解 内置注解 自定义注解 元注解 📖 反射 获取 Class 反射操作 📖 面试真题 Q1: 注解和反射的关系？ 答： 注解是元数据，反射可以在运行时读取注解信息，常用于框架实现（如 Spring 的依赖注入）。 Q2: 反射的缺点？ 答： 性能较低、安全性问题、破坏封装性。 --- ⭐ 重点：注解和反射是框架底层的基础",
     "category": "java-core",
     "content": "--- layout: default title: 注解与反射 --- 注解与反射 > Java 的元编程能力 🎯 面试重点 - 注解的定义和使用 - 反射的原理和应用 - 两者结合使用场景 📖 注解 内置注解 自定义注解 元注解 📖 反射 获取 Class 反射操作 📖 面试真题 Q1: 注解和反射的关系？ 答： 注解是元数据，反射可以在运行时读取注解信息，常用于框架实现（如 Spring 的依赖注入）。 Q2: 反射的缺点？ 答： 性能较低、安全性问题、破坏封装性。 --- ⭐ 重点：注解和反射是框架底层的基础"
   },
   {
     "title": "Spring Bean 生命周期详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/spring/bean-lifecycle",
+    "url": "/java-backend-interview/spring/bean-lifecycle.html",
     "description": "--- layout: default title: Spring Bean 生命周期详解 ⭐⭐⭐ --- Spring Bean 生命周期详解 ⭐⭐⭐ 面试题：说说 Spring Bean 的生命周期 核心回答 Spring Bean 的生命周期是指 Bean 从创建到销毁的整个过程，主要分为四个阶段：实例化 → 属性赋值 → 初始化 → 销毁。Spring 在每个阶段都提供了扩展点，允许开发者插入自定义逻辑。 完整生命周期流程图 详细阶段说明 1. 实例化阶段 触发时机：调用 或容器启动时 2. 属性赋值阶段 Aware 接口列表： | 接口 | 方法 | 作用 | |------|------|------| | BeanNameAware | setBeanName() | 获取 Bean 名称 | | BeanFactoryAware | setBeanFactory() | 获取 BeanFactory | | ApplicationContextAware | setApplicationContext() | 获取 ApplicationContext | | Envi...",
     "category": "spring",
     "content": "--- layout: default title: Spring Bean 生命周期详解 ⭐⭐⭐ --- Spring Bean 生命周期详解 ⭐⭐⭐ 面试题：说说 Spring Bean 的生命周期 核心回答 Spring Bean 的生命周期是指 Bean 从创建到销毁的整个过程，主要分为四个阶段：实例化 → 属性赋值 → 初始化 → 销毁。Spring 在每个阶段都提供了扩展点，允许开发者插入自定义逻辑。 完整生命周期流程图 详细阶段说明 1. 实例化阶段 触发时机：调用 或容器启动时 2. 属性赋值阶段 Aware 接口列表： | 接口 | 方法 | 作用 | |------|------|------| | BeanNameAware | setBeanName() | 获取 Bean 名称 | | BeanFactoryAware | setBeanFactory() | 获取 BeanFactory | | ApplicationContextAware | setApplicationContext() | 获取 ApplicationContext | | EnvironmentAware | setEnvironment() | 获取环境变量 | | ResourceLoaderAware | setResourceLoader() | 获取资源加载器 | 3. 初始化阶段 4. 销毁阶段 完整代码示例 Bean 配置： 执行顺序： BeanPostProcessor 扩展点 执行顺序： Spring 后置处理器体系 Bean 作用域与生命周期 | 作用域 | 实例化时机 | 销毁时机 | |--------|-----------|---------| | singleton | 容器启动时 | 容器关闭时 | | prototype | getBean 时 | GC 时（不主动销毁） | | request | 每次请求时 | 请求结束 | | session | 每次会话时 | 会话超时 | | application | 上下文启动时 | 上下文关闭 | 高频面试题 Q1: BeanFactory 和 FactoryBean 的区别？ Q2: 为什么有时候要用 BeanPostProcessor？ - AOP 代理：AnnotationAwareAspectJAutoProxyCreator 是 BeanPostProcessor 的实现 - 注解解析：@Autowired、@PostConstruct 等都依赖 BeanPostProcessor - 动态代理：在初始化后创建代理对象 Q3: 构造方法注入 vs Setter 注入的生命周期差异？ 最佳实践 --- 参考链接： - Spring Bean生命周期最详解-知乎 - Spring Bean生命周期-图灵课堂"
   },
   {
     "title": "Spring IoC 与 AOP 原理 ⭐⭐⭐",
-    "url": "/java-backend-interview/spring/ioc-aop",
+    "url": "/java-backend-interview/spring/ioc-aop.html",
     "description": "--- layout: default title: Spring IoC 与 AOP 原理 ⭐⭐⭐ --- Spring IoC 与 AOP 原理 ⭐⭐⭐ 面试题：说说你对 Spring IoC 和 AOP 的理解 核心回答 IoC（控制反转）和 AOP（面向切面编程）是 Spring 框架的两大核心特性，分别解决对象依赖管理和横切关注点复用问题。 --- 一、IoC（控制反转 / 依赖注入） 什么是 IoC？ 控制反转（Inversion of Control）：将对象的创建和依赖关系的管理交给 Spring 容器，而不是由开发者手动创建。 传统方式 vs IoC 方式： IoC 的实现原理 核心技术：反射 + 工厂模式 + 配置文件/注解 IoC 容器体系 BeanFactory vs ApplicationContext： | 特性 | BeanFactory | ApplicationContext | |------|-------------|-------------------| | 加载时机 | 懒加载（使用时才创建） | 预加载（启动时创建） | | 功能 | 基...",
     "category": "spring",
     "content": "--- layout: default title: Spring IoC 与 AOP 原理 ⭐⭐⭐ --- Spring IoC 与 AOP 原理 ⭐⭐⭐ 面试题：说说你对 Spring IoC 和 AOP 的理解 核心回答 IoC（控制反转）和 AOP（面向切面编程）是 Spring 框架的两大核心特性，分别解决对象依赖管理和横切关注点复用问题。 --- 一、IoC（控制反转 / 依赖注入） 什么是 IoC？ 控制反转（Inversion of Control）：将对象的创建和依赖关系的管理交给 Spring 容器，而不是由开发者手动创建。 传统方式 vs IoC 方式： IoC 的实现原理 核心技术：反射 + 工厂模式 + 配置文件/注解 IoC 容器体系 BeanFactory vs ApplicationContext： | 特性 | BeanFactory | ApplicationContext | |------|-------------|-------------------| | 加载时机 | 懒加载（使用时才创建） | 预加载（启动时创建） | | 功能 | 基础功能 | 完整功能（AOP、国际化、事件等） | | 适用场景 | 资源受限环境 | 企业级应用 | Bean 的生命周期 扩展点： 依赖注入的三种方式 推荐顺序：构造器注入 > Setter 注入 > 字段注入 --- 二、AOP（面向切面编程） 什么是 AOP？ 面向切面编程（Aspect-Oriented Programming）：将横切关注点（日志、事务、权限等）从业务逻辑中分离出来，实现模块化。 核心概念： | 概念 | 说明 | 类比 | |------|------|------| | Aspect（切面） | 横切关注点的模块化 | 一个功能模块 | | Join Point（连接点） | 程序执行点（方法、异常等） | 具体的方法 | | Pointcut（切点） | 匹配连接点的表达式 | 方法筛选条件 | | Advice（通知） | 切面的具体动作 | 具体执行逻辑 | | Target（目标对象） | 被代理的对象 | 原始对象 | | Proxy（代理） | 生成的代理对象 | 包装后的对象 | AOP 的实现原理 基于动态代理： - JDK 动态代理：目标类实现接口时使用 - CGLIB 代理：目标类没有实现接口时使用 Spring AOP 的执行流程 通知类型 切点表达式 Spring AOP 的局限性 1. 只能代理 Spring 管理的 Bean 2. 内部调用不会触发 AOP（this 调用不走代理） 3. final 方法不能被代理 4. 私有方法不能被代理 内部调用问题解决： --- 高频面试题 Q1: Spring 如何解决循环依赖？ Spring 通过三级缓存解决单例 Bean 的循环依赖： - 一级缓存（singletonObjects）：存放完全初始化好的 Bean - 二级缓存（earlySingletonObjects）：存放提前暴露的 Bean（已实例化但未填充属性） - 三级缓存（singletonFactories）：存放 Bean 工厂对象 注意：构造器注入的循环依赖无法解决，因为实例化阶段就需要依赖对象。 Q2: JDK 动态代理和 CGLIB 的区别？ | 特性 | JDK 动态代理 | CGLIB | |------|-------------|-------| | 依赖 | 需要实现接口 | 不需要接口 | | 原理 | 反射 + 接口 | ASM 字节码生成 | | 性能 | 调用稍慢（反射） | 调用更快（直接调用） | | 生成速度 | 快 | 慢（需要生成字节码） | | 限制 | 只能代理接口方法 | 不能代理 final 类和方法 | Q3: @Transactional 失效的场景？ 1. 方法不是 public 的 2. 方法内部调用（this 调用） 3. 异常被捕获未抛出 4. 抛出的异常类型不匹配（默认只回滚 RuntimeException） 5. 类未被 Spring 管理 Q4: Bean 的作用域有哪些？ - singleton（默认）：单例，每个 Spring 容器一个实例 - prototype：原型，每次获取都创建新实例 - request：每个 HTTP 请求一个实例 - session：每个 HTTP Session 一个实例 - application：每个 ServletContext 一个实例 --- 参考链接： - Spring IoC AOP 面试回答-Worktile - Spring AOP 实现原理-图灵课堂"
   },
   {
     "title": "Spring Boot 自动装配原理 ⭐⭐⭐",
-    "url": "/java-backend-interview/spring/auto-configuration",
+    "url": "/java-backend-interview/spring/auto-configuration.html",
     "description": "--- layout: default title: Spring Boot 自动装配原理 ⭐⭐⭐ --- Spring Boot 自动装配原理 ⭐⭐⭐ 面试题：Spring Boot 自动装配原理是什么？ 核心回答 Spring Boot 的自动装配（Auto-Configuration）是其核心特性，通过约定大于配置的思想，在启动时自动将符合条件的 Bean 加载到 IoC 容器中。 自动装配的核心注解 @EnableAutoConfiguration 详解 自动装配的执行流程 源码解析 1. AutoConfigurationImportSelector 2. spring.factories 文件 条件装配注解（@Conditional） Spring Boot 通过条件注解控制自动配置的加载时机： | 注解 | 条件 | |------|------| | | 类路径存在指定类 | | | 类路径不存在指定类 | | | 容器中存在指定 Bean | | | 容器中不存在指定 Bean | | | 指定属性满足条件 | | | 是 Web 应用 | | | SpEL 表达式为...",
     "category": "spring",
     "content": "--- layout: default title: Spring Boot 自动装配原理 ⭐⭐⭐ --- Spring Boot 自动装配原理 ⭐⭐⭐ 面试题：Spring Boot 自动装配原理是什么？ 核心回答 Spring Boot 的自动装配（Auto-Configuration）是其核心特性，通过约定大于配置的思想，在启动时自动将符合条件的 Bean 加载到 IoC 容器中。 自动装配的核心注解 @EnableAutoConfiguration 详解 自动装配的执行流程 源码解析 1. AutoConfigurationImportSelector 2. spring.factories 文件 条件装配注解（@Conditional） Spring Boot 通过条件注解控制自动配置的加载时机： | 注解 | 条件 | |------|------| | | 类路径存在指定类 | | | 类路径不存在指定类 | | | 容器中存在指定 Bean | | | 容器中不存在指定 Bean | | | 指定属性满足条件 | | | 是 Web 应用 | | | SpEL 表达式为 true | 示例： 自动装配示例：DispatcherServlet 自定义 Starter 1. 创建自动配置类 2. 配置属性类 3. 创建 spring.factories 4. 使用自定义 Starter 自动装配的排除与定制 Spring Boot 2.7+ 的变化 高频面试题 Q1: Spring Boot 自动装配和 Spring 的 XML 配置有什么区别？ | 特性 | XML 配置 | 自动装配 | |------|---------|---------| | 配置方式 | 手动编写 XML | 约定大于配置 | | 灵活性 | 完全可控 | 可覆盖定制 | | 维护成本 | 高 | 低 | | 开发效率 | 低 | 高 | Q2: 如何查看当前应用加载了哪些自动配置？ 或在启动类添加： Q3: @ConditionalOnProperty 的使用场景？ Q4: 为什么 Spring Boot 的自动配置类要加 @Configuration？ - 标记这是一个配置类 - 会被 Spring 的 处理 - 支持 方法的代理（保证单例） --- 参考链接： - Spring Boot 自动装配详解 - 深入剖析 SpringBoot3 自动装配原理-阿里云"
   },
   {
     "title": "Spring 熔断与限流",
-    "url": "/java-backend-interview/spring/circuit-breaker",
+    "url": "/java-backend-interview/spring/circuit-breaker.html",
     "description": "--- layout: default title: Spring 熔断与限流 --- Spring 熔断与限流 > Spring Cloud Circuit Breaker 🎯 面试重点 - 熔断器模式 - Hystrix / Sentinel - 降级处理 📖 熔断器 Hystrix Sentinel 📖 面试真题 Q1: 熔断器的工作原理？ 答： - 关闭状态：正常调用，统计失败率 - 打开状态：快速失败，直接返回降级 - 半开状态：尝试恢复，允许少量请求通过 --- ⭐ 重点：熔断是保护系统的关键机制",
     "category": "spring",
     "content": "--- layout: default title: Spring 熔断与限流 --- Spring 熔断与限流 > Spring Cloud Circuit Breaker 🎯 面试重点 - 熔断器模式 - Hystrix / Sentinel - 降级处理 📖 熔断器 Hystrix Sentinel 📖 面试真题 Q1: 熔断器的工作原理？ 答： - 关闭状态：正常调用，统计失败率 - 打开状态：快速失败，直接返回降级 - 半开状态：尝试恢复，允许少量请求通过 --- ⭐ 重点：熔断是保护系统的关键机制"
   },
   {
     "title": "Spring Boot Starter 机制",
-    "url": "/java-backend-interview/spring/starter-mechanism",
+    "url": "/java-backend-interview/spring/starter-mechanism.html",
     "description": "--- layout: default title: Spring Boot Starter 机制 --- Spring Boot Starter 机制 > 自动配置的核心 🎯 面试重点 - Starter 的作用 - 自动配置原理 - 如何自定义 Starter 📖 Starter 机制 什么是 Starter？ 自动配置 自定义 Starter 📖 面试真题 Q1: Spring Boot 自动配置原理？ 答： 1. @SpringBootApplication 包含 @EnableAutoConfiguration 2. 自动扫描 META-INF/spring.factories 3. 根据条件装配生成 Bean --- ⭐ 重点：理解 Starter 机制是理解 Spring Boot 的关键",
     "category": "spring",
     "content": "--- layout: default title: Spring Boot Starter 机制 --- Spring Boot Starter 机制 > 自动配置的核心 🎯 面试重点 - Starter 的作用 - 自动配置原理 - 如何自定义 Starter 📖 Starter 机制 什么是 Starter？ 自动配置 自定义 Starter 📖 面试真题 Q1: Spring Boot 自动配置原理？ 答： 1. @SpringBootApplication 包含 @EnableAutoConfiguration 2. 自动扫描 META-INF/spring.factories 3. 根据条件装配生成 Bean --- ⭐ 重点：理解 Starter 机制是理解 Spring Boot 的关键"
   },
   {
     "title": "Spring 配置中心",
-    "url": "/java-backend-interview/spring/config-center",
+    "url": "/java-backend-interview/spring/config-center.html",
     "description": "--- layout: default title: Spring 配置中心 --- Spring 配置中心 > Spring Cloud Config 🎯 面试重点 - 配置中心的概念 - Nacos Config - 配置热刷新 📖 配置中心 Nacos Config 热刷新 📖 面试真题 Q1: 配置中心的好处？ 答： 统一管理配置、动态刷新、不重启应用。 --- ⭐ 重点：配置中心是微服务的基础设施",
     "category": "spring",
     "content": "--- layout: default title: Spring 配置中心 --- Spring 配置中心 > Spring Cloud Config 🎯 面试重点 - 配置中心的概念 - Nacos Config - 配置热刷新 📖 配置中心 Nacos Config 热刷新 📖 面试真题 Q1: 配置中心的好处？ 答： 统一管理配置、动态刷新、不重启应用。 --- ⭐ 重点：配置中心是微服务的基础设施"
   },
   {
     "title": "@Transactional 失效场景与解决方案",
-    "url": "/java-backend-interview/spring/transactional-pitfalls",
+    "url": "/java-backend-interview/spring/transactional-pitfalls.html",
     "description": "--- layout: default title: @Transactional 失效场景与解决方案 --- @Transactional 失效场景与解决方案 > Spring 事务注解的常见陷阱，面试高频考点 🎯 面试重点 - @Transactional 注解的工作原理 - 事务失效的常见场景 - 如何排查和解决事务问题 - 事务最佳实践 📖 @Transactional 工作原理 Spring 事务代理机制 事务传播行为 📖 事务失效场景 1. 非 public 方法 解决方案： - 使用 的方法必须是 - 或配置 + CGLIB 代理 2. 自调用问题 解决方案： 1. 注入自身代理 2. 拆分到不同 Service 3. 异常类型不匹配 解决方案： - 明确指定 属性 4. 异常被捕获 5. 数据库引擎不支持 解决方案： - 使用 InnoDB 引擎 6. 非事务方法调用事务方法 📖 事务最佳实践 1. 配置建议 2. 编程式事务 3. 事务监控与排查 📖 面试真题 Q1: @Transactional 在哪些情况下会失效？ 答： 1. 方法非 public：Spring ...",
     "category": "spring",
     "content": "--- layout: default title: @Transactional 失效场景与解决方案 --- @Transactional 失效场景与解决方案 > Spring 事务注解的常见陷阱，面试高频考点 🎯 面试重点 - @Transactional 注解的工作原理 - 事务失效的常见场景 - 如何排查和解决事务问题 - 事务最佳实践 📖 @Transactional 工作原理 Spring 事务代理机制 事务传播行为 📖 事务失效场景 1. 非 public 方法 解决方案： - 使用 的方法必须是 - 或配置 + CGLIB 代理 2. 自调用问题 解决方案： 1. 注入自身代理 2. 拆分到不同 Service 3. 异常类型不匹配 解决方案： - 明确指定 属性 4. 异常被捕获 5. 数据库引擎不支持 解决方案： - 使用 InnoDB 引擎 6. 非事务方法调用事务方法 📖 事务最佳实践 1. 配置建议 2. 编程式事务 3. 事务监控与排查 📖 面试真题 Q1: @Transactional 在哪些情况下会失效？ 答： 1. 方法非 public：Spring 默认只代理 public 方法 2. 自调用问题：类内部方法调用，不走代理 3. 异常类型不匹配：默认只回滚 RuntimeException 和 Error 4. 异常被捕获：异常未抛出到代理层 5. 数据库引擎不支持：如 MyISAM 6. 传播行为配置错误：如 REQUIRESNEW 被嵌套调用 7. 多数据源未指定：未指定 transactionManager Q2: 如何解决自调用事务失效？ 答： 1. 注入自身代理：使用 2. 拆分 Service：将事务方法移到另一个 Service 3. 使用 AspectJ 模式： 4. 编程式事务：使用 TransactionTemplate Q3: 如何排查事务问题？ 答： 1. 开启调试日志： 2. 检查代理类：查看 Spring 创建的代理类名 3. 验证异常类型：确保异常能触发回滚 4. 检查数据库引擎：确认使用 InnoDB 5. 使用 TransactionMonitor：监控事务状态 Q4: 声明式事务和编程式事务的区别？ 答： - 声明式事务：使用 ，基于 AOP，代码简洁 - 编程式事务：使用 TransactionTemplate，灵活控制事务边界 - 选择建议：简单场景用声明式，复杂场景用编程式 Q5: 多数据源下的事务如何配置？ 答： 📚 延伸阅读 - Spring Transaction Documentation - Transaction Best Practices --- ⭐ 重点：事务是保证数据一致性的关键，必须掌握其原理和常见陷阱**"
   },
   {
     "title": "Spring 服务注册与发现",
-    "url": "/java-backend-interview/spring/service-discovery",
+    "url": "/java-backend-interview/spring/service-discovery.html",
     "description": "--- layout: default title: Spring 服务注册与发现 --- Spring 服务注册与发现 > Spring Cloud 服务治理 🎯 面试重点 - Spring Cloud 组件 - 服务注册与发现原理 - Nacos vs Eureka 📖 服务注册 服务注册 服务发现 📖 面试真题 Q1: @LoadBalanced 的作用？ 答： 让 RestTemplate 具有负载均衡能力，自动从注册中心获取服务地址。 --- ⭐ 重点：Spring Cloud 是微服务开发的基础",
     "category": "spring",
     "content": "--- layout: default title: Spring 服务注册与发现 --- Spring 服务注册与发现 > Spring Cloud 服务治理 🎯 面试重点 - Spring Cloud 组件 - 服务注册与发现原理 - Nacos vs Eureka 📖 服务注册 服务注册 服务发现 📖 面试真题 Q1: @LoadBalanced 的作用？ 答： 让 RestTemplate 具有负载均衡能力，自动从注册中心获取服务地址。 --- ⭐ 重点：Spring Cloud 是微服务开发的基础"
   },
   {
     "title": "Spring 事务传播机制详解 ⭐⭐⭐",
-    "url": "/java-backend-interview/spring/transaction-propagation",
+    "url": "/java-backend-interview/spring/transaction-propagation.html",
     "description": "--- layout: default title: Spring 事务传播机制详解 ⭐⭐⭐ --- Spring 事务传播机制详解 ⭐⭐⭐ 面试题：Spring 事务传播机制有哪些？ 核心回答 Spring 事务传播机制定义了多个事务方法相互调用时，事务如何在方法间传播。Spring 提供了 7 种传播行为，通过 配置。 七种传播行为 | 传播行为 | 说明 | 常用场景 | |---------|------|---------| | REQUIRED | 默认。如果当前有事务，加入该事务；如果没有，创建新事务 | 大多数业务 | | REQUIRESNEW | 始终新建事务，挂起当前事务 | 日志、通知 | | SUPPORTS | 如果当前有事务，加入事务；如果没有，非事务执行 | 查询方法 | | NOTSUPPORTED | 以非事务执行，挂起当前事务 | 发送短信、MQ | | MANDATORY | 必须在事务中执行，否则抛异常 | 强制需要事务 | | NEVER | 必须不在事务中执行，否则抛异常 | 禁止事务 | | NESTED | 如果当前有事务，嵌套执行；如...",
     "category": "spring",
     "content": "--- layout: default title: Spring 事务传播机制详解 ⭐⭐⭐ --- Spring 事务传播机制详解 ⭐⭐⭐ 面试题：Spring 事务传播机制有哪些？ 核心回答 Spring 事务传播机制定义了多个事务方法相互调用时，事务如何在方法间传播。Spring 提供了 7 种传播行为，通过 配置。 七种传播行为 | 传播行为 | 说明 | 常用场景 | |---------|------|---------| | REQUIRED | 默认。如果当前有事务，加入该事务；如果没有，创建新事务 | 大多数业务 | | REQUIRESNEW | 始终新建事务，挂起当前事务 | 日志、通知 | | SUPPORTS | 如果当前有事务，加入事务；如果没有，非事务执行 | 查询方法 | | NOTSUPPORTED | 以非事务执行，挂起当前事务 | 发送短信、MQ | | MANDATORY | 必须在事务中执行，否则抛异常 | 强制需要事务 | | NEVER | 必须不在事务中执行，否则抛异常 | 禁止事务 | | NESTED | 如果当前有事务，嵌套执行；如果没有，同 REQUIRED | 局部回滚 | 传播行为详解 1. REQUIRED（默认） 行为：如果当前有事务，加入该事务；如果没有，创建新事务。 特点： - 多个方法在同一个事务中 - 任一方法抛异常，全部回滚 2. REQUIRESNEW 行为：始终新建事务，挂起当前事务。 特点： - 两个事务完全独立 - 子事务回滚不影响父事务 - 父事务回滚也不影响子事务（已提交的部分） 3. SUPPORTS 行为：如果当前有事务，加入事务；如果没有，非事务执行。 场景： - 查询方法：希望在有事务时保证一致性，无事务时普通查询 - 适用于只读操作 4. NOTSUPPORTED 行为：以非事务执行，挂起当前事务。 场景： - 发送短信、MQ 消息 - 不希望被长事务影响 5. MANDATORY 行为：必须在事务中执行，否则抛异常。 场景： - 强制依赖外部事务的方法 - 子流程必须有事务保证 6. NEVER 行为：必须不在事务中执行，否则抛异常。 场景： - 导出报表：长时间操作，不应被事务锁定 - 某些查询操作 7. NESTED 行为：如果当前有事务，在嵌套事务中执行；如果没有，同 REQUIRED。 与 REQUIRESNEW 的区别： | 特性 | NESTED | REQUIRESNEW | |------|--------|--------------| | 事务关系 | 嵌套在父事务中 | 完全独立 | | 父事务回滚 | 子事务也回滚 | 子事务不受影响 | | 子事务回滚 | 可单独回滚 | 不影响父事务 | | savepoint | 使用数据库保存点 | 新建事务 | 传播行为对比图 代码示例 典型业务场景 @Transactional 失效场景 1. 方法访问权限问题 2. 自我调用（this 调用） 3. 异常被捕获 4. 异常类型不匹配 5. 非 public 代理问题 高频面试题 Q1: REQUIRED 和 NESTED 的区别？ Q2: REQUIRESNEW 和 REQUIRED 的区别？ Q3: 什么场景使用 REQUIRESNEW？ 1. 日志记录：日志失败不应影响业务 2. 发送通知：短信、MQ 消息 3. 异步任务：不想被长事务阻塞 4. 数据校验：独立事务校验 Q4: Spring 事务和数据库事务的关系？ 最佳实践 --- 参考链接： - Spring事务的传播机制-CSDN - Spring七种事务传播行为一文通关-掘金"
@@ -869,35 +869,35 @@
   },
   {
     "title": "Spring 事务隔离级别",
-    "url": "/java-backend-interview/spring/transaction-isolation",
+    "url": "/java-backend-interview/spring/transaction-isolation.html",
     "description": "--- layout: default title: Spring 事务隔离级别 --- Spring 事务隔离级别 > 数据库事务隔离级别在 Spring 中的配置 🎯 面试重点 - Spring 事务隔离级别配置 - 隔离级别与数据库的关系 📖 隔离级别配置 配置方式 📖 面试真题 Q1: @Transactional 失效场景？ 答： - 非 public 方法 - 异常被 catch 吞掉 - 传播行为问题 - 自调用 --- ⭐ 重点：理解事务配置和传播行为",
     "category": "spring",
     "content": "--- layout: default title: Spring 事务隔离级别 --- Spring 事务隔离级别 > 数据库事务隔离级别在 Spring 中的配置 🎯 面试重点 - Spring 事务隔离级别配置 - 隔离级别与数据库的关系 📖 隔离级别配置 配置方式 📖 面试真题 Q1: @Transactional 失效场景？ 答： - 非 public 方法 - 异常被 catch 吞掉 - 传播行为问题 - 自调用 --- ⭐ 重点：理解事务配置和传播行为"
   },
   {
     "title": "Spring 循环依赖与三级缓存 ⭐⭐⭐",
-    "url": "/java-backend-interview/spring/circular-dependency",
+    "url": "/java-backend-interview/spring/circular-dependency.html",
     "description": "--- layout: default title: Spring 循环依赖与三级缓存 ⭐⭐⭐ --- Spring 循环依赖与三级缓存 ⭐⭐⭐ 面试题：Spring 是如何解决循环依赖的？ 核心回答 Spring 通过三级缓存机制解决单例 Bean 的循环依赖问题。三级缓存分别存储不同阶段的 Bean 对象，通过提前暴露未完成初始化的 Bean 引用，打破循环依赖的死锁状态。 什么是循环依赖？ 循环依赖：两个或多个 Bean 相互依赖，形成闭环。 循环依赖的三种场景： | 场景 | 能否解决 | 说明 | |------|---------|------| | Setter 注入（单例） | ✅ 能解决 | Spring 三级缓存 | | Field 注入（单例） | ✅ 能解决 | Spring 三级缓存 | | 构造器注入 | ❌ 无法解决 | 构造时就需要完整对象 | 三级缓存结构 三级缓存的作用： 循环依赖解决流程 场景：A → B → A 源码解析 getSingleton 方法 doCreateBean 方法 为什么需要三级缓存？ 只用一级缓存的问题 只用二级缓存的问题 ...",
     "category": "spring",
     "content": "--- layout: default title: Spring 循环依赖与三级缓存 ⭐⭐⭐ --- Spring 循环依赖与三级缓存 ⭐⭐⭐ 面试题：Spring 是如何解决循环依赖的？ 核心回答 Spring 通过三级缓存机制解决单例 Bean 的循环依赖问题。三级缓存分别存储不同阶段的 Bean 对象，通过提前暴露未完成初始化的 Bean 引用，打破循环依赖的死锁状态。 什么是循环依赖？ 循环依赖：两个或多个 Bean 相互依赖，形成闭环。 循环依赖的三种场景： | 场景 | 能否解决 | 说明 | |------|---------|------| | Setter 注入（单例） | ✅ 能解决 | Spring 三级缓存 | | Field 注入（单例） | ✅ 能解决 | Spring 三级缓存 | | 构造器注入 | ❌ 无法解决 | 构造时就需要完整对象 | 三级缓存结构 三级缓存的作用： 循环依赖解决流程 场景：A → B → A 源码解析 getSingleton 方法 doCreateBean 方法 为什么需要三级缓存？ 只用一级缓存的问题 只用二级缓存的问题 三级缓存的完美设计 无法解决的循环依赖 构造器注入 错误： 解决方案： prototype 作用域 @Lazy 解决循环依赖 原理： - 构造器参数使用 时，Spring 注入的是一个代理对象 - 代理对象在第一次使用时才真正创建目标 Bean - 打破循环依赖 高频面试题 Q1: 为什么三级缓存要用 ObjectFactory 而不是直接存 Bean？ Q2: 二级缓存存在的意义？ Q3: Spring 为什么设计成不能降级？ Q4: @Async 导致的循环依赖问题？ 问题： 会创建代理对象，与循环依赖冲突 解决方案： 最佳实践 --- 参考链接： - Spring循环依赖与三级缓存-掘金 - Spring如何解决循环依赖-面试鸭"
   },
   {
     "title": "Spring Cloud 网关",
-    "url": "/java-backend-interview/spring/gateway",
+    "url": "/java-backend-interview/spring/gateway.html",
     "description": "--- layout: default title: Spring Cloud 网关 --- Spring Cloud 网关 > API Gateway 🎯 面试重点 - 网关作用 - Gateway 工作原理 - 过滤器 📖 Gateway 概念 核心概念 配置示例 📖 面试真题 Q1: 网关的作用？ 答： 请求路由、负载均衡、权限校验、限流熔断、日志监控。 --- ⭐ 重点：网关是微服务入口",
     "category": "spring",
     "content": "--- layout: default title: Spring Cloud 网关 --- Spring Cloud 网关 > API Gateway 🎯 面试重点 - 网关作用 - Gateway 工作原理 - 过滤器 📖 Gateway 概念 核心概念 配置示例 📖 面试真题 Q1: 网关的作用？ 答： 请求路由、负载均衡、权限校验、限流熔断、日志监控。 --- ⭐ 重点：网关是微服务入口"
   },
   {
     "title": "Spring 负载均衡",
-    "url": "/java-backend-interview/spring/load-balancing",
+    "url": "/java-backend-interview/spring/load-balancing.html",
     "description": "--- layout: default title: Spring 负载均衡 --- Spring 负载均衡 > Spring Cloud 负载均衡 🎯 面试重点 - 负载均衡策略 -Ribbon 组件 - 负载均衡原理 📖 负载均衡策略 Ribbon 内置策略 配置方式 📖 面试真题 Q1: Ribbon 的工作原理？ 答： 1. 拦截 RestTemplate 请求 2. 从注册中心获取服务列表 3. 根据负载均衡策略选择服务 4. 发起调用 --- ⭐ 重点：理解负载均衡策略和原理",
     "category": "spring",
     "content": "--- layout: default title: Spring 负载均衡 --- Spring 负载均衡 > Spring Cloud 负载均衡 🎯 面试重点 - 负载均衡策略 -Ribbon 组件 - 负载均衡原理 📖 负载均衡策略 Ribbon 内置策略 配置方式 📖 面试真题 Q1: Ribbon 的工作原理？ 答： 1. 拦截 RestTemplate 请求 2. 从注册中心获取服务列表 3. 根据负载均衡策略选择服务 4. 发起调用 --- ⭐ 重点：理解负载均衡策略和原理"
   },
   {
     "title": "Spring Boot 启动流程",
-    "url": "/java-backend-interview/spring/startup-process",
+    "url": "/java-backend-interview/spring/startup-process.html",
     "description": "--- layout: default title: Spring Boot 启动流程 --- Spring Boot 启动流程 > Spring Boot 应用启动过程 🎯 面试重点 - 启动流程的主要步骤 - 事件监听机制 📖 启动流程 主要步骤 关键阶段 📖 面试真题 Q1: Spring Boot 启动过程？ 答： 创建 ApplicationContext → 加载配置 → 实例化 Bean → 依赖注入 → 初始化。 --- ⭐ 重点：理解启动流程有助于排查问题",
     "category": "spring",
     "content": "--- layout: default title: Spring Boot 启动流程 --- Spring Boot 启动流程 > Spring Boot 应用启动过程 🎯 面试重点 - 启动流程的主要步骤 - 事件监听机制 📖 启动流程 主要步骤 关键阶段 📖 面试真题 Q1: Spring Boot 启动过程？ 答： 创建 ApplicationContext → 加载配置 → 实例化 Bean → 依赖注入 → 初始化。 --- ⭐ 重点：理解启动流程有助于排查问题"

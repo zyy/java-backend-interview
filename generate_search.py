@@ -48,13 +48,16 @@ def process_md_files(docs_dir='docs'):
             title = extract_title(content) or file.replace('.md', '').replace('-', ' ').title()
             # 生成URL - GitHub Pages格式：去掉.md后缀，添加baseurl
             rel_path = os.path.relpath(path, docs_dir)
-            url = '/java-backend-interview/' + rel_path.replace('\\', '/').replace('.md', '')
             if file == 'index.md':
-                # 目录索引页面，确保以斜杠结尾
-                if url.endswith('/index'):
-                    url = url[:-5]  # 去掉'/index'
-                if url != '/java-backend-interview/' and not url.endswith('/'):
+                # 目录索引页面，去掉index，确保以斜杠结尾
+                url = '/java-backend-interview/' + os.path.dirname(rel_path).replace('\\', '/')
+                if url == '/java-backend-interview/':
+                    url = '/java-backend-interview/'  # 根目录
+                elif not url.endswith('/'):
                     url = url + '/'
+            else:
+                # 普通内容页面：去掉.md后缀，添加.html扩展名，避免斜杠问题
+                url = '/java-backend-interview/' + rel_path.replace('\\', '/').replace('.md', '.html')
             # 清理内容
             clean = clean_markdown(content)
             # 截取前500字符作为描述
