@@ -1,0 +1,47 @@
+# GitHub Pages 配置
+title: Java 后端面试资料库
+description: 一份系统、全面的 Java 后端开发面试指南
+baseurl: "/java-backend-interview"
+url: "https://yycoder.github.io"
+
+# 主题设置
+theme: jekyll-theme-cayman
+
+# 插件
+plugins:
+  - jekyll-relative-links
+
+# Markdown 设置
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 导航
+navigation:
+  - title: "首页"
+    url: /
+  - title: "Java核心"
+    url: /docs/java-core/
+  - title: "JVM"
+    url: /docs/jvm/
+  - title: "Spring"
+    url: /docs/spring/
+  - title: "数据库"
+    url: /docs/database/
+  - title: "中间件"
+    url: /docs/middleware/
+  - title: "微服务"
+    url: /docs/microservices/
+  - title: "设计模式"
+    url: /docs/design-patterns/
+  - title: "算法"
+    url: /docs/algorithm/
+  - title: "项目实战"
+    url: /docs/projects/
+
+# 排除文件
+exclude:
+  - README.md
+  - LICENSE
+  - "*.gemspec"
