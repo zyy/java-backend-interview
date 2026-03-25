@@ -1,3 +1,7 @@
+---
+layout: default
+title: Kafka 核心原理
+---
 # Kafka 核心原理
 
 > 高吞吐量的分布式消息队列

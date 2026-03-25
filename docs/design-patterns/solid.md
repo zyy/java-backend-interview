@@ -1,3 +1,7 @@
+---
+layout: default
+title: SOLID 原则
+---
 # SOLID 原则
 
 > 面向对象设计原则

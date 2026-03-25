@@ -1,3 +1,7 @@
+---
+layout: default
+title: RocketMQ 核心原理
+---
 # RocketMQ 核心原理
 
 > 阿里巴巴开源的分布式消息中间件

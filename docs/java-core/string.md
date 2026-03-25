@@ -1,3 +1,7 @@
+---
+layout: default
+title: String、StringBuilder、StringBuffer 区别 ⭐⭐
+---
 # String、StringBuilder、StringBuffer 区别 ⭐⭐
 
 ## 面试题：String、StringBuilder、StringBuffer 有什么区别？

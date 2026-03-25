@@ -1,3 +1,7 @@
+---
+layout: default
+title: Kafka 原理
+---
 # Kafka 原理
 
 > Kafka 核心原理详解

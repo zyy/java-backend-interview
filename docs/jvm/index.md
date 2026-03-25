@@ -1,3 +1,7 @@
+---
+layout: default
+title: JVM 原理
+---
 # JVM 原理
 
 > JVM 是区分初级和高级 Java 开发者的关键知识点

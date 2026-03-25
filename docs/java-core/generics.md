@@ -1,3 +1,7 @@
+---
+layout: default
+title: 泛型机制
+---
 # 泛型机制
 
 > Java 的类型参数化

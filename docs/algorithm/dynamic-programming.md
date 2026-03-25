@@ -1,3 +1,7 @@
+---
+layout: default
+title: 动态规划专题
+---
 # 动态规划专题
 
 > DP 核心思想

@@ -1,3 +1,7 @@
+---
+layout: default
+title: Redis 数据类型
+---
 # Redis 数据类型
 
 > Redis 核心数据结构

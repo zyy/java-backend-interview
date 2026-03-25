@@ -1,3 +1,7 @@
+---
+layout: default
+title: ES 搜索与聚合
+---
 # ES 搜索与聚合
 
 > Elasticsearch 查询

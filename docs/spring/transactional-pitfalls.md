@@ -1,3 +1,7 @@
+---
+layout: default
+title: @Transactional 失效场景与解决方案
+---
 # @Transactional 失效场景与解决方案
 
 > Spring 事务注解的常见陷阱，面试高频考点

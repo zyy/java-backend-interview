@@ -1,3 +1,7 @@
+---
+layout: default
+title: 适配器模式
+---
 # 适配器模式
 
 > 接口转换

@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring 配置中心
+---
 # Spring 配置中心
 
 > Spring Cloud Config

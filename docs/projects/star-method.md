@@ -1,3 +1,7 @@
+---
+layout: default
+title: STAR 法则
+---
 # STAR 法则
 
 > 项目介绍方法论

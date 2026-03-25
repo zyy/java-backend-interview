@@ -1,3 +1,7 @@
+---
+layout: default
+title: ThreadLocal 原理与内存泄漏 ⭐⭐⭐
+---
 # ThreadLocal 原理与内存泄漏 ⭐⭐⭐
 
 ## 面试题：ThreadLocal 为什么会内存泄漏？如何解决？

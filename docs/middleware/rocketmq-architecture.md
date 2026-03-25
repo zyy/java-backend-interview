@@ -1,3 +1,7 @@
+---
+layout: default
+title: RocketMQ 架构
+---
 # RocketMQ 架构
 
 > RocketMQ 核心组件

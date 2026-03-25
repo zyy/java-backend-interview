@@ -1,3 +1,7 @@
+---
+layout: default
+title: Java 核心基础
+---
 # Java 核心基础
 
 > Java 基础是后端面试的重中之重，务必扎实掌握

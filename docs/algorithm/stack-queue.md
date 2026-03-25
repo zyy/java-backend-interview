@@ -1,3 +1,7 @@
+---
+layout: default
+title: 栈与队列
+---
 # 栈与队列
 
 > 线性数据结构

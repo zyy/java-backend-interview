@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring Boot 自动装配原理 ⭐⭐⭐
+---
 # Spring Boot 自动装配原理 ⭐⭐⭐
 
 ## 面试题：Spring Boot 自动装配原理是什么？

@@ -1,3 +1,7 @@
+---
+layout: default
+title: JVM 运行时数据区
+---
 # JVM 运行时数据区
 
 > 理解 JVM 内存划分是排查内存问题的基础

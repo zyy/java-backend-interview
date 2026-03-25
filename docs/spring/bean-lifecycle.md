@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring Bean 生命周期详解 ⭐⭐⭐
+---
 # Spring Bean 生命周期详解 ⭐⭐⭐
 
 ## 面试题：说说 Spring Bean 的生命周期

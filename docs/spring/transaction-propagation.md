@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring 事务传播机制详解 ⭐⭐⭐
+---
 # Spring 事务传播机制详解 ⭐⭐⭐
 
 ## 面试题：Spring 事务传播机制有哪些？

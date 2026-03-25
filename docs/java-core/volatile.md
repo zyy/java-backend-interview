@@ -1,3 +1,7 @@
+---
+layout: default
+title: volatile 原理与内存屏障 ⭐⭐⭐
+---
 # volatile 原理与内存屏障 ⭐⭐⭐
 
 ## 面试题：volatile 的作用和原理是什么？

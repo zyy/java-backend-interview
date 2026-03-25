@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 死锁分析
+---
 # MySQL 死锁分析
 
 > 死锁是并发环境下的常见问题

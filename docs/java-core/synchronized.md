@@ -1,3 +1,7 @@
+---
+layout: default
+title: synchronized 与锁升级原理 ⭐⭐⭐
+---
 # synchronized 与锁升级原理 ⭐⭐⭐
 
 ## 面试题：synchronized 的锁升级过程是怎样的？

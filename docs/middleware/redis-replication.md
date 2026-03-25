@@ -1,3 +1,7 @@
+---
+layout: default
+title: Redis 主从复制与哨兵
+---
 # Redis 主从复制与哨兵
 
 > Redis 高可用方案

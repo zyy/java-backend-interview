@@ -1,3 +1,7 @@
+---
+layout: default
+title: G1、ZGC、Shenandoah
+---
 # G1、ZGC、Shenandoah
 
 > 现代垃圾回收器

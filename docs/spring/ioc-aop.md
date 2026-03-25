@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring IoC 与 AOP 原理 ⭐⭐⭐
+---
 # Spring IoC 与 AOP 原理 ⭐⭐⭐
 
 ## 面试题：说说你对 Spring IoC 和 AOP 的理解

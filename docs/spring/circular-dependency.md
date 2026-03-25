@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring 循环依赖与三级缓存 ⭐⭐⭐
+---
 # Spring 循环依赖与三级缓存 ⭐⭐⭐
 
 ## 面试题：Spring 是如何解决循环依赖的？

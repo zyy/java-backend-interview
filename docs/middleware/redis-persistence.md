@@ -1,3 +1,7 @@
+---
+layout: default
+title: Redis 持久化与过期策略 ⭐⭐⭐
+---
 # Redis 持久化与过期策略 ⭐⭐⭐
 
 ## 面试题：Redis 的持久化方式有哪些？过期策略是什么？

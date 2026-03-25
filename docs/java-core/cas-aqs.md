@@ -1,3 +1,7 @@
+---
+layout: default
+title: CAS 与 AQS 原理详解 ⭐⭐⭐
+---
 # CAS 与 AQS 原理详解 ⭐⭐⭐
 
 ## 面试题：说说 CAS 和 AQS 的原理

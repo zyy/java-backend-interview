@@ -1,3 +1,7 @@
+---
+layout: default
+title: 消息队列选型
+---
 # 消息队列选型
 
 > 主流 MQ 对比

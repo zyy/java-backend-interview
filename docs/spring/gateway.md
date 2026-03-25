@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring Cloud 网关
+---
 # Spring Cloud 网关
 
 > API Gateway

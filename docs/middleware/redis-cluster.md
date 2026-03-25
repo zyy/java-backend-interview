@@ -1,3 +1,7 @@
+---
+layout: default
+title: Redis Cluster 集群
+---
 # Redis Cluster 集群
 
 > Redis 分布式集群方案

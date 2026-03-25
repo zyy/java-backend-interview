@@ -1,3 +1,7 @@
+---
+layout: default
+title: GC 调优实战
+---
 # GC 调优实战
 
 > 实际生产环境的 GC 调优

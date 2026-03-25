@@ -1,3 +1,7 @@
+---
+layout: default
+title: 哈希表
+---
 # 哈希表
 
 > 高效查找数据结构

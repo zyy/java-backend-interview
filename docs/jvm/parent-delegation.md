@@ -1,3 +1,7 @@
+---
+layout: default
+title: 双亲委派模型
+---
 # 双亲委派模型
 
 > Java 类加载的核心机制

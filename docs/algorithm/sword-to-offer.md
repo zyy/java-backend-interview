@@ -1,3 +1,7 @@
+---
+layout: default
+title: 剑指 Offer
+---
 # 剑指 Offer
 
 > 经典面试题集

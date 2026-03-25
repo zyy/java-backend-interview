@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring Boot Starter 机制
+---
 # Spring Boot Starter 机制
 
 > 自动配置的核心

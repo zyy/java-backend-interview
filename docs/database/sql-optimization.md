@@ -1,3 +1,7 @@
+---
+layout: default
+title: SQL 优化技巧
+---
 # SQL 优化技巧
 
 > 写出高性能的 SQL 是后端工程师的核心能力

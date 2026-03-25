@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 分片策略
+---
 # MySQL 分片策略
 
 > 分库分表的核心策略

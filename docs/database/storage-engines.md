@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 存储引擎
+---
 # MySQL 存储引擎
 
 > 选择合适的存储引擎是优化的第一步

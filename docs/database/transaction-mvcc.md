@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 事务与 MVCC 详解 ⭐⭐⭐
+---
 # MySQL 事务与 MVCC 详解 ⭐⭐⭐
 
 ## 面试题：解释 MySQL 中的 ACID 属性，并说明 MVCC 的实现原理

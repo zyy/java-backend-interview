@@ -1,3 +1,7 @@
+---
+layout: default
+title: 分布式 ID
+---
 # 分布式 ID
 
 > 分库分表后的唯一 ID 生成策略

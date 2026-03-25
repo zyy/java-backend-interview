@@ -1,3 +1,7 @@
+---
+layout: default
+title: Spring 服务注册与发现
+---
 # Spring 服务注册与发现
 
 > Spring Cloud 服务治理

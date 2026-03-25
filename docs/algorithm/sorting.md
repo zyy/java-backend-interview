@@ -1,3 +1,7 @@
+---
+layout: default
+title: 排序算法
+---
 # 排序算法
 
 > 经典排序算法

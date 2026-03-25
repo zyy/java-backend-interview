@@ -1,3 +1,7 @@
+---
+layout: default
+title: 手写 LRU 缓存
+---
 # 手写 LRU 缓存
 
 > 经典面试题

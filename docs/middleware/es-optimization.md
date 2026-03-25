@@ -1,3 +1,7 @@
+---
+layout: default
+title: ES 性能优化
+---
 # ES 性能优化
 
 > Elasticsearch 调优

@@ -1,3 +1,7 @@
+---
+layout: default
+title: ArrayList 与 LinkedList 区别 ⭐⭐
+---
 # ArrayList 与 LinkedList 区别 ⭐⭐
 
 ## 面试题：ArrayList 和 LinkedList 有什么区别？

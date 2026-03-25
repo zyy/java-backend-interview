@@ -1,3 +1,7 @@
+---
+layout: default
+title: equals 与 hashCode
+---
 # equals 与 hashCode
 
 > Java 对象比较的核心方法

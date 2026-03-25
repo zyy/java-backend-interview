@@ -1,3 +1,7 @@
+---
+layout: default
+title: 图论基础
+---
 # 图论基础
 
 > 复杂关系建模

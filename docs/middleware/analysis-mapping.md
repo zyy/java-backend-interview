@@ -1,3 +1,7 @@
+---
+layout: default
+title: ES 分词与映射
+---
 # ES 分词与映射
 
 > Elasticsearch 分析器

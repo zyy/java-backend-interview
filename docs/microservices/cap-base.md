@@ -1,3 +1,7 @@
+---
+layout: default
+title: CAP 理论与 BASE 理论
+---
 # CAP 理论与 BASE 理论
 
 > 分布式系统的基石，面试必问

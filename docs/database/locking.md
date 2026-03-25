@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 锁机制详解 ⭐⭐⭐
+---
 # MySQL 锁机制详解 ⭐⭐⭐
 
 ## 面试题：MySQL 有哪些锁？分别适用于什么场景？

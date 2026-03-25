@@ -1,3 +1,7 @@
+---
+layout: default
+title: Java 基础数据类型与包装类
+---
 # Java 基础数据类型与包装类
 
 > 理解基本类型和包装类的区别是 Java 基础

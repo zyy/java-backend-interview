@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 索引原理详解 ⭐⭐⭐
+---
 # MySQL 索引原理详解 ⭐⭐⭐
 
 ## 面试题：说一下 B+ 树索引实现原理

@@ -1,3 +1,7 @@
+---
+layout: default
+title: HashMap 原理详解 ⭐⭐⭐
+---
 # HashMap 原理详解 ⭐⭐⭐
 
 ## 面试题：介绍一下 HashMap 底层的实现原理

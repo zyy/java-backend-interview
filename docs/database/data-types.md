@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 数据类型选择
+---
 # MySQL 数据类型选择
 
 > 合理选择数据类型提高性能和可维护性

@@ -1,3 +1,7 @@
+---
+layout: default
+title: Kubernetes 核心概念
+---
 # Kubernetes 核心概念
 
 > 容器编排平台

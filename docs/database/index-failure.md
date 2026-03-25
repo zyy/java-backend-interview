@@ -1,3 +1,7 @@
+---
+layout: default
+title: MySQL 索引失效场景 ⭐⭐⭐
+---
 # MySQL 索引失效场景 ⭐⭐⭐
 
 ## 面试题：什么情况下索引会失效？
