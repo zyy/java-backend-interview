@@ -32,11 +32,11 @@ title: 算法
 
 ## 🎯 面试高频题
 
-1. **反转链表**
-2. **两数之和**
-3. **最长无重复子串**
-4. **合并 K 个有序链表**
-5. **二叉树层序遍历**
+1. **[反转链表](./common-algorithms.md)**
+2. **[两数之和](./common-algorithms.md)**
+3. **[最长无重复子串](./common-algorithms.md)**
+4. **[合并 K 个有序链表](./common-algorithms.md)**
+5. **[二叉树层序遍历](./common-algorithms.md)**
 
 ## 📚 刷题平台
 

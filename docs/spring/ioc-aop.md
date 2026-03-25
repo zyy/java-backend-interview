@@ -320,6 +320,42 @@ public class UserService {
 
 ## 高频面试题
 
+**Q0: Spring IoC 和 AOP 的实现原理？**
+
+**IoC（控制反转）的实现原理：**
+1. **BeanDefinition**：Spring 将 Bean 的配置信息（类名、作用域、属性等）解析为 BeanDefinition 对象。
+2. **BeanFactory**：核心容器接口，负责 Bean 的创建和管理。
+3. **ApplicationContext**：BeanFactory 的扩展，提供更多企业级功能（事件发布、国际化等）。
+4. **依赖注入**：通过反射或 CGLIB 为 Bean 注入依赖。
+5. **生命周期管理**：管理 Bean 的创建、初始化、使用和销毁。
+
+**关键流程**：
+```
+1. 加载配置 → 2. 解析 BeanDefinition → 3. 注册到 BeanFactory
+4. 实例化 Bean → 5. 属性注入 → 6. 初始化 → 7. 使用 → 8. 销毁
+```
+
+**AOP（面向切面编程）的实现原理：**
+1. **切面（Aspect）**：横切关注点的模块化（如日志、事务）。
+2. **连接点（Joinpoint）**：程序执行过程中的特定点（如方法调用）。
+3. **通知（Advice）**：在连接点执行的动作（如前置通知、后置通知）。
+4. **切点（Pointcut）**：匹配连接点的表达式。
+5. **织入（Weaving）**：将切面应用到目标对象的过程。
+
+**实现方式**：
+1. **JDK 动态代理**：基于接口，使用 `Proxy.newProxyInstance()` 创建代理。
+2. **CGLIB 动态代理**：基于继承，使用 ASM 字节码生成子类。
+3. **AspectJ**：编译时或加载时织入，功能更强大。
+
+**Spring AOP 的工作流程**：
+```
+1. 定义切面（@Aspect）和通知（@Before、@After 等）
+2. 配置自动代理（@EnableAspectJAutoProxy）
+3. Spring 创建 Bean 时，检查是否需要 AOP 代理
+4. 如果需要，创建代理对象（JDK 或 CGLIB）
+5. 调用代理对象的方法时，执行切面逻辑
+```
+
 **Q1: Spring 如何解决循环依赖？**
 
 Spring 通过**三级缓存**解决单例 Bean 的循环依赖：

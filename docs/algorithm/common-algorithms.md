@@ -625,6 +625,169 @@ class UnionFind {
 
 ---
 
+## 八、面试真题解答
+
+### Q1: 反转链表
+**题目**：反转一个单链表。
+
+**解法**：
+```java
+public ListNode reverseList(ListNode head) {
+    ListNode prev = null;
+    ListNode curr = head;
+    while (curr != null) {
+        ListNode next = curr.next;  // 保存下一个节点
+        curr.next = prev;           // 反转当前节点
+        prev = curr;                // 前移 prev
+        curr = next;                // 前移 curr
+    }
+    return prev;  // 新的头节点
+}
+
+// 递归解法
+public ListNode reverseListRecursive(ListNode head) {
+    if (head == null || head.next == null) {
+        return head;
+    }
+    ListNode newHead = reverseListRecursive(head.next);
+    head.next.next = head;
+    head.next = null;
+    return newHead;
+}
+```
+
+**复杂度分析**：
+- 时间复杂度：O(n)，需要遍历整个链表。
+- 空间复杂度：迭代法 O(1)，递归法 O(n)（递归栈空间）。
+
+### Q2: 两数之和
+**题目**：给定一个整数数组 nums 和一个目标值 target，找出数组中两个数的和等于 target 的索引。
+
+**解法**：
+```java
+public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        int complement = target - nums[i];
+        if (map.containsKey(complement)) {
+            return new int[] { map.get(complement), i };
+        }
+        map.put(nums[i], i);
+    }
+    return new int[0];
+}
+```
+
+**复杂度分析**：
+- 时间复杂度：O(n)，只需遍历一次数组。
+- 空间复杂度：O(n)，最坏情况下需要存储所有元素。
+
+### Q3: 最长无重复子串
+**题目**：给定一个字符串 s，找出其中不含有重复字符的最长子串的长度。
+
+**解法**：
+```java
+public int lengthOfLongestSubstring(String s) {
+    Map<Character, Integer> map = new HashMap<>();
+    int maxLength = 0;
+    int left = 0;
+    
+    for (int right = 0; right < s.length(); right++) {
+        char c = s.charAt(right);
+        if (map.containsKey(c)) {
+            left = Math.max(left, map.get(c) + 1);
+        }
+        map.put(c, right);
+        maxLength = Math.max(maxLength, right - left + 1);
+    }
+    
+    return maxLength;
+}
+```
+
+**复杂度分析**：
+- 时间复杂度：O(n)，每个字符最多被访问两次（left 和 right 各一次）。
+- 空间复杂度：O(min(m, n))，其中 m 是字符集大小。
+
+### Q4: 合并 K 个有序链表
+**题目**：合并 k 个有序链表为一个有序链表。
+
+**解法**：
+```java
+public ListNode mergeKLists(ListNode[] lists) {
+    if (lists == null || lists.length == 0) return null;
+    
+    PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
+    
+    // 将每个链表的头节点加入堆
+    for (ListNode node : lists) {
+        if (node != null) {
+            pq.offer(node);
+        }
+    }
+    
+    ListNode dummy = new ListNode(0);
+    ListNode curr = dummy;
+    
+    while (!pq.isEmpty()) {
+        ListNode min = pq.poll();
+        curr.next = min;
+        curr = curr.next;
+        
+        if (min.next != null) {
+            pq.offer(min.next);
+        }
+    }
+    
+    return dummy.next;
+}
+```
+
+**复杂度分析**：
+- 时间复杂度：O(n log k)，其中 n 是总节点数，k 是链表个数。
+- 空间复杂度：O(k)，优先队列中最多有 k 个节点。
+
+### Q5: 二叉树层序遍历
+**题目**：给定一个二叉树，返回其节点值的层序遍历。
+
+**解法**：
+```java
+public List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> result = new ArrayList<>();
+    if (root == null) return result;
+    
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        List<Integer> level = new ArrayList<>();
+        
+        for (int i = 0; i < size; i++) {
+            TreeNode node = queue.poll();
+            level.add(node.val);
+            
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        
+        result.add(level);
+    }
+    
+    return result;
+}
+```
+
+**复杂度分析**：
+- 时间复杂度：O(n)，每个节点被访问一次。
+- 空间复杂度：O(n)，最坏情况下队列中存储所有叶子节点。
+
+---
+
 **参考链接：**
 - [LeetCode 热题 100](https://leetcode.cn/problem-list/hot-100/)
 - [剑指 Offer](https://leetcode.cn/problem-list/lcof/)

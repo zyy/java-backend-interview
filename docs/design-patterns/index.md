@@ -29,8 +29,8 @@ title: 设计模式
 ## 🎯 面试高频题
 
 1. **[单例模式的几种实现方式？线程安全的单例如何实现？](./design-patterns.md)**
-2. **JDK 中哪些用到了设计模式？**
-3. **Spring 中用到了哪些设计模式？**
+2. **[JDK 中哪些用到了设计模式？](./practical-patterns.md)**
+3. **[Spring 中用到了哪些设计模式？](./practical-patterns.md)**
 4. **[策略模式和代理模式的区别？](./design-patterns.md)**
 
 ## 📚 延伸阅读

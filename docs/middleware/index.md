@@ -31,11 +31,11 @@ title: 中间件
 
 ## 🎯 面试高频题
 
-1. **Redis 为什么这么快？**
+1. **[Redis 为什么这么快？](./redis-data-types.md)**
 2. **[什么是缓存穿透、击穿、雪崩？如何解决？](./cache-problems.md)**
 3. **[Redis 的持久化方式有哪些？过期策略是什么？](./redis-persistence.md)**
-4. **RocketMQ 的事务消息原理？**
-5. **Kafka 如何保证消息不丢失？**
+4. **[RocketMQ 的事务消息原理？](./rocketmq-architecture.md)**
+5. **[Kafka 如何保证消息不丢失？](./kafka-principles.md)**
 
 ## 📚 延伸阅读
 

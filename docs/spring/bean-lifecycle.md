@@ -377,6 +377,94 @@ public class ConnectionManager {
 // 4. 避免在 init/destroy 方法中抛出异常
 ```
 
+## 📖 面试真题
+
+### Q1: Spring Bean 的生命周期？
+
+**答：** Spring Bean 的生命周期包括以下几个主要阶段：
+
+#### 1. 实例化（Instantiation）
+- 通过反射调用构造函数创建 Bean 实例。
+- 如果是工厂方法，则调用工厂方法创建实例。
+
+#### 2. 属性赋值（Population）
+- 为 Bean 的属性注入值（通过 Setter 方法或字段注入）。
+- 处理 `@Autowired`、`@Value` 等注解。
+
+#### 3. 初始化（Initialization）
+1. **Aware 接口回调**：
+   - `BeanNameAware`：设置 Bean 名称。
+   - `BeanFactoryAware`：设置 BeanFactory。
+   - `ApplicationContextAware`：设置 ApplicationContext。
+2. **BeanPostProcessor 前置处理**：
+   - `postProcessBeforeInitialization()`：在初始化之前调用。
+3. **初始化方法**：
+   - 实现 `InitializingBean` 接口的 `afterPropertiesSet()` 方法。
+   - 通过 `@PostConstruct` 注解标记的方法。
+   - XML 配置中的 `init-method` 属性。
+4. **BeanPostProcessor 后置处理**：
+   - `postProcessAfterInitialization()`：在初始化之后调用。
+   - 可以在这里进行 AOP 代理的创建。
+
+#### 4. 使用（In Use）
+- Bean 完全初始化，可以被应用程序使用。
+
+#### 5. 销毁（Destruction）
+1. **销毁方法**：
+   - 实现 `DisposableBean` 接口的 `destroy()` 方法。
+   - 通过 `@PreDestroy` 注解标记的方法。
+   - XML 配置中的 `destroy-method` 属性。
+2. **Bean 被垃圾回收**。
+
+#### 6. 流程图
+```
+实例化 → 属性赋值 → Aware接口回调 → BeanPostProcessor前置处理
+  ↓
+初始化方法 → BeanPostProcessor后置处理 → 使用 → 销毁
+```
+
+#### 7. 代码示例
+```java
+@Component
+public class MyBean implements BeanNameAware, InitializingBean, DisposableBean {
+    
+    @Autowired
+    private Dependency dependency;
+    
+    @PostConstruct
+    public void postConstruct() {
+        System.out.println("@PostConstruct 方法");
+    }
+    
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("BeanNameAware: " + name);
+    }
+    
+    @Override
+    public void afterPropertiesSet() {
+        System.out.println("InitializingBean.afterPropertiesSet()");
+    }
+    
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("@PreDestroy 方法");
+    }
+    
+    @Override
+    public void destroy() {
+        System.out.println("DisposableBean.destroy()");
+    }
+}
+```
+
+#### 8. BeanPostProcessor 的作用
+- **自定义初始化逻辑**：可以在初始化前后添加自定义逻辑。
+- **AOP 代理创建**：`AbstractAutoProxyCreator` 在 `postProcessAfterInitialization()` 中创建代理。
+- **属性验证**：检查必需的属性是否已设置。
+
+**总结**：理解 Spring Bean 的生命周期对于解决依赖注入、AOP、事务等问题非常重要，也是面试中的高频考点。
+
 ---
 
 **参考链接：**

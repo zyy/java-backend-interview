@@ -31,7 +31,7 @@ title: 数据库
 
 ## 🎯 面试高频题
 
-1. **InnoDB 和 MyISAM 的区别？**
+1. **[InnoDB 和 MyISAM 的区别？](./storage-engines.md)**
 2. **[B+树索引的原理？为什么不用 B 树？](./index-principle.md)**
 3. **[什么情况下索引会失效？](./index-failure.md)**
 4. **[MVCC 如何实现读写不阻塞？](./transaction-mvcc.md)**

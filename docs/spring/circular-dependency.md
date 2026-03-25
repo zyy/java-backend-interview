@@ -430,6 +430,103 @@ public class ServiceB {
 }
 ```
 
+## 📖 面试真题
+
+### Q1: Spring 如何解决循环依赖？
+
+**答：** Spring 通过**三级缓存**机制解决单例 Bean 的循环依赖问题。
+
+#### 1. 三级缓存的作用
+- **一级缓存（singletonObjects）**：
+  - 存储完全初始化好的 Bean。
+  - `ConcurrentHashMap<String, Object>` 类型。
+- **二级缓存（earlySingletonObjects）**：
+  - 存储提前暴露的 Bean（已实例化但未填充属性）。
+  - `HashMap<String, Object>` 类型。
+- **三级缓存（singletonFactories）**：
+  - 存储 Bean 工厂对象，用于创建提前暴露的 Bean。
+  - `HashMap<String, ObjectFactory<?>>` 类型。
+
+#### 2. 解决流程（以 A 依赖 B，B 依赖 A 为例）
+```
+1. 创建 A：
+   - 实例化 A（调用构造函数）
+   - 将 A 的工厂放入三级缓存
+   - 为 A 注入属性 B
+
+2. 创建 B：
+   - 实例化 B（调用构造函数）
+   - 将 B 的工厂放入三级缓存
+   - 为 B 注入属性 A
+   - 从三级缓存获取 A 的工厂，创建 A 的早期引用
+   - 将 A 的早期引用放入二级缓存，从三级缓存删除
+   - B 初始化完成，放入一级缓存
+
+3. 继续创建 A：
+   - 从一级缓存获取 B
+   - 为 A 注入 B
+   - A 初始化完成，放入一级缓存
+   - 从二级缓存删除 A 的早期引用
+```
+
+#### 3. 关键源码（简化版）
+```java
+// AbstractAutowireCapableBeanFactory
+protected Object doCreateBean(String beanName, RootBeanDefinition mbd, Object[] args) {
+    // 1. 实例化 Bean
+    BeanWrapper instanceWrapper = createBeanInstance(beanName, mbd, args);
+    Object bean = instanceWrapper.getWrappedInstance();
+    
+    // 2. 提前暴露 Bean（解决循环依赖）
+    boolean earlySingletonExposure = (mbd.isSingleton() && 
+                                     this.allowCircularReferences && 
+                                     isSingletonCurrentlyInCreation(beanName));
+    if (earlySingletonExposure) {
+        // 添加到三级缓存
+        addSingletonFactory(beanName, () -> getEarlyBeanReference(beanName, mbd, bean));
+    }
+    
+    // 3. 属性注入
+    populateBean(beanName, mbd, instanceWrapper);
+    
+    // 4. 初始化
+    Object exposedObject = initializeBean(beanName, bean, mbd);
+    
+    return exposedObject;
+}
+```
+
+#### 4. 无法解决的情况
+- **构造器注入的循环依赖**：实例化阶段就需要依赖对象，无法提前暴露。
+- **原型（Prototype）Bean**：Spring 不缓存原型 Bean，每次都是新实例。
+- **多例 Bean**：同原型 Bean。
+
+#### 5. 解决方案
+1. **使用 Setter 注入替代构造器注入**（推荐）。
+2. **使用 @Lazy 注解**：延迟加载依赖。
+   ```java
+   @Component
+   public class A {
+       @Lazy
+       @Autowired
+       private B b;
+   }
+   ```
+3. **使用 @DependsOn 注解**：明确指定依赖顺序。
+4. **重构代码**：提取公共逻辑到第三方 Bean。
+
+#### 6. Spring Boot 2.6+ 的变化
+- 默认关闭循环依赖支持（`spring.main.allow-circular-references=false`）。
+- 建议重构代码消除循环依赖。
+- 如需启用：`spring.main.allow-circular-references=true`。
+
+#### 7. 最佳实践
+- 尽量避免循环依赖，保持清晰的依赖关系。
+- 如需循环依赖，使用 Setter 注入。
+- 定期检查代码，消除不必要的循环依赖。
+
+**总结**：理解 Spring 的三级缓存机制是解决循环依赖问题的关键，也是面试中的高频考点。
+
 ---
 
 **参考链接：**

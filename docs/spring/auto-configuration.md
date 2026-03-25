@@ -263,6 +263,115 @@ com.example.OtherAutoConfiguration
 
 ### 高频面试题
 
+**Q0: Spring Boot 自动装配原理？**
+
+**答：** Spring Boot 自动装配（Auto-Configuration）的核心原理是基于条件化配置和约定优于配置的思想。
+
+#### 1. 核心机制
+- **@EnableAutoConfiguration**：启动自动装配的核心注解。
+- **META-INF/spring.factories**：早期版本（Spring Boot 2.7 前）存放自动配置类的文件。
+- **META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports**：Spring Boot 2.7+ 使用此文件。
+- **@Conditional 系列注解**：条件化加载配置。
+
+#### 2. 工作流程
+```
+1. Spring Boot 启动 → 2. 加载 @SpringBootApplication
+3. @SpringBootApplication 包含 @EnableAutoConfiguration
+4. @EnableAutoConfiguration 通过 AutoConfigurationImportSelector
+5. 加载 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+6. 过滤条件（@Conditional） → 7. 注册符合条件的配置类
+```
+
+#### 3. 关键源码分析
+```java
+// AutoConfigurationImportSelector 核心方法
+public String[] selectImports(AnnotationMetadata annotationMetadata) {
+    // 1. 检查是否启用自动装配
+    if (!isEnabled(annotationMetadata)) {
+        return NO_IMPORTS;
+    }
+    
+    // 2. 获取自动配置类
+    AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(annotationMetadata);
+    
+    // 3. 返回符合条件的配置类
+    return StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());
+}
+
+// 获取自动配置条目
+protected AutoConfigurationEntry getAutoConfigurationEntry(AnnotationMetadata annotationMetadata) {
+    // 获取所有配置类
+    List<String> configurations = getCandidateConfigurations(annotationMetadata, attributes);
+    
+    // 去重
+    configurations = removeDuplicates(configurations);
+    
+    // 排除指定的类
+    Set<String> exclusions = getExclusions(annotationMetadata, attributes);
+    checkExcludedClasses(configurations, exclusions);
+    configurations.removeAll(exclusions);
+    
+    // 条件过滤
+    configurations = getConfigurationClassFilter().filter(configurations);
+    
+    // 触发自动配置导入事件
+    fireAutoConfigurationImportEvents(configurations, exclusions);
+    
+    return new AutoConfigurationEntry(configurations, exclusions);
+}
+```
+
+#### 4. 条件注解（@Conditional）
+- **@ConditionalOnClass**：类路径下存在指定类时生效。
+- **@ConditionalOnMissingClass**：类路径下不存在指定类时生效。
+- **@ConditionalOnBean**：容器中存在指定 Bean 时生效。
+- **@ConditionalOnMissingBean**：容器中不存在指定 Bean 时生效。
+- **@ConditionalOnProperty**：配置文件中存在指定属性时生效。
+- **@ConditionalOnResource**：存在指定资源文件时生效。
+- **@ConditionalOnWebApplication**：Web 应用时生效。
+- **@ConditionalOnNotWebApplication**：非 Web 应用时生效。
+
+#### 5. 自动配置示例
+```java
+@Configuration
+@ConditionalOnClass({ DataSource.class, EmbeddedDatabaseType.class })
+@EnableConfigurationProperties(DataSourceProperties.class)
+@Import({ DataSourcePoolMetadataProvidersConfiguration.class, 
+          DataSourceInitializationConfiguration.class })
+public class DataSourceAutoConfiguration {
+    
+    @Configuration
+    @Conditional(EmbeddedDatabaseCondition.class)
+    @ConditionalOnMissingBean({ DataSource.class, XADataSource.class })
+    @Import(EmbeddedDataSourceConfiguration.class)
+    protected static class EmbeddedDatabaseConfiguration {
+    }
+    
+    @Configuration
+    @Conditional(PooledDataSourceCondition.class)
+    @ConditionalOnMissingBean({ DataSource.class, XADataSource.class })
+    @Import({ DataSourceConfiguration.Hikari.class, 
+              DataSourceConfiguration.Tomcat.class,
+              DataSourceConfiguration.Dbcp2.class,
+              DataSourceConfiguration.Generic.class })
+    protected static class PooledDataSourceConfiguration {
+    }
+}
+```
+
+#### 6. 自定义 Starter
+1. 创建 `xxx-spring-boot-autoconfigure` 模块。
+2. 创建 `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` 文件。
+3. 编写自动配置类，使用 `@Conditional` 注解。
+4. 创建 `xxx-spring-boot-starter` 模块，依赖自动配置模块。
+
+#### 7. 调试技巧
+- **查看加载的自动配置**：`debug=true` 或 `logging.level.org.springframework.boot.autoconfigure=DEBUG`。
+- **排除特定自动配置**：`@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})`。
+- **查看条件评估报告**：`debug=true` 会在启动时打印条件匹配报告。
+
+**总结**：Spring Boot 自动装配通过条件化配置和约定优于配置的原则，大大简化了 Spring 应用的配置工作。
+
 **Q1: Spring Boot 自动装配和 Spring 的 XML 配置有什么区别？**
 
 | 特性 | XML 配置 | 自动装配 |

@@ -579,6 +579,157 @@ public class QueryService {
 }
 ```
 
+## 📖 面试真题
+
+### Q1: Spring 事务传播机制有哪些？
+
+**答：** Spring 定义了 7 种事务传播行为，用于控制方法调用时事务如何传播。
+
+#### 1. REQUIRED（默认）
+- **行为**：如果当前存在事务，则加入该事务；否则创建一个新事务。
+- **场景**：大多数业务方法使用此传播行为。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void methodA() {
+      methodB();  // 加入 methodA 的事务
+  }
+  
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void methodB() {
+      // 在 methodA 的事务中执行
+  }
+  ```
+
+#### 2. REQUIRES_NEW
+- **行为**：总是创建一个新事务，如果当前存在事务，则挂起当前事务。
+- **场景**：需要独立提交的事务，如日志记录、异步任务。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void methodA() {
+      // 事务 A
+      methodB();  // 挂起事务 A，创建新事务 B
+      // 继续事务 A
+  }
+  
+  @Transactional(propagation = Propagation.REQUIRES_NEW)
+  public void methodB() {
+      // 独立的事务 B，失败不影响事务 A
+  }
+  ```
+
+#### 3. SUPPORTS
+- **行为**：如果当前存在事务，则加入该事务；否则以非事务方式执行。
+- **场景**：查询方法，可以有事务也可以没有。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void update() {
+      query();  // 在事务中执行
+  }
+  
+  @Transactional(propagation = Propagation.SUPPORTS)
+  public void query() {
+      // 如果有事务则加入，否则非事务执行
+  }
+  ```
+
+#### 4. NOT_SUPPORTED
+- **行为**：以非事务方式执行，如果当前存在事务，则挂起当前事务。
+- **场景**：不需要事务支持的方法。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void methodA() {
+      methodB();  // 挂起事务，非事务执行
+  }
+  
+  @Transactional(propagation = Propagation.NOT_SUPPORTED)
+  public void methodB() {
+      // 非事务执行
+  }
+  ```
+
+#### 5. MANDATORY
+- **行为**：必须在一个已有的事务中执行，否则抛出异常。
+- **场景**：强制要求调用方开启事务的方法。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void methodA() {
+      methodB();  // 正常执行
+  }
+  
+  @Transactional(propagation = Propagation.MANDATORY)
+  public void methodB() {
+      // 必须在事务中执行
+  }
+  
+  public void methodC() {
+      methodB();  // 抛出异常：No existing transaction found for transaction marked with propagation 'mandatory'
+  }
+  ```
+
+#### 6. NEVER
+- **行为**：必须在非事务环境下执行，如果当前存在事务，则抛出异常。
+- **场景**：绝对不能在事务中执行的方法。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.NEVER)
+  public void methodA() {
+      // 必须在非事务环境执行
+  }
+  ```
+
+#### 7. NESTED
+- **行为**：如果当前存在事务，则在嵌套事务内执行；否则创建新事务。
+- **特点**：嵌套事务是外部事务的子事务，有独立的保存点（savepoint）。
+- **场景**：部分操作需要独立回滚的场景。
+- **示例**：
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  public void methodA() {
+      try {
+          methodB();  // 嵌套事务，有独立的保存点
+      } catch (Exception e) {
+          // methodB 回滚，methodA 继续执行
+      }
+  }
+  
+  @Transactional(propagation = Propagation.NESTED)
+  public void methodB() {
+      // 嵌套事务，失败只回滚自己
+  }
+  ```
+
+#### 8. 传播行为对比表
+| 传播行为 | 当前有事务 | 当前无事务 | 特点 |
+|----------|-----------|-----------|------|
+| REQUIRED | 加入 | 新建 | 默认，最常用 |
+| REQUIRES_NEW | 新建（挂起当前） | 新建 | 独立事务 |
+| SUPPORTS | 加入 | 非事务 | 灵活查询 |
+| NOT_SUPPORTED | 非事务（挂起当前） | 非事务 | 强制非事务 |
+| MANDATORY | 加入 | 抛异常 | 强制要求事务 |
+| NEVER | 抛异常 | 非事务 | 强制非事务 |
+| NESTED | 嵌套事务 | 新建 | 保存点机制 |
+
+#### 9. 选择建议
+- **常规业务方法**：使用 `REQUIRED`（默认）。
+- **需要独立提交的操作**：使用 `REQUIRES_NEW`。
+- **查询方法**：使用 `SUPPORTS` 或 `readOnly=true`。
+- **强制事务环境**：使用 `MANDATORY`。
+- **强制非事务环境**：使用 `NEVER`。
+- **部分回滚场景**：使用 `NESTED`（注意：需要数据库支持保存点）。
+
+#### 10. 注意事项
+- 传播行为只对 `@Transactional` 注解的方法有效。
+- 同类方法调用时，`@Transactional` 可能失效（通过代理调用）。
+- 不同数据源的事务传播需要通过分布式事务解决。
+- 嵌套事务需要数据库支持（如 MySQL 的 InnoDB）。
+
+**总结**：理解 Spring 事务传播机制是设计复杂业务逻辑的基础，合理使用传播行为可以保证数据一致性和系统性能。
+
 ---
 
 **参考链接：**
