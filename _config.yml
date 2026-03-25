@@ -9,6 +9,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+# 默认布局
+default_layout: default
+
 # 排除文件
 exclude:
   - README.md
