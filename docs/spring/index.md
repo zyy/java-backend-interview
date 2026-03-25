@@ -5,13 +5,12 @@
 ## 📋 内容大纲
 
 ### 1. Spring Core ⭐⭐
-- [IoC 容器原理](./ioc-container.md)
+- [IoC 与 AOP 原理](./ioc-aop.md) ⭐⭐⭐
 - [Bean 生命周期](./bean-lifecycle.md)
 - [循环依赖解决](./circular-dependency.md)
-- [AOP 原理与实现](./aop.md)
 
 ### 2. Spring Boot ⭐⭐
-- [自动装配原理](./auto-configuration.md)
+- [自动装配原理](./auto-configuration.md) ⭐⭐⭐
 - [Starter 机制](./starter-mechanism.md)
 - [启动流程分析](./startup-process.md)
 
@@ -31,8 +30,8 @@
 
 1. **Spring Bean 的生命周期？**
 2. **Spring 如何解决循环依赖？**
-3. **Spring AOP 的实现原理？**
-4. **Spring Boot 自动装配原理？**
+3. **[Spring IoC 和 AOP 的实现原理？](./ioc-aop.md)**
+4. **[Spring Boot 自动装配原理？](./auto-configuration.md)**
 5. **分布式事务的解决方案？**
 
 ## 📚 延伸阅读

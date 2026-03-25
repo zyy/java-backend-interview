@@ -10,15 +10,14 @@
 - [SQL 优化技巧](./sql-optimization.md)
 
 ### 2. 索引原理 ⭐⭐⭐
-- [B+树结构](./b-plus-tree.md)
+- [B+树索引原理](./index-principle.md) ⭐⭐⭐
 - [索引设计原则](./index-design.md)
 - [索引失效场景](./index-failure.md)
 - [覆盖索引与回表](./covering-index.md)
 
 ### 3. 事务与锁 ⭐⭐⭐
-- [ACID 与实现](./acid.md)
+- [事务 ACID 与 MVCC](./transaction-mvcc.md) ⭐⭐⭐
 - [隔离级别与问题](./isolation-levels.md)
-- [MVCC 机制](./mvcc.md)
 - [锁类型与粒度](./locking.md)
 - [死锁分析与预防](./deadlock.md)
 
@@ -30,9 +29,9 @@
 ## 🎯 面试高频题
 
 1. **InnoDB 和 MyISAM 的区别？**
-2. **B+树索引的原理？为什么不用 B 树？**
+2. **[B+树索引的原理？为什么不用 B 树？](./index-principle.md)**
 3. **聚簇索引和非聚簇索引的区别？**
-4. **MVCC 如何实现读写不阻塞？**
+4. **[MVCC 如何实现读写不阻塞？](./transaction-mvcc.md)**
 5. **什么情况下索引会失效？**
 
 ## 📚 延伸阅读
