@@ -267,10 +267,6 @@
 {%- if is_category_page or is_doc_page -%}
   {%- assign show_sidebar = true -%}
 {%- endif -%}
-{%- assign root_parts = url_without_base | split: '/' -%}
-{%- if url_without_base == '' or url_without_base == '/' or url_without_base == '/index.html' -%}
-  {%- assign show_sidebar = true -%}
-{%- endif -%}
 
 <div class="layout-wrapper">
 
