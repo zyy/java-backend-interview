@@ -263,10 +263,19 @@
   {%- assign is_category_page = true -%}
 {%- endif -%}
 
+{%- assign show_sidebar = false -%}
+{%- if is_category_page or is_doc_page -%}
+  {%- assign show_sidebar = true -%}
+{%- endif -%}
+{%- assign root_parts = url_without_base | split: '/' -%}
+{%- if url_without_base == '' or url_without_base == '/' or url_without_base == '/index.html' -%}
+  {%- assign show_sidebar = true -%}
+{%- endif -%}
+
 <div class="layout-wrapper">
 
-  <!-- 左侧分类导航（分类页 + 文档详情页均显示） -->
-  {%- if is_category_page or is_doc_page -%}
+  <!-- 左侧分类导航（所有页面均显示） -->
+  {%- if show_sidebar -%}
   <aside class="doc-sidebar">
     <div class="sidebar-title">📚 知识分类</div>
     <ul class="sidebar-nav">
