@@ -32,6 +32,15 @@ title: 数据库
 ### 5. 高并发场景 ⭐⭐⭐
 - [金融系统热点账户问题](./hot-account.md) ⭐⭐⭐
 
+### 6. 主从复制与高可用 ⭐⭐⭐
+- [MySQL 主从复制与高可用](./replication-ha.md) ⭐⭐⭐
+
+### 7. 性能优化 ⭐⭐⭐
+- [慢查询优化与性能调优](./slow-query-optimization.md) ⭐⭐⭐
+
+### 8. MySQL 8.0 新特性 ⭐⭐
+- [MySQL 8.0 新特性详解](./mysql8-features.md)
+
 ## 🎯 面试高频题
 
 1. **[InnoDB 和 MyISAM 的区别？](./storage-engines.md)**
@@ -40,6 +49,9 @@ title: 数据库
 4. **[MVCC 如何实现读写不阻塞？](./transaction-mvcc.md)**
 5. **[MySQL 有哪些锁？如何避免死锁？](./locking.md)**
 6. **[金融系统热点账户如何解决？](./hot-account.md)**
+7. **[MySQL 主从复制的原理？](./replication-ha.md)**
+8. **[如何排查慢查询？](./slow-query-optimization.md)**
+9. **[MySQL 8.0 有哪些重大改进？](./mysql8-features.md)**
 
 ## 📚 延伸阅读
 
