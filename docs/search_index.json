@@ -1,12 +1,5 @@
 [
   {
-    "title": "Git 钩子测试文档",
-    "url": "/java-backend-interview/test-git-hook.html",
-    "description": "Git 钩子测试文档 这是一个测试文档,用于验证 Git post-commit 钩子是否能正确触发搜索索引更新。 测试步骤 1. 创建此文件 2. 使用 添加到暂存区 3. 使用 提交 4. 检查是否有自动提交的搜索索引更新 预期结果: 提交后应该看到搜索索引更新的提示信息。",
-    "category": "",
-    "content": "Git 钩子测试文档 这是一个测试文档,用于验证 Git post-commit 钩子是否能正确触发搜索索引更新。 测试步骤 1. 创建此文件 2. 使用 添加到暂存区 3. 使用 提交 4. 检查是否有自动提交的搜索索引更新 预期结果: 提交后应该看到搜索索引更新的提示信息。"
-  },
-  {
     "title": "Kubernetes 核心概念",
     "url": "/java-backend-interview/microservices/kubernetes.html",
     "description": "--- layout: default title: Kubernetes 核心概念 --- Kubernetes 核心概念 > 容器编排平台 🎯 面试重点 - Kubernetes 架构 - 核心资源 📖 架构 📖 核心资源 📖 面试真题 Q1: K8s 的作用？ 答： 容器编排、自动调度、弹性伸缩。 --- ⭐ 重点：K8s 是云原生的核心",
