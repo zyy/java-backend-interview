@@ -258,7 +258,8 @@
 {%- if url_without_base != '' and url_without_base != '/' and url_without_base != '/index.html' and url_without_base contains '.html' -%}
   {%- assign is_category_page = true -%}
 {%- endif -%}
-{%- if url_without_base ends_with '/' -%}
+{%- assign last_char = url_without_base | slice: -1, 1 -%}
+{%- if last_char == '/' -%}
   {%- assign is_category_page = true -%}
 {%- endif -%}
 
