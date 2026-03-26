@@ -23,6 +23,7 @@ title: Java 核心基础
 
 ### 3. 并发编程 ⭐⭐⭐
 - [线程池核心参数详解](./thread-pool.md) ⭐⭐⭐
+- [如何设计一个动态线程池？](./dynamic-threadpool.md) ⭐⭐⭐
 - [synchronized 与锁升级](./synchronized.md) ⭐⭐⭐
 - [volatile 与内存屏障](./volatile.md) ⭐⭐⭐
 - [CAS 与 AQS 原理](./cas-aqs.md) ⭐⭐⭐

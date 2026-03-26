@@ -1,0 +1,30 @@
+[2026-03-26 12:38:53] ========== 开始执行定时索引更新 ==========
+[2026-03-26 12:38:53] 未检测到 docs 目录变更
+[2026-03-26 12:38:53] 开始更新搜索索引...
+Generating search index...
+Generated 136 entries to docs/search_index.json
+Search page created at docs/search.html
+Done!
+[2026-03-26 12:38:53] ✅ 搜索索引更新成功
+[2026-03-26 12:38:53] ========== 执行完成 ==========
+[2026-03-26 12:38:53] 
+[2026-03-26 12:45:11] ========== 开始执行定时索引更新 ==========
+[2026-03-26 12:45:11] 未检测到 docs 目录变更
+[2026-03-26 12:45:11] 开始更新搜索索引...
+Generating search index...
+Generated 136 entries to docs/search_index.json
+Search page created at docs/search.html
+Done!
+[2026-03-26 12:45:11] ✅ 搜索索引更新成功
+[2026-03-26 12:45:11] ========== 执行完成 ==========
+[2026-03-26 12:45:11] 
+[2026-03-26 12:50:37] ========== 开始执行定时索引更新 ==========
+[2026-03-26 12:50:37] 未检测到 docs 目录变更
+[2026-03-26 12:50:37] 开始更新搜索索引...
+Generating search index...
+Generated 136 entries to docs/search_index.json
+Search page created at docs/search.html
+Done!
+[2026-03-26 12:50:37] ✅ 搜索索引更新成功
+[2026-03-26 12:50:37] ========== 执行完成 ==========
+[2026-03-26 12:50:37] 
