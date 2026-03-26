@@ -22,6 +22,7 @@ title: 中间件
 - [Kafka 原理](./kafka-principles.md)
 - [消息可靠性保证](./message-reliability.md)
 - [顺序消息与延迟消息](./message-patterns.md)
+- [订单超时自动取消：Redis 延时队列实现](./order-delay-queue.md) ⭐⭐⭐
 
 ### 3. Elasticsearch ⭐⭐
 - [倒排索引原理](./inverted-index.md)
