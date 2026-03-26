@@ -29,6 +29,9 @@ title: 数据库
 - [分布式 ID](./distributed-id.md)
 - [ShardingSphere 实战](./shardingsphere.md)
 
+### 5. 高并发场景 ⭐⭐⭐
+- [金融系统热点账户问题](./hot-account.md) ⭐⭐⭐
+
 ## 🎯 面试高频题
 
 1. **[InnoDB 和 MyISAM 的区别？](./storage-engines.md)**
@@ -36,6 +39,7 @@ title: 数据库
 3. **[什么情况下索引会失效？](./index-failure.md)**
 4. **[MVCC 如何实现读写不阻塞？](./transaction-mvcc.md)**
 5. **[MySQL 有哪些锁？如何避免死锁？](./locking.md)**
+6. **[金融系统热点账户如何解决？](./hot-account.md)**
 
 ## 📚 延伸阅读
 
