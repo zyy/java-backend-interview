@@ -30,6 +30,9 @@ title: 算法
 - [手写线程池](./thread-pool.md)
 - [手写 RPC 框架](./rpc-framework.md)
 
+### 5. 大数据处理 ⭐⭐
+- [Top K 问题：最小堆与快速选择](./top-k-problem.md) ⭐⭐⭐
+
 ## 🎯 面试高频题
 
 1. **[反转链表](./common-algorithms.md)**
@@ -37,6 +40,7 @@ title: 算法
 3. **[最长无重复子串](./common-algorithms.md)**
 4. **[合并 K 个有序链表](./common-algorithms.md)**
 5. **[二叉树层序遍历](./common-algorithms.md)**
+6. **[Top K 问题如何快速求解？](./top-k-problem.md)**
 
 ## 📚 刷题平台
 
