@@ -14,6 +14,9 @@ title: 项目实战
 - [常见问题准备](./common-questions.md)
 
 ### 2. 系统设计 ⭐⭐⭐
+- [设计一个大文件分片上传系统](./large-file-upload-design.md)
+- [设计一个 IP 归属地查询系统](./ip-geo-design.md)
+- [统计 DAU 与海量数据去重](./uv-unique-visitor-design.md)
 - [设计一个短链系统](./tinyurl-design.md)
 - [设计一个秒杀系统](./seckill-design.md)
 - [设计一个即时通讯系统](./im-design.md)
