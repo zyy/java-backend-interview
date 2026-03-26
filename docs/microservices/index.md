@@ -11,7 +11,8 @@ title: 微服务架构
 ### 1. 分布式基础 ⭐⭐⭐
 - [CAP 与 BASE 理论](./cap-base.md)
 - [分布式一致性](./distributed-consistency.md)
-- [分布式事务](./distributed-transaction.md)
+- [分布式事务](./distributed-transaction.md) ⭐⭐⭐
+- [一致性哈希](./consistent-hashing.md) ⭐⭐⭐
 
 ### 2. 服务治理 ⭐⭐⭐
 - [服务注册发现](./service-registry.md)
@@ -32,9 +33,10 @@ title: 微服务架构
 
 1. **[CAP 理论是什么？如何取舍？](./cap-base.md)**
 2. **[分布式事务的解决方案有哪些？](./distributed-transaction.md)**
-3. **[限流的常见算法？](./rate-limiting.md)**
-4. **[熔断和降级的区别？](./circuit-breaker-pattern.md)**
-5. **[服务网格解决了什么问题？](./service-mesh.md)**
+3. **[一致性哈希解决了什么问题？](./consistent-hashing.md)**
+4. **[限流的常见算法？](./rate-limiting.md)**
+5. **[熔断和降级的区别？](./circuit-breaker-pattern.md)**
+6. **[服务网格解决了什么问题？](./service-mesh.md)**
 
 ## 📚 延伸阅读
 
