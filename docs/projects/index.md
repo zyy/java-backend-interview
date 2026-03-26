@@ -18,6 +18,7 @@ title: 项目实战
 - [设计一个秒杀系统](./seckill-design.md)
 - [设计一个即时通讯系统](./im-design.md)
 - [设计一个推荐系统](./recommendation-design.md)
+- [中心化交易所现货与杠杆业务](./cex-trading.md) ⭐⭐⭐
 
 ### 3. 性能优化案例 ⭐⭐⭐
 - [接口性能优化](./api-optimization.md)
@@ -35,6 +36,8 @@ title: 项目实战
 2. **[项目中遇到的最大挑战是什么？](./common-questions.md)**
 3. **[如何设计一个高并发系统？](./seckill-design.md)**
 4. **[线上出问题了怎么排查？](./cpu-troubleshoot.md)**
+5. **[撮合引擎的核心设计原则是什么？](./cex-trading.md)**
+6. **[杠杆交易的强平机制是如何设计的？](./cex-trading.md)**
 
 ## 📚 延伸阅读
 
