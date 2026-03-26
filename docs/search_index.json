@@ -156,9 +156,9 @@
   {
     "title": "中间件",
     "url": "/java-backend-interview/middleware/",
-    "description": "--- layout: default title: 中间件 --- 中间件 > 中间件是构建高并发系统的基石 📋 内容大纲 1. Redis ⭐⭐⭐ - 数据类型与应用场景 - 持久化与过期策略 ⭐⭐⭐ - 缓存穿透、击穿、雪崩 ⭐⭐⭐ - 主从复制与哨兵 - Cluster 集群 - 分布式锁实现 2. 消息队列 ⭐⭐⭐ - 消息队列选型 - RocketMQ 架构 - Kafka 原理 - 消息可靠性保证 - 顺序消息与延迟消息 - 订单超时自动取消：Redis 延时队列实现 ⭐⭐⭐ 3. Elasticsearch ⭐⭐ - 倒排索引原理 - 分词与映射 - 搜索与聚合 - 性能优化 🎯 面试高频题 1. Redis 为什么这么快？ 2. 什么是缓存穿透、击穿、雪崩？如何解决？ 3. Redis 的持久化方式有哪些？过期策略是什么？ 4. RocketMQ 的事务消息原理？ 5. Kafka 如何保证消息不丢失？ 📚 延伸阅读 - Redis 官方文档 - RocketMQ 官方文档",
+    "description": "--- layout: default title: 中间件 --- 中间件 > 中间件是构建高并发系统的基石 📋 内容大纲 1. Redis ⭐⭐⭐ - 数据类型与应用场景 - 持久化与过期策略 ⭐⭐⭐ - 缓存穿透、击穿、雪崩 ⭐⭐⭐ - 主从复制与哨兵 - Cluster 集群 - 分布式锁实现 2. 消息队列 ⭐⭐⭐ - 消息队列选型 - RocketMQ 架构 - RocketMQ 核心原理 - Kafka 原理 - Kafka 核心原理 - 消息可靠性保证 - 顺序消息与延迟消息 - 订单超时自动取消：Redis 延时队列实现 ⭐⭐⭐ 3. Elasticsearch ⭐⭐ - 倒排索引原理 - 分词与映射 - 搜索与聚合 - 性能优化 🎯 面试高频题 1. Redis 为什么这么快？ 2. 什么是缓存穿透、击穿、雪崩？如何解决？ 3. Redis 的持久化方式有哪些？过期策略是什么？ 4. RocketMQ 的事务消息原理？ 5. Kafka 如何保证消息不丢失？ 📚 延伸阅读 - Redis 官方文档 - RocketMQ 官方文档",
     "category": "middleware",
-    "content": "--- layout: default title: 中间件 --- 中间件 > 中间件是构建高并发系统的基石 📋 内容大纲 1. Redis ⭐⭐⭐ - 数据类型与应用场景 - 持久化与过期策略 ⭐⭐⭐ - 缓存穿透、击穿、雪崩 ⭐⭐⭐ - 主从复制与哨兵 - Cluster 集群 - 分布式锁实现 2. 消息队列 ⭐⭐⭐ - 消息队列选型 - RocketMQ 架构 - Kafka 原理 - 消息可靠性保证 - 顺序消息与延迟消息 - 订单超时自动取消：Redis 延时队列实现 ⭐⭐⭐ 3. Elasticsearch ⭐⭐ - 倒排索引原理 - 分词与映射 - 搜索与聚合 - 性能优化 🎯 面试高频题 1. Redis 为什么这么快？ 2. 什么是缓存穿透、击穿、雪崩？如何解决？ 3. Redis 的持久化方式有哪些？过期策略是什么？ 4. RocketMQ 的事务消息原理？ 5. Kafka 如何保证消息不丢失？ 📚 延伸阅读 - Redis 官方文档 - RocketMQ 官方文档"
+    "content": "--- layout: default title: 中间件 --- 中间件 > 中间件是构建高并发系统的基石 📋 内容大纲 1. Redis ⭐⭐⭐ - 数据类型与应用场景 - 持久化与过期策略 ⭐⭐⭐ - 缓存穿透、击穿、雪崩 ⭐⭐⭐ - 主从复制与哨兵 - Cluster 集群 - 分布式锁实现 2. 消息队列 ⭐⭐⭐ - 消息队列选型 - RocketMQ 架构 - RocketMQ 核心原理 - Kafka 原理 - Kafka 核心原理 - 消息可靠性保证 - 顺序消息与延迟消息 - 订单超时自动取消：Redis 延时队列实现 ⭐⭐⭐ 3. Elasticsearch ⭐⭐ - 倒排索引原理 - 分词与映射 - 搜索与聚合 - 性能优化 🎯 面试高频题 1. Redis 为什么这么快？ 2. 什么是缓存穿透、击穿、雪崩？如何解决？ 3. Redis 的持久化方式有哪些？过期策略是什么？ 4. RocketMQ 的事务消息原理？ 5. Kafka 如何保证消息不丢失？ 📚 延伸阅读 - Redis 官方文档 - RocketMQ 官方文档"
   },
   {
     "title": "ES 搜索与聚合",
