@@ -11,7 +11,7 @@ title: 微服务架构
 ### 1. 分布式基础 ⭐⭐⭐
 - [CAP 与 BASE 理论](./cap-base.md)
 - [Raft 一致性协议详解](./raft-consensus.md) ⭐⭐⭐
-- [分布式一致性（Paxos）](./distributed-consistency.md)
+- [Paxos 与分布式一致性协议详解](./distributed-consistency.md) ⭐⭐⭐
 - [分布式事务](./distributed-transaction.md) ⭐⭐⭐
 - [一致性哈希](./consistent-hashing.md) ⭐⭐⭐
 

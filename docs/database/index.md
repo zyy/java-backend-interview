@@ -35,6 +35,7 @@ title: 数据库
 
 ### 6. 主从复制与高可用 ⭐⭐⭐
 - [MySQL 主从复制与高可用](./replication-ha.md) ⭐⭐⭐
+- [数据库读写分离方案详解](./readwrite-splitting.md) ⭐⭐⭐
 
 ### 7. 性能优化 ⭐⭐⭐
 - [慢查询优化与性能调优](./slow-query-optimization.md) ⭐⭐⭐

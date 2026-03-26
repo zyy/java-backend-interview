@@ -26,8 +26,10 @@ title: Java 核心基础
 - [如何设计一个动态线程池？](./dynamic-threadpool.md) ⭐⭐⭐
 - [synchronized 与锁升级](./synchronized.md) ⭐⭐⭐
 - [volatile 与内存屏障](./volatile.md) ⭐⭐⭐
+- [Java 内存模型（JMM）与 happens-before 详解](./jmm-volatile-happens-before.md) ⭐⭐⭐
 - [CAS 与 AQS 原理](./cas-aqs.md) ⭐⭐⭐
 - [ThreadLocal 原理与内存泄漏](./threadlocal.md) ⭐⭐⭐
+- [Java 并发工具类详解](./concurrent-utils.md) ⭐⭐⭐
 
 ### 4. IO/NIO ⭐⭐
 - [BIO、NIO、AIO 区别](./io-models.md) ⭐⭐
@@ -41,6 +43,7 @@ title: Java 核心基础
 4. **[String、StringBuilder、StringBuffer 的区别？](./string.md)**
 5. **[synchronized 的锁升级过程？](./synchronized.md)**
 6. **[volatile 能保证原子性吗？为什么？](./volatile.md)**
+7. **[Java 内存模型（JMM）中 happens-before 规则是什么？](./jmm-volatile-happens-before.md)**
 7. **[ArrayList 和 LinkedList 的区别？](./list.md)**
 8. **[ThreadLocal 为什么会内存泄漏？如何解决？](./threadlocal.md)**
 9. **[CAS 和 AQS 的原理？](./cas-aqs.md)**
