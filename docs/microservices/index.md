@@ -19,6 +19,7 @@ title: 微服务架构
 - [服务注册发现](./service-registry.md)
 - [配置中心](./config-server.md)
 - [链路追踪](./distributed-tracing.md)
+- [接口幂等性方案详解](./idempotency-design.md) ⭐⭐⭐
 
 ### 3. 高可用设计 ⭐⭐⭐
 - [限流算法](./rate-limiting.md)
@@ -38,7 +39,8 @@ title: 微服务架构
 4. **[一致性哈希解决了什么问题？](./consistent-hashing.md)**
 5. **[限流的常见算法？](./rate-limiting.md)**
 6. **[熔断和降级的区别？](./circuit-breaker-pattern.md)**
-7. **[服务网格解决了什么问题？](./service-mesh.md)**
+7. **[如何保证接口幂等？重复提交怎么办？](./idempotency-design.md)**
+8. **[服务网格解决了什么问题？](./service-mesh.md)**
 
 ## 📚 延伸阅读
 
