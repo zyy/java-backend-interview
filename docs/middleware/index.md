@@ -19,7 +19,9 @@ title: 中间件
 ### 2. 消息队列 ⭐⭐⭐
 - [消息队列选型](./mq-comparison.md)
 - [RocketMQ 架构](./rocketmq-architecture.md)
+- [RocketMQ 核心原理](./rocketmq.md)
 - [Kafka 原理](./kafka-principles.md)
+- [Kafka 核心原理](./kafka.md)
 - [消息可靠性保证](./message-reliability.md)
 - [顺序消息与延迟消息](./message-patterns.md)
 - [订单超时自动取消：Redis 延时队列实现](./order-delay-queue.md) ⭐⭐⭐
