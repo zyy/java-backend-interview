@@ -227,6 +227,67 @@
       .search-box { width: 100%; }
     }
 
+    /* ===== 上一页 / 下一页导航 ===== */
+    .page-nav {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #eaecef;
+    }
+    .page-nav-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .page-nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid #e1e4e8;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      min-width: 0;
+    }
+    .page-nav-btn:hover {
+      border-color: #0366d6;
+      background: #f6f8fa;
+      box-shadow: 0 2px 8px rgba(3, 102, 214, 0.1);
+    }
+    .page-nav-btn.disabled {
+      visibility: hidden;
+    }
+    .page-nav-btn.prev { justify-content: flex-start; }
+    .page-nav-btn.next { justify-content: flex-end; margin-left: auto; }
+    .page-nav-btn .nav-arrow {
+      font-size: 20px;
+      color: #6c757d;
+      flex-shrink: 0;
+    }
+    .page-nav-btn .nav-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .page-nav-btn.next .nav-info { align-items: flex-end; }
+    .page-nav-btn .nav-label {
+      font-size: 12px;
+      color: #6c757d;
+      margin-bottom: 2px;
+    }
+    .page-nav-btn .nav-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #24292e;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 220px;
+    }
+    .page-nav-btn.next .nav-title { text-align: right; }
+
     @media (max-width: 768px) {
       .search-results { max-height: 280px; border-radius: 8px; }
       .search-result-item { padding: 8px 10px; }
@@ -346,6 +407,56 @@
     {%- endif -%}
 
     {{ content }}
+
+    {%- if is_doc_page -%}
+    <!-- 上一页 / 下一页导航 -->
+    {%- assign current_dir = page.path | split: '/' | pop | join: '/' -%}
+    {%- assign siblings = site.pages | where_exp: 'p', 'p.path contains current_dir' | sort: 'path' -%}
+    {%- assign prev_page = nil -%}
+    {%- assign next_page = nil -%}
+    {%- assign found_current = false -%}
+    {%- for p in siblings -%}
+      {%- unless p.path contains 'index' -%}
+        {%- if found_current and next_page == nil -%}
+          {%- assign next_page = p -%}
+        {%- endif -%}
+        {%- if p.path == page.path -%}
+          {%- assign found_current = true -%}
+        {%- endif -%}
+        {%- unless found_current -%}
+          {%- assign prev_page = p -%}
+        {%- endunless -%}
+      {%- endunless -%}
+    {%- endfor -%}
+    {%- if prev_page or next_page -%}
+    <nav class="page-nav">
+      <div class="page-nav-inner">
+        {%- if prev_page -%}
+        <a class="page-nav-btn prev" href="{{ prev_page.url | relative_url }}">
+          <span class="nav-arrow">←</span>
+          <span class="nav-info">
+            <span class="nav-label">上一篇</span>
+            <span class="nav-title">{{ prev_page.title | default: prev_page.path | split: '/' | last | replace: '.html', '' | replace: '-', ' ' }}</span>
+          </span>
+        </a>
+        {%- else -%}
+        <span class="page-nav-btn prev disabled"></span>
+        {%- endif -%}
+        {%- if next_page -%}
+        <a class="page-nav-btn next" href="{{ next_page.url | relative_url }}">
+          <span class="nav-info">
+            <span class="nav-label">下一篇</span>
+            <span class="nav-title">{{ next_page.title | default: next_page.path | split: '/' | last | replace: '.html', '' | replace: '-', ' ' }}</span>
+          </span>
+          <span class="nav-arrow">→</span>
+        </a>
+        {%- else -%}
+        <span class="page-nav-btn next disabled"></span>
+        {%- endif -%}
+      </div>
+    </nav>
+    {%- endif -%}
+    {%- endif -%}
   </main>
 </div>
 
