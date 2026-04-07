@@ -159,13 +159,13 @@ public int fib(int n) {
 public int fibMatrix(int n) {
     if (n <= 1) return n;
 
-    int[][] matrix = {{1, 1}, {1, 0}};
+    int[][] matrix = {&lbrace;&lbrace;1, 1&rbrace;&rbrace;, &lbrace;&lbrace;1, 0&rbrace;&rbrace;};
     int[][] result = matrixPow(matrix, n - 1);
     return result[0][0];
 }
 
 private int[][] matrixPow(int[][] m, int n) {
-    int[][] result = {{1, 0}, {0, 1}}; // 单位矩阵
+    int[][] result = {&lbrace;&lbrace;1, 0&rbrace;&rbrace;, &lbrace;&lbrace;0, 1&rbrace;&rbrace;}; // 单位矩阵
     while (n > 0) {
         if ((n & 1) == 1) {
             result = multiply(result, m);

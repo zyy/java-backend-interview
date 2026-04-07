@@ -96,7 +96,7 @@ monitoring:
           severity: warning
         annotations:
           summary: "接口响应时间过高"
-          description: "{{ $labels.path }} P99响应时间超过500ms"
+          description: "&#123;&#123; $labels.path &#125;&#125; P99响应时间超过500ms"
 ```
 
 ## 📖 性能分析工具
