@@ -33,7 +33,8 @@ title: Java 核心基础
 
 ### 4. IO/NIO ⭐⭐
 - [BIO、NIO、AIO 区别](./io-models.md) ⭐⭐
-- [Netty 基础](./netty-basics.md)
+- [Netty 核心原理与高性能网络编程](./netty-basics.md) ⭐⭐
+- [Java 8/11/17 新特性详解](./java-new-features.md) ⭐⭐⭐
 
 ## 🎯 面试高频题
 
@@ -44,12 +45,10 @@ title: Java 核心基础
 5. **[synchronized 的锁升级过程？](./synchronized.md)**
 6. **[volatile 能保证原子性吗？为什么？](./volatile.md)**
 7. **[Java 内存模型（JMM）中 happens-before 规则是什么？](./jmm-volatile-happens-before.md)**
-7. **[ArrayList 和 LinkedList 的区别？](./list.md)**
-8. **[ThreadLocal 为什么会内存泄漏？如何解决？](./threadlocal.md)**
-9. **[CAS 和 AQS 的原理？](./cas-aqs.md)**
-10. **[BIO、NIO、AIO 的区别？](./io-models.md)**
+8. **[ArrayList 和 LinkedList 的区别？](./list.md)**
+9. **[ThreadLocal 为什么会内存泄漏？如何解决？](./threadlocal.md)**
+10. **[CAS 和 AQS 的原理？](./cas-aqs.md)**
+11. **[BIO、NIO、AIO 的区别？](./io-models.md)**
+12. **[Java 8 有哪些新特性？Lambda 和 Stream 的原理？](./java-new-features.md)**
 
 ## 📚 延伸阅读
-
-- [Java 官方文档](https://docs.oracle.com/javase/8/docs/)
-- [深入理解 Java 虚拟机](https://book.douban.com/subject/34907497/)
