@@ -2,6 +2,7 @@
 layout: default
 title: 项目实战
 ---
+
 # 项目实战
 
 > 项目经验是面试的核心，要能清晰表达
@@ -26,6 +27,7 @@ title: 项目实战
 - [设计一个分布式任务调度平台](./task-scheduler-design.md)
 - [设计一个排行榜系统](./ranking-system-design.md)
 - [中心化交易所现货与杠杆业务](./cex-trading.md) ⭐⭐⭐
+- [API 网关设计与实现](./api-gateway.md) ⭐⭐⭐
 
 ### 3. 性能优化案例 ⭐⭐⭐
 - [接口性能优化](./api-optimization.md)
@@ -48,6 +50,7 @@ title: 项目实战
 7. **[线上出问题了怎么排查？](./cpu-troubleshoot.md)**
 8. **[撮合引擎的核心设计原则是什么？](./cex-trading.md)**
 9. **[杠杆交易的强平机制是如何设计的？](./cex-trading.md)**
+10. **[API 网关的核心职责有哪些？](./api-gateway.md)**
 
 ## 📚 延伸阅读
 

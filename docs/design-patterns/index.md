@@ -2,6 +2,7 @@
 layout: default
 title: 设计模式
 ---
+
 # 设计模式
 
 > 设计模式体现代码设计能力，面试常考
@@ -20,6 +21,7 @@ title: 设计模式
 
 ### 3. 行为型模式 ⭐⭐⭐
 - [策略、观察者、代理模式](./design-patterns.md) ⭐⭐
+- [策略模式（Strategy Pattern）](./strategy-pattern.md) ⭐⭐⭐
 - [责任链模式](./chain-of-responsibility.md)
 
 ### 4. 设计原则 ⭐⭐⭐
@@ -32,6 +34,7 @@ title: 设计模式
 2. **[JDK 中哪些用到了设计模式？](./practical-patterns.md)**
 3. **[Spring 中用到了哪些设计模式？](./practical-patterns.md)**
 4. **[策略模式和代理模式的区别？](./design-patterns.md)**
+5. **[策略模式和状态模式的区别？](./strategy-pattern.md)**
 
 ## 📚 延伸阅读
 

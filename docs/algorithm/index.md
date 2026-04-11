@@ -2,6 +2,7 @@
 layout: default
 title: 算法
 ---
+
 # 算法
 
 > 算法是面试的硬通货，必须重视
@@ -24,6 +25,7 @@ title: 算法
 - [高频 100 题](./top-100.md)
 - [剑指 Offer](./sword-to-offer.md)
 - [动态规划专题](./dynamic-programming.md)
+- [字符串高频算法与面试题](./string-algorithms.md) ⭐⭐
 
 ### 4. 手写代码 ⭐⭐⭐
 - [手写 LRU](./lru-cache.md)
@@ -41,6 +43,8 @@ title: 算法
 4. **[合并 K 个有序链表](./common-algorithms.md)**
 5. **[二叉树层序遍历](./common-algorithms.md)**
 6. **[Top K 问题如何快速求解？](./top-k-problem.md)**
+7. **[如何实现 LRU 缓存？](./lru-cache.md)**
+8. **[KMP 算法是如何实现的？](./string-algorithms.md)**
 
 ## 📚 刷题平台
 
